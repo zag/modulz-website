@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/372831/76622024-f450e800-6530-11ea-9a68-86d348316c57.png" width="200" height="200" alt="Modulz" />
+</p>
+
+<h3 align="center">
+  An open source repo for Modulz's marketing site, blog and learning platform.
+</h3>
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
