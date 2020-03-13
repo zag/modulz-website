@@ -1,3 +1,5 @@
+const withPlugins = require('next-compose-plugins');
+const withOptimizedImages = require('next-optimized-images');
 const withMdxEnhanced = require('next-mdx-enhanced')({
   layoutPath: 'layouts',
   defaultLayout: true,
@@ -9,6 +11,9 @@ const withMdxEnhanced = require('next-mdx-enhanced')({
   },
 });
 
-module.exports = withMdxEnhanced({
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-});
+module.exports = withPlugins([
+  withMdxEnhanced({
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  }),
+  withOptimizedImages,
+]);
