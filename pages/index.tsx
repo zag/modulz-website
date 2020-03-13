@@ -64,20 +64,9 @@ const Home = () => {
                       {frontMatter.summary}
                     </Text>
 
-                    {Array.isArray(frontMatter.by) ? (
-                      <Text>multiple</Text>
-                    ) : (
-                      <Flex mt={3} sx={{ alignItems: 'center' }}>
-                        <Avatar
-                          mr={1}
-                          src={authors[frontMatter.by as string].avatar}
-                          alt={authors[frontMatter.by as string].name}
-                        />
-                        <Text size={1} sx={{ color: 'gray700' }}>
-                          {authors[frontMatter.by as string].name}
-                        </Text>
-                      </Flex>
-                    )}
+                    <Box mt={2}>
+                      <Avatar src={authors[frontMatter.by].avatar} />
+                    </Box>
                   </CardLink>
                 </NextLink>
               </Box>

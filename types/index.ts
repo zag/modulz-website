@@ -3,6 +3,6 @@ export type FrontMatter = {
   title: string;
   publishedAt: string;
   summary?: string;
-  by?: string | string[];
+  by?: string;
   __resourcePath: string;
 };
