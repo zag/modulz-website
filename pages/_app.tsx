@@ -35,7 +35,7 @@ function App({ Component, pageProps }: AppProps) {
 
         <PrismTheme />
 
-        <Box p={4} mb={9}>
+        <Box p={4}>
           <NextLink href="/">
             <Link sx={{ color: 'inherit' }}>
               <Logo />
