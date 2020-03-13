@@ -11,9 +11,14 @@ const withMdxEnhanced = require('next-mdx-enhanced')({
   },
 });
 
-module.exports = withPlugins([
-  withMdxEnhanced({
-    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  }),
-  withOptimizedImages,
-]);
+module.exports = withPlugins(
+  [
+    withMdxEnhanced({
+      pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    }),
+    withOptimizedImages,
+  ],
+  {
+    // Next.js config
+  }
+);
