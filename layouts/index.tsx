@@ -2,8 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { parseISO, format } from 'date-fns';
 import { Container, Heading, Text, Box } from '@modulz/radix';
+import { FrontMatter } from '../types';
 
-export default frontMatter => {
+export default (frontMatter: FrontMatter) => {
   return ({ children }) => {
     return (
       <React.Fragment>

@@ -3,7 +3,9 @@ import Head from 'next/head';
 import NextLink from 'next/link';
 import { parseISO, format } from 'date-fns';
 import { Container, Box, Heading, Text, CardLink } from '@modulz/radix';
+// @ts-ignore
 import { frontMatter as blogPosts } from './learn/*.mdx';
+import { FrontMatter } from '../types';
 
 const Home = () => {
   return (
@@ -24,18 +26,18 @@ const Home = () => {
       </Text>
 
       <Container size={0} my={8}>
-        {blogPosts.map(post => (
-          <Box my={4} key={post.title}>
-            <NextLink href={post.__resourcePath.replace('.mdx', '')}>
+        {blogPosts.map((frontMatter: FrontMatter) => (
+          <Box my={4} key={frontMatter.title}>
+            <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')}>
               <CardLink variant="ghost" sx={{ bg: 'transparent', userSelect: 'none' }}>
                 <Heading size={0} sx={{ fontWeight: 500 }}>
-                  {post.title}
+                  {frontMatter.title}
                 </Heading>
                 <Text as="p" size={1} sx={{ color: 'gray700' }}>
-                  {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
+                  {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
                 </Text>
                 <Text as="p" size={2} mt={3}>
-                  {post.title}
+                  {frontMatter.title}
                 </Text>
               </CardLink>
             </NextLink>

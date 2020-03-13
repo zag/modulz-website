@@ -1,3 +1,4 @@
+import { AppProps } from 'next/app';
 import Head from 'next/head';
 import NextLink from 'next/link';
 import { MDXProvider } from '@mdx-js/react';
@@ -13,7 +14,7 @@ export const PrismTheme = createGlobalStyle`
 
 const { RadixProvider, Box, Link } = Radix;
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <RadixProvider>
       <MDXProvider

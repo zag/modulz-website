@@ -10,5 +10,5 @@ const withMdxEnhanced = require('next-mdx-enhanced')({
 });
 
 module.exports = withMdxEnhanced({
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 });
