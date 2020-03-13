@@ -106,6 +106,10 @@ const Home = () => {
                     <Text as="p" size={2} mt={3}>
                       {frontMatter.summary}
                     </Text>
+
+                    <Box mt={2}>
+                      <Avatar src={authors[frontMatter.by].avatar} />
+                    </Box>
                   </CardLink>
                 </NextLink>
               </Box>
