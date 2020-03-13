@@ -25,6 +25,8 @@ function App({ Component, pageProps }: AppProps) {
           h3: props => <Radix.Heading size={3} my={4} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: props => <Radix.Heading size={3} {...props} as="h4" />,
           p: props => <Radix.Text size={3} mb={4} {...props} as="p" />,
+          a: Radix.Link,
+          inlineCode: Radix.Code,
           li: props => (
             <li>
               <Radix.Text size={3} {...props} />
@@ -37,7 +39,7 @@ function App({ Component, pageProps }: AppProps) {
           tr: Radix.Tr,
           td: Radix.Td,
           th: Radix.Th,
-          inlineCode: props => <Radix.Code {...props} />,
+          strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
           img: ({ ...props }) => (
             <Box display="inline-block" my={4}>
               <img style={{ maxWidth: '100%', verticalAlign: 'middle' }} {...props} />
