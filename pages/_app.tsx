@@ -20,11 +20,32 @@ function App({ Component, pageProps }: AppProps) {
       <MDXProvider
         components={{
           ...Radix,
-          h1: props => <Radix.Heading size={4} sx={{ fontWeight: 500 }} {...props} />,
-          h2: props => <Radix.Heading size={4} sx={{ fontWeight: 500 }} {...props} />,
-          h3: props => <Radix.Heading size={3} sx={{ fontWeight: 500 }} {...props} />,
-          p: props => <Radix.Text size={3} {...props} />,
+          h1: props => <Radix.Heading size={5} mb={4} sx={{ fontWeight: 500 }} {...props} as="h1" />,
+          h2: props => <Radix.Heading size={4} my={4} sx={{ fontWeight: 500 }} {...props} as="h2" />,
+          h3: props => <Radix.Heading size={3} my={4} sx={{ fontWeight: 500 }} {...props} as="h3" />,
+          h4: props => <Radix.Heading size={3} {...props} as="h4" />,
+          p: props => <Radix.Text size={3} mb={4} {...props} as="p" />,
+          li: props => (
+            <li>
+              <Radix.Text size={3} {...props} />
+            </li>
+          ),
+          table: props => <Radix.Table my={4} {...props} />,
+          thead: Radix.Thead,
+          tbody: Radix.Tbody,
+          tfoot: Radix.Tfoot,
+          tr: Radix.Tr,
+          td: Radix.Td,
+          th: Radix.Th,
           inlineCode: props => <Radix.Code {...props} />,
+          img: ({ ...props }) => (
+            <Box display="inline-block" my={4}>
+              <img style={{ maxWidth: '100%', verticalAlign: 'middle' }} {...props} />
+            </Box>
+          ),
+          blockquote: props => (
+            <Box my={4} pl={4} sx={{ borderLeft: theme => `2px solid ${theme.colors.blue600}` }} {...props} />
+          ),
         }}
       >
         <Head>

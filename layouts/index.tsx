@@ -26,7 +26,7 @@ export default (frontMatter: FrontMatter) => {
             </Text>
           </Flex>
 
-          <Box mt={8}>{children}</Box>
+          <Box my={8}>{children}</Box>
         </Container>
       </React.Fragment>
     );
