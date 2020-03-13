@@ -4,29 +4,26 @@ import NextLink from 'next/link';
 import { parseISO, format } from 'date-fns';
 import { Container, Box, Heading, Text, CardLink } from '@modulz/radix';
 // @ts-ignore
-import { frontMatter as learnPosts } from './learn/*.mdx';
+import { frontMatter as blogPosts } from './blog/*.mdx';
 import { FrontMatter } from '../types';
 
 const Learn = () => {
   return (
     <Container size={1}>
       <Head>
-        <title>Modulz Learn</title>
+        <title>Modulz Blog</title>
       </Head>
 
       <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
-        Learn
+        Blog
       </Heading>
 
       <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
-        Find the tutorials you need.
-      </Text>
-      <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
-        And the ones you didn't think you did.
+        More about what we're doing.
       </Text>
 
       <Container size={0} my={8}>
-        {learnPosts.map((frontMatter: FrontMatter) => (
+        {blogPosts.map((frontMatter: FrontMatter) => (
           <Box my={4} key={frontMatter.title}>
             <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')}>
               <CardLink variant="ghost" sx={{ bg: 'transparent', userSelect: 'none' }}>
