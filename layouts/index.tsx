@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+
 import { parseISO, format } from 'date-fns';
 import { Container, Heading, Text, Box, Flex, Avatar, Link } from '@modulz/radix';
 import { FrontMatter } from '../types';
@@ -7,10 +9,16 @@ import { authors } from '../data/authors';
 
 export default (frontMatter: FrontMatter) => {
   return ({ children }) => {
+    const router = useRouter();
+
+    const articleType = router.pathname.includes('/blog/') ? 'Blog' : 'Learn';
+
     return (
       <React.Fragment>
         <Head>
-          <title>{frontMatter.title} — Modulz Learn</title>
+          <title>
+            {frontMatter.title} — Modulz {articleType}
+          </title>
         </Head>
 
         <Container size={1} my={8}>
@@ -31,11 +39,6 @@ export default (frontMatter: FrontMatter) => {
             <Text size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
               {frontMatter.readingTime.text}
             </Text>
-            {/* <Box>
-              <Text size={1} sx={{ color: 'gray700', lineHeight: 0 }}>
-                <Link href={authors[frontMatter.by].twitter}>{authors[frontMatter.by].twitter}</Link>
-              </Text>
-            </Box> */}
           </Flex>
 
           <Box my={8}>{children}</Box>

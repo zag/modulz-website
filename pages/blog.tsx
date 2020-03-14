@@ -1,48 +1,40 @@
 import React from 'react';
 import Head from 'next/head';
-import NextLink from 'next/link';
-import { parseISO, format } from 'date-fns';
-import { Container, Box, Heading, Text, CardLink } from '@modulz/radix';
+import { Container, Box, Heading, Text } from '@modulz/radix';
 // @ts-ignore
 import { frontMatter as blogPosts } from './blog/*.mdx';
 import { FrontMatter } from '../types';
+import { BlogCard } from '../components/BlogCard';
+import { BlogCardGrid } from '../components/BlogCardGrid';
 
-const Learn = () => {
+const Blog = () => {
   return (
-    <Container size={1}>
-      <Head>
-        <title>Modulz Blog</title>
-      </Head>
+    <React.Fragment>
+      <Container size={1}>
+        <Head>
+          <title>Modulz Blog</title>
+        </Head>
 
-      <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
-        Blog
-      </Heading>
+        <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
+          Blog
+        </Heading>
 
-      <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
-        More about what we're doing.
-      </Text>
-
-      <Container size={0} my={8}>
-        {blogPosts.map((frontMatter: FrontMatter) => (
-          <Box my={4} key={frontMatter.title}>
-            <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')}>
-              <CardLink variant="ghost" sx={{ bg: 'transparent', userSelect: 'none' }}>
-                <Heading size={0} sx={{ fontWeight: 500 }}>
-                  {frontMatter.title}
-                </Heading>
-                <Text as="p" size={1} sx={{ color: 'gray700' }}>
-                  {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
-                </Text>
-                <Text as="p" size={2} mt={3}>
-                  {frontMatter.title}
-                </Text>
-              </CardLink>
-            </NextLink>
-          </Box>
-        ))}
+        <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+          More about what we're doing.
+        </Text>
       </Container>
-    </Container>
+
+      <Container size={2} my={8}>
+        <BlogCardGrid>
+          {blogPosts.map((frontMatter: FrontMatter) => (
+            <Box my={4} key={frontMatter.title}>
+              <BlogCard frontMatter={frontMatter} />
+            </Box>
+          ))}
+        </BlogCardGrid>
+      </Container>
+    </React.Fragment>
   );
 };
 
-export default Learn;
+export default Blog;

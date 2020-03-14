@@ -53,7 +53,7 @@ function App({ Component, pageProps }: AppProps) {
         }}
       >
         <Head>
-          <title>Modulz Learn</title>
+          <title>Modulz</title>
           <link rel="icon" href="/favicon.png" />
           <link rel="stylesheet" href="https://cdn.modulz.app/fonts/fonts.css" />
         </Head>
@@ -61,8 +61,8 @@ function App({ Component, pageProps }: AppProps) {
         <PrismTheme />
 
         <Box p={4}>
-          <NextLink href="/">
-            <Link sx={{ color: 'inherit' }}>
+          <NextLink href="/" passHref>
+            <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
               <Logo />
             </Link>
           </NextLink>

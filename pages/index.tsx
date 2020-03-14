@@ -1,14 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
 import NextLink from 'next/link';
-import { parseISO, format } from 'date-fns';
-import { Container, Box, Heading, Text, CardLink, Divider, Link, Flex, Avatar } from '@modulz/radix';
+import { Container, Box, Heading, Text, Divider, Link } from '@modulz/radix';
 // @ts-ignore
 import { frontMatter as learnPosts } from './learn/*.mdx';
 // @ts-ignore
 import { frontMatter as blogPosts } from './blog/*.mdx';
 import { FrontMatter } from '../types';
-import { authors } from '../data/authors';
+import { BlogCard } from '../components/BlogCard';
+import { BlogCardGrid } from '../components/BlogCardGrid';
 
 const Home = () => {
   return (
@@ -47,40 +47,16 @@ const Home = () => {
           Learn how to make the most out of Modulz.
         </Text>
 
-        <Flex mt={6} mb={6} mx={-3}>
+        <BlogCardGrid>
           {(learnPosts as FrontMatter[])
             .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
+            .slice(0, 3)
             .map(frontMatter => (
               <Box key={frontMatter.title} sx={{ flex: 1 }}>
-                <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')}>
-                  <CardLink
-                    mx={3}
-                    sx={{
-                      bg: 'transparent',
-                      userSelect: 'none',
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                    }}
-                  >
-                    <Heading size={0} sx={{ fontWeight: 500 }}>
-                      {frontMatter.title}
-                    </Heading>
-                    <Text as="p" size={1} sx={{ color: 'gray700' }}>
-                      {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
-                    </Text>
-                    <Text as="p" size={2} mt={3}>
-                      {frontMatter.summary}
-                    </Text>
-
-                    <Box pt={3} mt="auto">
-                      <Avatar src={authors[frontMatter.by].avatar} />
-                    </Box>
-                  </CardLink>
-                </NextLink>
+                <BlogCard frontMatter={frontMatter} />
               </Box>
             ))}
-        </Flex>
+        </BlogCardGrid>
 
         <Box>
           <NextLink href="/learn" passHref>
@@ -99,40 +75,16 @@ const Home = () => {
           More about what we're doing.
         </Text>
 
-        <Flex mt={6} mb={6} mx={-3}>
+        <BlogCardGrid>
           {(blogPosts as FrontMatter[])
             .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
+            .slice(0, 3)
             .map(frontMatter => (
               <Box key={frontMatter.title} sx={{ flex: 1 }}>
-                <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')}>
-                  <CardLink
-                    mx={3}
-                    sx={{
-                      bg: 'transparent',
-                      userSelect: 'none',
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                    }}
-                  >
-                    <Heading size={0} sx={{ fontWeight: 500 }}>
-                      {frontMatter.title}
-                    </Heading>
-                    <Text as="p" size={1} sx={{ color: 'gray700' }}>
-                      {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
-                    </Text>
-                    <Text as="p" size={2} mt={3}>
-                      {frontMatter.summary}
-                    </Text>
-
-                    <Box pt={3} mt="auto">
-                      <Avatar src={authors[frontMatter.by].avatar} />
-                    </Box>
-                  </CardLink>
-                </NextLink>
+                <BlogCard frontMatter={frontMatter} />
               </Box>
             ))}
-        </Flex>
+        </BlogCardGrid>
 
         <Box>
           <NextLink href="/blog" passHref>
