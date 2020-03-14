@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { parseISO, format } from 'date-fns';
-import { Container, Heading, Text, Box, Flex, Avatar } from '@modulz/radix';
+import { Container, Heading, Text, Box, Flex, Avatar, Link } from '@modulz/radix';
 import { FrontMatter } from '../types';
 import { authors } from '../data/authors';
 
@@ -13,17 +13,29 @@ export default (frontMatter: FrontMatter) => {
           <title>{frontMatter.title} — Modulz Learn</title>
         </Head>
 
-        <Container size={1}>
-          <Heading size={5} mb={1} sx={{ fontWeight: 500 }}>
+        <Container size={1} my={8}>
+          <Heading size={4} mb={1} sx={{ fontWeight: 500 }}>
             {frontMatter.title}
           </Heading>
 
-          <Flex mt={2} sx={{ alignItems: 'center' }}>
+          <Flex mt={4} sx={{ alignItems: 'center' }}>
             <Avatar src={authors[frontMatter.by].avatar} mr={2} />
-            <Text size={1} sx={{ color: 'gray700', lineHeight: 0 }}>
-              By {authors[frontMatter.by].name} <br />
+            <Text as="p" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+              {authors[frontMatter.by].name}
+            </Text>
+            <Separator />
+            <Text as="time" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </Text>
+            <Separator />
+            <Text size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+              {frontMatter.readingTime.text}
+            </Text>
+            {/* <Box>
+              <Text size={1} sx={{ color: 'gray700', lineHeight: 0 }}>
+                <Link href={authors[frontMatter.by].twitter}>{authors[frontMatter.by].twitter}</Link>
+              </Text>
+            </Box> */}
           </Flex>
 
           <Box my={8}>{children}</Box>
@@ -32,3 +44,11 @@ export default (frontMatter: FrontMatter) => {
     );
   };
 };
+
+function Separator() {
+  return (
+    <Text mx={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+      &#xB7;
+    </Text>
+  );
+}

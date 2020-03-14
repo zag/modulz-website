@@ -6,6 +6,7 @@ import { createGlobalStyle } from 'styled-components';
 import * as Radix from '@modulz/radix';
 import { Logo } from '../components/Logo';
 import { prismTheme } from '../prismTheme';
+import { Footer } from '../components/Footer';
 
 // Create global CSS for syntax highlighting
 export const PrismTheme = createGlobalStyle`
@@ -24,13 +25,13 @@ function App({ Component, pageProps }: AppProps) {
           h2: props => <Radix.Heading size={4} my={4} sx={{ fontWeight: 500 }} {...props} as="h2" />,
           h3: props => <Radix.Heading size={3} my={4} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: props => <Radix.Heading size={3} {...props} as="h4" />,
-          p: props => <Radix.Text size={3} mb={4} {...props} as="p" />,
+          p: props => <Radix.Text size={4} mb={4} {...props} sx={{ lineHeight: 3, ...props.sx }} as="p" />,
           a: Radix.Link,
           hr: props => <Radix.Divider my={8} mx="auto" size={2} {...props} />,
           inlineCode: Radix.Code,
           li: props => (
             <li>
-              <Radix.Text size={3} {...props} />
+              <Radix.Text size={4} {...props} sx={{ lineHeight: 3, ...props.sx }} />
             </li>
           ),
           table: props => <Radix.Table my={4} {...props} />,
@@ -68,6 +69,8 @@ function App({ Component, pageProps }: AppProps) {
         </Box>
 
         <Component {...pageProps} />
+
+        <Footer />
       </MDXProvider>
     </RadixProvider>
   );

@@ -53,7 +53,16 @@ const Home = () => {
             .map(frontMatter => (
               <Box key={frontMatter.title} sx={{ flex: 1 }}>
                 <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')}>
-                  <CardLink mx={3} sx={{ bg: 'transparent', userSelect: 'none' }}>
+                  <CardLink
+                    mx={3}
+                    sx={{
+                      bg: 'transparent',
+                      userSelect: 'none',
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                    }}
+                  >
                     <Heading size={0} sx={{ fontWeight: 500 }}>
                       {frontMatter.title}
                     </Heading>
@@ -64,7 +73,7 @@ const Home = () => {
                       {frontMatter.summary}
                     </Text>
 
-                    <Box mt={2}>
+                    <Box pt={3} mt="auto">
                       <Avatar src={authors[frontMatter.by].avatar} />
                     </Box>
                   </CardLink>
@@ -96,7 +105,16 @@ const Home = () => {
             .map(frontMatter => (
               <Box key={frontMatter.title} sx={{ flex: 1 }}>
                 <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')}>
-                  <CardLink mx={3} sx={{ bg: 'transparent', userSelect: 'none' }}>
+                  <CardLink
+                    mx={3}
+                    sx={{
+                      bg: 'transparent',
+                      userSelect: 'none',
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                    }}
+                  >
                     <Heading size={0} sx={{ fontWeight: 500 }}>
                       {frontMatter.title}
                     </Heading>
@@ -107,7 +125,7 @@ const Home = () => {
                       {frontMatter.summary}
                     </Text>
 
-                    <Box mt={2}>
+                    <Box pt={3} mt="auto">
                       <Avatar src={authors[frontMatter.by].avatar} />
                     </Box>
                   </CardLink>
