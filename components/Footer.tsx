@@ -9,11 +9,15 @@ export const Footer = () => {
       <Divider size={2} mx="auto" my={9} />
       <Container size={2} my={9}>
         <Grid
-          sx={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: 3, '& ul': { listStyle: 'none', margin: 0, padding: 0 } }}
+          sx={{
+            gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(4, 1fr)'],
+            gap: [6, 3],
+            '& ul': { listStyle: 'none', margin: 0, padding: 0 },
+          }}
         >
-          <Flex sx={{ flexDirection: 'column' }}>
+          <Flex sx={{ flexDirection: [null, 'column'], alignItems: ['center', 'start'] }}>
             <Logo />
-            <Text as="p" mt="auto" sx={{ color: 'gray500', userSelect: 'none' }}>
+            <Text as="p" ml={['auto', 0]} mt={[0, 'auto']} sx={{ color: 'gray500', userSelect: 'none' }}>
               &copy; Modulz, Inc
             </Text>
           </Flex>
