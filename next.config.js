@@ -11,10 +11,9 @@ module.exports = withPlugins(
       rehypePlugins: [require('@mapbox/rehype-prism')],
       extendFrontMatter: {
         process: (mdxContent, frontMatter) => {
-          const sansFrontMatter = mdxContent.replace(/^(---\n.+?\n---\n)?/s, '');
           return {
-            wordCount: sansFrontMatter.split(/\s+/g).length,
-            readingTime: readingTime(sansFrontMatter),
+            wordCount: mdxContent.split(/\s+/g).length,
+            readingTime: readingTime(mdxContent),
           };
         },
       },
