@@ -1,19 +1,18 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import NextLink from 'next/link';
 import { MDXProvider } from '@mdx-js/react';
 import { createGlobalStyle } from 'styled-components';
 import * as Radix from '@modulz/radix';
-import { Logo } from '../components/Logo';
 import { prismTheme } from '../prismTheme';
+import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 // Create global CSS for syntax highlighting
-export const PrismTheme = createGlobalStyle`
-  ${prismTheme}
+export const GlobalStyles = createGlobalStyle`
+  ${prismTheme};
 `;
 
-const { RadixProvider, Box, Link } = Radix;
+const { RadixProvider, Box } = Radix;
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -21,11 +20,11 @@ function App({ Component, pageProps }: AppProps) {
       <MDXProvider
         components={{
           ...Radix,
-          h1: props => <Radix.Heading size={5} mb={4} sx={{ fontWeight: 500 }} {...props} as="h1" />,
-          h2: props => <Radix.Heading size={4} my={4} sx={{ fontWeight: 500 }} {...props} as="h2" />,
-          h3: props => <Radix.Heading size={3} my={4} sx={{ fontWeight: 500 }} {...props} as="h3" />,
+          h1: props => <Radix.Heading size={5} mb={6} sx={{ fontWeight: 500 }} {...props} as="h1" />,
+          h2: props => <Radix.Heading size={4} my={6} sx={{ fontWeight: 500 }} {...props} as="h2" />,
+          h3: props => <Radix.Heading size={3} my={6} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: props => <Radix.Heading size={3} {...props} as="h4" />,
-          p: props => <Radix.Text size={4} mb={4} {...props} sx={{ lineHeight: 3, ...props.sx }} as="p" />,
+          p: props => <Radix.Text size={4} mb={6} {...props} sx={{ lineHeight: 3, ...props.sx }} as="p" />,
           a: Radix.Link,
           hr: props => <Radix.Divider my={8} mx="auto" size={2} {...props} />,
           inlineCode: Radix.Code,
@@ -34,7 +33,11 @@ function App({ Component, pageProps }: AppProps) {
               <Radix.Text size={4} {...props} sx={{ lineHeight: 3, ...props.sx }} />
             </li>
           ),
-          table: props => <Radix.Table my={4} {...props} />,
+          table: props => (
+            <Box sx={{ overflow: 'auto' }}>
+              <Radix.Table mt={6} mb={7} {...props} sx={{ minWidth: 600, ...props.sx }} />
+            </Box>
+          ),
           thead: Radix.Thead,
           tbody: Radix.Tbody,
           tfoot: Radix.Tfoot,
@@ -43,12 +46,12 @@ function App({ Component, pageProps }: AppProps) {
           th: Radix.Th,
           strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
           img: ({ ...props }) => (
-            <Box display="inline-block" my={4}>
+            <Box display="inline-block" my={6}>
               <img style={{ maxWidth: '100%', verticalAlign: 'middle' }} {...props} />
             </Box>
           ),
           blockquote: props => (
-            <Box my={4} pl={4} sx={{ borderLeft: theme => `2px solid ${theme.colors.blue600}` }} {...props} />
+            <Box my={6} pl={4} sx={{ borderLeft: theme => `2px solid ${theme.colors.blue600}` }} {...props} />
           ),
         }}
       >
@@ -58,15 +61,9 @@ function App({ Component, pageProps }: AppProps) {
           <link rel="stylesheet" href="https://cdn.modulz.app/fonts/fonts.css" />
         </Head>
 
-        <PrismTheme />
+        <GlobalStyles />
 
-        <Box p={4}>
-          <NextLink href="/" passHref>
-            <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
-              <Logo />
-            </Link>
-          </NextLink>
-        </Box>
+        <Header />
 
         <Component {...pageProps} />
 

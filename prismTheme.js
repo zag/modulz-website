@@ -13,7 +13,7 @@ export const prismTheme = css`
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: ${theme.lineHeights[1]};
+    line-height: ${theme.lineHeights[2]};
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
@@ -27,9 +27,13 @@ export const prismTheme = css`
 
   /* Code blocks */
   pre[class*='language-'] {
-    padding: ${theme.space[3]};
+    padding-top: ${theme.space[2]};
+    padding-bottom: ${theme.space[2]};
+    padding-left: ${theme.space[3]};
+    padding-right: ${theme.space[3]};
     margin: ${theme.space[6]} 0;
     overflow: auto;
+    min-width: 100%;
   }
 
   :not(pre) > code[class*='language-'],
@@ -86,7 +90,7 @@ export const prismTheme = css`
   .language-css .token.string,
   .style .token.string {
     color: #9a6e3a;
-    background: hsla(0, 0%, 100%, 0.5);
+    /* background: hsla(0, 0%, 100%, 0.5); */
   }
 
   .token.atrule,
@@ -116,5 +120,21 @@ export const prismTheme = css`
 
   .token.entity {
     cursor: help;
+  }
+
+  /* Line highlighting via https://github.com/j0lv3r4/mdx-prism */
+  .mdx-marker {
+    display: block;
+
+    /* Reset padding originally set in "pre[class*='language-']" */
+    margin-left: -${theme.space[3]};
+    margin-right: -${theme.space[3]};
+    padding-left: ${theme.space[3]};
+    padding-right: ${theme.space[3]};
+
+    background-color: ${theme.colors.gray200};
+    box-shadow: inset 2px 0px 0 0px ${theme.colors.blue600};
+
+    min-width: fit-content;
   }
 `;
