@@ -26,7 +26,7 @@ function App({ Component, pageProps }: AppProps) {
           h4: props => <Radix.Heading size={3} {...props} as="h4" />,
           p: props => <Radix.Text size={4} mb={6} {...props} sx={{ lineHeight: 3, ...props.sx }} as="p" />,
           a: Radix.Link,
-          hr: props => <Radix.Divider my={8} mx="auto" size={2} {...props} />,
+          hr: props => <Radix.Divider size={2} my={8} mx="auto" {...props} />,
           inlineCode: Radix.Code,
           li: props => (
             <li>

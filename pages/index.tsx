@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import NextLink from 'next/link';
 import { Container, Box, Heading, Text, Divider, Link } from '@modulz/radix';
 // @ts-ignore
@@ -9,13 +8,12 @@ import { frontMatter as blogPosts } from './blog/*.mdx';
 import { FrontMatter } from '../types';
 import { BlogCard } from '../components/BlogCard';
 import { BlogCardGrid } from '../components/BlogCardGrid';
+import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
 const Home = () => {
   return (
     <Box py={8}>
-      <Head>
-        <title>Modulz</title>
-      </Head>
+      <TitleAndMetaTags />
 
       <Container size={1}>
         <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
