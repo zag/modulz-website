@@ -50,9 +50,9 @@ export const Header = () => {
         </Text>
         <Pipe mx={3} />
         <Text sx={{ color: 'gray700' }}>
-          <NextLink href="https://modulz.app/login" passHref>
-            <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Login</Link>
-          </NextLink>
+          <Link href="https://modulz.app/login" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
+            Login
+          </Link>
         </Text>
       </Flex>
     </Flex>
