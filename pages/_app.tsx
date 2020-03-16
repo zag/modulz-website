@@ -33,6 +33,8 @@ function App({ Component, pageProps }: AppProps) {
           a: Radix.Link,
           hr: props => <Radix.Divider size={2} my={8} mx="auto" {...props} />,
           inlineCode: Radix.Code,
+          ul: props => <Radix.Box mb={6} {...props} as="ul" />,
+          ol: props => <Radix.Box mb={6} {...props} as="ol" />,
           li: props => (
             <li>
               <Radix.Text size={4} {...props} sx={{ lineHeight: 3, ...props.sx }} />
