@@ -2,9 +2,9 @@ import React from 'react';
 import NextLink from 'next/link';
 import { Container, Box, Heading, Text, Divider, Link } from '@modulz/radix';
 // @ts-ignore
-import { frontMatter as learnPosts } from './learn/*.mdx';
+import { frontMatter as learnPosts } from './learn/**/*.mdx';
 // @ts-ignore
-import { frontMatter as blogPosts } from './blog/*.mdx';
+import { frontMatter as blogPosts } from './blog/**/*.mdx';
 import { FrontMatter } from '../types';
 import { BlogCard } from '../components/BlogCard';
 import { BlogCardGrid } from '../components/BlogCardGrid';

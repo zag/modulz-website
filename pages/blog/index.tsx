@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Box, Heading, Text } from '@modulz/radix';
 // @ts-ignore
-import { frontMatter as blogPosts } from './blog/*.mdx';
-import { FrontMatter } from '../types';
-import { BlogCard } from '../components/BlogCard';
-import { BlogCardGrid } from '../components/BlogCardGrid';
-import TitleAndMetaTags from '../components/TitleAndMetaTags';
+import { frontMatter as blogPosts } from './*.mdx';
+import { FrontMatter } from '../../types';
+import { BlogCard } from '../../components/BlogCard';
+import { BlogCardGrid } from '../../components/BlogCardGrid';
+import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 
 const Blog = () => {
   return (
