@@ -2,7 +2,7 @@ import React from 'react';
 import { NextPageContext } from 'next';
 // @ts-ignore
 import { frontMatter as learnPosts } from './*.mdx';
-import { getRssXml } from '../../data/getRssXml';
+import { makeRssXml } from '../../data/makeRssXml';
 
 export default class Rss extends React.Component {
   static async getInitialProps({ res }: NextPageContext) {
@@ -12,8 +12,8 @@ export default class Rss extends React.Component {
 
     res.setHeader('Content-Type', 'text/xml');
     res.write(
-      getRssXml({
-        type: 'learn',
+      makeRssXml({
+        baseUrl: 'https://modulz.app/learn',
         title: 'Modulz Learn RSS Feed',
         description: 'Recent tutorials from Modulz Learn',
         frontMatters: learnPosts,
