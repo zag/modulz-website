@@ -10,6 +10,11 @@ import { Footer } from '../components/Footer';
 // Create global CSS for syntax highlighting
 export const GlobalStyles = createGlobalStyle`
   ${prismTheme};
+
+	::selection {
+		background-color: ${Radix.theme.colors.blue600};
+		color: ${Radix.theme.colors.white};
+	}
 `;
 
 const { RadixProvider, Box } = Radix;
@@ -59,6 +64,7 @@ function App({ Component, pageProps }: AppProps) {
           <title>Modulz</title>
           <link rel="icon" href="/favicon.png" />
           <link rel="stylesheet" href="https://cdn.modulz.app/fonts/fonts.css" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
 
         <GlobalStyles />

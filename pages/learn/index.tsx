@@ -9,7 +9,7 @@ import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 
 const Learn = () => {
   return (
-    <React.Fragment>
+    <Box py={8}>
       <Container size={1}>
         <TitleAndMetaTags title="Modulz Learn" description="Find the tutorials you need." />
 
@@ -34,7 +34,7 @@ const Learn = () => {
           ))}
         </BlogCardGrid>
       </Container>
-    </React.Fragment>
+    </Box>
   );
 };
 

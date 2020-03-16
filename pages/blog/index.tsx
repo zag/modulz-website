@@ -9,7 +9,7 @@ import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 
 const Blog = () => {
   return (
-    <React.Fragment>
+    <Box py={8}>
       <Container size={1}>
         <TitleAndMetaTags title="Modulz Blog" description="More about what we're doing." />
 
@@ -33,7 +33,7 @@ const Blog = () => {
             ))}
         </BlogCardGrid>
       </Container>
-    </React.Fragment>
+    </Box>
   );
 };
 
