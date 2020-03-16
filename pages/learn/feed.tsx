@@ -14,8 +14,8 @@ export default class Rss extends React.Component {
     res.write(
       makeRssXml({
         baseUrl: 'https://modulz.app/learn',
-        title: 'Modulz Learn RSS Feed',
-        description: 'Recent tutorials from Modulz Learn',
+        title: 'Modulz Learn',
+        description: "Recent tutorials from the Modulz's Learning Blog",
         frontMatters: learnPosts,
       })
     );
