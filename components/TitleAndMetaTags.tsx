@@ -13,7 +13,7 @@ export default function TitleAndMetaTags({
   url = 'https://modulz.app',
   pathname,
   title = 'Modulz',
-  description = 'The visual code editor for designing and building digital products—without writing code.',
+  description = 'The visual code editor for producing production-ready design systems without writing code',
 }: TitleAndMetaTagsProps) {
   const router = useRouter();
   const image = 'https://www.modulz.app/social.png';
