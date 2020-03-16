@@ -20,9 +20,9 @@ const Home = () => {
           The visual code editor
         </Heading>
 
-        <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+        <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
           Design, develop, document and deploy your design system—without writing code.
-        </Text>
+        </Heading>
       </Container>
 
       <Container
