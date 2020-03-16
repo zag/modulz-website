@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-
 import { parseISO, format } from 'date-fns';
 import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider } from '@modulz/radix';
 import { FrontMatter } from '../types';
