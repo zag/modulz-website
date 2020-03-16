@@ -1,19 +1,17 @@
 import React from 'react';
-import Head from 'next/head';
 import { Container, Box, Heading, Text } from '@modulz/radix';
 // @ts-ignore
 import { frontMatter as learnPosts } from './learn/*.mdx';
 import { FrontMatter } from '../types';
 import { BlogCard } from '../components/BlogCard';
 import { BlogCardGrid } from '../components/BlogCardGrid';
+import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
 const Learn = () => {
   return (
     <React.Fragment>
       <Container size={1}>
-        <Head>
-          <title>Modulz Learn</title>
-        </Head>
+        <TitleAndMetaTags title="Modulz Learn" description="Find the tutorials you need." />
 
         <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
           Learn
