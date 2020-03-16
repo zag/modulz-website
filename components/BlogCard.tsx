@@ -17,11 +17,11 @@ export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
           flexDirection: 'column',
         }}
       >
-        <Heading size={0} sx={{ fontWeight: 500 }}>
+        <Heading as="h6" size={1} sx={{ fontWeight: 500 }}>
           {frontMatter.title}
         </Heading>
 
-        <Text as="p" size={3} mt={3} sx={{ color: 'gray700' }}>
+        <Text as="p" size={3} mt={2} sx={{ color: 'gray700' }}>
           {frontMatter.summary}
         </Text>
 

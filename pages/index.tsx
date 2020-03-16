@@ -38,10 +38,10 @@ const Home = () => {
       <Container size={2}>
         <Divider my={8} mx="auto" size={2} />
 
-        <Heading as="h2" size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
+        <Heading as="h3" size={4} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
           Learn
         </Heading>
-        <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+        <Text as="p" size={5} sx={{ textAlign: 'center', color: 'gray700' }}>
           Learn how to make the most out of Modulz.
         </Text>
 
@@ -66,10 +66,10 @@ const Home = () => {
       <Container size={2}>
         <Divider my={8} mx="auto" size={2} />
 
-        <Heading as="h2" size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
+        <Heading as="h3" size={4} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
           Blog
         </Heading>
-        <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+        <Text as="p" size={5} sx={{ textAlign: 'center', color: 'gray700' }}>
           More about what we're doing.
         </Text>
 
