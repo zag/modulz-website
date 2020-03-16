@@ -24,11 +24,13 @@ const Blog = () => {
 
       <Container size={2} my={8}>
         <BlogCardGrid>
-          {blogPosts.map((frontMatter: FrontMatter) => (
-            <Box my={4} key={frontMatter.title}>
-              <BlogCard frontMatter={frontMatter} />
-            </Box>
-          ))}
+          {blogPosts
+            .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
+            .map((frontMatter: FrontMatter) => (
+              <Box my={4} key={frontMatter.title}>
+                <BlogCard frontMatter={frontMatter} />
+              </Box>
+            ))}
         </BlogCardGrid>
       </Container>
     </React.Fragment>
