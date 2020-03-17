@@ -9,8 +9,8 @@ import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 
 const Learn = () => {
   return (
-    <Box py={8}>
-      <Container size={1}>
+    <Box>
+      <Container size={2}>
         <TitleAndMetaTags title="Modulz Learn" description="Find the tutorials you need." />
 
         <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
@@ -25,7 +25,7 @@ const Learn = () => {
         </Text>
       </Container>
 
-      <Container size={2} my={8}>
+      <Container size={2} my={8} sx={{ maxWidth: '1090px' }}>
         <BlogCardGrid>
           {learnPosts.map((frontMatter: FrontMatter) => (
             <Box my={4} key={frontMatter.title}>

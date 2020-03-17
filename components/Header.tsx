@@ -20,14 +20,34 @@ export const Header = () => {
           <button
             ref={buttonRef}
             onClick={() => setIsOpen(true)}
-            style={{ background: 'transparent', border: 0, appearance: 'none', outline: 'none' }}
+            style={{ background: 'transparent', border: 0, appearance: 'none', outline: 'none', lineHeight: 1, padding: '0' }}
           >
             <Text sx={{ color: 'gray700' }}>Product</Text>
           </button>
           <Popover targetRef={buttonRef} isOpen={isOpen} onClose={() => setIsOpen(false)}>
             <Box px={3} py={2}>
               <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
-                <NextLink href="/" passHref>
+                <NextLink href="/styleguide" passHref>
+                  <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Tokens</Link>
+                </NextLink>
+              </Text>
+              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+                <NextLink href="/editor" passHref>
+                  <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Editor</Link>
+                </NextLink>
+              </Text>
+              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+                <NextLink href="/styleguide" passHref>
+                  <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Components</Link>
+                </NextLink>
+              </Text>
+              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+                <NextLink href="/styleguide" passHref>
+                  <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Playground</Link>
+                </NextLink>
+              </Text>
+              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+                <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Styleguide</Link>
                 </NextLink>
               </Text>
@@ -38,18 +58,22 @@ export const Header = () => {
               </Text>
             </Box>
           </Popover>
-
-          <Text sx={{ color: 'gray700' }} mx={6}>
-            <NextLink href="/blog" passHref>
-              <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Blog</Link>
-            </NextLink>
-          </Text>
-          <Text sx={{ color: 'gray700' }}>
+          <Text sx={{ color: 'gray700' }} ml={7}>
             <NextLink href="/learn" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Learn</Link>
             </NextLink>
           </Text>
-          <Pipe mx={3} />
+          <Text sx={{ color: 'gray700' }} ml={7}>
+            <NextLink href="/blog" passHref>
+              <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Blog</Link>
+            </NextLink>
+          </Text>
+          <Text sx={{ color: 'gray700' }} ml={7}>
+            <NextLink href="/pricing" passHref>
+              <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Pricing</Link>
+            </NextLink>
+          </Text>
+          <Pipe mx={5} />
           <Text sx={{ color: 'gray700' }}>
             <Link href="https://modulz.app/login" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
               Login
