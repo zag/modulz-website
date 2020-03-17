@@ -1,13 +1,5 @@
 import React from 'react';
-import NextLink from 'next/link';
-import { Container, Box, Grid, Heading, Button, Text, Divider, Flex, Link } from '@modulz/radix';
-// @ts-ignore
-import { frontMatter as learnPosts } from './learn/**/*.mdx';
-// @ts-ignore
-import { frontMatter as blogPosts } from './blog/**/*.mdx';
-import { FrontMatter } from '../types';
-import { BlogCard } from '../components/BlogCard';
-import { BlogCardGrid } from '../components/BlogCardGrid';
+import { Container, Box, Grid, Heading, Button, Text, Divider, Flex } from '@modulz/radix';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
@@ -16,7 +8,7 @@ const Editor = () => {
     <Box>
       <TitleAndMetaTags />
 
-      <Box pt={6} pb={8}>
+      <Box mt={6} mb={8}>
         <Container size={1}>
           <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
             The visual code editor
@@ -28,10 +20,7 @@ const Editor = () => {
         </Container>
       </Box>
 
-      <Container
-        size={2}
-        sx={{ maxWidth: '1280px' }}
-      >
+      <Container size={2} sx={{ maxWidth: '1280px' }}>
         <Flex mb={7} sx={{ justifyContent: 'space-around' }}>
           <Box sx={{ position: 'relative', width: '175px', opacity: '.5' }}>
             <Text as="p" size={2} mb={1} sx={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
@@ -66,20 +55,46 @@ const Editor = () => {
             </Text>
           </Box>
         </Flex>
-        <img src="/home/editor.png" style={{ display: 'block', maxWidth: '100%', boxShadow: 'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)', borderRadius: '10px' }} />
+        <img
+          src="/home/editor.png"
+          style={{
+            display: 'block',
+            maxWidth: '100%',
+            boxShadow: 'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
+            borderWidth: '1px',
+            borderStyle: 'solid',
+            borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
+            borderRadius: '10px',
+          }}
+        />
       </Container>
 
       <Divider mx="auto" size={2} />
 
       <Box py={9}>
         <Container size={1}>
-          <Text as="h3" size={2} mb={3} sx={{ textAlign: 'center', fontWeight: 500, color: 'gray700', letterSpacing: '.125em', textTransform: 'uppercase' }}>
+          <Text
+            as="h3"
+            size={2}
+            mb={3}
+            sx={{
+              textAlign: 'center',
+              fontWeight: 500,
+              color: 'gray700',
+              letterSpacing: '.125em',
+              textTransform: 'uppercase',
+            }}
+          >
             Components
           </Text>
           <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
             The most advanced component library ever built.
           </Heading>
-          <Text as="p" size={5} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}>
+          <Text
+            as="p"
+            size={5}
+            sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}
+          >
             Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
           </Text>
         </Container>
@@ -122,13 +137,28 @@ const Editor = () => {
 
       <Box py={9}>
         <Container size={1}>
-          <Text as="h3" size={2} mb={3} sx={{ textAlign: 'center', fontWeight: 500, color: 'gray700', letterSpacing: '.125em', textTransform: 'uppercase' }}>
+          <Text
+            as="h3"
+            size={2}
+            mb={3}
+            sx={{
+              textAlign: 'center',
+              fontWeight: 500,
+              color: 'gray700',
+              letterSpacing: '.125em',
+              textTransform: 'uppercase',
+            }}
+          >
             Code export
           </Text>
           <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
             The most advanced code generation in the world. Hands down.
           </Heading>
-          <Text as="p" size={5} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}>
+          <Text
+            as="p"
+            size={5}
+            sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}
+          >
             Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
           </Text>
         </Container>

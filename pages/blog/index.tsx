@@ -22,7 +22,7 @@ const Blog = () => {
         </Text>
       </Container>
 
-      <Container size={2} sx={{ maxWidth: '1090px' }}>
+      <Container size={2} my={8} sx={{ maxWidth: '1090px' }}>
         <BlogCardGrid>
           {blogPosts
             .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))

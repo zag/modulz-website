@@ -16,7 +16,7 @@ const Home = () => {
     <Box>
       <TitleAndMetaTags />
 
-      <Box pt={6} pb={8}>
+      <Box mt={6} mb={8}>
         <Container size={1}>
           <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
             The visual code editor
@@ -26,7 +26,9 @@ const Home = () => {
             Design, develop, document and deploy your design system—without writing code.
           </Heading>
           <Flex mt={7} sx={{ justifyContent: 'center' }}>
-            <Button size={1} variant="blue">Apply for beta access</Button>
+            <Button size={1} variant="blue">
+              Apply for beta access
+            </Button>
           </Flex>
           <Flex mt={3} sx={{ justifyContent: 'center' }}>
             <Text size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '1' }}>
@@ -36,18 +38,25 @@ const Home = () => {
         </Container>
       </Box>
 
-      <Container
-        size={2}
-        sx={{ maxWidth: '1280px' }}
-      >
+      <Container size={2} my={8} pb={8} sx={{ maxWidth: '1280px' }}>
         <Box>
-          <img src="/home/editor.png" style={{ display: 'block', maxWidth: '100%', boxShadow: 'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)', borderRadius: '10px' }} />
+          <img
+            src="/home/editor.png"
+            style={{
+              display: 'block',
+              maxWidth: '100%',
+              boxShadow:
+                'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
+              borderWidth: '1px',
+              borderStyle: 'solid',
+              borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
+              borderRadius: '10px',
+            }}
+          />
         </Box>
       </Container>
 
-      <Divider mx="auto" size={2} />
-
-      <Box py={9}>
+      <Box my={8}>
         <Container size={2} sx={{ maxWidth: '1090px' }}>
           <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
             Learn
@@ -59,7 +68,7 @@ const Home = () => {
           <BlogCardGrid>
             {(learnPosts as FrontMatter[])
               .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
-              .slice(0, 3)
+              .slice(0, 4)
               .map(frontMatter => (
                 <Box key={frontMatter.title} sx={{ flex: 1 }}>
                   <BlogCard frontMatter={frontMatter} />
@@ -67,7 +76,7 @@ const Home = () => {
               ))}
           </BlogCardGrid>
 
-          <Box>
+          <Box mt={2}>
             <NextLink href="/learn" passHref>
               <Link>Browse all</Link>
             </NextLink>
@@ -88,7 +97,7 @@ const Home = () => {
           <BlogCardGrid>
             {(blogPosts as FrontMatter[])
               .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
-              .slice(0, 3)
+              .slice(0, 4)
               .map(frontMatter => (
                 <Box key={frontMatter.title} sx={{ flex: 1 }}>
                   <BlogCard frontMatter={frontMatter} />
@@ -96,7 +105,7 @@ const Home = () => {
               ))}
           </BlogCardGrid>
 
-          <Box>
+          <Box mt={2}>
             <NextLink href="/blog" passHref>
               <Link>Browse all</Link>
             </NextLink>

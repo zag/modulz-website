@@ -3,7 +3,7 @@ import { Container, Text, Box, Flex, Heading, Link } from '@modulz/radix';
 
 export const BetaAccess = () => {
   return (
-    <Box py={9}>
+    <Box my={8}>
       <Container size={1}>
         <Heading as="h5" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
           Join our beta program

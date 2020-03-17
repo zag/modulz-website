@@ -5,8 +5,8 @@ import { Logo } from './Logo';
 
 export const Footer = () => {
   return (
-    <Box pb={9}>
-      <Divider size={2} mx="auto" mb={9} />
+    <Box pb={8}>
+      <Divider size={2} mx="auto" my={8} />
       <Container size={2} sx={{ maxWidth: '1090px' }}>
         <Grid
           sx={{
@@ -17,7 +17,13 @@ export const Footer = () => {
         >
           <Flex sx={{ flexDirection: [null, 'column'], alignItems: ['center', 'start'] }}>
             <Logo />
-            <Text as="span" size={2} ml={['auto', 0]} mt={[0, 'auto']} sx={{ color: 'gray500', lineHeight: '0', userSelect: 'none' }}>
+            <Text
+              as="span"
+              size={2}
+              ml={['auto', 0]}
+              mt={[0, 'auto']}
+              sx={{ color: 'gray500', lineHeight: '0', userSelect: 'none' }}
+            >
               &copy; Modulz, Inc
             </Text>
           </Flex>
