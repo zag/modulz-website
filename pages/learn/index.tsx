@@ -9,7 +9,7 @@ import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 
 const Learn = () => {
   return (
-    <Box>
+    <Box mt={6} mb={8}>
       <Container size={2}>
         <TitleAndMetaTags title="Modulz Learn" description="Find the tutorials you need." />
 
