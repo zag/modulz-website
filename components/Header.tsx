@@ -32,7 +32,7 @@ export const Header = () => {
                 </NextLink>
               </Text>
               <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
-                <NextLink href="/styleguide" passHref>
+                <NextLink href="/editor" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Editor</Link>
                 </NextLink>
               </Text>
