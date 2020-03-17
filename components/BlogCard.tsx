@@ -1,7 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { parseISO, format } from 'date-fns';
-import { CardLink, Heading, Text, Flex, Avatar } from '@modulz/radix';
+import { CardLink, Heading, Text, Flex, Avatar, Box } from '@modulz/radix';
 import { FrontMatter } from '../types';
 import { authors } from '../data/authors';
 
@@ -25,11 +25,18 @@ export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
           {frontMatter.summary}
         </Text>
 
-        <Flex pt={8} mt="auto" sx={{ alignItems: 'center' }}>
-          <Avatar src={authors[frontMatter.by].avatar} />
-          <Text as="p" size={2} ml={2} sx={{ color: 'gray700' }}>
-            {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
-          </Text>
+        <Flex pt={4} mt="auto" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
+          <Flex sx={{ alignItems: 'center' }}>
+            <Avatar src={authors[frontMatter.by].avatar} />
+            <Text as="p" size={2} ml={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+              {authors[frontMatter.by].name}
+            </Text>
+          </Flex>
+          <Box>
+            <Text as="p" size={2} ml={2} sx={{ color: 'gray700' }}>
+              {format(parseISO(frontMatter.publishedAt), 'MMMM "yy')}
+            </Text>
+          </Box>
         </Flex>
       </CardLink>
     </NextLink>
