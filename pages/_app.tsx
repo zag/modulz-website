@@ -26,23 +26,23 @@ function App({ Component, pageProps }: AppProps) {
         components={{
           ...Radix,
           h1: props => <Radix.Heading size={5} mb={6} sx={{ fontWeight: 500 }} {...props} as="h1" />,
-          h2: props => <Radix.Heading size={4} my={6} sx={{ fontWeight: 500 }} {...props} as="h2" />,
-          h3: props => <Radix.Heading size={3} my={6} sx={{ fontWeight: 500 }} {...props} as="h3" />,
-          h4: props => <Radix.Heading size={3} {...props} as="h4" />,
-          p: props => <Radix.Text size={4} mb={6} {...props} sx={{ lineHeight: 3, ...props.sx }} as="p" />,
+          h2: props => <Radix.Heading size={2} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
+          h3: props => <Radix.Heading size={1} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
+          h4: props => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
+          p: props => <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />,
           a: Radix.Link,
-          hr: props => <Radix.Divider size={2} my={8} mx="auto" {...props} />,
+          hr: props => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
           inlineCode: Radix.Code,
-          ul: props => <Radix.Box mb={6} {...props} as="ul" />,
-          ol: props => <Radix.Box mb={6} {...props} as="ol" />,
+          ul: props => <Radix.Box mb={3} {...props} as="ul" />,
+          ol: props => <Radix.Box mb={3} {...props} as="ol" />,
           li: props => (
             <li>
-              <Radix.Text size={4} {...props} sx={{ lineHeight: 3, ...props.sx }} />
+              <Radix.Text size={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} />
             </li>
           ),
           table: props => (
             <Box sx={{ overflow: 'auto' }}>
-              <Radix.Table mt={6} mb={7} {...props} sx={{ minWidth: 600, ...props.sx }} />
+              <Radix.Table mt={0} mb={3} {...props} sx={{ minWidth: 600, ...props.sx }} />
             </Box>
           ),
           thead: Radix.Thead,
@@ -53,12 +53,12 @@ function App({ Component, pageProps }: AppProps) {
           th: Radix.Th,
           strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
           img: ({ ...props }) => (
-            <Box display="inline-block" my={6}>
+            <Box display="inline-block" mx={-7} my={3}>
               <img style={{ maxWidth: '100%', verticalAlign: 'middle' }} {...props} />
             </Box>
           ),
           blockquote: props => (
-            <Box my={6} pl={4} sx={{ borderLeft: theme => `2px solid ${theme.colors.blue600}` }} {...props} />
+            <Box my={5} pl={6} sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }} {...props} />
           ),
         }}
       >

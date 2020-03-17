@@ -9,7 +9,7 @@ import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 
 const Blog = () => {
   return (
-    <Box py={8}>
+    <Box>
       <Container size={1}>
         <TitleAndMetaTags title="Modulz Blog" description="More about what we're doing." />
 
@@ -22,7 +22,7 @@ const Blog = () => {
         </Text>
       </Container>
 
-      <Container size={2} my={8}>
+      <Container size={2} sx={{ maxWidth: '1090px' }}>
         <BlogCardGrid>
           {blogPosts
             .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))

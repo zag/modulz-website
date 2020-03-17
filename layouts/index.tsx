@@ -14,22 +14,22 @@ export default (frontMatter: FrontMatter) => {
 
     const twitterShare = `
 		https://twitter.com/intent/tweet?
-		text="${frontMatter.title}" by @${authors[frontMatter.by].twitter}. Read on the @modulz ${
+		text="${frontMatter.title}" by @${authors[frontMatter.by].twitter} on @modulz ${
       articleType === 'BLOG' ? 'blog' : 'learning blog'
     }
-		&url=https://modulz.app${router.route}
+		.&url=https://modulz.app${router.route}
 		`;
 
     return (
       <React.Fragment>
         <TitleAndMetaTags title={frontMatter.title} description={frontMatter.summary} />
 
-        <Container size={1} my={8}>
-          <Heading size={4} mb={1} sx={{ fontWeight: 500 }}>
+        <Container size={1} mt={6} sx={{ maxWidth: '600px' }}>
+          <Heading size={3} mb={1} sx={{ fontWeight: 500 }}>
             {frontMatter.title}
           </Heading>
 
-          <Flex mt={4} sx={{ alignItems: 'center' }}>
+          <Flex mt={3} sx={{ alignItems: 'center' }}>
             <Avatar src={authors[frontMatter.by].avatar} mr={2} />
             <Text as="p" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
               {authors[frontMatter.by].name}
@@ -44,14 +44,14 @@ export default (frontMatter: FrontMatter) => {
             </Text>
           </Flex>
 
-          <Box my={8}>{children}</Box>
+          <Box my={6}>{children}</Box>
 
           <Divider size={2} my={8} mx="auto" />
 
           <Box sx={{ textAlign: 'center' }}>
             <Text as="p" lineHeight={2}>
-              You can share this read with your friends on{' '}
-              <Link href={twitterShare} target="_blank" title="Share this article on Twitter">
+              Share this post on{' '}
+              <Link href={twitterShare} target="_blank" title="Share this post on Twitter">
                 Twitter
               </Link>
             </Text>
