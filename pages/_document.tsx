@@ -3,7 +3,7 @@ import NextDocument, { Head, Main, NextScript, DocumentContext } from 'next/docu
 import { ServerStyleSheet } from 'styled-components';
 import * as snippet from '@segment/snippet';
 
-const { ANALYTICS_WRITE_KEY = 'VlKRmItoqEhOheR3TSam1BQuY4Ie4CDD', NODE_ENV = 'development' } = process.env;
+const { SEGMENT_ID, NODE_ENV = 'development' } = process.env;
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -31,18 +31,14 @@ export default class Document extends NextDocument {
   }
 
   renderSnippet() {
-    const opts = {
-      apiKey: ANALYTICS_WRITE_KEY,
-      // note: the page option only covers SSR tracking.
-      // Page.js is used to track other events using `window.analytics.page()`
-      page: true,
-    };
+    if (NODE_ENV === 'production') {
+      const opts = {
+        apiKey: SEGMENT_ID,
+        page: true,
+      };
 
-    if (NODE_ENV === 'development') {
-      return snippet.max(opts);
+      return snippet.min(opts);
     }
-
-    return snippet.min(opts);
   }
 
   render() {

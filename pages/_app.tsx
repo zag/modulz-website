@@ -8,6 +8,8 @@ import { prismTheme } from '../prismTheme';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
+const { NODE_ENV } = process.env;
+
 // Create global CSS for syntax highlighting
 export const GlobalStyles = createGlobalStyle`
   ${prismTheme};
@@ -22,8 +24,7 @@ const { RadixProvider, Box } = Radix;
 
 // Track client-side page views with Segment
 Router.events.on('routeChangeComplete', url => {
-  // @ts-ignore
-  window.analytics.page(url);
+  NODE_ENV === 'production' && (window as any).analytics.page(url);
 });
 
 function App({ Component, pageProps }: AppProps) {
