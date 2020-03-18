@@ -1,9 +1,7 @@
 import React from 'react';
 import NextDocument, { Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import * as snippet from '@segment/snippet';
-
-const { SEGMENT_ID, NODE_ENV } = process.env;
+import { renderSnippet } from '../utils/analytics';
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -30,17 +28,11 @@ export default class Document extends NextDocument {
     }
   }
 
-  renderSnippet() {
-    if (NODE_ENV === 'production') {
-      return snippet.min({ apiKey: SEGMENT_ID, page: true });
-    }
-  }
-
   render() {
     return (
       <html>
         <Head>
-          <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />
+          <script dangerouslySetInnerHTML={{ __html: renderSnippet() }} />
         </Head>
         <body>
           <Main />

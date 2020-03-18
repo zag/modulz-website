@@ -1,17 +1,16 @@
 import React from 'react';
-import Router from 'next/router';
-
-const { NODE_ENV } = process.env;
+import { Router } from 'next/router';
+import * as snippet from '@segment/snippet';
 
 type WindowWithAnalytics = Window &
   typeof globalThis & {
     analytics: any;
   };
 
-export const Analytics = () => {
+export const useAnalytics = () => {
   React.useEffect(() => {
     const handleRouteChange = url => {
-      if (NODE_ENV === 'production') {
+      if (process.env.NODE_ENV === 'production') {
         // We need to wrap it in a rAF to ensure the correct data is sent to Segment
         // https://github.com/zeit/next.js/issues/6025
         requestAnimationFrame(() => (window as WindowWithAnalytics).analytics.page(url));
@@ -20,6 +19,10 @@ export const Analytics = () => {
     Router.events.on('routeChangeComplete', handleRouteChange);
     return () => Router.events.off('routeChangeComplete', handleRouteChange);
   }, []);
-
-  return null;
 };
+
+export function renderSnippet() {
+  if (process.env.NODE_ENV === 'production') {
+    return snippet.min({ apiKey: process.env.SEGMENT_ID, page: true });
+  }
+}

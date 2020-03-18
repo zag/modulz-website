@@ -7,7 +7,7 @@ import * as Radix from '@modulz/radix';
 import { prismTheme } from '../prismTheme';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { Analytics } from '../components/Analytics';
+import { useAnalytics } from '../utils/analytics';
 
 const GlobalStyles = createGlobalStyle`
   ${prismTheme};
@@ -19,6 +19,8 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 function App({ Component, pageProps }: AppProps) {
+  useAnalytics();
+
   return (
     <Radix.RadixProvider>
       <MDXProvider
@@ -82,8 +84,6 @@ function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
 
         <Footer />
-
-        <Analytics />
       </MDXProvider>
     </Radix.RadixProvider>
   );
