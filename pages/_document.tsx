@@ -3,7 +3,10 @@ import NextDocument, { Head, Main, NextScript, DocumentContext } from 'next/docu
 import { ServerStyleSheet } from 'styled-components';
 import * as snippet from '@segment/snippet';
 
-const { SEGMENT_ID, NODE_ENV = 'development' } = process.env;
+const { SEGMENT_ID, NODE_ENV } = process.env;
+
+console.log('>>>>>>>', NODE_ENV);
+console.log('>>>>>>>', SEGMENT_ID);
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
