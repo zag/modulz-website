@@ -1,17 +1,15 @@
+import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import Router from 'next/router';
 import { MDXProvider } from '@mdx-js/react';
 import { createGlobalStyle } from 'styled-components';
 import * as Radix from '@modulz/radix';
 import { prismTheme } from '../prismTheme';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { Analytics } from '../components/Analytics';
 
-const { NODE_ENV } = process.env;
-
-// Create global CSS for syntax highlighting
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   ${prismTheme};
 
 	::selection {
@@ -20,16 +18,9 @@ export const GlobalStyles = createGlobalStyle`
 	}
 `;
 
-const { RadixProvider, Box } = Radix;
-
-// Track client-side page views with Segment
-Router.events.on('routeChangeComplete', url => {
-  NODE_ENV === 'production' && (window as any).analytics.page(url);
-});
-
 function App({ Component, pageProps }: AppProps) {
   return (
-    <RadixProvider>
+    <Radix.RadixProvider>
       <MDXProvider
         components={{
           ...Radix,
@@ -51,9 +42,9 @@ function App({ Component, pageProps }: AppProps) {
             </li>
           ),
           table: props => (
-            <Box sx={{ overflow: 'auto' }}>
+            <Radix.Box sx={{ overflow: 'auto' }}>
               <Radix.Table mt={0} mb={3} {...props} sx={{ minWidth: 600, ...props.sx }} />
-            </Box>
+            </Radix.Box>
           ),
           thead: Radix.Thead,
           tbody: Radix.Tbody,
@@ -63,12 +54,12 @@ function App({ Component, pageProps }: AppProps) {
           th: Radix.Th,
           strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
           img: ({ ...props }) => (
-            <Box display="inline-block" mx={-7} my={3}>
+            <Radix.Box display="inline-block" mx={-7} my={3}>
               <img style={{ maxWidth: '100%', verticalAlign: 'middle' }} {...props} />
-            </Box>
+            </Radix.Box>
           ),
           blockquote: props => (
-            <Box
+            <Radix.Box
               my={5}
               pl={6}
               sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }}
@@ -91,8 +82,10 @@ function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
 
         <Footer />
+
+        <Analytics />
       </MDXProvider>
-    </RadixProvider>
+    </Radix.RadixProvider>
   );
 }
 

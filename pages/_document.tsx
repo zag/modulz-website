@@ -32,12 +32,7 @@ export default class Document extends NextDocument {
 
   renderSnippet() {
     if (NODE_ENV === 'production') {
-      const opts = {
-        apiKey: SEGMENT_ID,
-        page: true,
-      };
-
-      return snippet.min(opts);
+      return snippet.min({ apiKey: SEGMENT_ID, page: true });
     }
   }
 
