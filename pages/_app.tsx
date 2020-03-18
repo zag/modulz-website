@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import Router from 'next/router';
 import { MDXProvider } from '@mdx-js/react';
 import { createGlobalStyle } from 'styled-components';
 import * as Radix from '@modulz/radix';
@@ -19,6 +20,12 @@ export const GlobalStyles = createGlobalStyle`
 
 const { RadixProvider, Box } = Radix;
 
+// Track client-side page views with Segment
+Router.events.on('routeChangeComplete', url => {
+  // @ts-ignore
+  window.analytics.page(url);
+});
+
 function App({ Component, pageProps }: AppProps) {
   return (
     <RadixProvider>
@@ -29,7 +36,9 @@ function App({ Component, pageProps }: AppProps) {
           h2: props => <Radix.Heading size={2} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
           h3: props => <Radix.Heading size={1} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: props => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
-          p: props => <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />,
+          p: props => (
+            <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />
+          ),
           a: Radix.Link,
           hr: props => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
           inlineCode: Radix.Code,
@@ -58,7 +67,12 @@ function App({ Component, pageProps }: AppProps) {
             </Box>
           ),
           blockquote: props => (
-            <Box my={5} pl={6} sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }} {...props} />
+            <Box
+              my={5}
+              pl={6}
+              sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }}
+              {...props}
+            />
           ),
         }}
       >
