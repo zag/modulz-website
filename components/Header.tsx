@@ -20,7 +20,14 @@ export const Header = () => {
           <button
             ref={buttonRef}
             onClick={() => setIsOpen(true)}
-            style={{ background: 'transparent', border: 0, appearance: 'none', outline: 'none', lineHeight: 1, padding: '0' }}
+            style={{
+              background: 'transparent',
+              border: 0,
+              appearance: 'none',
+              outline: 'none',
+              lineHeight: 1,
+              padding: '0',
+            }}
           >
             <Text sx={{ color: 'gray700' }}>Product</Text>
           </button>
@@ -58,6 +65,11 @@ export const Header = () => {
               </Text>
             </Box>
           </Popover>
+          <Text sx={{ color: 'gray700' }} ml={7}>
+            <NextLink href="/about" passHref>
+              <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>About</Link>
+            </NextLink>
+          </Text>
           <Text sx={{ color: 'gray700' }} ml={7}>
             <NextLink href="/learn" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Learn</Link>
