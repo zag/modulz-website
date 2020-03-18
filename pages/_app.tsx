@@ -1,3 +1,4 @@
+import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MDXProvider } from '@mdx-js/react';
@@ -6,9 +7,9 @@ import * as Radix from '@modulz/radix';
 import { prismTheme } from '../prismTheme';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { useAnalytics } from '../utils/analytics';
 
-// Create global CSS for syntax highlighting
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   ${prismTheme};
 
 	::selection {
@@ -17,11 +18,11 @@ export const GlobalStyles = createGlobalStyle`
 	}
 `;
 
-const { RadixProvider, Box } = Radix;
-
 function App({ Component, pageProps }: AppProps) {
+  useAnalytics();
+
   return (
-    <RadixProvider>
+    <Radix.RadixProvider>
       <MDXProvider
         components={{
           ...Radix,
@@ -29,7 +30,9 @@ function App({ Component, pageProps }: AppProps) {
           h2: props => <Radix.Heading size={2} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
           h3: props => <Radix.Heading size={1} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: props => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
-          p: props => <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />,
+          p: props => (
+            <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />
+          ),
           a: Radix.Link,
           hr: props => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
           inlineCode: Radix.Code,
@@ -41,9 +44,9 @@ function App({ Component, pageProps }: AppProps) {
             </li>
           ),
           table: props => (
-            <Box sx={{ overflow: 'auto' }}>
+            <Radix.Box sx={{ overflow: 'auto' }}>
               <Radix.Table mt={0} mb={3} {...props} sx={{ minWidth: 600, ...props.sx }} />
-            </Box>
+            </Radix.Box>
           ),
           thead: Radix.Thead,
           tbody: Radix.Tbody,
@@ -53,12 +56,17 @@ function App({ Component, pageProps }: AppProps) {
           th: Radix.Th,
           strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
           img: ({ ...props }) => (
-            <Box display="inline-block" mx={-7} my={3}>
+            <Radix.Box display="inline-block" mx={-7} my={3}>
               <img style={{ maxWidth: '100%', verticalAlign: 'middle' }} {...props} />
-            </Box>
+            </Radix.Box>
           ),
           blockquote: props => (
-            <Box my={5} pl={6} sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }} {...props} />
+            <Radix.Box
+              my={5}
+              pl={6}
+              sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }}
+              {...props}
+            />
           ),
         }}
       >
@@ -77,7 +85,7 @@ function App({ Component, pageProps }: AppProps) {
 
         <Footer />
       </MDXProvider>
-    </RadixProvider>
+    </Radix.RadixProvider>
   );
 }
 

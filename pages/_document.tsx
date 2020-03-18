@@ -1,11 +1,13 @@
 import React from 'react';
-import NextDocument, { DocumentContext } from 'next/document';
+import NextDocument, { Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { renderSnippet } from '../utils/analytics';
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
+
     try {
       ctx.renderPage = () =>
         originalRenderPage({
@@ -24,5 +26,19 @@ export default class Document extends NextDocument {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <html>
+        <Head>
+          <script dangerouslySetInnerHTML={{ __html: renderSnippet() }} />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    );
   }
 }
