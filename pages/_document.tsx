@@ -3,11 +3,6 @@ import NextDocument, { Head, Main, NextScript, DocumentContext } from 'next/docu
 import { ServerStyleSheet } from 'styled-components';
 import * as snippet from '@segment/snippet';
 
-const { SEGMENT_ID, NODE_ENV } = process.env;
-
-console.log('>>>>>>>', NODE_ENV);
-console.log('>>>>>>>', SEGMENT_ID);
-
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -34,7 +29,12 @@ export default class Document extends NextDocument {
   }
 
   renderSnippet() {
+    const { SEGMENT_ID, NODE_ENV } = process.env;
+    console.log('>>>>>>>', 'renderSnippet called');
+    console.log('>>>>>>>', NODE_ENV);
+    console.log('>>>>>>>', SEGMENT_ID);
     if (NODE_ENV === 'production') {
+      console.log('>>>>>>>', 'renderSnippet called in condition');
       const opts = {
         apiKey: SEGMENT_ID,
         page: true,
