@@ -16,7 +16,7 @@ export const Header = () => {
           </Link>
         </NextLink>
 
-        <Flex ml="auto" sx={{ alignItems: 'center' }}>
+        <Flex ml="auto" sx={{ flexDirection: ['column', 'row'], alignItems: ['flex-end', 'center'] }}>
           <button
             ref={buttonRef}
             onClick={() => setIsOpen(true)}

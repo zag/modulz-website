@@ -8,6 +8,7 @@ import { prismTheme } from '../prismTheme';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { useAnalytics } from '../utils/analytics';
+import { VideoPlayer } from '../components/VideoPlayer';
 
 const GlobalStyles = createGlobalStyle`
   ${prismTheme};
@@ -56,7 +57,7 @@ function App({ Component, pageProps }: AppProps) {
           th: Radix.Th,
           strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
           img: ({ ...props }) => (
-            <Radix.Box display="inline-block" mx={-7} my={3}>
+            <Radix.Box mx={[-5, -5, -7]} my={3}>
               <img style={{ maxWidth: '100%', verticalAlign: 'middle' }} {...props} />
             </Radix.Box>
           ),
@@ -67,6 +68,11 @@ function App({ Component, pageProps }: AppProps) {
               sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }}
               {...props}
             />
+          ),
+          Video: props => (
+            <Radix.Box mx={[-5, -5, -7]} my={8}>
+              <VideoPlayer {...props} />
+            </Radix.Box>
           ),
         }}
       >
