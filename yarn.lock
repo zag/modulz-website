@@ -1020,7 +1020,7 @@
     resize-observer-polyfill "^1.5.1"
     tabbable "^4.0.0"
 
-"@modulz/radix-icons@2.0.0":
+"@modulz/radix-icons@2.0.0", "@modulz/radix-icons@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@modulz/radix-icons/-/radix-icons-2.0.0.tgz#b179f0328b10d82573b77f2e22825d8647d7033b"
   integrity sha512-kp7hVMPVaQ2+9r2l6Cg28Huj5z3aBKl1jk7lmqtnnPEJH7vr6p6lS3u2RxMhTGQvg+H1mXJGTKhveG++87RYGQ==
