@@ -1003,10 +1003,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.5.7.tgz#335358feb2d511bfdb3aa46e31752a10aa51270a"
   integrity sha512-SV+V8A+Y33pmVT/LWk/2y51ixIyA/QH1XL+nrWAhoqre1rFtxOEZ4jr0W+bKZpeahOvkn/BQTheK+dRty9o/ig==
 
-"@modulz/primitives@0.0.1-15":
-  version "0.0.1-15"
-  resolved "https://registry.yarnpkg.com/@modulz/primitives/-/primitives-0.0.1-15.tgz#dd3e28c4eec324acd556fd676ec83f6f7fdea2a1"
-  integrity sha512-oSdzUXRF6n/6BPCCMsKJ2joFXHjbSnH7RJMQc0zbNRQtXQBm57OIJ9J+bbByxB4sQcEBY0aV8Etx+zXIaj8Bqg==
+"@modulz/primitives@0.0.1-19":
+  version "0.0.1-19"
+  resolved "https://registry.yarnpkg.com/@modulz/primitives/-/primitives-0.0.1-19.tgz#2f73e0b0ab256cf84f241f608af8c3a3fb350a31"
+  integrity sha512-tS9GIVIlrf6PuBWpHytZO1SAeYZZn1pMb1AqKjFRB107YzcFa7GjVklGZFCC1JPN8kp4glje0zHlseoD4KLk3g==
   dependencies:
     "@modulz/radix-icons" "2.0.0"
     "@modulz/radix-system" "0.0.1-alpha.11"
@@ -1020,7 +1020,7 @@
     resize-observer-polyfill "^1.5.1"
     tabbable "^4.0.0"
 
-"@modulz/radix-icons@2.0.0", "@modulz/radix-icons@^2.0.0":
+"@modulz/radix-icons@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@modulz/radix-icons/-/radix-icons-2.0.0.tgz#b179f0328b10d82573b77f2e22825d8647d7033b"
   integrity sha512-kp7hVMPVaQ2+9r2l6Cg28Huj5z3aBKl1jk7lmqtnnPEJH7vr6p6lS3u2RxMhTGQvg+H1mXJGTKhveG++87RYGQ==
@@ -1036,12 +1036,12 @@
     "@types/styled-system__css" "^5.0.5"
     csstype "^2.6.7"
 
-"@modulz/radix@^0.0.1-beta.26":
-  version "0.0.1-beta.26"
-  resolved "https://registry.yarnpkg.com/@modulz/radix/-/radix-0.0.1-beta.26.tgz#20f818e1c24b5db7b750762c38bc064f71e0cdce"
-  integrity sha512-T6Xx39CJut/Gg9ZkVPtjAZoD2J/heS+qmtx6b93zndwgC5T5+dq7WSbOrFVmWw+KPyDvKwh6b2aF6GjsqTve7g==
+"@modulz/radix@0.0.1-beta.28":
+  version "0.0.1-beta.28"
+  resolved "https://registry.yarnpkg.com/@modulz/radix/-/radix-0.0.1-beta.28.tgz#2d2e5a464893120fd6e858e5536b22fe5049180c"
+  integrity sha512-B9k6CNL7RZ7LSZMyDL43xwkSWZ0Fgbika2moPJIb/99VrQbBR7I6Mr1+ycwHLnM3eYHkXK+BbUwEwlix0OGptA==
   dependencies:
-    "@modulz/primitives" "0.0.1-15"
+    "@modulz/primitives" "0.0.1-19"
     "@modulz/radix-system" "0.0.1-alpha.11"
     "@styled-system/css" "5.1.4"
     "@styled-system/theme-get" "^5.1.2"

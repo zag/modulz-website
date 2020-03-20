@@ -1,11 +1,10 @@
 import React from 'react';
-import { AspectRatio, Box, Flex } from '@modulz/radix';
+import { AspectRatio, Box, Flex, Image } from '@modulz/radix';
 
 type VideoPlayerProps = { id: string };
 
 export const VideoPlayer = ({ id, ...props }: VideoPlayerProps) => {
   const [hasStartedPlaying, setHasStartedPlaying] = React.useState(false);
-  const [shouldUsePosterFallback, setShouldUsePosterFallback] = React.useState(false);
   const [posterUrl, setPosterUrl] = React.useState(undefined);
 
   React.useEffect(() => {
@@ -14,7 +13,6 @@ export const VideoPlayer = ({ id, ...props }: VideoPlayerProps) => {
     img.onload = () => {
       if (img.width <= 120) {
         setPosterUrl(`http://i3.ytimg.com/vi/${id}/hqdefault.jpg`);
-        setShouldUsePosterFallback(true);
       } else {
         setPosterUrl(img.src);
       }
@@ -43,18 +41,7 @@ export const VideoPlayer = ({ id, ...props }: VideoPlayerProps) => {
           },
         }}
       >
-        {posterUrl && (
-          <img
-            src={posterUrl}
-            style={{
-              width: '100%',
-              height: '100%',
-              filter: shouldUsePosterFallback && 'blur(15px)',
-              transform: shouldUsePosterFallback && 'scale(2)',
-              willChange: 'filter',
-            }}
-          />
-        )}
+        {posterUrl && <Image src={posterUrl} sx={{ width: '100%', height: '100%' }} />}
 
         <Box
           sx={{
