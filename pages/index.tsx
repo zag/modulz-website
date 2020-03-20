@@ -1,15 +1,14 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Container, Box, Heading, Button, Text, Divider, Flex, Link } from '@modulz/radix';
-// @ts-ignore
-import { frontMatter as learnPosts } from './learn/**/*.mdx';
-// @ts-ignore
-import { frontMatter as blogPosts } from './blog/**/*.mdx';
+import { Container, Box, Heading, Text, Divider, Flex, Link } from '@modulz/radix';
+import { learnPosts } from '../utils/learnPosts';
+import { blogPosts } from '../utils/blogPosts';
 import { FrontMatter } from '../types';
 import { BlogCard } from '../components/BlogCard';
 import { BlogCardGrid } from '../components/BlogCardGrid';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
+import { MarketingButton } from '../components/MarketingButtton';
 
 const Home = () => {
   return (
@@ -17,18 +16,31 @@ const Home = () => {
       <TitleAndMetaTags />
 
       <Box mt={6} mb={8}>
-        <Container size={1}>
+        <Container size={2}>
           <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
             The visual code editor
           </Heading>
+        </Container>
 
-          <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
+        <Container size={1}>
+          <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4', fontWeight: 400 }}>
             Design, develop, document and deploy your design system—without writing code.
           </Heading>
           <Flex mt={7} sx={{ justifyContent: 'center' }}>
-            <Button size={1} variant="blue">
+            <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank">
               Apply for beta access
-            </Button>
+              <Box as="span" ml={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path
+                    d="M5.5 3.5L11.5 3.5L11.5 9.5"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M3.5 11.5L11.5 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </Box>
+            </MarketingButton>
           </Flex>
           <Flex mt={3} sx={{ justifyContent: 'center' }}>
             <Text size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '1' }}>

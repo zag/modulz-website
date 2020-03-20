@@ -1,7 +1,6 @@
 import React from 'react';
 import { NextPageContext } from 'next';
-// @ts-ignore
-import { frontMatter as learnPosts } from './**/*.mdx';
+import { learnPosts } from '../../utils/learnPosts';
 import { makeRssXml } from '../../data/makeRssXml';
 
 export default class Rss extends React.Component {

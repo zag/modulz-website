@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Box, Heading, Text } from '@modulz/radix';
-// @ts-ignore
-import { frontMatter as learnPosts } from './**/*.mdx';
+import { learnPosts } from '../../utils/learnPosts';
 import { FrontMatter } from '../../types';
 import { BlogCard } from '../../components/BlogCard';
 import { BlogCardGrid } from '../../components/BlogCardGrid';

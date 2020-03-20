@@ -1,10 +1,8 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { Container, Box, Grid, Heading, Button, Text, Divider, Flex, Link } from '@modulz/radix';
-// @ts-ignore
-import { frontMatter as learnPosts } from './learn/**/*.mdx';
-// @ts-ignore
-import { frontMatter as blogPosts } from './blog/**/*.mdx';
+import { learnPosts } from '../utils/learnPosts';
+import { blogPosts } from '../utils/blogPosts';
 import { FrontMatter } from '../types';
 import { BlogCard } from '../components/BlogCard';
 import { BlogCardGrid } from '../components/BlogCardGrid';
