@@ -1,5 +1,5 @@
 import React from 'react';
-import { AspectRatio, Box, Flex, Image } from '@modulz/radix';
+import { AspectRatio, Box, Flex, Image as RadixImage } from '@modulz/radix';
 
 type VideoPlayerProps = { id: string };
 
@@ -41,7 +41,7 @@ export const VideoPlayer = ({ id, ...props }: VideoPlayerProps) => {
           },
         }}
       >
-        {posterUrl && <Image src={posterUrl} sx={{ width: '100%', height: '100%' }} />}
+        {posterUrl && <RadixImage src={posterUrl} sx={{ width: '100%', height: '100%' }} />}
 
         <Box
           sx={{

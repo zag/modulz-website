@@ -29,64 +29,66 @@ export const Header = () => {
               padding: '0',
             }}
           >
-            <Text sx={{ color: 'gray700' }}>Product</Text>
+            <Text size={3} sx={{ color: 'gray700' }}>
+              Product
+            </Text>
           </button>
           <Popover targetRef={buttonRef} isOpen={isOpen} onClose={() => setIsOpen(false)}>
             <Box px={3} py={2}>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Tokens</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/editor" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Editor</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Components</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Playground</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Styleguide</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Radix</Link>
                 </NextLink>
               </Text>
             </Box>
           </Popover>
-          <Text sx={{ color: 'gray700' }} ml={7}>
+          <Text size={3} sx={{ color: 'gray700' }} ml={7}>
             <NextLink href="/about" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>About</Link>
             </NextLink>
           </Text>
-          <Text sx={{ color: 'gray700' }} ml={7}>
+          <Text size={3} sx={{ color: 'gray700' }} ml={7}>
             <NextLink href="/learn" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Learn</Link>
             </NextLink>
           </Text>
-          <Text sx={{ color: 'gray700' }} ml={7}>
+          <Text size={3} sx={{ color: 'gray700' }} ml={7}>
             <NextLink href="/blog" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Blog</Link>
             </NextLink>
           </Text>
-          <Text sx={{ color: 'gray700' }} ml={7}>
+          <Text size={3} sx={{ color: 'gray700' }} ml={7}>
             <NextLink href="/pricing" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Pricing</Link>
             </NextLink>
           </Text>
           <Pipe mx={5} />
-          <Text sx={{ color: 'gray700' }}>
+          <Text size={3} sx={{ color: 'gray700' }}>
             <Link href="https://modulz.app/login" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
               Login
             </Link>

@@ -14,7 +14,7 @@ const Editor = () => {
             The visual code editor
           </Heading>
 
-          <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
+          <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
             Style your component library, from color to shadows to animations—without writing code.
           </Heading>
         </Container>

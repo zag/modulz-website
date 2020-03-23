@@ -14,7 +14,7 @@ const Pricing = () => {
             About
           </Heading>
 
-          <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
+          <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
             Our mission is to fix the disconnect between digital product teams.
           </Heading>
         </Container>

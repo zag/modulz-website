@@ -1,0 +1,41 @@
+---
+title: 'User setting screen'
+publishedAt: '2020-03-21'
+summary: 'The user settings screen is where you can configure your personal information.'
+by: 'peduarte'
+---
+
+import hero from './learn-user-setting.gif';
+import userSetting from './learn-personal-settings.png';
+import password from './learn-password.png';
+import organizations from './learn-organizations.png';
+import deleteAccount from './learn-delete-account.png';
+
+The user settings screen is where you can configure your personal information, password, organization and delete your account.
+It can be accessed by clicking on your avatar at the top right corner of your screen.
+
+<Image src={hero} sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: 3 }} />
+
+## Personal settings
+
+You can change your name, email, and avatar under personal settings. Your email is not displayed publicly and is only used for important purposes.
+
+<Image src={userSetting} sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: 3 }} />
+
+## Password
+
+You can change your password here. We recommend that you use a strong password for security reasons. We currently don't support 2FA, but it's on our radar.
+
+<Image src={password} sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: 3 }} />
+
+## Organizations
+
+Here you can see all the organizations you belong to. Clicking on the avatar or the name will switch to that organization. Clicking on the <Icon><DotsVerticalIcon /></Icon> button will give you extra options.
+
+<Image src={organizations} sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: 3 }} />
+
+## Danger zone
+
+If you wish to delete your account, this is where you do it. Clicking the delete button will prompt an overlay with an extra confirmation step. We'd love to know why you're deciding to leave,
+
+<Image src={deleteAccount} sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: 3 }} />

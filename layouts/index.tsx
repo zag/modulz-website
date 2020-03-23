@@ -49,7 +49,7 @@ export default (frontMatter: FrontMatter) => {
           <Divider size={2} my={8} mx="auto" />
 
           <Box sx={{ textAlign: 'center' }}>
-            <Text as="p" sx={{ lineHeight: 2 }}>
+            <Text as="p" size={3} sx={{ lineHeight: 2 }}>
               Share this post on{' '}
               <Link href={twitterShare} target="_blank" title="Share this post on Twitter">
                 Twitter

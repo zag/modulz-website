@@ -72,7 +72,7 @@ export const Footer = () => {
             </Heading>
             <ul>
               <li>
-                <Text as="p" mt={3} sx={{ lineHeight: '1' }}>
+                <Text as="p" size={3} mt={3} sx={{ lineHeight: '1' }}>
                   <Link href="https://twitter.com/modulz">Twitter</Link>
                 </Text>
               </li>
