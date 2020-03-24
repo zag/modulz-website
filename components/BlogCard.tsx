@@ -7,7 +7,7 @@ import { authors } from '../data/authors';
 
 export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
   return (
-    <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')} passHref>
+    <NextLink href={`/${frontMatter.id}`} passHref>
       <CardLink
         sx={{
           bg: 'transparent',
