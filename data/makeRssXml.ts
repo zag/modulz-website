@@ -1,20 +1,22 @@
 import { FrontMatter } from '../types';
 import { parseISO, format } from 'date-fns';
 
-type XmlProps = { baseUrl: string; title: string; description: string; frontMatters: FrontMatter[] };
+const baseUrl = 'https://modulz.app';
 
-export const makeRssXml = ({ baseUrl, title, description, frontMatters }: XmlProps) => {
+type XmlProps = { articleType: 'blog' | 'learn'; title: string; description: string; frontMatters: FrontMatter[] };
+
+export const makeRssXml = ({ articleType, title, description, frontMatters }: XmlProps) => {
   const sortedFrontMatters = frontMatters
     .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
     .slice(0, 15);
 
-  const rssItemsXml = makeItemsRss({ baseUrl, frontMatters: sortedFrontMatters });
+  const rssItemsXml = makeItemsRss({ frontMatters: sortedFrontMatters });
 
   return `<?xml version="1.0" ?>
 		<rss version="2.0">
 			<channel>
 					<title>${title}</title>
-					<link>${baseUrl}</link>
+					<link>${baseUrl}/${articleType}</link>
 					<description>${description}</description>
 					<language>en</language>
 					<lastBuildDate>${format(parseISO(frontMatters[0].publishedAt), 'MMMM dd, yyyy')}</lastBuildDate>
@@ -23,16 +25,16 @@ export const makeRssXml = ({ baseUrl, title, description, frontMatters }: XmlPro
 		</rss>`;
 };
 
-type MakeItemsRssProps = { baseUrl: string; frontMatters: FrontMatter[] };
+type MakeItemsRssProps = { frontMatters: FrontMatter[] };
 
-const makeItemsRss = ({ baseUrl, frontMatters }: MakeItemsRssProps) => {
+const makeItemsRss = ({ frontMatters }: MakeItemsRssProps) => {
   let rssItemsXml = '';
 
   frontMatters.forEach(frontMatter => {
     rssItemsXml += `
 			<item>
 				<title>${frontMatter.title}</title>
-				<link>${baseUrl}/${frontMatter.__resourcePath.replace('.mdx', '')}</link>
+				<link>${baseUrl}/${frontMatter.id}</link>
 				<pubDate>${frontMatter.publishedAt}</pubDate>
 				<description>${frontMatter.summary}</description>
 			</item>

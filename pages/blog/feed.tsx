@@ -12,7 +12,7 @@ export default class Rss extends React.Component {
     res.setHeader('Content-Type', 'text/xml');
     res.write(
       makeRssXml({
-        baseUrl: 'https://modulz.app/blog',
+        articleType: 'blog',
         title: 'Modulz Blog',
         description: 'Recent articles from the Modulz Blog',
         frontMatters: blogPosts,

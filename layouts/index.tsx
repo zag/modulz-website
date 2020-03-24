@@ -5,6 +5,11 @@ import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider } from '@mod
 import { FrontMatter } from '../types';
 import { authors } from '../data/authors';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
+import { blogPosts } from '../utils/blogPosts';
+import { learnPosts } from '../utils/learnPosts';
+import { BlogCard } from '../components/BlogCard';
+
+const allPosts = [...blogPosts, ...learnPosts];
 
 export default (frontMatter: FrontMatter) => {
   return ({ children }) => {
@@ -57,6 +62,36 @@ export default (frontMatter: FrontMatter) => {
             </Text>
           </Box>
         </Container>
+
+        {Boolean(frontMatter.relatedIds) && (
+          <Container size={1} sx={{ maxWidth: '600px' }}>
+            <Divider size={2} my={8} mx="auto" />
+            <Box>
+              <Text
+                as="h3"
+                size={2}
+                mb={3}
+                weight="medium"
+                sx={{
+                  textAlign: 'center',
+                  color: 'gray700',
+                  letterSpacing: '.125em',
+                  textTransform: 'uppercase',
+                }}
+              >
+                Related articles
+              </Text>
+
+              {allPosts.map((_frontMatter: FrontMatter) => {
+                return frontMatter.relatedIds.includes(_frontMatter.id) ? (
+                  <Box key={_frontMatter.id} mb={4}>
+                    <BlogCard frontMatter={_frontMatter} />
+                  </Box>
+                ) : null;
+              })}
+            </Box>
+          </Container>
+        )}
       </React.Fragment>
     );
   };
