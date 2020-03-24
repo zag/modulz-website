@@ -16,7 +16,12 @@ export const Footer = () => {
           }}
         >
           <Flex sx={{ flexDirection: [null, 'column'], alignItems: ['center', 'start'] }}>
-            <Logo />
+            <NextLink href="/" passHref>
+              <Link variant="fade" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
+                <Logo />
+              </Link>
+            </NextLink>
+
             <Text
               as="span"
               size={2}
@@ -50,18 +55,22 @@ export const Footer = () => {
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
                   <NextLink href="/styleguide" passHref>
-                    <Link>Styleguide</Link>
+                    <Link variant="fade">Styleguide</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
-                  <Link href="https://radix.modulz.app">Radix</Link>
+                  <Link variant="fade" href="https://radix.modulz.app">
+                    Radix
+                  </Link>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
-                  <Link href="https://modulz.typeform.com/to/fp4gBW">Beta</Link>
+                  <Link variant="fade" href="https://modulz.typeform.com/to/fp4gBW">
+                    Beta
+                  </Link>
                 </Text>
               </li>
             </ul>
@@ -73,22 +82,30 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size={3} mt={3} sx={{ lineHeight: '1' }}>
-                  <Link href="https://twitter.com/modulz">Twitter</Link>
+                  <Link variant="fade" href="https://twitter.com/modulz">
+                    Twitter
+                  </Link>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
-                  <Link href="https://github.com/modulz">Github</Link>
+                  <Link variant="fade" href="https://github.com/modulz">
+                    Github
+                  </Link>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
-                  <Link href="https://spectrum.chat/modulz">Spectrum</Link>
+                  <Link variant="fade" href="https://spectrum.chat/modulz">
+                    Spectrum
+                  </Link>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
-                  <Link href="https://www.youtube.com/channel/UCEU5U-sfF6fmGvTmelBRePQ">Youtube</Link>
+                  <Link variant="fade" href="https://www.youtube.com/channel/UCEU5U-sfF6fmGvTmelBRePQ">
+                    Youtube
+                  </Link>
                 </Text>
               </li>
             </ul>
@@ -101,21 +118,21 @@ export const Footer = () => {
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
                   <NextLink href="/about" passHref>
-                    <Link>About</Link>
+                    <Link variant="fade">About</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
                   <NextLink href="/blog" passHref>
-                    <Link>Blog</Link>
+                    <Link variant="fade">Blog</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
                   <NextLink href="/careers" passHref>
-                    <Link>Careers</Link>
+                    <Link variant="fade">Careers</Link>
                   </NextLink>
                 </Text>
               </li>

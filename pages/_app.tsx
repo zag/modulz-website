@@ -68,6 +68,19 @@ function App({ Component, pageProps }: AppProps) {
               <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
             </Radix.Box>
           ),
+          ProductImage: ({ ...props }) => (
+            <Radix.Box mx={[0, 0, -7]} my={4}>
+              <Radix.Image
+                {...props}
+                sx={{
+                  maxWidth: '100%',
+                  verticalAlign: 'middle',
+                  border: theme => `1px solid ${theme.colors.gray300}`,
+                  borderRadius: 3,
+                }}
+              />
+            </Radix.Box>
+          ),
           blockquote: props => (
             <Radix.Box
               my={5}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { parseISO, format } from 'date-fns';
-import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider } from '@modulz/radix';
+import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider, TextProps } from '@modulz/radix';
 import { FrontMatter } from '../types';
 import { authors } from '../data/authors';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
@@ -36,10 +36,10 @@ export default (frontMatter: FrontMatter) => {
 
           <Flex mt={3} sx={{ alignItems: 'center' }}>
             <Avatar src={authors[frontMatter.by].avatar} mr={2} />
-            <Text as="p" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+            <Text as="p" size={2} sx={{ display: ['none', 'block'], color: 'gray700', lineHeight: 0 }}>
               {authors[frontMatter.by].name}
             </Text>
-            <Separator />
+            <Separator sx={{ display: ['none', 'block'] }} />
             <Text as="time" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
               {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
             </Text>
@@ -97,9 +97,9 @@ export default (frontMatter: FrontMatter) => {
   };
 };
 
-function Separator() {
+function Separator({ sx }: TextProps) {
   return (
-    <Text mx={2} sx={{ color: 'gray700', lineHeight: 0 }} aria-hidden>
+    <Text mx={2} sx={{ color: 'gray700', lineHeight: 0, ...sx }} aria-hidden>
       &#xB7;
     </Text>
   );
