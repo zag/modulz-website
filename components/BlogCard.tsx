@@ -34,7 +34,7 @@ export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
           </Flex>
           <Box>
             <Text as="p" size={2} ml={2} sx={{ color: 'gray700' }}>
-              {format(parseISO(frontMatter.publishedAt), 'MMMM "yy')}
+              {format(parseISO(frontMatter.publishedAt), 'MMMM ‘yy')}
             </Text>
           </Box>
         </Flex>

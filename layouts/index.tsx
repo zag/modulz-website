@@ -8,6 +8,7 @@ import TitleAndMetaTags from '../components/TitleAndMetaTags';
 import { blogPosts } from '../utils/blogPosts';
 import { learnPosts } from '../utils/learnPosts';
 import { BlogCard } from '../components/BlogCard';
+import { BlogCardGrid } from '../components/BlogCardGrid';
 
 const allPosts = [...blogPosts, ...learnPosts];
 
@@ -41,7 +42,7 @@ export default (frontMatter: FrontMatter) => {
             </Text>
             <Separator sx={{ display: ['none', 'block'] }} />
             <Text as="time" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
-              {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+              {format(parseISO(frontMatter.publishedAt), 'MMMM ‘yy')}
             </Text>
             <Separator />
             <Text size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
@@ -64,7 +65,7 @@ export default (frontMatter: FrontMatter) => {
         </Container>
 
         {Boolean(frontMatter.relatedIds) && (
-          <Container size={1} sx={{ maxWidth: '600px' }}>
+          <Container size={2} sx={{ maxWidth: '1090px' }}>
             <Divider size={2} my={8} mx="auto" />
             <Box>
               <Text
@@ -82,13 +83,15 @@ export default (frontMatter: FrontMatter) => {
                 Related articles
               </Text>
 
-              {allPosts.map((_frontMatter: FrontMatter) => {
-                return frontMatter.relatedIds.includes(_frontMatter.id) ? (
-                  <Box key={_frontMatter.id} mb={4}>
-                    <BlogCard frontMatter={_frontMatter} />
-                  </Box>
-                ) : null;
-              })}
+              <BlogCardGrid>
+                {allPosts.map((_frontMatter: FrontMatter) => {
+                  return frontMatter.relatedIds.includes(_frontMatter.id) ? (
+                    <Box key={_frontMatter.id} mb={4}>
+                      <BlogCard frontMatter={_frontMatter} />
+                    </Box>
+                  ) : null;
+                })}
+              </BlogCardGrid>
             </Box>
           </Container>
         )}
