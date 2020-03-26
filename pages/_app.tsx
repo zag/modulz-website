@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import NextLink from 'next/link';
 import { MDXProvider } from '@mdx-js/react';
 import { createGlobalStyle } from 'styled-components';
 import * as Radix from '@modulz/radix';
@@ -36,7 +37,16 @@ function App({ Component, pageProps }: AppProps) {
           p: props => (
             <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />
           ),
-          a: Radix.Link,
+          a: ({ href = '', ...props }) => {
+            if (href.startsWith('/')) {
+              return (
+                <NextLink href={href} passHref>
+                  <Radix.Link {...props} />
+                </NextLink>
+              );
+            }
+            return <Radix.Link href={href} {...props} />;
+          },
           hr: props => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
           inlineCode: Radix.Code,
           ul: props => <Radix.Box mb={3} {...props} as="ul" />,
@@ -69,14 +79,12 @@ function App({ Component, pageProps }: AppProps) {
             </Radix.Box>
           ),
           ProductImage: ({ ...props }) => (
-            <Radix.Box mx={[0, -5, -7]} my={4}>
+            <Radix.Box mx={[0, -5, -9]} my={4} p={5} sx={{ bg: 'blue600' }}>
               <Radix.Image
                 {...props}
                 sx={{
                   maxWidth: '100%',
                   verticalAlign: 'middle',
-                  border: theme => `1px solid ${theme.colors.gray300}`,
-                  borderRadius: 3,
                 }}
               />
             </Radix.Box>
