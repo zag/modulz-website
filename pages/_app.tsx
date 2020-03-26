@@ -79,7 +79,7 @@ function App({ Component, pageProps }: AppProps) {
             </Radix.Box>
           ),
           ProductImage: ({ ...props }) => (
-            <Radix.Box mx={[0, -5, -9]} my={4} p={5} sx={{ bg: 'blue600' }}>
+            <Radix.Box mx={[-5, -5, -9]} my={4} p={[2, 5]} sx={{ bg: 'blue600' }}>
               <Radix.Image
                 {...props}
                 sx={{
