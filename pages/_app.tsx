@@ -104,7 +104,7 @@ function App({ Component, pageProps }: AppProps) {
           ),
           ProductVideo: props => (
             <Radix.Box mx={[-5, -5, -9]} my={4} p={[2, 5]} sx={{ bg: 'blue600' }}>
-              <video {...props} autoPlay playsInline mute loop style={{ width: '100%' }}></video>
+              <video {...props} autoPlay playsInline muted loop style={{ width: '100%' }}></video>
             </Radix.Box>
           ),
           Icon: props => (
