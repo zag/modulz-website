@@ -86,9 +86,7 @@ export default (frontMatter: FrontMatter) => {
               <BlogCardGrid>
                 {allPosts.map((_frontMatter: FrontMatter) => {
                   return frontMatter.relatedIds.includes(_frontMatter.id) ? (
-                    <Box key={_frontMatter.id} mb={4}>
-                      <BlogCard frontMatter={_frontMatter} />
-                    </Box>
+                    <BlogCard key={_frontMatter.id} frontMatter={_frontMatter} />
                   ) : null;
                 })}
               </BlogCardGrid>
