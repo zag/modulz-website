@@ -79,7 +79,11 @@ function App({ Component, pageProps }: AppProps) {
             </Radix.Box>
           ),
           ProductImage: ({ ...props }) => (
-            <Radix.Box mx={[-5, -5, -9]} my={4} p={[2, 5]} sx={{ bg: 'blue600' }}>
+            <Radix.Box
+              mx={[-5, -5, -9]}
+              my={4}
+              sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: [0, 2, 2], overflow: 'hidden' }}
+            >
               <Radix.Image
                 {...props}
                 sx={{
@@ -103,8 +107,12 @@ function App({ Component, pageProps }: AppProps) {
             </Radix.Box>
           ),
           ProductVideo: props => (
-            <Radix.Box mx={[-5, -5, -9]} my={4} p={[2, 5]} sx={{ bg: 'blue600' }}>
-              <video {...props} autoPlay playsInline muted loop style={{ width: '100%' }}></video>
+            <Radix.Box
+              mx={[-5, -5, -9]}
+              my={4}
+              sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: [0, 2, 2], overflow: 'hidden' }}
+            >
+              <video {...props} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
             </Radix.Box>
           ),
           Icon: props => (
