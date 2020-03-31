@@ -41,7 +41,7 @@ function App({ Component, pageProps }: AppProps) {
             if (href.startsWith('/')) {
               return (
                 <NextLink href={href} passHref>
-                  <Radix.Link {...props} />
+                  <Radix.Link {...props} variant="underline" />
                 </NextLink>
               );
             }
@@ -67,7 +67,7 @@ function App({ Component, pageProps }: AppProps) {
           tr: Radix.Tr,
           td: Radix.Td,
           th: Radix.Th,
-          strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
+          strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontSize: 'inherit', fontWeight: 500 }} />,
           img: ({ ...props }) => (
             <Radix.Box mx={[-5, -5, -7]} my={4}>
               <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
