@@ -30,33 +30,33 @@ function App({ Component, pageProps }: AppProps) {
         components={{
           ...Radix,
           ...RadixIcons,
-          h1: props => <Radix.Heading size={5} mb={6} sx={{ fontWeight: 500 }} {...props} as="h1" />,
-          h2: props => <Radix.Heading size={2} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
-          h3: props => <Radix.Heading size={1} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
-          h4: props => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
-          p: props => (
+          h1: (props) => <Radix.Heading size={5} mb={6} sx={{ fontWeight: 500 }} {...props} as="h1" />,
+          h2: (props) => <Radix.Heading size={2} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
+          h3: (props) => <Radix.Heading size={1} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
+          h4: (props) => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
+          p: (props) => (
             <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />
           ),
           a: ({ href = '', ...props }) => {
             if (href.startsWith('/')) {
               return (
                 <NextLink href={href} passHref>
-                  <Radix.Link {...props} />
+                  <Radix.Link {...props} variant="underline" />
                 </NextLink>
               );
             }
             return <Radix.Link href={href} {...props} />;
           },
-          hr: props => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
+          hr: (props) => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
           inlineCode: Radix.Code,
-          ul: props => <Radix.Box mb={3} {...props} as="ul" />,
-          ol: props => <Radix.Box mb={3} {...props} as="ol" />,
-          li: props => (
+          ul: (props) => <Radix.Box mb={3} {...props} as="ul" />,
+          ol: (props) => <Radix.Box mb={3} {...props} as="ol" />,
+          li: (props) => (
             <li>
               <Radix.Text size={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} />
             </li>
           ),
-          table: props => (
+          table: (props) => (
             <Radix.Box sx={{ overflow: 'auto' }}>
               <Radix.Table mt={0} mb={3} {...props} sx={{ minWidth: 600, ...props.sx }} />
             </Radix.Box>
@@ -67,7 +67,7 @@ function App({ Component, pageProps }: AppProps) {
           tr: Radix.Tr,
           td: Radix.Td,
           th: Radix.Th,
-          strong: props => <Radix.Text {...props} sx={{ ...props.sx, fontWeight: 500 }} />,
+          strong: (props) => <Radix.Text {...props} sx={{ ...props.sx, fontSize: 'inherit', fontWeight: 500 }} />,
           img: ({ ...props }) => (
             <Radix.Box mx={[-5, -5, -7]} my={4}>
               <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
@@ -82,7 +82,11 @@ function App({ Component, pageProps }: AppProps) {
             <Radix.Box
               mx={[-5, -5, -9]}
               my={4}
-              sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: [0, 2, 2], overflow: 'hidden' }}
+              sx={{
+                border: (theme) => `1px solid ${theme.colors.gray300}`,
+                borderRadius: [0, 2, 2],
+                overflow: 'hidden',
+              }}
             >
               <Radix.Image
                 {...props}
@@ -93,29 +97,33 @@ function App({ Component, pageProps }: AppProps) {
               />
             </Radix.Box>
           ),
-          blockquote: props => (
+          blockquote: (props) => (
             <Radix.Box
               my={5}
               pl={6}
-              sx={{ borderLeft: theme => `2px solid ${theme.colors.gray300}`, color: 'gray300' }}
+              sx={{ borderLeft: (theme) => `2px solid ${theme.colors.gray300}`, color: 'gray300' }}
               {...props}
             />
           ),
-          Video: props => (
+          Video: (props) => (
             <Radix.Box mx={[-5, -5, -7]} my={8}>
               <VideoPlayer {...props} />
             </Radix.Box>
           ),
-          ProductVideo: props => (
+          ProductVideo: (props) => (
             <Radix.Box
               mx={[-5, -5, -9]}
               my={4}
-              sx={{ border: theme => `1px solid ${theme.colors.gray300}`, borderRadius: [0, 2, 2], overflow: 'hidden' }}
+              sx={{
+                border: (theme) => `1px solid ${theme.colors.gray300}`,
+                borderRadius: [0, 2, 2],
+                overflow: 'hidden',
+              }}
             >
               <video {...props} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
             </Radix.Box>
           ),
-          Icon: props => (
+          Icon: (props) => (
             <Radix.Box
               as="span"
               {...props}
@@ -127,7 +135,7 @@ function App({ Component, pageProps }: AppProps) {
                 bg: 'gray100',
                 size: 5,
                 mx: '3px',
-                border: theme => `1px solid ${theme.colors.gray200}`,
+                border: (theme) => `1px solid ${theme.colors.gray200}`,
                 ...props.sx,
               }}
             />
