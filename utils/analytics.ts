@@ -9,7 +9,7 @@ type WindowWithAnalytics = Window &
 
 export const useAnalytics = () => {
   React.useEffect(() => {
-    const handleRouteChange = url => {
+    const handleRouteChange = (url) => {
       if (process.env.NODE_ENV === 'production') {
         // We need to wrap it in a rAF to ensure the correct data is sent to Segment
         // https://github.com/zeit/next.js/issues/6025

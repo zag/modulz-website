@@ -5,14 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier './**/*.{js,jsx,ts,tsx,json,md,mdx}' --write"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.4.0",
-    "@mdx-js/loader": "^1.5.7",
-    "@modulz/radix": "0.0.1-beta.28",
+    "@mdx-js/loader": "^1.5.8",
+    "@modulz/radix": "0.0.1-beta.30",
     "@modulz/radix-icons": "^2.0.0",
-    "@next/mdx": "^9.3.0",
+    "@next/mdx": "^9.3.3",
     "@segment/snippet": "^4.4.0",
     "babel-plugin-import-glob-array": "^0.2.0",
     "date-fns": "^2.10.0",
@@ -23,18 +24,18 @@
     "next-compose-plugins": "^2.2.0",
     "next-mdx-enhanced": "^2.4.0",
     "next-optimized-images": "^2.5.5",
-    "next-videos": "^1.1.3",
+    "next-videos": "^1.1.4",
     "prismjs": "^1.19.0",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "reading-time": "^1.2.0",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "@types/node": "^13.9.0",
-    "@types/react": "^16.9.23",
+    "@types/node": "^13.9.8",
+    "@types/react": "^16.9.30",
     "babel-plugin-styled-components": "^1.10.7",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.2",
     "rehype": "^9.0.1",
     "typescript": "^3.8.3"
   }

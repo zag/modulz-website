@@ -78,7 +78,7 @@ const Home = () => {
           </Text>
 
           <BlogCardGrid>
-            {(learnPosts as FrontMatter[]).slice(0, 4).map(frontMatter => (
+            {(learnPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
               <Box key={frontMatter.title} sx={{ flex: 1 }}>
                 <BlogCard frontMatter={frontMatter} />
               </Box>
@@ -104,7 +104,7 @@ const Home = () => {
           </Text>
 
           <BlogCardGrid>
-            {(blogPosts as FrontMatter[]).slice(0, 4).map(frontMatter => (
+            {(blogPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
               <Box key={frontMatter.title} sx={{ flex: 1 }}>
                 <BlogCard frontMatter={frontMatter} />
               </Box>
