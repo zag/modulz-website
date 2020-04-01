@@ -11,7 +11,7 @@
   "dependencies": {
     "@mapbox/rehype-prism": "^0.4.0",
     "@mdx-js/loader": "^1.5.8",
-    "@modulz/radix": "0.0.1-beta.30",
+    "@modulz/radix": "0.0.1-beta.31",
     "@modulz/radix-icons": "^2.0.0",
     "@next/mdx": "^9.3.3",
     "@segment/snippet": "^4.4.0",

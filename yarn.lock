@@ -1046,10 +1046,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.5.8.tgz#cbadda0378af899c17ce1aa69c677015cab28448"
   integrity sha512-a7Gjjw8bfBSertA/pTWBA/9WKEhgaSxvQE2NTSUzaknrzGFOhs4alZSHh3RHmSFdSWv5pUuzAgsWseMLhWEVkQ==
 
-"@modulz/primitives@0.0.1-23":
-  version "0.0.1-23"
-  resolved "https://registry.yarnpkg.com/@modulz/primitives/-/primitives-0.0.1-23.tgz#de93e05ea4bcbee76f88512251156fc7138ca7be"
-  integrity sha512-jnsYOeTLRs9lwIgmaByfydxJktz0LWonvH+8gLXFCNd237n3TcDb4pxF80Q/CoXpQaLTugGlnOizeuqc8PCslg==
+"@modulz/primitives@0.0.1-24":
+  version "0.0.1-24"
+  resolved "https://registry.yarnpkg.com/@modulz/primitives/-/primitives-0.0.1-24.tgz#e2e5657382375e034f3dec2acb0eed7b1d5a7c41"
+  integrity sha512-4/JOnffSjD6rsc0U4APkP13t/83rCfskT5MEXTvrOQwCTP1kI493nC0iPI4OODw+29q+swF7B37uyrjLxMUlsQ==
   dependencies:
     "@modulz/radix-icons" "2.0.0"
     "@modulz/radix-system" "0.0.1-alpha.11"
@@ -1079,12 +1079,12 @@
     "@types/styled-system__css" "^5.0.5"
     csstype "^2.6.7"
 
-"@modulz/radix@0.0.1-beta.30":
-  version "0.0.1-beta.30"
-  resolved "https://registry.yarnpkg.com/@modulz/radix/-/radix-0.0.1-beta.30.tgz#59a6c7e1773567b896515f94bbed16f1e1f1f262"
-  integrity sha512-OTZitBJozqwNH9zpkPvjK5Gpuo5XN3JECWQY551o0duXK3R+agT8m3HTOIyyg5/G8KYvetGahDzcKVoeMmoF3g==
+"@modulz/radix@0.0.1-beta.31":
+  version "0.0.1-beta.31"
+  resolved "https://registry.yarnpkg.com/@modulz/radix/-/radix-0.0.1-beta.31.tgz#715a5a5d66dbec6d5f186292e6c6a50a47eb4a52"
+  integrity sha512-nrT4CHAl3btnMMx+BOnKFEHX+41y7cySg/OWZdvimUT0FIzlgJqoPM6/F+FyaSXQ0HmUPZdRJMUsXZKLVa9kjA==
   dependencies:
-    "@modulz/primitives" "0.0.1-23"
+    "@modulz/primitives" "0.0.1-24"
     "@modulz/radix-system" "0.0.1-alpha.11"
     "@styled-system/css" "5.1.4"
     "@styled-system/theme-get" "^5.1.2"
