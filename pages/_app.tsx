@@ -45,7 +45,7 @@ function App({ Component, pageProps }: AppProps) {
                 </NextLink>
               );
             }
-            return <Radix.Link href={href} {...props} />;
+            return <Radix.Link href={href} {...props} variant="underline" />;
           },
           hr: (props) => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
           inlineCode: Radix.Code,
