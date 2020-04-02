@@ -1,0 +1,56 @@
+---
+title: 'Introducing Primitives'
+publishedAt: '2020-04-02'
+summary: 'A comprehensive library of accessible and customizable components.'
+by: 'peduarte'
+---
+
+import tooltip from './primitives-tooltip.mp4';
+
+As design systems grow in popularity, so does accessibility concerns. Unfortunately, most teams don't have the time or capacity to address the requirements of complex components.
+
+This is why we've built Primitives. A comprehensive library of accessible and customizable components. Every design system shipped with Modulz will be using Primtives as a foundation.
+
+Our own design system, [Radix](https://radix.modulz.app), is already built on top of Primitives and the Modulz UI is built with Radix. Some call it dogdfooging.
+
+Let's take a closer look at some of our Primitives below.
+
+## Tooltip
+
+The complexities of an accessible Tooltip can be easily overlooked. CSS only Tooltips are cool, but chances are, they'll lack some key accessibility features.
+
+The Tooltip Primitive is a core component for us since it's used all over the Modulz interface, so it had to be excellent.
+
+<ProductVideo src={tooltip} />
+
+Tooltips should appear as a result of hovering or focusing an element, but only after a small delay. If a tooltip is already visible, hovering or focusing another element that also displays a tooltip, should display it instantly.
+
+The tooltip should disappear when the element is no longer being hovered or focused, when pressing the `Escape` key or when the user has interacted with the element, for example, a click on a button.
+
+Tooltips are customizable, so if you wanted it to display to the right of the element, you'd use the `side` prop. If you wanted it to be centered against the element, you'd use the `align` prop. If you wanted to hide the arrow, you'd use the `noArrow` prop.
+
+In addition to all of the above, tooltips are aware of collisions. If a tooltip doesn't fit where it's supposed to, it'll automatically be adjusted to ensure it's visible for the users.
+
+### Demo
+
+<Flex sx={{bg:'yellow400', p:6, borderRadius:2,alignItems:'center', justifyContent:'center'}}>
+
+<Tooltip label="Remove property" align="center">
+  <IconButton>
+    <TrashIcon />
+  </IconButton>
+</Tooltip>
+
+<Tooltip label="Close popover" side="top" align="center">
+  <IconButton ml={2}>
+    <CrossIcon />
+  </IconButton>
+</Tooltip>
+
+<Tooltip label="Reload window" align="center">
+  <IconButton ml={2}>
+    <ReloadIcon />
+  </IconButton>
+</Tooltip>
+
+</Flex>
