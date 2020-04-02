@@ -19,6 +19,7 @@ const Styleguide = () => {
           <Heading size={5} mb={4} sx={{ textAlign: 'center' }}>
             The fastest way to create a styleguide
           </Heading>
+
           <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
             Keep your team in sync with a styleguide automatically generated from your design system.
           </Heading>

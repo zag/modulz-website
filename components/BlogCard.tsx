@@ -7,7 +7,7 @@ import { authors } from '../data/authors';
 
 export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
   return (
-    <NextLink href={frontMatter.__resourcePath.replace('.mdx', '')} passHref>
+    <NextLink href={`/${frontMatter.id}`} passHref>
       <CardLink
         sx={{
           bg: 'transparent',
@@ -34,7 +34,7 @@ export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
           </Flex>
           <Box>
             <Text as="p" size={2} ml={2} sx={{ color: 'gray700' }}>
-              {format(parseISO(frontMatter.publishedAt), 'MMMM "yy')}
+              {format(parseISO(frontMatter.publishedAt), 'MMMM ‘yy')}
             </Text>
           </Box>
         </Flex>

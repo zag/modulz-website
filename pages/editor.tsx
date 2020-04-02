@@ -72,7 +72,7 @@ const Editor = () => {
 
       <Divider mx="auto" size={2} />
 
-      <Box py={9} sx={{ backgroundColor: 'hsl(210,10%,9%)' }}>
+      <Box py={9}>
         <Container size={1}>
           <Text
             as="h3"
@@ -88,7 +88,7 @@ const Editor = () => {
           >
             Components
           </Text>
-          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', color: 'white' }}>
+          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center' }}>
             Kickstart your design system with premade components.
           </Heading>
           <Text
@@ -106,9 +106,317 @@ const Editor = () => {
             </Text>
           </Box>
         </Container>
-        <Button size={1}>
-          Button
-        </Button>
+        <Flex py="5" px="9" sx={{ alignItems: 'center', userSelect: 'none' }}>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            textAlign: 'center',
+            backgroundColor: 'gray200',
+            px: '3',
+            height: '6',
+            fontSize: '3',
+            fontWeight: '500',
+            borderRadius: '2',
+            mr: '8',
+          }}>
+            Button
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            textAlign: 'center',
+            px: '2',
+            height: '4',
+            fontSize: '1',
+            border: '1px solid',
+            borderColor: 'gray300',
+            color: 'gray700',
+            fontWeight: '500',
+            borderRadius: '9999px',
+            mr: '8',
+          }}>
+            Badge
+          </Box>
+          <Box sx={{
+            backgroundColor: 'gray200',
+            height: '3px',
+            width: '100px',
+            borderRadius: '9999px',
+            position: 'relative',
+            mr: '8',
+          }}>
+            <Box sx={{
+              backgroundColor: 'gray500',
+              height: '100%',
+              width: '50%',
+              borderRadius: '9999px',
+            }}></Box>
+            <Box sx={{
+              backgroundColor: 'white',
+              border: '1px solid',
+              borderColor: 'gray100',
+              boxShadow: '0 1px 2px rgba(0,0,0,.1)',
+              height: '15px',
+              width: '15px',
+              borderRadius: '50%',
+              position: 'absolute',
+              left: '50%',
+              marginLeft: '-7px',
+              top: '-5px',
+            }}></Box>
+          </Box>
+          <Box sx={{
+            backgroundColor: 'gray200',
+            height: '2',
+            width: '150px',
+            borderRadius: '9999px',
+            position: 'relative',
+            mr: '8',
+          }}>
+            <Box sx={{
+              backgroundColor: 'gray500',
+              height: '100%',
+              width: '50%',
+              borderRadius: '9999px 0 0 9999px',
+            }}></Box>
+          </Box>
+          <Box sx={{
+            backgroundColor: 'white',
+            borderRadius: '2',
+            position: 'relative',
+            py: '2',
+            mr: '8',
+            boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
+          }}>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              This is a menu item
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              Second menu item
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              Menu item
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              Another menu item
+            </Box>
+          </Box>
+          <Box sx={{
+            backgroundColor: 'white',
+            borderRadius: '2',
+            position: 'relative',
+            py: '2',
+            mr: '8',
+            boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
+          }}>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              Calendar
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              Second menu item
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              Menu item
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              px: '6',
+              height: '6',
+              fontSize: '1',
+            }}>
+              Another menu item
+            </Box>
+          </Box>
+          <Box sx={{
+            backgroundColor: 'gray300',
+            height: '3',
+            width: '6',
+            borderRadius: '9999px',
+            mr: '8',
+          }}>
+            <Box sx={{
+              backgroundColor: 'white',
+              border: '1px solid',
+              borderColor: 'gray300',
+              boxShadow: '0 1px 3px rgba(0,0,0,.05)',
+              height: '3',
+              width: '3',
+              borderRadius: '50%',
+            }}></Box>
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            width: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '50%',
+            mr: '8',
+          }}>
+            <Box sx={{
+              backgroundColor: 'gray600',
+              height: '9px',
+              width: '9px',
+              borderRadius: '50%',
+            }}></Box>
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            width: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.467 3.72686C11.7559 3.91576 11.8369 4.30309 11.648 4.592L7.39803 11.092C7.29787 11.2452 7.1356 11.3468 6.95405 11.3699C6.77251 11.3931 6.58992 11.3355 6.4545 11.2124L3.7045 8.71243C3.44909 8.48024 3.43027 8.08496 3.66246 7.82954C3.89465 7.57413 4.28993 7.55531 4.54534 7.7875L6.75295 9.79442L10.6018 3.90793C10.7907 3.61903 11.178 3.53796 11.467 3.72686Z" fill="#282B2E"/>
+            </svg>
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Avatar
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Alert
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Toast
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Card
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Input
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Code
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Select
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '5',
+            border: '1px solid',
+            borderColor: 'gray400',
+            borderRadius: '1',
+            mr: '8',
+          }}>
+            Tooltip
+          </Box>
+        </Flex>
         <Container size={2}>
           <Grid
             sx={{
@@ -299,6 +607,33 @@ const Editor = () => {
             <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
               <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500, letterSpacing: '-.042em' }}>
                 Transitions
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3', letterSpacing: '-.008em' }}>
+                This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but
+                I think it brings up a lot of questions.
+              </Text>
+            </Box>
+          </Flex>
+
+          <Flex mt={8} sx={{ alignItems: 'center' }}>
+            <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+              <img
+                src="/home/editor.png"
+                style={{
+                  display: 'block',
+                  maxWidth: '100%',
+                  boxShadow:
+                    'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
+                  borderWidth: '1px',
+                  borderStyle: 'solid',
+                  borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
+                  borderRadius: '10px',
+                }}
+              />
+            </Box>
+            <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500, letterSpacing: '-.042em' }}>
+                Linter
               </Heading>
               <Text as="p" size={4} sx={{ lineHeight: '3', letterSpacing: '-.008em' }}>
                 This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but

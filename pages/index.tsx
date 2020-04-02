@@ -75,14 +75,11 @@ const Home = () => {
           </Text>
 
           <BlogCardGrid>
-            {(learnPosts as FrontMatter[])
-              .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
-              .slice(0, 4)
-              .map(frontMatter => (
-                <Box key={frontMatter.title} sx={{ flex: 1 }}>
-                  <BlogCard frontMatter={frontMatter} />
-                </Box>
-              ))}
+            {(learnPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
+              <Box key={frontMatter.title} sx={{ flex: 1 }}>
+                <BlogCard frontMatter={frontMatter} />
+              </Box>
+            ))}
           </BlogCardGrid>
 
           <Box mt={2}>
@@ -104,14 +101,11 @@ const Home = () => {
           </Text>
 
           <BlogCardGrid>
-            {(blogPosts as FrontMatter[])
-              .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
-              .slice(0, 4)
-              .map(frontMatter => (
-                <Box key={frontMatter.title} sx={{ flex: 1 }}>
-                  <BlogCard frontMatter={frontMatter} />
-                </Box>
-              ))}
+            {(blogPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
+              <Box key={frontMatter.title} sx={{ flex: 1 }}>
+                <BlogCard frontMatter={frontMatter} />
+              </Box>
+            ))}
           </BlogCardGrid>
 
           <Box mt={2}>

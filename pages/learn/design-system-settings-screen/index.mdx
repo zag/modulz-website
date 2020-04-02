@@ -1,0 +1,43 @@
+---
+title: 'Design system settings screen'
+publishedAt: '2020-03-31'
+summary: 'The design system settings screen is where you can configure your design system information.'
+by: 'peduarte'
+relatedIds:
+  - 'learn/create-a-new-design-system'
+  - 'learn/organization-dashboard-screen'
+  - 'learn/organization-settings-screen'
+  - 'learn/user-settings-screen'
+---
+
+import hero from './design-system-settings-screen.mp4';
+
+The design system settings screen is where you can configure your design system information.
+It can be accessed by clicking on "Settings" link in the sidebar.
+
+On this page, you can:
+
+- Update your design system name
+- Delete your design system
+
+<ProductVideo src={hero} />
+
+## Update your design system settings
+
+You can change your design system's name under the "Settings" section.
+
+> **Note:** Your design system name will be used to generate the `Provider` Component. For example, a design system named `Wallop` will export a `WallopProvider` Component.
+
+## Manage organization members
+
+You can manage your members and their roles under the "Team" section.
+
+> **Note**: Changes made here will impact your [organization members](/learn/manage-organization-members).
+
+## Set your style guide URL
+
+You can set your style guide subdomain under the "Style guide domain" section. For example, changing the subdomain to `wallop` will update your style guide URL to [https://wallop.modulz.app](https://wallop.modulz.app). This is on a first come first served basis.
+
+## Delete your design system
+
+If you wish to delete your design system, you can do so under the "danger zone" section. Clicking the delete button will prompt a dialog with an extra confirmation step.

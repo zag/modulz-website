@@ -17,10 +17,7 @@ const Learn = () => {
         </Heading>
 
         <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
-          Find the tutorials you need.
-        </Text>
-        <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
-          And the ones you didn't think you did.
+          Content to help with onboarding, education and best practices.
         </Text>
       </Container>
 

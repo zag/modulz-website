@@ -1,10 +1,16 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { parseISO, format } from 'date-fns';
-import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider } from '@modulz/radix';
+import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider, TextProps } from '@modulz/radix';
 import { FrontMatter } from '../types';
 import { authors } from '../data/authors';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
+import { blogPosts } from '../utils/blogPosts';
+import { learnPosts } from '../utils/learnPosts';
+import { BlogCard } from '../components/BlogCard';
+import { BlogCardGrid } from '../components/BlogCardGrid';
+
+const allPosts = [...blogPosts, ...learnPosts];
 
 export default (frontMatter: FrontMatter) => {
   return ({ children }) => {
@@ -31,12 +37,12 @@ export default (frontMatter: FrontMatter) => {
 
           <Flex mt={3} sx={{ alignItems: 'center' }}>
             <Avatar src={authors[frontMatter.by].avatar} mr={2} />
-            <Text as="p" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+            <Text as="p" size={2} sx={{ display: ['none', 'block'], color: 'gray700', lineHeight: 0 }}>
               {authors[frontMatter.by].name}
             </Text>
-            <Separator />
+            <Separator sx={{ display: ['none', 'block'] }} />
             <Text as="time" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
-              {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+              {format(parseISO(frontMatter.publishedAt), 'MMMM ‘yy')}
             </Text>
             <Separator />
             <Text size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
@@ -49,7 +55,7 @@ export default (frontMatter: FrontMatter) => {
           <Divider size={2} my={8} mx="auto" />
 
           <Box sx={{ textAlign: 'center' }}>
-            <Text size={3} as="p" sx={{ lineHeight: 2 }}>
+            <Text as="p" size={3} sx={{ lineHeight: 2 }}>
               Share this post on{' '}
               <Link href={twitterShare} target="_blank" title="Share this post on Twitter">
                 Twitter
@@ -57,14 +63,44 @@ export default (frontMatter: FrontMatter) => {
             </Text>
           </Box>
         </Container>
+
+        {Boolean(frontMatter.relatedIds) && (
+          <Container size={2} sx={{ maxWidth: '1090px' }}>
+            <Divider size={2} my={8} mx="auto" />
+            <Box>
+              <Text
+                as="h3"
+                size={2}
+                mb={3}
+                weight="medium"
+                sx={{
+                  textAlign: 'center',
+                  color: 'gray700',
+                  letterSpacing: '.125em',
+                  textTransform: 'uppercase',
+                }}
+              >
+                Related articles
+              </Text>
+
+              <BlogCardGrid>
+                {allPosts.map((_frontMatter: FrontMatter) => {
+                  return frontMatter.relatedIds.includes(_frontMatter.id) ? (
+                    <BlogCard key={_frontMatter.id} frontMatter={_frontMatter} />
+                  ) : null;
+                })}
+              </BlogCardGrid>
+            </Box>
+          </Container>
+        )}
       </React.Fragment>
     );
   };
 };
 
-function Separator() {
+function Separator({ sx }: TextProps) {
   return (
-    <Text mx={2} sx={{ color: 'gray700', lineHeight: 0 }} aria-hidden>
+    <Text mx={2} sx={{ color: 'gray700', lineHeight: 0, ...sx }} aria-hidden>
       &#xB7;
     </Text>
   );

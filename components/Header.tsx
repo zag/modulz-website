@@ -33,32 +33,32 @@ export const Header = () => {
           </button>
           <Popover targetRef={buttonRef} isOpen={isOpen} onClose={() => setIsOpen(false)}>
             <Box px={3} py={2}>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Tokens</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/editor" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Editor</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Components</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Playground</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/styleguide" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Styleguide</Link>
                 </NextLink>
               </Text>
-              <Text as="p" sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 3 }} mr={6}>
                 <NextLink href="/" passHref>
                   <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Radix</Link>
                 </NextLink>

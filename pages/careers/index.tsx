@@ -12,7 +12,7 @@ const Careers = () => {
           Careers
         </Heading>
 
-        <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+        <Text as="p" size={7} weight="normal" sx={{ textAlign: 'center', color: 'gray700' }}>
           Help us build the future of visual coding by bringing design closer to engineering.
         </Text>
       </Container>

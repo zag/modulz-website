@@ -23,13 +23,11 @@ const Blog = () => {
 
       <Container size={3} my={8}>
         <BlogCardGrid>
-          {blogPosts
-            .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
-            .map((frontMatter: FrontMatter) => (
-              <Box my={4} key={frontMatter.title}>
-                <BlogCard frontMatter={frontMatter} />
-              </Box>
-            ))}
+          {blogPosts.map((frontMatter: FrontMatter) => (
+            <Box my={4} key={frontMatter.title}>
+              <BlogCard frontMatter={frontMatter} />
+            </Box>
+          ))}
         </BlogCardGrid>
       </Container>
     </Box>
