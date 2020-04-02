@@ -9,9 +9,9 @@ import tooltip from './primitives-tooltip.mp4';
 
 As design systems grow in popularity, so does accessibility concerns. Unfortunately, most teams don't have the time or capacity to address the requirements of complex components.
 
-This is why we've built Primitives. A comprehensive library of accessible and customizable components. Every design system shipped with Modulz will be using Primtives as a foundation.
+This is why we've built Primitives. A comprehensive library of accessible and customizable components. Every design system shipped with Modulz will be using Primitives as a foundation.
 
-Our own design system, [Radix](https://radix.modulz.app), is already built on top of Primitives and the Modulz UI is built with Radix. Some call it dogdfooging.
+Our own design system, [Radix](https://radix.modulz.app), is already built on top of Primitives and the Modulz UI is built with Radix. Some call it dogfooding.
 
 Let's take a closer look at some of our Primitives below.
 
@@ -19,7 +19,7 @@ Let's take a closer look at some of our Primitives below.
 
 The complexities of an accessible Tooltip can be easily overlooked. CSS only Tooltips are cool, but chances are, they'll lack some key accessibility features.
 
-The Tooltip Primitive is a core component for us since it's used all over the Modulz interface, so it had to be excellent.
+Tooltips are a core component for us since it's used often within the Modulz interface, so it had to be excellent.
 
 <ProductVideo src={tooltip} />
 
@@ -33,7 +33,7 @@ In addition to all of the above, tooltips are aware of collisions. If a tooltip 
 
 ### Demo
 
-<Flex sx={{bg:'yellow400', p:6, borderRadius:2,alignItems:'center', justifyContent:'center'}}>
+<Flex sx={{bg: 'yellow400', p: 7, borderRadius: 2, alignItems: 'center', justifyContent: 'center'}}>
 
 <Tooltip label="Remove property" align="center">
   <IconButton>
