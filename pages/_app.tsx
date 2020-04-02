@@ -110,19 +110,31 @@ function App({ Component, pageProps }: AppProps) {
               <VideoPlayer {...props} />
             </Radix.Box>
           ),
-          ProductVideo: (props) => (
-            <Radix.Box
-              mx={[-5, -5, -9]}
-              my={4}
-              sx={{
-                border: (theme) => `1px solid ${theme.colors.gray300}`,
-                borderRadius: [0, 2, 2],
-                overflow: 'hidden',
-              }}
-            >
-              <video {...props} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
-            </Radix.Box>
-          ),
+          ProductVideo: (props) =>
+            props.small ? (
+              <Radix.Box
+                my={4}
+                sx={{
+                  border: (theme) => `1px solid ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
+                }}
+              >
+                <video {...props} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
+              </Radix.Box>
+            ) : (
+              <Radix.Box
+                mx={[-5, -5, -9]}
+                my={4}
+                sx={{
+                  border: (theme) => `1px solid ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
+                }}
+              >
+                <video {...props} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
+              </Radix.Box>
+            ),
           Icon: (props) => (
             <Radix.Box
               as="span"
