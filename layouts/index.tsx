@@ -24,7 +24,7 @@ export default (frontMatter: FrontMatter) => {
       <React.Fragment>
         <TitleAndMetaTags title={frontMatter.title} description={frontMatter.summary} />
 
-        <Container size={1} mt={6} sx={{ maxWidth: '600px' }}>
+        <Container size={1} mt={6}>
           <Heading size={3} mb={1} sx={{ fontWeight: 500 }}>
             {frontMatter.title}
           </Heading>
@@ -49,7 +49,7 @@ export default (frontMatter: FrontMatter) => {
           <Divider size={2} my={8} mx="auto" />
 
           <Box sx={{ textAlign: 'center' }}>
-            <Text as="p" sx={{ lineHeight: 2 }}>
+            <Text size={3} as="p" sx={{ lineHeight: 2 }}>
               Share this post on{' '}
               <Link href={twitterShare} target="_blank" title="Share this post on Twitter">
                 Twitter

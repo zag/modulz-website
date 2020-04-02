@@ -10,11 +10,11 @@ const Pricing = () => {
 
       <Box mt={6} mb={8}>
         <Container size={1}>
-          <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
+          <Heading size={5} mb={4} sx={{ textAlign: 'center' }}>
             About
           </Heading>
 
-          <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
+          <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
             Our mission is to fix the disconnect between digital product teams.
           </Heading>
         </Container>

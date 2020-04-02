@@ -17,13 +17,10 @@ const Home = () => {
 
       <Box mt={6} mb={8}>
         <Container size={2}>
-          <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
+          <Heading size={5} mb={3} sx={{ textAlign: 'center', fontWeight: 500 }}>
             The visual code editor
           </Heading>
-        </Container>
-
-        <Container size={1}>
-          <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4', fontWeight: 400 }}>
+          <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
             Design, develop, document and deploy your design system—without writing code.
           </Heading>
           <Flex mt={7} sx={{ justifyContent: 'center' }}>
@@ -42,7 +39,7 @@ const Home = () => {
               </Box>
             </MarketingButton>
           </Flex>
-          <Flex mt={3} sx={{ justifyContent: 'center' }}>
+          <Flex mt={4} sx={{ justifyContent: 'center' }}>
             <Text size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '1' }}>
               We're currently in private beta.
             </Text>
@@ -50,8 +47,8 @@ const Home = () => {
         </Container>
       </Box>
 
-      <Container size={2} my={8} pb={8} sx={{ maxWidth: '1280px' }}>
-        <Box>
+      <Container size={3}>
+        <Box my={8} pb={8}>
           <img
             src="/home/editor.png"
             style={{
@@ -68,12 +65,12 @@ const Home = () => {
         </Box>
       </Container>
 
-      <Box my={8}>
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+      <Box py={8}>
+        <Container size={3}>
+          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500 }}>
             Learn
           </Heading>
-          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700', letterSpacing: '-.008em' }}>
+          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
             Learn how to make the most out of Modulz.
           </Text>
 
@@ -98,11 +95,11 @@ const Home = () => {
 
       <Divider mx="auto" size={2} />
       <Box py={9}>
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+        <Container size={3}>
+          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500 }}>
             Blog
           </Heading>
-          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700', letterSpacing: '-.008em' }}>
+          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
             More about what we're doing.
           </Text>
 

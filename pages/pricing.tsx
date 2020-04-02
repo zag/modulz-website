@@ -14,7 +14,7 @@ const Pricing = () => {
             Pricing
           </Heading>
 
-          <Heading as="h2" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
+          <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
             Design, develop, document and deploy your design system—without writing code.
           </Heading>
           <Flex mt={7} sx={{ justifyContent: 'center' }}>
