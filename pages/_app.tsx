@@ -30,9 +30,9 @@ function App({ Component, pageProps }: AppProps) {
         components={{
           ...Radix,
           ...RadixIcons,
-          h1: (props) => <Radix.Heading size={5} mb={6} sx={{ fontWeight: 500 }} {...props} as="h1" />,
-          h2: (props) => <Radix.Heading size={2} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
-          h3: (props) => <Radix.Heading size={1} mt={3} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
+          h1: (props) => <Radix.Heading size={5} mb={8} sx={{ fontWeight: 500 }} {...props} as="h1" />,
+          h2: (props) => <Radix.Heading size={2} mt={8} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
+          h3: (props) => <Radix.Heading size={1} mt={7} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: (props) => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
           p: (props) => (
             <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />
