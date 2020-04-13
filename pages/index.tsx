@@ -9,6 +9,7 @@ import { BlogCardGrid } from '../components/BlogCardGrid';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 import { MarketingButton } from '../components/MarketingButtton';
+import { Logo } from '../components/Logo';
 
 const Home = () => {
   return (
@@ -18,10 +19,10 @@ const Home = () => {
       <Box mt={6} mb={8}>
         <Container size={2}>
           <Heading size={5} mb={3} sx={{ textAlign: 'center', fontWeight: 500 }}>
-            The visual code editor
+            The No-Code DSM
           </Heading>
-          <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
-            Design, develop, document and deploy your design system—without writing code.
+          <Heading as="h2" px="4" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
+            Define tokens, style components, document your design system and deploy your React library—without writing code.
           </Heading>
           <Flex mt={7} sx={{ justifyContent: 'center' }}>
             <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank">
@@ -64,6 +65,250 @@ const Home = () => {
           />
         </Box>
       </Container>
+
+      <Box py={8}>
+        <Container size={2}>
+          <Heading as="h3" size={4} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
+            Design, develop, document and deploy your design system—without writing code.
+          </Heading>
+          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+            A central hub for your design system.
+          </Text>
+        </Container>
+        <Container size={3}>
+          <Grid sx={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
+            <Box>
+              <Heading as="h3" size={2} mb={4} sx={{ fontWeight: 500 }}>
+                Define your tokens
+              </Heading>
+              <Text as="p" size={3}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes, Sketch is the perfect place to design, create, test and iterate.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={3} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn about tokens
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+            <Box>
+              <Heading as="h3" size={1} mb={4} sx={{ fontWeight: 500 }}>
+                Design your components
+              </Heading>
+              <Text as="p" size={3}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes, Sketch is the perfect place to design, create, test and iterate.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={3} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn about tokens
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+            <Box>
+              <Heading as="h3" size={1} mb={4} sx={{ fontWeight: 500 }}>
+                Document your styleguide
+              </Heading>
+              <Text as="p" size={3}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes, Sketch is the perfect place to design, create, test and iterate.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={3} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn about tokens
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+            <Box>
+              <Heading as="h3" size={1} mb={4} sx={{ fontWeight: 500 }}>
+                Deploy your design system
+              </Heading>
+              <Text as="p" size={3}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes, Sketch is the perfect place to design, create, test and iterate.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={3} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn about tokens
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Box py={8}>
+        <Container size={2}>
+          <Text
+            as="h3"
+            size={2}
+            mb={5}
+            sx={{ fontWeight: 500, color: 'gray700', letterSpacing: '.125em', textAlign: 'center', textTransform: 'uppercase', lineHeight: '13px', }}
+          >
+            How it works
+          </Text>
+          <Heading as="h3" size={4} mb={8} sx={{ textAlign: 'center', fontWeight: 500 }}>
+            Design, document and deploy your design system—without writing code.
+          </Heading>
+        </Container>
+        <Container size={2}>
+          <Grid sx={{ gridTemplateColumns: 'repeat(2, 1fr)', gap: 8, alignItems: 'center', justifyItems: 'center' }}>
+            <Box>
+              <Box sx={{ width: '150px', height: '150px', backgroundColor: 'pink' }}>
+              </Box>
+            </Box>
+            <Box>
+              <Heading as="h3" size={1} mb={4} sx={{ fontWeight: 500 }}>
+                Define your tokens
+              </Heading>
+              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={3} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn more
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+            <Box>
+              <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank">
+                Apply for beta access
+                <Box as="span" ml={2}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path
+                      d="M5.5 3.5L11.5 3.5L11.5 9.5"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M3.5 11.5L11.5 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </Box>
+              </MarketingButton>
+            </Box>
+            <Box>
+              <Heading as="h3" size={1} mb={4} sx={{ fontWeight: 500 }}>
+                Design your components
+              </Heading>
+              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={3} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn about tokens
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+
+            <Box>
+            <Box sx={{ width: '150px', height: '150px', backgroundColor: 'pink' }}>
+            </Box>
+            </Box>
+            <Box>
+              <Heading as="h3" size={2} mb={4} sx={{ fontWeight: 500 }}>
+                Document your design system
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={4} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn about tokens
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+
+            <Box>
+            <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank">
+              Apply for beta access
+              <Box as="span" ml={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                  <path
+                    d="M5.5 3.5L11.5 3.5L11.5 9.5"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M3.5 11.5L11.5 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </Box>
+            </MarketingButton>
+            </Box>
+            <Box>
+              <Heading as="h3" size={2} mb={4} sx={{ fontWeight: 500 }}>
+                Deploy your design system
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={4} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn more
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+
+            <Box>
+              <Box sx={{
+                width: '6',
+                height: '6',
+                boxShadow: 'white 0px 0px 0px 80px, rgb(204, 231, 255) 0px 0px 0px 81px, rgb(245, 250, 255) 0px 0px 0px 160px, rgb(214, 236, 255) 0px 0px 0px 161px, white 0px 0px 0px 240px, rgb(214, 236, 255) 0px 0px 0px 241px, rgb(250, 253, 255) 0px 0px 0px 320px, rgb(224, 241, 255) 0px 0px 0px 321px, white 0px 0px 0px 400px',
+                borderRadius: '50%',
+                position: 'relative',
+                zIndex: '-3',
+              }}>
+                <Logo />
+              </Box>
+            </Box>
+            <Box>
+              <Heading as="h3" size={2} mb={4} sx={{ fontWeight: 500 }}>
+                Integrations
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                From pixel-perfect icons and scalable vector graphics, to full user flows and interactive prototypes.
+              </Text>
+              <Box mt="5">
+                <Text as="span" size={4} style={{ lineHeight: '1' }}>
+                  <NextLink href="/about" passHref>
+                    <Link variant="highlight" sx={{ ':focus': { boxShadow: 'none' } }}>
+                      Learn more
+                    </Link>
+                  </NextLink>
+                </Text>
+              </Box>
+            </Box>
+
+          </Grid>
+        </Container>
+      </Box>
 
       <Box py={8}>
         <Container size={3}>
@@ -267,31 +512,6 @@ const Home = () => {
               </Text>
             </Card>
           </Grid>
-        </Container>
-      </Box>
-
-      <Box py={8}>
-        <Container size={3}>
-          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500 }}>
-            Learn
-          </Heading>
-          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
-            Learn how to make the most out of Modulz.
-          </Text>
-
-          <BlogCardGrid>
-            {(learnPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
-              <Box key={frontMatter.title} sx={{ flex: 1 }}>
-                <BlogCard frontMatter={frontMatter} />
-              </Box>
-            ))}
-          </BlogCardGrid>
-
-          <Box mt={2}>
-            <NextLink href="/learn" passHref>
-              <Link>Browse all</Link>
-            </NextLink>
-          </Box>
         </Container>
       </Box>
 
