@@ -1,7 +1,7 @@
 {
   "build": {
     "env": {
-      "SEGMENT_ID": "@website-segment-write-key"
+      "SEGMENT_ID": "@segment_write_key"
     }
   }
 }
