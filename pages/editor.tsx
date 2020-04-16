@@ -3,11 +3,13 @@ import NextLink from 'next/link';
 import styled from 'styled-components'
 import { Container, Box, Grid, Heading, Button, Text, Link, Divider, Flex, AspectRatio } from '@modulz/radix';
 import { BetaAccess } from '../components/BetaAccess';
+import { EditorIllustration } from '../components/EditorIllustration';
+import { TextEditorIllustration } from '../components/TextEditorIllustration';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
 const Scroll = styled.div`
   overflow-x: scroll;
-  padding: 80px 0;
+  padding: 45px 0;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -82,6 +84,139 @@ const Editor = () => {
       <Divider mx="auto" size={2} />
 
       <Box py={9}>
+        <Container size={2}>
+
+          <Flex mt={8} sx={{ alignItems: 'center' }}>
+          <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+            <Flex mr={6} sx={{ alignItems: 'center', justifyContent: 'center', fontSize: '2', fontWeight: '500', width: '5', height: '5', backgroundColor: 'green600', borderRadius: '50%', color: 'white' }}>
+              2
+            </Flex>
+            <Box sx={{
+              flexShrink: '0',
+              backgroundColor: 'white',
+              borderRadius: '2',
+              position: 'relative',
+              boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
+              maxWidth: '300px'
+            }}>
+              <Box sx={{
+                padding: '4',
+              }}>
+                <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                  Font size too small
+                </Text>
+                <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                  This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                </Text>
+                <Flex>
+                  <Button mr={2}>
+                    Ignore
+                  </Button>
+                  <Button variant="blue">
+                    Fix
+                  </Button>
+                </Flex>
+              </Box>
+              <Box sx={{
+                padding: '4',
+                pt: '1'
+              }}>
+                <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                  Font size too small
+                </Text>
+                <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                  This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                </Text>
+                <Flex>
+                  <Button mr={2}>
+                    Ignore
+                  </Button>
+                  <Button variant="blue">
+                    Fix
+                  </Button>
+                </Flex>
+              </Box>
+            </Box>
+          </Box>
+            <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500, letterSpacing: '-.042em' }}>
+                Transitions
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3', letterSpacing: '-.008em' }}>
+                This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but
+                I think it brings up a lot of questions.
+              </Text>
+            </Box>
+          </Flex>
+
+          <Flex mt={8} sx={{ alignItems: 'center' }}>
+            <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+              <Flex mr={6} sx={{ alignItems: 'center', justifyContent: 'center', fontSize: '2', fontWeight: '500', width: '5', height: '5', backgroundColor: 'green600', borderRadius: '50%', color: 'white' }}>
+                2
+              </Flex>
+              <Box sx={{
+                flexShrink: '0',
+                backgroundColor: 'white',
+                borderRadius: '2',
+                position: 'relative',
+                boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
+                maxWidth: '300px'
+              }}>
+                <Box sx={{
+                  padding: '4',
+                }}>
+                  <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                    Font size too small
+                  </Text>
+                  <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                    This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                  </Text>
+                  <Flex>
+                    <Button mr={2}>
+                      Ignore
+                    </Button>
+                    <Button variant="blue">
+                      Fix
+                    </Button>
+                  </Flex>
+                </Box>
+                <Box sx={{
+                  padding: '4',
+                  pt: '1'
+                }}>
+                  <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                    Font size too small
+                  </Text>
+                  <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                    This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                  </Text>
+                  <Flex>
+                    <Button mr={2}>
+                      Ignore
+                    </Button>
+                    <Button variant="blue">
+                      Fix
+                    </Button>
+                  </Flex>
+                </Box>
+              </Box>
+            </Box>
+            <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+              <Heading as="h3" size={2} mb={3} sx={{ fontWeight: 500 }}>
+                Design Linting
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but
+                I think it brings up a lot of questions.
+              </Text>
+            </Box>
+          </Flex>
+        </Container>
+      </Box>
+
+      <Divider mx="auto" size={2} />
+
+      <Box py={9}>
         <Container size={1}>
           <Text
             as="h3"
@@ -105,15 +240,8 @@ const Editor = () => {
             size={5}
             sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3' }}
           >
-            Hundreds of white-label components including sliders, tabs, buttons, datepickers and more. Compose entire interfaces with free resources, generated by one of the largest design communities in the world.
+            Hundreds of white-label components including sliders, tabs, buttons, datepickers and more.
           </Text>
-          <Box mt={5} mb={7}>
-            <Text as="span" size={4} sx={{ color: 'blue600', lineHeight: 1 }}>
-              <NextLink href="/styleguide" passHref>
-                <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Component store</Link>
-              </NextLink>
-            </Text>
-          </Box>
         </Container>
         <Box>
           <Scroll>
@@ -527,7 +655,7 @@ const Editor = () => {
         </Box>
 
         <Box>
-          <Scroll>
+          <Scroll style={{ paddingTop: '25px', paddingBottom: '80px' }}>
             <Flex sx={{ alignItems: 'center', userSelect: 'none' }}>
               <Box sx={{
                 display: 'flex',
@@ -936,7 +1064,7 @@ const Editor = () => {
             </Flex>
           </Scroll>
         </Box>
-        
+
         <Container size={2}>
           <Grid
             sx={{
@@ -964,7 +1092,7 @@ const Editor = () => {
         </Container>
       </Box>
 
-      <Box py={9} sx={{ backgroundColor: 'hsl(210,10%,6%)' }}>
+      <Box py={9}>
         <Container size={2}>
           <Text
             as="h3"
@@ -980,99 +1108,68 @@ const Editor = () => {
           >
             Code export
           </Text>
-          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', color: 'white' }}>
+          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center' }}>
             The most advanced code generation. <br /> Hands down.
           </Heading>
           <Text
             as="p"
             size={5}
-            sx={{ textAlign: 'center', color: 'gray600', lineHeight: '3' }}
+            sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3' }}
           >
             Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
           </Text>
         </Container>
-        <Container size={3}>
-          <Box
-            sx={{
-              position: 'relative',
-              height: '580px',
-            }}
-          >
-            <Box
-              sx={{
-                position: 'absolute',
-                width: '100%',
-                top: '-160px',
-              }}
-            >
-              <AspectRatio ratio="16:9">
-                <Box
-                  sx={{
-                    backgroundColor: 'black',
-                    height: '100%',
-                    borderRadius: '10px',
-                    transform: 'perspective(100em) rotateX(70deg)',
-                  }}
-                >
-                </Box>
-              </AspectRatio>
-            </Box>
-            <Box
-              sx={{
-                position: 'absolute',
-                width: '100%',
-                top: '70px'
-              }}
-            >
-              <AspectRatio ratio="16:9">
-                <Box
-                  sx={{
-                    backgroundColor: 'black',
-                    height: '100%',
-                    borderRadius: '10px',
-                    transform: 'perspective(100em) rotateX(70deg)',
-                  }}
-                >
-                </Box>
-              </AspectRatio>
-            </Box>
-          </Box>
+        <Container size={2}>
+          <Flex mb={5} sx={{
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}>
+            <EditorIllustration />
+            <TextEditorIllustration />
+          </Flex>
           <Grid
             sx={{
-              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(4, 1fr)'],
-              gap: 5,
+              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+              gap: 8,
+              marginTop: [
+                '0',
+                '0',
+                '0',
+                '0',
+                '-45px',
+              ],
             }}
           >
             <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500, color: 'white' }}>
+              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
                 Powered by React
               </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2', color: 'gray600' }}>
+              <Text as="p" size={4} sx={{ lineHeight: '3', color: 'gray700' }}>
                 Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
             </Box>
             <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500, color: 'white' }}>
+              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
                 Configurable
               </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2', color: 'gray600' }}>
+              <Text as="p" size={4} sx={{ lineHeight: '3', color: 'gray700' }}>
                 Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
             </Box>
             <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500, color: 'white' }}>
+              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
                 Extendible
               </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2', color: 'gray600' }}>
+              <Text as="p" size={4} sx={{ lineHeight: '3', color: 'gray700' }}>
                 Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
             </Box>
             <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500, color: 'white' }}>
-                Popular libraries
+              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
+                TypeScript
               </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2', color: 'gray600' }}>
-                Built on top of Styled System Core. Styled-components. Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+              <Text as="p" size={4} sx={{ lineHeight: '3', color: 'gray700' }}>
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
             </Box>
           </Grid>
@@ -1080,50 +1177,60 @@ const Editor = () => {
       </Box>
 
       <Box py={9}>
-        <Container size={3}>
-          <Flex mt={8} sx={{ alignItems: 'center' }}>
-            <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-              <img
-                src="/home/editor.png"
-                style={{
-                  display: 'block',
-                  maxWidth: '100%',
-                  boxShadow:
-                    'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
-                  borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
-                  borderRadius: '10px',
-                }}
-              />
-            </Box>
-            <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500, letterSpacing: '-.042em' }}>
-                Panes
-              </Heading>
-              <Text as="p" size={4} sx={{ lineHeight: '3', letterSpacing: '-.008em' }}>
-                This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but
-                I think it brings up a lot of questions.
-              </Text>
-            </Box>
-          </Flex>
+        <Container size={2}>
 
           <Flex mt={8} sx={{ alignItems: 'center' }}>
-            <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-              <img
-                src="/home/editor.png"
-                style={{
-                  display: 'block',
-                  maxWidth: '100%',
-                  boxShadow:
-                    'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
-                  borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
-                  borderRadius: '10px',
-                }}
-              />
+          <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+            <Flex mr={6} sx={{ alignItems: 'center', justifyContent: 'center', fontSize: '2', fontWeight: '500', width: '5', height: '5', backgroundColor: 'green600', borderRadius: '50%', color: 'white' }}>
+              2
+            </Flex>
+            <Box sx={{
+              flexShrink: '0',
+              backgroundColor: 'white',
+              borderRadius: '2',
+              position: 'relative',
+              boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
+              maxWidth: '300px'
+            }}>
+              <Box sx={{
+                padding: '4',
+              }}>
+                <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                  Font size too small
+                </Text>
+                <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                  This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                </Text>
+                <Flex>
+                  <Button mr={2}>
+                    Ignore
+                  </Button>
+                  <Button variant="blue">
+                    Fix
+                  </Button>
+                </Flex>
+              </Box>
+              <Box sx={{
+                padding: '4',
+                pt: '1'
+              }}>
+                <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                  Font size too small
+                </Text>
+                <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                  This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                </Text>
+                <Flex>
+                  <Button mr={2}>
+                    Ignore
+                  </Button>
+                  <Button variant="blue">
+                    Fix
+                  </Button>
+                </Flex>
+              </Box>
             </Box>
+          </Box>
             <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
               <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500, letterSpacing: '-.042em' }}>
                 Transitions
@@ -1137,25 +1244,61 @@ const Editor = () => {
 
           <Flex mt={8} sx={{ alignItems: 'center' }}>
             <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-              <img
-                src="/home/editor.png"
-                style={{
-                  display: 'block',
-                  maxWidth: '100%',
-                  boxShadow:
-                    'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
-                  borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
-                  borderRadius: '10px',
-                }}
-              />
+              <Flex mr={6} sx={{ alignItems: 'center', justifyContent: 'center', fontSize: '2', fontWeight: '500', width: '5', height: '5', backgroundColor: 'green600', borderRadius: '50%', color: 'white' }}>
+                2
+              </Flex>
+              <Box sx={{
+                flexShrink: '0',
+                backgroundColor: 'white',
+                borderRadius: '2',
+                position: 'relative',
+                boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
+                maxWidth: '300px'
+              }}>
+                <Box sx={{
+                  padding: '4',
+                }}>
+                  <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                    Font size too small
+                  </Text>
+                  <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                    This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                  </Text>
+                  <Flex>
+                    <Button mr={2}>
+                      Ignore
+                    </Button>
+                    <Button variant="blue">
+                      Fix
+                    </Button>
+                  </Flex>
+                </Box>
+                <Box sx={{
+                  padding: '4',
+                  pt: '1'
+                }}>
+                  <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
+                    Font size too small
+                  </Text>
+                  <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
+                    This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
+                  </Text>
+                  <Flex>
+                    <Button mr={2}>
+                      Ignore
+                    </Button>
+                    <Button variant="blue">
+                      Fix
+                    </Button>
+                  </Flex>
+                </Box>
+              </Box>
             </Box>
             <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500, letterSpacing: '-.042em' }}>
-                Linter
+              <Heading as="h3" size={2} mb={3} sx={{ fontWeight: 500 }}>
+                Design Linting
               </Heading>
-              <Text as="p" size={4} sx={{ lineHeight: '3', letterSpacing: '-.008em' }}>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
                 This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but
                 I think it brings up a lot of questions.
               </Text>
