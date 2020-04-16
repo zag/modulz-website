@@ -3,6 +3,7 @@ import NextLink from 'next/link';
 import styled from 'styled-components'
 import { Container, Box, Grid, Heading, Button, Text, Link, Divider, Flex, AspectRatio } from '@modulz/radix';
 import { BetaAccess } from '../components/BetaAccess';
+import { LintingPopover } from '../components/LintingPopover';
 import { EditorIllustration } from '../components/EditorIllustration';
 import { TextEditorIllustration } from '../components/TextEditorIllustration';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
@@ -1092,6 +1093,8 @@ const Editor = () => {
         </Container>
       </Box>
 
+      <Divider mx="auto" size={2} />
+      
       <Box py={9}>
         <Container size={2}>
           <Text
@@ -1176,134 +1179,53 @@ const Editor = () => {
         </Container>
       </Box>
 
+      <Divider mx="auto" size={2} />
+
       <Box py={9}>
         <Container size={2}>
-
-          <Flex mt={8} sx={{ alignItems: 'center' }}>
-          <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-            <Flex mr={6} sx={{ alignItems: 'center', justifyContent: 'center', fontSize: '2', fontWeight: '500', width: '5', height: '5', backgroundColor: 'green600', borderRadius: '50%', color: 'white' }}>
-              2
-            </Flex>
-            <Box sx={{
-              flexShrink: '0',
-              backgroundColor: 'white',
-              borderRadius: '2',
-              position: 'relative',
-              boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
-              maxWidth: '300px'
-            }}>
-              <Box sx={{
-                padding: '4',
-              }}>
-                <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
-                  Font size too small
-                </Text>
-                <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
-                  This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
-                </Text>
-                <Flex>
-                  <Button mr={2}>
-                    Ignore
-                  </Button>
-                  <Button variant="blue">
-                    Fix
-                  </Button>
-                </Flex>
-              </Box>
-              <Box sx={{
-                padding: '4',
-                pt: '1'
-              }}>
-                <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
-                  Font size too small
-                </Text>
-                <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
-                  This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
-                </Text>
-                <Flex>
-                  <Button mr={2}>
-                    Ignore
-                  </Button>
-                  <Button variant="blue">
-                    Fix
-                  </Button>
-                </Flex>
-              </Box>
+          <Grid
+            sx={{
+              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+              gap: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Box>
+              <LintingPopover />
             </Box>
-          </Box>
-            <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500, letterSpacing: '-.042em' }}>
+            <Box>
+              <Heading as="h3" size={2} mb={3} sx={{ fontWeight: 500 }}>
                 Transitions
               </Heading>
-              <Text as="p" size={4} sx={{ lineHeight: '3', letterSpacing: '-.008em' }}>
-                This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but
-                I think it brings up a lot of questions.
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
             </Box>
-          </Flex>
+          </Grid>
+        </Container>
+      </Box>
 
-          <Flex mt={8} sx={{ alignItems: 'center' }}>
-            <Box mr={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
-              <Flex mr={6} sx={{ alignItems: 'center', justifyContent: 'center', fontSize: '2', fontWeight: '500', width: '5', height: '5', backgroundColor: 'green600', borderRadius: '50%', color: 'white' }}>
-                2
-              </Flex>
-              <Box sx={{
-                flexShrink: '0',
-                backgroundColor: 'white',
-                borderRadius: '2',
-                position: 'relative',
-                boxShadow: '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
-                maxWidth: '300px'
-              }}>
-                <Box sx={{
-                  padding: '4',
-                }}>
-                  <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
-                    Font size too small
-                  </Text>
-                  <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
-                    This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
-                  </Text>
-                  <Flex>
-                    <Button mr={2}>
-                      Ignore
-                    </Button>
-                    <Button variant="blue">
-                      Fix
-                    </Button>
-                  </Flex>
-                </Box>
-                <Box sx={{
-                  padding: '4',
-                  pt: '1'
-                }}>
-                  <Text size={2} weight="medium" mb={1} sx={{ display: 'block' }} style={{ lineHeight: '1' }}>
-                    Font size too small
-                  </Text>
-                  <Text as="p" size={1} mb={2} sx={{ lineHeight: '1' }}>
-                    This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself.
-                  </Text>
-                  <Flex>
-                    <Button mr={2}>
-                      Ignore
-                    </Button>
-                    <Button variant="blue">
-                      Fix
-                    </Button>
-                  </Flex>
-                </Box>
-              </Box>
+      <Box py={9}>
+        <Container size={2}>
+          <Grid
+            sx={{
+              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+              gap: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Box>
+              <LintingPopover />
             </Box>
-            <Box ml={6} sx={{ flexBasis: '0', flexGrow: '1' }}>
+            <Box>
               <Heading as="h3" size={2} mb={3} sx={{ fontWeight: 500 }}>
                 Design Linting
               </Heading>
               <Text as="p" size={4} sx={{ lineHeight: '3' }}>
-                This is going to be a bit of a thought dump, I'm not sure any of it blocks the registration itself, but
-                I think it brings up a lot of questions.
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
             </Box>
-          </Flex>
+          </Grid>
         </Container>
       </Box>
 
