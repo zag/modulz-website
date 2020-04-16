@@ -890,6 +890,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+  version "7.9.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
+  integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4":
   version "7.8.7"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.7.tgz#8fefce9802db54881ba59f90bb28719b4996324d"
@@ -1070,12 +1077,12 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.5.8.tgz#cbadda0378af899c17ce1aa69c677015cab28448"
   integrity sha512-a7Gjjw8bfBSertA/pTWBA/9WKEhgaSxvQE2NTSUzaknrzGFOhs4alZSHh3RHmSFdSWv5pUuzAgsWseMLhWEVkQ==
 
-"@modulz/primitives@0.0.1-24":
-  version "0.0.1-24"
-  resolved "https://registry.yarnpkg.com/@modulz/primitives/-/primitives-0.0.1-24.tgz#e2e5657382375e034f3dec2acb0eed7b1d5a7c41"
-  integrity sha512-4/JOnffSjD6rsc0U4APkP13t/83rCfskT5MEXTvrOQwCTP1kI493nC0iPI4OODw+29q+swF7B37uyrjLxMUlsQ==
+"@modulz/primitives@0.0.1-36":
+  version "0.0.1-36"
+  resolved "https://registry.yarnpkg.com/@modulz/primitives/-/primitives-0.0.1-36.tgz#f5fd813456fedc120b3ab17afb17513d34154673"
+  integrity sha512-SNhVdMPDWfTYT8wNqFwEdYE2gNbTee3k8Wqx+jfhr+32jF26pOutJPR0JAh+hH/a7efq8Bx1b3jQ0PTpY0/chQ==
   dependencies:
-    "@modulz/radix-icons" "2.0.0"
+    "@modulz/radix-icons" "2.1.0"
     "@modulz/radix-system" "0.0.1-alpha.11"
     aria-hidden "^1.1.1"
     body-scroll-lock "^2.6.4"
@@ -1084,13 +1091,14 @@
     lodash.omit "^4.5.0"
     lodash.pick "^4.4.0"
     react-is "^16.12.0"
+    react-transition-group "^4.3.0"
     resize-observer-polyfill "^1.5.1"
     tabbable "^4.0.0"
 
-"@modulz/radix-icons@2.0.0", "@modulz/radix-icons@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@modulz/radix-icons/-/radix-icons-2.0.0.tgz#b179f0328b10d82573b77f2e22825d8647d7033b"
-  integrity sha512-kp7hVMPVaQ2+9r2l6Cg28Huj5z3aBKl1jk7lmqtnnPEJH7vr6p6lS3u2RxMhTGQvg+H1mXJGTKhveG++87RYGQ==
+"@modulz/radix-icons@2.1.0", "@modulz/radix-icons@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@modulz/radix-icons/-/radix-icons-2.1.0.tgz#214142d956a1bf88326ade7b7ae628fedf5d6dad"
+  integrity sha512-eTSt5odB+n52LG8GFRNbJLSjKIf9Q/gUa61Nch/TQQKjU27Txxjo4eEilhvL/R1/FYyHjslyMJaKQ2IHLnrUBg==
 
 "@modulz/radix-system@0.0.1-alpha.11":
   version "0.0.1-alpha.11"
@@ -1103,12 +1111,12 @@
     "@types/styled-system__css" "^5.0.5"
     csstype "^2.6.7"
 
-"@modulz/radix@0.0.1-beta.31":
-  version "0.0.1-beta.31"
-  resolved "https://registry.yarnpkg.com/@modulz/radix/-/radix-0.0.1-beta.31.tgz#715a5a5d66dbec6d5f186292e6c6a50a47eb4a52"
-  integrity sha512-nrT4CHAl3btnMMx+BOnKFEHX+41y7cySg/OWZdvimUT0FIzlgJqoPM6/F+FyaSXQ0HmUPZdRJMUsXZKLVa9kjA==
+"@modulz/radix@0.0.1-beta.38":
+  version "0.0.1-beta.38"
+  resolved "https://registry.yarnpkg.com/@modulz/radix/-/radix-0.0.1-beta.38.tgz#23950e7c00c5c72c6216e763f7ee348901521d65"
+  integrity sha512-B5R89mK8b69ZDv2ShIK4VVHb34UyNfI6oQJOtGJbgSVQ052EStBAWVtnhl+U8aGHXR4kvf+pAlQV7wzvoiIBRg==
   dependencies:
-    "@modulz/primitives" "0.0.1-24"
+    "@modulz/primitives" "0.0.1-36"
     "@modulz/radix-system" "0.0.1-alpha.11"
     "@styled-system/css" "5.1.4"
     "@styled-system/theme-get" "^5.1.2"
@@ -2950,6 +2958,14 @@ dir-glob@2.0.0:
   dependencies:
     arrify "^1.0.1"
     path-type "^3.0.0"
+
+dom-helpers@^5.0.1:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.1.4.tgz#4609680ab5c79a45f2531441f1949b79d6587f4b"
+  integrity sha512-TjMyeVUvNEnOnhzs6uAn9Ya47GmMo3qq7m+Lr/3ON0Rs5kHvb8I+SQYjLUSYn7qhEm0QjW0yrBkvz9yOrwwz1A==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    csstype "^2.6.7"
 
 dom-serializer@^0.2.1:
   version "0.2.2"
@@ -6685,6 +6701,21 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.0.tgz#0f37c3613c34fe6b37cd7f763a0d6293ab15c527"
   integrity sha512-GFMtL0vHkiBv9HluwNZTggSn/sCyEt9n02aM0dSAjGGyqyNlAyftYm4phPxdvCigG15JreC5biwxCgTAJZ7yAA==
+
+react-ticker@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-ticker/-/react-ticker-1.2.2.tgz#12cda5ff8266c6fe90ffcd8c58e12ba1596ddf24"
+  integrity sha512-PXUujoPJvajxwOfosuuujlrBUrjgGp4FB4haWFOI25ujhMppW4SuLkiOdQ9AylrWN3yTHWdk2kbQWe3n9SjFGA==
+
+react-transition-group@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.3.0.tgz#fea832e386cf8796c58b61874a3319704f5ce683"
+  integrity sha512-1qRV1ZuVSdxPlPf4O8t7inxUGpdyO5zG9IoNfJxSO0ImU2A1YWkEQvFPuIPZmMLkg5hYs7vv5mMOyfgSkvAwvw==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    dom-helpers "^5.0.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
 
 react@16.13.1:
   version "16.13.1"
