@@ -151,7 +151,7 @@ const Editor = () => {
           </Text>
         </Container>
         <Box>
-          <Ticker speed={2}>
+          <Ticker speed={6}>
             {() => (
               <Flex sx={{ alignItems: 'center', userSelect: 'none', py: 7 }}>
                 <Box
@@ -645,7 +645,7 @@ const Editor = () => {
         </Box>
 
         <Box>
-          <Ticker speed={2} direction="toRight">
+          <Ticker speed={6} direction="toRight">
             {() => (
               <Flex sx={{ alignItems: 'center', userSelect: 'none', py: 7, flexDirection: 'row-reverse' }}>
                 <Box
@@ -1280,15 +1280,15 @@ const Editor = () => {
               alignItems: 'center',
             }}
           >
-            <Box>
+            <Flex sx={{ justifyContent: 'center' }}>
               <LintingPopover />
-            </Box>
+            </Flex>
             <Box>
               <Heading as="h3" size={2} mb={3} sx={{ fontWeight: 500 }}>
                 Design Linting
               </Heading>
               <Text as="p" size={4} sx={{ lineHeight: '3' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+                Similar to code linting, our design linter automatically catches anomalies in your components. Check things like color contrast, text legibility, scale adherence and more.
               </Text>
             </Box>
           </Grid>
