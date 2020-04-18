@@ -4,11 +4,12 @@ import { AspectRatio, Flex, Button, Box } from '@modulz/radix';
 export const EditorIllustration = () => {
   return (
     <Box
+      className="visual-editor"
       sx={{
         position: 'relative',
         zIndex: 1,
         width: ['325px', '325px', '718px', '718px', '1000px'],
-        marginTop: ['0', '0', '0', '0', '-80px'],
+        // marginTop: ['0', '0', '0', '0', '-80px'],
       }}
     >
       <AspectRatio ratio="16:9">
@@ -29,7 +30,11 @@ export const EditorIllustration = () => {
           }}
         >
           <Flex>
-            <Box padding={3} sx={{ width: '20%', borderRight: '1px solid', borderColor: 'gray300' }}>
+            <Box
+              className="sidebar"
+              padding={3}
+              sx={{ width: '20%', borderRight: '1px solid', borderColor: 'gray300' }}
+            >
               <Box
                 mb={3}
                 sx={{
@@ -303,25 +308,47 @@ export const EditorIllustration = () => {
             </Box>
             <Flex sx={{ alignItems: 'center', justifyContent: 'center', flexGrow: 1, position: 'relative' }}>
               <Flex
+                className="button"
                 sx={{
                   alignItems: 'center',
                   justifyContent: 'center',
-                  background: 'linear-gradient(hsl(240,90%,84%), hsl(240,90%,70%))',
-                  border: '1px solid hsl(240,80%,60%)',
-                  boxShadow: '0 2px 5px rgba(0,0,0,.1)',
-                  fontSize: '4',
-                  fontWeight: '500',
-                  height: '6',
-                  px: '3',
-                  borderRadius: '9999px',
+                  backgroundColor: 'gray',
+                  overflow: 'hidden',
+                  height: 5,
+                  px: 2,
+                  backgroundImage: 'linear-gradient(gray, gray)',
+                  position: 'relative',
+                  borderRadius: 0,
+                  borderStyle: 'solid',
+                  borderColor: 'hsl(240,80%,60%)',
+                  borderWidth: 0,
+                  // boxShadow: '0 2px 5px rgba(0,0,0,.1)',
+                  // height: '6',
+                  // px: '3',
+                  // borderRadius: '9999px',
                 }}
               >
+                <Box
+                  className="gradient"
+                  sx={{
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    top: 0,
+                    left: 0,
+                    opacity: 0,
+                    backgroundImage: 'linear-gradient(hsl(240,90%,84%), hsl(240,90%,70%))',
+                    zIndex: 1,
+                  }}
+                />
                 <Box
                   sx={{
                     backgroundColor: 'white',
                     height: '5px',
                     borderRadius: '9999px',
                     width: '65px',
+                    position: 'relative',
+                    zIndex: 2,
                   }}
                 ></Box>
               </Flex>
@@ -339,7 +366,7 @@ export const EditorIllustration = () => {
                 }}
               ></Box>
             </Flex>
-            <Box sx={{ width: '20%', borderLeft: '1px solid', borderColor: 'gray300' }}>
+            <Box className="sidebar" sx={{ width: '20%', borderLeft: '1px solid', borderColor: 'gray300' }}>
               <Box padding={3}>
                 <Box
                   mb={3}

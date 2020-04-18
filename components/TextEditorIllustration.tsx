@@ -4,9 +4,10 @@ import { AspectRatio, Flex, Box } from '@modulz/radix';
 export const TextEditorIllustration = () => {
   return (
     <Box
+      className="text-editor"
       sx={{
         width: ['325px', '325px', '718px', '718px', '1000px'],
-        marginTop: ['0', '0', '0', '0', '-240px'],
+        // marginTop: ['0', '0', '0', '0', '-240px'],
       }}
     >
       <AspectRatio ratio="16:9">
@@ -57,6 +58,7 @@ export const TextEditorIllustration = () => {
               </Box>
             </Box>
             <Box
+              className="sidebar"
               padding={2}
               sx={{ width: '20%', backgroundColor: 'hsl(192, 95%, 10%)', borderRight: '1px solid hsl(192, 100%, 7%)' }}
             >
