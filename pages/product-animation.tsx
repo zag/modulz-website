@@ -5,7 +5,7 @@ import TitleAndMetaTags from '../components/TitleAndMetaTags';
 import { Cursor } from '../components/Cursor';
 
 const Editor = () => {
-  const tl = gsap.timeline({ paused: false, delay: 0.3 });
+  const tl = gsap.timeline({ delay: 0.3, defaults: { ease: 'expo' } });
 
   const modulz = React.useRef(null);
   const vscode = React.useRef(null);
@@ -25,39 +25,17 @@ const Editor = () => {
     const code3 = vscode.current.querySelectorAll('.code3 > *');
     const code4 = vscode.current.querySelectorAll('.code4 > *');
 
-    gsap.set(sidebarItems, { y: -10, opacity: 0 });
-    gsap.set(panels, { opacity: 0 });
     gsap.set([code1, code2, code3, code4], { opacity: 0 });
 
-    tl.to(modulz.current, 0.4, {
-      ease: 'easeOutExpo',
-      scale: 1,
-      opacity: 1,
-    });
-
-    tl.to(sidebarItems, 0.2, {
-      ease: 'easeOutExpo',
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-    });
-
-    tl.to(panels, 1, {
-      ease: 'easeOutExpo',
-      opacity: 1,
-    });
-
     tl.to(vscode.current, 0.3, {
-      ease: 'easeOutExpo',
       yPercent: 50,
       opacity: 1,
     });
 
     tl.to(
       cursor,
-      1,
+      0.5,
       {
-        ease: 'easeOutExpo',
         y: action1.offsetTop - action1.clientHeight - 5,
         x: action1.offsetLeft + action1.clientWidth / 3,
       },
@@ -68,30 +46,25 @@ const Editor = () => {
       cursor,
       0.2,
       {
-        ease: 'easeOutExpo',
         scale: 0.8,
       },
       '+=0.3'
     );
 
     tl.to(cursor, 0.2, {
-      ease: 'easeOutExpo',
       scale: 1,
     });
 
     tl.to('.button .gradient', 0.5, {
-      ease: 'easeOutExpo',
       opacity: 1,
     });
 
     tl.to(code1, 0.3, {
-      ease: 'easeOutExpo',
       opacity: 1,
       stagger: 0.1,
     });
 
-    tl.to(cursor, 1, {
-      ease: 'easeOutExpo',
+    tl.to(cursor, 0.5, {
       y: action2.offsetTop - action2.clientHeight - 5,
       x: action2.offsetLeft + action2.clientWidth / 3,
     });
@@ -100,14 +73,12 @@ const Editor = () => {
       cursor,
       0.2,
       {
-        ease: 'easeOutExpo',
         scale: 0.8,
       },
       '+=0.3'
     );
 
     tl.to(cursor, 0.2, {
-      ease: 'easeOutExpo',
       scale: 1,
     });
 
@@ -116,13 +87,11 @@ const Editor = () => {
     });
 
     tl.to(code2, 0.3, {
-      ease: 'easeOutExpo',
       opacity: 1,
       stagger: 0.1,
     });
 
-    tl.to(cursor, 1, {
-      ease: 'easeOutExpo',
+    tl.to(cursor, 0.5, {
       y: action3.offsetTop + 25 - action3.clientHeight - 5,
       x: action3.offsetLeft + action3.clientWidth / 3,
     });
@@ -131,14 +100,12 @@ const Editor = () => {
       cursor,
       0.2,
       {
-        ease: 'easeOutExpo',
         scale: 0.8,
       },
       '+=0.3'
     );
 
     tl.to(cursor, 0.2, {
-      ease: 'easeOutExpo',
       scale: 1,
     });
 
@@ -149,13 +116,11 @@ const Editor = () => {
     });
 
     tl.to(code3, 0.3, {
-      ease: 'easeOutExpo',
       opacity: 1,
       stagger: 0.1,
     });
 
-    tl.to(cursor, 1, {
-      ease: 'easeOutExpo',
+    tl.to(cursor, 0.5, {
       y: action4.offsetTop + 25 - action4.clientHeight - 5,
       x: action4.offsetLeft + action4.clientWidth / 3,
     });
@@ -164,14 +129,12 @@ const Editor = () => {
       cursor,
       0.2,
       {
-        ease: 'easeOutExpo',
         scale: 0.8,
       },
       '+=0.3'
     );
 
     tl.to(cursor, 0.2, {
-      ease: 'easeOutExpo',
       scale: 1,
     });
 
@@ -180,7 +143,6 @@ const Editor = () => {
     });
 
     tl.to(code4, 0.3, {
-      ease: 'easeOutExpo',
       opacity: 1,
       stagger: 0.1,
     });
@@ -188,7 +150,6 @@ const Editor = () => {
     // STYLEGUIDE EDITOR SCENE
 
     tl.to(styleguide.current, 0.4, {
-      ease: 'easeOutExpo',
       delay: 1,
       yPercent: 50,
       opacity: 1,
@@ -200,7 +161,7 @@ const Editor = () => {
       <TitleAndMetaTags />
 
       <Container sx={{ maxWidth: 'fit-content' }}>
-        <Box ref={modulz} sx={{ position: 'relative', zIndex: 3, opacity: 0, transform: 'scale(0.8)' }}>
+        <Box ref={modulz} sx={{ position: 'relative', zIndex: 3 }}>
           <EditorIllustration />
         </Box>
         <Box ref={vscode} sx={{ position: 'relative', zIndex: 2, transform: 'translateY(-100%)', opacity: 0 }}>
