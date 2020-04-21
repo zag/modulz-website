@@ -24,8 +24,6 @@ const Editor = () => {
     const closeIcon = linter.current.querySelector('.close-icon');
     const closeIconRect = closeIcon.getBoundingClientRect();
 
-    gsap.set([popover], { opacity: 0 });
-
     tl.to(notificationBubble, 0.5, {
       opacity: 1,
       onStart: () => (counter.innerHTML = '1'),
@@ -179,6 +177,7 @@ export const LintingIllustration = () => {
             maxHeight: '440px',
             maxWidth: '320px',
             overflow: 'hidden',
+            opacity: 0,
           }}
         >
           <Flex
