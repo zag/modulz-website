@@ -1,0 +1,78 @@
+---
+title: 'Introducing Select'
+publishedAt: '2020-04-03'
+summary: 'A custom Select component without compromises.'
+by: 'peduarte'
+relatedIds:
+  - 'blog/introducing-primitives'
+  - 'blog/introducing-tooltip'
+---
+
+import Parts from './parts.png';
+
+For designers, custom Select components are a must.
+
+On the other hand, for developers, building a custom Select is a bottomless well of complexities and frustrations.
+
+A common compromise is to make the "face" of the Select look custom, but then display the native OS menu when opened.
+
+## Features
+
+Let's look into some of the features the Select Primitive contains.
+
+Our Select Primitive is inspired by Mac OS native Menu, and its list of features are on par.
+
+### Styling
+
+Unlike the native select, you're able to style all the parts that make up the select dropdown. Those are:
+
+- Button
+- Menu
+- Item
+- Label
+- Divider
+- Scroll Indicator
+- Group
+
+As you'd expect, any part that contains states can also be styles, so for example, the Item contains the following states:
+
+- Normal
+- Highlighted
+- Disabled
+- Selected
+- Grouped
+
+<ProductImage src={Parts} />
+
+### Keyboard navigation
+
+We support full keyboard accessibility so you can do anything you need without using your mouse.
+
+When the button is focused, you can:
+
+- Press `space` key to open the menu
+- Press `up` and `down` arrow keys to open the menu
+- Typeahead lookups
+
+When the menu is opened, you can:
+
+- Press `space` or `enter` keys to select the highlighted item
+- Press `esc` to close the menu
+- Press `up` and `down` arrow keys to navigate across items
+- Typeahead lookups
+
+### Typeahead
+
+You can rely on typeahead funtionality if you're focused on the select button or when the menu is opened.
+
+### Positioning
+
+When you open the menu, we'll make sure that it's properly positioned above the menu, whilst keeping the selected item placed on top.
+
+### Colision
+
+In the unlikely scenario where there's not enough space to position the menu relatively to the selected item, we'll adjust the positioning automatically.
+
+### Scrolling
+
+If the menu needs scrolling, we'll automatically add Scroll Indicators where necessary. As you start scrolling the menu, we'll proportionally update the height to allow more items to be visible at once.
