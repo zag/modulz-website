@@ -11,6 +11,7 @@ relatedIds:
 import parts from './parts.png';
 import typeahead from './typeahead.mp4';
 import typeaheadOpen from './typeahead-open.mp4';
+import typeaheadLoop from './typeahead-loop.mp4';
 
 For designers, custom Select components are a must.
 
@@ -50,13 +51,13 @@ As you'd expect, any part that contains states can also be styles, so for exampl
 
 We support full keyboard accessibility so you can do anything you need without using your mouse.
 
-When the button is focused, you can:
+When the Select Button is focused, you can:
 
 - Press `space` key to open the menu
 - Press `up` and `down` arrow keys to open the menu
 - Typeahead lookups
 
-When the menu is opened, you can:
+When the Select Menu is opened, you can:
 
 - Press `space` or `enter` keys to select the highlighted item
 - Press `esc` to close the menu
@@ -65,39 +66,24 @@ When the menu is opened, you can:
 
 ### Typeahead
 
-You can rely on typeahead funtionality if you're focused on the select button or when the menu is opened.
+You can rely on typeahead funtionality if you're focused on the Select Button or when the Select Menu is opened.
 
-<Flex sx={{alignItems:'center'}}>
+<ProductVideo small sx={{ maxWidth: 375, mx: 'auto' }} src={typeahead} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  Typeahead when Select button is focused example
+</Text>
 
-<Flex sx={{ flex: 1, pr:4}}>
+<ProductVideo small sx={{ maxWidth: 375, mx: 'auto' }} src={typeaheadOpen} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  Typeahead when Select Menu is opened example
+</Text>
 
-**Auto highlighting items based on what you've typed**
+Pressing the same letter will loop over all items that start with that letter.
 
-</Flex>
-
-<Flex sx={{ flex: 1}}>
-
-<ProductVideo small src={typeahead} />
-
-</Flex>
-
-</Flex>
-
-<Flex sx={{alignItems:'center'}}>
-
-<Flex sx={{ flex: 1}}>
-
-<ProductVideo small src={typeaheadOpen} />
-
-</Flex>
-
-<Flex sx={{ flex: 1, pl:4}}>
-
-**Auto highlighting items based on what you've typed**
-
-</Flex>
-
-</Flex>
+<ProductVideo small sx={{ maxWidth: 375, mx: 'auto' }} src={typeaheadOpen} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  Typeahead looping example
+</Text>
 
 Loop through items starting with the same letter if that letter is pressed repeatedly
 
