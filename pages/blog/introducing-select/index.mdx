@@ -8,7 +8,9 @@ relatedIds:
   - 'blog/introducing-tooltip'
 ---
 
-import Parts from './parts.png';
+import parts from './parts.png';
+import typeahead from './typeahead.mp4';
+import typeaheadOpen from './typeahead-open.mp4';
 
 For designers, custom Select components are a must.
 
@@ -42,7 +44,7 @@ As you'd expect, any part that contains states can also be styles, so for exampl
 - Selected
 - Grouped
 
-<ProductImage src={Parts} />
+<ProductImage src={parts} />
 
 ### Keyboard navigation
 
@@ -64,6 +66,40 @@ When the menu is opened, you can:
 ### Typeahead
 
 You can rely on typeahead funtionality if you're focused on the select button or when the menu is opened.
+
+<Flex sx={{alignItems:'center'}}>
+
+<Flex sx={{ flex: 1, pr:4}}>
+
+**Auto highlighting items based on what you've typed**
+
+</Flex>
+
+<Flex sx={{ flex: 1}}>
+
+<ProductVideo small src={typeahead} />
+
+</Flex>
+
+</Flex>
+
+<Flex sx={{alignItems:'center'}}>
+
+<Flex sx={{ flex: 1}}>
+
+<ProductVideo small src={typeaheadOpen} />
+
+</Flex>
+
+<Flex sx={{ flex: 1, pl:4}}>
+
+**Auto highlighting items based on what you've typed**
+
+</Flex>
+
+</Flex>
+
+Loop through items starting with the same letter if that letter is pressed repeatedly
 
 ### Positioning
 
