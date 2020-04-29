@@ -9,7 +9,7 @@ relatedIds:
 ---
 
 import parts from './parts.png';
-import typeahead from './typeahead.mp4';
+import typeaheadClosed from './typeahead-closed.mp4';
 import typeaheadOpen from './typeahead-open.mp4';
 import typeaheadLoop from './typeahead-loop.mp4';
 
@@ -68,19 +68,19 @@ When the Select Menu is opened, you can:
 
 You can rely on typeahead funtionality if you're focused on the Select Button or when the Select Menu is opened.
 
-<ProductVideo small sx={{ maxWidth: 375, mx: 'auto' }} src={typeahead} />
+<ProductVideo small src={typeaheadClosed} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
   Typeahead when Select button is focused example
 </Text>
 
-<ProductVideo small sx={{ maxWidth: 375, mx: 'auto' }} src={typeaheadOpen} />
+<ProductVideo small src={typeaheadOpen} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
   Typeahead when Select Menu is opened example
 </Text>
 
 Pressing the same letter will loop over all items that start with that letter.
 
-<ProductVideo small sx={{ maxWidth: 375, mx: 'auto' }} src={typeaheadLoop} />
+<ProductVideo small src={typeaheadLoop} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
   Typeahead looping example
 </Text>
