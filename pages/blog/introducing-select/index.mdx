@@ -1,5 +1,5 @@
 ---
-title: 'Introducing Select'
+title: 'Back to the drawing board: The select'
 publishedAt: '2020-04-03'
 summary: 'A custom Select component without compromises.'
 by: 'peduarte'
@@ -14,35 +14,47 @@ import typeaheadClosed from './typeahead-closed.mp4';
 import typeaheadOpen from './typeahead-open.mp4';
 import typeaheadLoop from './typeahead-loop.mp4';
 
-Building an accessible and customisable custom Select component from scratch is undoubtedly one of the most challenging pieces of UI one can tackle.
+Building an accessible custom Select component from scratch is undoubtedly one of the most challenging pieces of UI one can tackle.
 
-There are many cases that need to be handled, such as keyboard navigation, collision-aware position and accessibility concerns.
+There are many cases that need to be handled, such as keyboard navigation, collision-aware positioning and accessibility concerns.
 
 Because of the amount of time it takes to make it right, teams tend to take shortcuts. As a result either the end user suffers (lack of functionality) or the product (lack of design).
 
-In this article, we'd like to introduce our Select Primitive. Built from the ground up with accessibility features out of the box and customisable to your product's need.
+In this article, we'll look at how some of the biggest websites in the world have implemented their Select component, and how we went back to the drawing board to build our Select Primitive with accessibility features out of the box and customisable to your product's need.
 
 ---
 
-Design systems built with Modulz now include the Select Primitive, allowing users to style all its parts and states. Here's a short demo of how the Select Primtive can be styled via Modulz.
+## Selects in the wild
 
-This component consists of a few parts which can be composed together to create different content hierarchy.
+For each of the following example, we'll be looking at how they've implemented these features:
 
-<ProductVideo src={redSelect} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  A demo of Modulz styling the Select Primitive
-</Text>
+- Keyboard navigation
+- Voiceover
+- Typeahead
+- Focus management
+- Dynamic positioning
 
-### Styling
+### Facebook
 
-As showed in the demo above, all the parts (and their corresponding states) that make up a Select componment are available in the parts panel.
+<!-- https://www.facebook.com/settings?tab=payments&section=settings -->
 
-The Select Primitve consists of two main parts, these are the `Button` and the `Menu`. Each of these part contains furhter nested parts.
+### Twitter
 
-<ProductImage src={parts} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  All the parts of a Select Primitive
-</Text>
+<!-- https://twitter.com/settings/language -->
+
+### Google
+
+<!-- https://pay.google.com/gp/w/home/settings -->
+
+### Netflix
+
+<!-- https://help.netflix.com/en/ -->
+
+### Amazon
+
+<!-- https://www.amazon.es/ -->
+
+## Select Primitive
 
 ### Keyboard navigation
 
@@ -95,3 +107,23 @@ In the unlikely scenario where there's not enough space to position the menu rel
 ### Scrolling
 
 If the menu needs scrolling, we'll automatically add Scroll Indicators where necessary. As you start scrolling the menu, we'll proportionally update the height to allow more items to be visible at once.
+
+### Styling
+
+As showed in the demo above, all the parts (and their corresponding states) that make up a Select componment are available in the parts panel.
+
+The Select Primitve consists of two main parts, these are the `Button` and the `Menu`. Each of these part contains furhter nested parts.
+
+<ProductImage src={parts} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  All the parts of a Select Primitive
+</Text>
+
+### Modulz
+
+Here's a short demo of how the Select Primtive can be styled via Modulz
+
+<ProductVideo src={redSelect} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  A demo of Modulz styling the Select Primitive
+</Text>
