@@ -9,43 +9,40 @@ relatedIds:
 ---
 
 import parts from './parts.png';
+import redSelect from './red-select.mp4';
 import typeaheadClosed from './typeahead-closed.mp4';
 import typeaheadOpen from './typeahead-open.mp4';
 import typeaheadLoop from './typeahead-loop.mp4';
 
-For designers, custom Select components are a must.
+Building an accessible and customisable custom Select component from scratch is undoubtedly one of the most challenging pieces of UI one can tackle.
 
-On the other hand, for developers, building a custom Select is a bottomless well of complexities and frustrations.
+There are many cases that need to be handled, such as keyboard navigation, collision-aware position and accessibility concerns.
 
-A common compromise is to make the "face" of the Select look custom, but then display the native OS menu when opened.
+Because of the amount of time it takes to make it right, teams tend to take shortcuts. As a result either the end user suffers (lack of functionality) or the product (lack of design).
 
-## Features
+In this article, we'd like to introduce our Select Primitive. Built from the ground up with accessibility features out of the box and customisable to your product's need.
 
-Let's look into some of the features the Select Primitive contains.
+---
 
-Our Select Primitive is inspired by Mac OS native Menu, and its list of features are on par.
+Design systems built with Modulz now include the Select Primitive, allowing users to style all its parts and states. Here's a short demo of how the Select Primtive can be styled via Modulz.
+
+This component consists of a few parts which can be composed together to create different content hierarchy.
+
+<ProductVideo src={redSelect} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  A demo of Modulz styling the Select Primitive
+</Text>
 
 ### Styling
 
-Unlike the native select, you're able to style all the parts that make up the select dropdown. Those are:
+As showed in the demo above, all the parts (and their corresponding states) that make up a Select componment are available in the parts panel.
 
-- Button
-- Menu
-- Item
-- Label
-- Divider
-- Scroll Indicator
-- Group
-
-As you'd expect, any part that contains states can also be styles, so for example, the Item contains the following states:
-
-- Normal
-- Highlighted
-- Disabled
-- Selected
-- Grouped
+The Select Primitve consists of two main parts, these are the `Button` and the `Menu`. Each of these part contains furhter nested parts.
 
 <ProductImage src={parts} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  All the parts of a Select Primitive
+</Text>
 
 ### Keyboard navigation
 
