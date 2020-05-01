@@ -9,6 +9,10 @@ relatedIds:
 ---
 
 import parts from './parts.png';
+import apple from './apple.png';
+import netflix from './netflix.png';
+import instagram from './instagram.png';
+import tesla from './tesla.png';
 import redSelect from './red-select.mp4';
 import typeaheadClosed from './typeahead-closed.mp4';
 import typeaheadOpen from './typeahead-open.mp4';
@@ -16,9 +20,9 @@ import typeaheadLoop from './typeahead-loop.mp4';
 
 Building an accessible custom Select component from scratch is undoubtedly one of the most challenging pieces of UI one can tackle.
 
-There are many cases that need to be handled, such as keyboard navigation, collision-aware positioning and accessibility concerns.
+There are many cases that need to be handled, such as keyboard navigation, typeahead functionality, collision-aware positioning and many accessibility concerns.
 
-Because of the amount of time it takes to make it right, teams tend to take shortcuts. As a result either the end user suffers (lack of functionality) or the product (lack of design).
+Due of the amount of time it takes to make it right, teams tend to take shortcuts. As a result either the end user suffers (lack of functionality) or the product (lack of design).
 
 In this article, we'll look at how some of the biggest websites in the world have implemented their Select component, and how we went back to the drawing board to build our Select Primitive with accessibility features out of the box and customisable to your product's need.
 
@@ -26,33 +30,51 @@ In this article, we'll look at how some of the biggest websites in the world hav
 
 ## Selects in the wild
 
-For each of the following example, we'll be looking at how they've implemented these features:
+We've compiled a list of examples of how Select components are typically implemented. After having gone through hundreds of websites, it's safe to say that it boils down to two common implementations, both with compromises.
 
-- Keyboard navigation
-- Voiceover
-- Typeahead
-- Focus management
-- Dynamic positioning
+### Compromise on design
 
-### Facebook
+The first approach is to rely on the native Select.
+
+This is typically done by making the `select` element transparent and positioned on top of a `button`. This is the element that gets styled. When the user clicks on that `button`, they are actually clicking on the transparent `select`. Finally, when the `select` opens, the transparency is removed.
+
+The good thing with this approach is that you get all of the accessibility features and complex UI logic handled for you automatically.
+
+The downside is that styling is extremely limited, as a result users will see a native-looking menu popping up on beautifully designed products.
+
+<Grid sx={{
+		gridTemplateColumns: '1fr 1fr',
+		gap: 1,
+		bg: 'gray300',
+		border: t => `1px solid ${t.colors.gray300}`,
+		borderRadius: 3,
+		overflow: 'hidden',
+		mx: [-5, -5, -9]
+	}}
+>
+
+<Image sx={{ width: '100%', margin: 0 }} m={0} src={apple} />
+<Image sx={{ width: '100%', margin: 0 }} m={0} src={instagram} />
+<Image sx={{ width: '100%', margin: 0 }} m={0} src={netflix} />
+<Image sx={{ width: '100%', margin: 0 }} m={0} src={tesla} />
+
+</Grid>
+
+### Compromise on accessibility
+
+The second approach is to prioritise aesthetics over accessibility.
+
+<!-- ### Facebook -->
 
 <!-- https://www.facebook.com/settings?tab=payments&section=settings -->
 
-### Twitter
-
-<!-- https://twitter.com/settings/language -->
-
-### Google
+<!-- ### Google -->
 
 <!-- https://pay.google.com/gp/w/home/settings -->
 
-### Netflix
+<!-- ### Yelp -->
 
-<!-- https://help.netflix.com/en/ -->
-
-### Amazon
-
-<!-- https://www.amazon.es/ -->
+<!-- https://www.yelp.es/barcelona -->
 
 ## Select Primitive
 
@@ -96,17 +118,33 @@ Pressing the same letter will loop over all items that start with that letter.
 
 Loop through items starting with the same letter if that letter is pressed repeatedly
 
+### Screen reader
+
+We provide the right `aria-*` attributes according to the WAI-ARIA specification to ensure voice over works correctly.
+
 ### Positioning
 
 When you open the menu, we'll make sure that it's properly positioned above the menu, whilst keeping the selected item placed on top.
 
-### Colision
+### Collision
 
 In the unlikely scenario where there's not enough space to position the menu relatively to the selected item, we'll adjust the positioning automatically.
 
-### Scrolling
+### Scroll based height
 
 If the menu needs scrolling, we'll automatically add Scroll Indicators where necessary. As you start scrolling the menu, we'll proportionally update the height to allow more items to be visible at once.
+
+### Focus trap
+
+When the Menu is opened, the focus is trapped to the Menu container. Pressing `tab` at this point will prevent the focused element to changing. To navigate across the Items, the up and down arrow must be used.
+
+### Scroll lock
+
+When the Menu is opened, the page cannot be scrolled.
+
+### Block clicks outside
+
+When the Menu is opened, clicks on elements outside of it will be blocked. When you click outside, the Menu will be closed.
 
 ### Styling
 

@@ -74,9 +74,7 @@ function App({ Component, pageProps }: AppProps) {
             </Radix.Box>
           ),
           Image: ({ ...props }) => (
-            <Radix.Box mx={[-5, -5, -7]} my={4}>
-              <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
-            </Radix.Box>
+            <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
           ),
           ProductImage: ({ ...props }) => (
             <Radix.Box
