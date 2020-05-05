@@ -104,7 +104,16 @@ function App({ Component, pageProps }: AppProps) {
             />
           ),
           Video: (props) => (
-            <Radix.Box mx={[-5, -5, -7]} my={4}>
+            <Radix.Box
+              mx={[-5, -5, -7]}
+              my={4}
+              sx={{
+                border: (theme) => `1px solid ${theme.colors.gray300}`,
+                borderRadius: [0, 2, 2],
+                overflow: 'hidden',
+                ...props.sx,
+              }}
+            >
               <VideoPlayer {...props} />
             </Radix.Box>
           ),

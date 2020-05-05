@@ -44,21 +44,20 @@ An important feature of custom Selects is keyboard accessibility. Apart from off
 
 A common issue with custom built Selects is that they either completely lack keyboard navigation, or they're partly implemented.
 
-<ProductVideo small src={yelp} />
+<ProductVideo src={yelp} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  Yelp.com uses Select components in their footer to switch languages and countries. As you can see in this video,
-  pressing <Code variant="fade">up</Code> and <Code variant="fade">down</Code> arrows don't correctly cycle over the
-  items.
+  This is an example of how pressing <Code variant="fade">up</Code> and <Code variant="fade">down</Code> arrows don't
+  correctly cycle over the items.
 </Text>
 
 ### Lack of screen reader support
 
-Something to take into account when creating your own custom Select is to make sure the appropritate `aria-*` attributes are implemented. It's crucial to dedicate extra care time and attention to those. An incorrectly implemented component will do more harm than good for users with certain types of disabilities.
+Something to take into account when creating your own custom Select is to make sure it's properly labelled. It's crucial to dedicate extra care time and attention to this, otherwise it can do more harm than good for users with certain types of disabilities.
 
-<Video id="SZ_b_rj1IeI" poster={amazonVideoPoster} />
+<Video id="uEyUbQ_eqwg" poster={amazonVideoPoster} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
   The video above shows the how the screen reader lacks enough context and information to accurately announce the list
-  of options, effectively giving portraying an innacurate representation of the UI.
+  of options.
 </Text>
 
 ### No typeahead functionality
@@ -67,76 +66,32 @@ Typeahead functionality is specially helpful for Select with many options. If im
 
 Lack of typeahead support can jeoperdize the user experience by forcing users to scan a long list of options.
 
-<ProductVideo small src={facebook} />
+<ProductVideo src={facebook} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  An example of a custom Select without typeahead functionality. As you can see in this video, the user is trying to
-  bypass scrolling through all options by typing in "US Dollar".
+  This is an example of a custom Select without typeahead functionality. The user is trying to bypass scrolling through
+  all options by typing in "US Dollar".
 </Text>
 
 ### No collision detection
 
-It's important to ensure that whenever the Menu appears, it's entirely visible for the users. Collision detection makes it able to identify if there's enough space for the Menu to be displayed. If not, then it'll automatically be adjusted to ensure it's fully visible.
+It's important to ensure that whenever the Menu appears it's entirely visible for the users. If collision detection isn't handled the Menu could be hidden from the user, effectively not providing all the neccessary information.
 
-<ProductVideo small src={soundcloud} />
+<ProductVideo src={soundcloud} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  An example of a custom Select without collision support
+  An example of a custom Select without collision support, notice how part of the Menu is out of view.
 </Text>
 
 ### Incorrect Menu implementations
 
-By displaying a piece of UI that looks like Select, users will expect a relatively positioned Menu to appear, and not a full screen dialog.
+Managing user's expectation is another important factor to consider. Users interact with Select components all day long, on websites and on their operating systems. By displaying a piece of UI that looks like Select, users will expect a relatively positioned Menu to appear. It's important to be true to their expectations.
 
-<ProductVideo small src={squarespace} />
+<ProductVideo src={squarespace} />
 <Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  Squarespace implementation of a Select component
+  In this example the Select Menu is implemented as a full screen Dialog instead of being relatively positioned to the
+  click target.
 </Text>
 
-## Selects in the wild
-
-We've compiled a list of examples of how Select components are typically implemented. After having gone through hundreds of websites, it's safe to say that it boils down to two common implementations, both with compromises.
-
-### Compromise on design
-
-The first approach is to rely on the native Select.
-
-This is typically done by making the `select` element transparent and positioned on top of a `button`. This is the element that gets styled. When the user clicks on that `button`, they are actually clicking on the transparent `select`. Finally, when the `select` opens, the transparency is removed.
-
-The good thing with this approach is that you get all of the accessibility features and complex UI logic handled for you automatically.
-
-The downside is that styling is extremely limited, as a result users will see a native-looking menu popping up on beautifully designed products.
-
-<Grid sx={{
-		gridTemplateColumns: '1fr 1fr',
-		gap: 1,
-		bg: 'gray300',
-		border: t => `1px solid ${t.colors.gray300}`,
-		borderRadius: 3,
-		overflow: 'hidden',
-		mx: [-5, -5, -9]
-	}}
->
-
-<Image sx={{ width: '100%', margin: 0 }} m={0} src={apple} />
-<Image sx={{ width: '100%', margin: 0 }} m={0} src={instagram} />
-<Image sx={{ width: '100%', margin: 0 }} m={0} src={netflix} />
-<Image sx={{ width: '100%', margin: 0 }} m={0} src={tesla} />
-
-</Grid>
-
-### Compromise on accessibility
-
-The second approach is to prioritise aesthetics over accessibility.
-
-<ProductVideo small src={squarespace} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}></Text>
-
-<!-- ### Facebook -->
-
-<!-- https://www.facebook.com/settings?tab=payments&section=settings -->
-
-<!-- ### Google -->
-
-<!-- https://pay.google.com/gp/w/home/settings -->
+---
 
 ## Select Primitive
 
