@@ -104,12 +104,12 @@ function App({ Component, pageProps }: AppProps) {
             />
           ),
           Video: (props) => (
-            <Radix.Box mx={[-5, -5, -7]} my={8}>
+            <Radix.Box mx={[-5, -5, -7]} my={4}>
               <VideoPlayer {...props} />
             </Radix.Box>
           ),
-          ProductVideo: (props) =>
-            props.small ? (
+          ProductVideo: ({ small, ...props }) =>
+            small ? (
               <Radix.Box
                 {...props}
                 my={4}

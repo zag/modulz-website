@@ -17,16 +17,79 @@ import redSelect from './red-select.mp4';
 import typeaheadClosed from './typeahead-closed.mp4';
 import typeaheadOpen from './typeahead-open.mp4';
 import typeaheadLoop from './typeahead-loop.mp4';
+import squarespace from './squarespace.mp4';
+import yelp from './yelp.mp4';
+import youtube from './youtube.mp4';
+import facebook from './facebook.mp4';
+import soundcloud from './soundcloud.mp4';
+import amazonVideoPoster from './amazon-video-poster.png';
 
 Building an accessible custom Select component from scratch is undoubtedly one of the most challenging pieces of UI one can tackle.
 
 There are many cases that need to be handled, such as keyboard navigation, typeahead functionality, collision-aware positioning and many accessibility concerns.
 
-Due of the amount of time it takes to make it right, teams tend to take shortcuts. As a result either the end user suffers (lack of functionality) or the product (lack of design).
+Due of the amount of time it takes to make it right, it's understandable that teams tend to take shortcuts. As a result either the end user suffers (lack of functionality) or the product suffers (lack of design).
 
 In this article, we'll look at how some of the biggest websites in the world have implemented their Select component, and how we went back to the drawing board to build our Select Primitive with accessibility features out of the box and customisable to your product's need.
 
 ---
+
+## Common issues
+
+Many custom Selects across the web generally suffer from one or more of the following issues:
+
+### Lack of keyboard navigation
+
+An important feature of custom Selects is keyboard accessibility. Apart from offering an overall better user experience, it enables users with certain types of disabilities to navigate across the list of options.
+
+A common issue with custom built Selects is that they either completely lack keyboard navigation, or they're partly implemented.
+
+<ProductVideo small src={yelp} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  Yelp.com uses Select components in their footer to switch languages and countries. As you can see in this video,
+  pressing <Code variant="fade">up</Code> and <Code variant="fade">down</Code> arrows don't correctly cycle over the
+  items.
+</Text>
+
+### Lack of screen reader support
+
+Something to take into account when creating your own custom Select is to make sure the appropritate `aria-*` attributes are implemented. It's crucial to dedicate extra care time and attention to those. An incorrectly implemented component will do more harm than good for users with certain types of disabilities.
+
+<Video id="SZ_b_rj1IeI" poster={amazonVideoPoster} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  The video above shows the how the screen reader lacks enough context and information to accurately announce the list
+  of options, effectively giving portraying an innacurate representation of the UI.
+</Text>
+
+### No typeahead functionality
+
+Typeahead functionality is specially helpful for Select with many options. If implemented, it can jump to the user's desired option based on what they're typing.
+
+Lack of typeahead support can jeoperdize the user experience by forcing users to scan a long list of options.
+
+<ProductVideo small src={facebook} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  An example of a custom Select without typeahead functionality. As you can see in this video, the user is trying to
+  bypass scrolling through all options by typing in "US Dollar".
+</Text>
+
+### No collision detection
+
+It's important to ensure that whenever the Menu appears, it's entirely visible for the users. Collision detection makes it able to identify if there's enough space for the Menu to be displayed. If not, then it'll automatically be adjusted to ensure it's fully visible.
+
+<ProductVideo small src={soundcloud} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  An example of a custom Select without collision support
+</Text>
+
+### Incorrect Menu implementations
+
+By displaying a piece of UI that looks like Select, users will expect a relatively positioned Menu to appear, and not a full screen dialog.
+
+<ProductVideo small src={squarespace} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+  Squarespace implementation of a Select component
+</Text>
 
 ## Selects in the wild
 
@@ -64,6 +127,9 @@ The downside is that styling is extremely limited, as a result users will see a 
 
 The second approach is to prioritise aesthetics over accessibility.
 
+<ProductVideo small src={squarespace} />
+<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}></Text>
+
 <!-- ### Facebook -->
 
 <!-- https://www.facebook.com/settings?tab=payments&section=settings -->
@@ -72,13 +138,13 @@ The second approach is to prioritise aesthetics over accessibility.
 
 <!-- https://pay.google.com/gp/w/home/settings -->
 
-<!-- ### Yelp -->
-
-<!-- https://www.yelp.es/barcelona -->
-
 ## Select Primitive
 
 ### Keyboard navigation
+
+Implementing keyboard navigation is one of the most important accessibility features of the Select component. It helps users with motor diabilities navigate across the options in the select. Blind users also rely on keyboard for navigation. It's also important for other types of disablities, such as people with tremors, people without hands or people who have no use of their hands.
+
+Keyboard navigation can also improve the user experience for people without disabilities, by allowing users to achieve their goal without reaching out for the mouse.
 
 We support full keyboard accessibility so you can do anything you need without using your mouse.
 
