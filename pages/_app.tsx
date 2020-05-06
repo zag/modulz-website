@@ -159,7 +159,7 @@ function App({ Component, pageProps }: AppProps) {
               {React.Children.map(props.children, (child) => (
                 <Radix.Text
                   size={5}
-                  mb={3}
+                  mb={5}
                   {...child.props}
                   sx={{ lineHeight: 3, letterSpacing: 0, ...props.sx }}
                   as="p"

@@ -1,5 +1,5 @@
 ---
-title: 'Back to the drawing board: The select'
+title: 'Cracking: The select'
 publishedAt: '2020-04-03'
 summary: 'A custom Select component without compromises.'
 by: 'peduarte'
@@ -63,7 +63,7 @@ sx={{
   }}
 />
 
-In this example, pressing <Code variant="fade">Up</Code> and <Code variant="fade">Down</Code> arrows don't
+**Keyboard navigaton:** pressing <Code variant="fade">Up</Code> and <Code variant="fade">Down</Code> arrows don't
 correctly cycle over the items.
 
 </Box>
@@ -86,7 +86,7 @@ correctly cycle over the items.
   }}
 />
 
-In this example, typing in "US Dollar" doesn't automatically jump to that option.
+**Typeahead:** typing in "US Dollar" doesn't automatically jump to that option.
 
 </Box>
 
@@ -108,7 +108,7 @@ In this example, typing in "US Dollar" doesn't automatically jump to that option
   }}
 />
 
-In this example, part of the Menu is hidden below the fold.
+**Collision:** part of the Menu is hidden below the fold.
 
 </Box>
 
@@ -130,7 +130,7 @@ In this example, part of the Menu is hidden below the fold.
   }}
 />
 
-In this example, the Select Menu is implemented as a full screen Dialog.
+**Managing expectations:** the Select Menu is implemented as a full screen Dialog.
 
 </Box>
 
@@ -138,12 +138,12 @@ In this example, the Select Menu is implemented as a full screen Dialog.
 
 <Video id="uEyUbQ_eqwg" poster={amazonVideoPoster} />
 
-The video above shows the how the screen reader lacks enough context and information to accurately announce the list
+**Screen reader:** the video above shows the how the screen reader lacks enough context and information to accurately announce the list
 of options.
 
 <Divider mt={8} />
 
-## The Select Primitive
+## How we cracked it
 
 <!-- As with most of our Primitives, the Select is a core component for us, it's widely used in Modulz and our users will interact with it hundreds, if not thousands, of times. -->
 
