@@ -20,6 +20,8 @@ import facebook from './facebook.mp4';
 import soundcloud from './soundcloud.mp4';
 import amazonVideoPoster from './amazon-video-poster.png';
 
+<Intro>
+
 Building an accessible custom Select component from scratch is one of the most challenging pieces of UI one can tackle.
 
 There are many cases that need to be handled varying from accessibility concerns to collision-aware positioning.
@@ -28,7 +30,9 @@ It can take months of work to build it correctly. And because of that most teams
 
 In this article, I'll highlight the most common pitfalls of custom built Selects and how we went back to the drawing board to build ours.
 
----
+</Intro>
+
+<Divider mt={8} />
 
 ## Common pitfalls
 
@@ -48,11 +52,13 @@ sx={{
   src={yelp}
   mb={2}
   sx={{
-    transition: 'ease-out 100ms',
+    transition: 'ease-out 200ms',
+    transformOrigin: '50% 85%',
     ':hover': {
       transitionDuration: '250ms',
-      transform: 'scale(1.5)',
-      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+      transitionDelay: '100ms',
+      transform: [null, 'scale(1.25)'],
+      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
     },
   }}
 />
@@ -69,11 +75,13 @@ correctly cycle over the items.
   src={facebook}
   mb={2}
   sx={{
-    transition: 'ease-out 100ms',
+    transition: 'ease-out 200ms',
+    transformOrigin: '50% 85%',
     ':hover': {
       transitionDuration: '250ms',
-      transform: 'scale(1.5)',
-      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+      transitionDelay: '100ms',
+      transform: [null, 'scale(1.25)'],
+      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
     },
   }}
 />
@@ -89,11 +97,13 @@ In this example, typing in "US Dollar" doesn't automatically jump to that option
   src={soundcloud}
   mb={2}
   sx={{
-    transition: 'ease-out 100ms',
+    transition: 'ease-out 200ms',
+    transformOrigin: '50% 85%',
     ':hover': {
       transitionDuration: '250ms',
-      transform: 'scale(1.5)',
-      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+      transitionDelay: '100ms',
+      transform: [null, 'scale(1.25)'],
+      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
     },
   }}
 />
@@ -109,11 +119,13 @@ In this example, part of the Menu is hidden below the fold.
   src={squarespace}
   mb={2}
   sx={{
-    transition: 'ease-out 100ms',
+    transition: 'ease-out 200ms',
+    transformOrigin: '50% 85%',
     ':hover': {
       transitionDuration: '250ms',
-      transform: 'scale(1.5)',
-      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+      transitionDelay: '100ms',
+      transform: [null, 'scale(1.25)'],
+      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
     },
   }}
 />
@@ -129,9 +141,11 @@ In this example, the Select Menu is implemented as a full screen Dialog.
 The video above shows the how the screen reader lacks enough context and information to accurately announce the list
 of options.
 
----
+<Divider mt={8} />
 
-## Select Primitive
+## The Select Primitive
+
+Most of the Primitives available in Modulz are used in the Modulz app itself. The Select is a core component for us, it's widely used and users will interact with it hundreds, if not thousands, of times.
 
 ### Keyboard navigation
 
@@ -159,19 +173,19 @@ When the Select Menu is opened, you can:
 You can rely on typeahead funtionality if you're focused on the Select Button or when the Select Menu is opened.
 
 <ProductVideo small src={typeaheadClosed} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
   Typeahead when Select button is focused example
 </Text>
 
 <ProductVideo small src={typeaheadOpen} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
   Typeahead when Select Menu is opened example
 </Text>
 
 Pressing the same letter will loop over all items that start with that letter.
 
 <ProductVideo small src={typeaheadLoop} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
   Typeahead looping example
 </Text>
 
@@ -212,7 +226,7 @@ As showed in the demo above, all the parts (and their corresponding states) that
 The Select Primitve consists of two main parts, these are the `Button` and the `Menu`. Each of these part contains furhter nested parts.
 
 <ProductImage src={parts} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
   All the parts of a Select Primitive
 </Text>
 
@@ -221,6 +235,6 @@ The Select Primitve consists of two main parts, these are the `Button` and the `
 Here's a short demo of how the Select Primtive can be styled via Modulz
 
 <ProductVideo src={redSelect} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
+<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
   A demo of Modulz styling the Select Primitive
 </Text>

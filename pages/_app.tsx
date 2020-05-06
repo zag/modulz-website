@@ -154,6 +154,19 @@ function App({ Component, pageProps }: AppProps) {
               }}
             />
           ),
+          Intro: (props) => (
+            <Radix.Box mt={7} mb={5}>
+              {React.Children.map(props.children, (child) => (
+                <Radix.Text
+                  size={5}
+                  mb={3}
+                  {...child.props}
+                  sx={{ lineHeight: 3, letterSpacing: 0, ...props.sx }}
+                  as="p"
+                />
+              ))}
+            </Radix.Box>
+          ),
         }}
       >
         <Head>
