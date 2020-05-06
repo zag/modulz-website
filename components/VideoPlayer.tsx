@@ -1,7 +1,7 @@
 import React from 'react';
 import { AspectRatio, Box, Flex, Image as RadixImage } from '@modulz/radix';
 
-type VideoPlayerProps = { id: string; poster: string };
+type VideoPlayerProps = { id?: string; poster?: string };
 
 export const VideoPlayer = ({ id, poster, ...props }: VideoPlayerProps) => {
   const [hasStartedPlaying, setHasStartedPlaying] = React.useState(false);

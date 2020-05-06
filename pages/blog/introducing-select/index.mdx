@@ -20,72 +20,114 @@ import facebook from './facebook.mp4';
 import soundcloud from './soundcloud.mp4';
 import amazonVideoPoster from './amazon-video-poster.png';
 
-Building an accessible custom Select component from scratch is undoubtedly one of the most challenging pieces of UI one can tackle.
+Building an accessible custom Select component from scratch is one of the most challenging pieces of UI one can tackle.
 
-There are many cases that need to be handled, such as keyboard navigation, typeahead functionality, collision-aware positioning and many accessibility concerns.
+There are many cases that need to be handled varying from accessibility concerns to collision-aware positioning.
 
-Due of the amount of time it takes to make it right, it's understandable that teams tend to take shortcuts. As a result either the end user suffers (lack of functionality) or the product suffers (lack of design).
+It can take months of work to build it correctly. And because of that most teams are unable to implement or the required features.
 
-In this article, we'll look at how some of the biggest websites in the world have implemented their Select component, and how we went back to the drawing board to build our Select Primitive with accessibility features out of the box and customisable to your product's need.
+In this article, I'll highlight the most common pitfalls of custom built Selects and how we went back to the drawing board to build ours.
 
 ---
 
-## Common issues
+## Common pitfalls
 
-Many custom Selects across the web generally suffer from one or more of the following issues:
+The majority of custom built Selects lack keyboard navigation, typeahead functionality, collision-aware positioning and screen reader support.
 
-### Lack of keyboard navigation
+<Grid
+mx={[0, -5, -9]}
+sx={{
+	gridTemplateColumns: ['1fr', '1fr 1fr'],
+	gridColumnGap: [0, 4, 5]
+}}>
 
-An important feature of custom Selects is keyboard accessibility. Apart from offering an overall better user experience, it enables users with certain types of disabilities to navigate across the list of options.
+<Box>
 
-A common issue with custom built Selects is that they either completely lack keyboard navigation, or they're partly implemented.
+<ProductVideo
+  small
+  src={yelp}
+  mb={2}
+  sx={{
+    transition: 'ease-out 100ms',
+    ':hover': {
+      transitionDuration: '250ms',
+      transform: 'scale(1.5)',
+      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+    },
+  }}
+/>
 
-<ProductVideo src={yelp} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  This is an example of how pressing <Code variant="fade">up</Code> and <Code variant="fade">down</Code> arrows don't
-  correctly cycle over the items.
-</Text>
+In this example, pressing <Code variant="fade">Up</Code> and <Code variant="fade">Down</Code> arrows don't
+correctly cycle over the items.
 
-### Lack of screen reader support
+</Box>
 
-Something to take into account when creating your own custom Select is to make sure it's properly labelled. It's crucial to dedicate extra care time and attention to this, otherwise it can do more harm than good for users with certain types of disabilities.
+<Box>
+
+<ProductVideo
+  small
+  src={facebook}
+  mb={2}
+  sx={{
+    transition: 'ease-out 100ms',
+    ':hover': {
+      transitionDuration: '250ms',
+      transform: 'scale(1.5)',
+      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+    },
+  }}
+/>
+
+In this example, typing in "US Dollar" doesn't automatically jump to that option.
+
+</Box>
+
+<Box>
+
+<ProductVideo
+  small
+  src={soundcloud}
+  mb={2}
+  sx={{
+    transition: 'ease-out 100ms',
+    ':hover': {
+      transitionDuration: '250ms',
+      transform: 'scale(1.5)',
+      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+    },
+  }}
+/>
+
+In this example, part of the Menu is hidden below the fold.
+
+</Box>
+
+<Box>
+
+<ProductVideo
+  small
+  src={squarespace}
+  mb={2}
+  sx={{
+    transition: 'ease-out 100ms',
+    ':hover': {
+      transitionDuration: '250ms',
+      transform: 'scale(1.5)',
+      boxShadow: 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px',
+    },
+  }}
+/>
+
+In this example, the Select Menu is implemented as a full screen Dialog.
+
+</Box>
+
+</Grid>
 
 <Video id="uEyUbQ_eqwg" poster={amazonVideoPoster} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  The video above shows the how the screen reader lacks enough context and information to accurately announce the list
-  of options.
-</Text>
 
-### No typeahead functionality
-
-Typeahead functionality is specially helpful for Select with many options. If implemented, it can jump to the user's desired option based on what they're typing.
-
-Lack of typeahead support can jeoperdize the user experience by forcing users to scan a long list of options.
-
-<ProductVideo src={facebook} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  This is an example of a custom Select without typeahead functionality. The user is trying to bypass scrolling through
-  all options by typing in "US Dollar".
-</Text>
-
-### No collision detection
-
-It's important to ensure that whenever the Menu appears it's entirely visible for the users. If collision detection isn't handled the Menu could be hidden from the user, effectively not providing all the neccessary information.
-
-<ProductVideo src={soundcloud} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  An example of a custom Select without collision support, notice how part of the Menu is out of view.
-</Text>
-
-### Incorrect Menu implementations
-
-Managing user's expectation is another important factor to consider. Users interact with Select components all day long, on websites and on their operating systems. By displaying a piece of UI that looks like Select, users will expect a relatively positioned Menu to appear. It's important to be true to their expectations.
-
-<ProductVideo src={squarespace} />
-<Text as="legend" mb={7} sx={{ textAlign: 'center', color: 'gray700', lineHeight: 0 }}>
-  In this example the Select Menu is implemented as a full screen Dialog instead of being relatively positioned to the
-  click target.
-</Text>
+The video above shows the how the screen reader lacks enough context and information to accurately announce the list
+of options.
 
 ---
 
@@ -101,15 +143,15 @@ We support full keyboard accessibility so you can do anything you need without u
 
 When the Select Button is focused, you can:
 
-- Press `space` key to open the menu
-- Press `up` and `down` arrow keys to open the menu
+- Press `Space` key to open the menu
+- Press `Up` and `Down` arrow keys to open the menu
 - Typeahead lookups
 
 When the Select Menu is opened, you can:
 
-- Press `space` or `enter` keys to select the highlighted item
-- Press `esc` to close the menu
-- Press `up` and `down` arrow keys to navigate across items
+- Press `Space` or `Enter` keys to select the highlighted item
+- Press `Esc` to close the menu
+- Press `Up` and `Down` arrow keys to navigate across items
 - Typeahead lookups
 
 ### Typeahead
