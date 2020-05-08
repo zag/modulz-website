@@ -1,5 +1,5 @@
 ---
-title: 'Cracking: The select'
+title: 'Under the spotlight: Select'
 publishedAt: '2020-04-03'
 summary: 'A custom Select component without compromises.'
 by: 'peduarte'
@@ -20,152 +20,51 @@ import facebook from './facebook.mp4';
 import soundcloud from './soundcloud.mp4';
 import amazonVideoPoster from './amazon-video-poster.png';
 
-<Intro>
+Building a custom Select is hard. Very hard.
 
-Building a custom Select is hard. Very hard. It may be one of the hardest UI get right.
+There are many cases to consider. From accessibility concerns to collision-aware positioning. Unfortunately, because of this complexity, custom-built Select components fall short of the mark.
 
-There are many cases that you need to handle. They vary from accessibility concerns to collision detection.
+This article highlights the common pitfalls and demonstrates how we overcame these challenges while building our Select for Modulz.
 
-This article highlights its common pitfalls and what you can do to prevent them.
+---
 
-</Intro>
+Look closer at custom-built Select components around the web. Keyboard navigation. Typeahead functionality. Collision-aware positioning. Screen reader support. These are some of the most common features that custom Selects tend to lack.
 
-<Divider mt={8} />
+<ProductVideo src={yelp}>
+  Pressing <Code variant="fade">Up</Code> and <Code variant="fade">Down</Code> arrows don't cycle over the options.
+</ProductVideo>
 
-## Common pitfalls
+<ProductVideo src={facebook}>Typing in "US Dollar" doesn't skip to that option.</ProductVideo>
 
-Keyboard navigation. Typeahead functionality. Collision-aware positioning. Screen reader support. These are some of the most common features that custom Selects tend to lack.
+<ProductVideo src={soundcloud}>The Menu is being cropped by the viewport.</ProductVideo>
 
-<Grid
-mx={[0, -5, -9]}
-sx={{
-	gridTemplateColumns: ['1fr', '1fr 1fr'],
-	gridColumnGap: [0, 4, 5]
-}}>
+<ProductVideo src={squarespace}>The Menu is not positioned relative to the click target.</ProductVideo>
 
-<Box>
+<Video id="uEyUbQ_eqwg" poster={amazonVideoPoster}>
+  The screen reader announcements are not descriptive enough.
+</Video>
 
-<ProductVideo
-  small
-  src={yelp}
-  mb={2}
-  sx={{
-    transition: 'ease-out 200ms',
-    transformOrigin: '50% 85%',
-    ':hover': {
-      transitionDuration: '250ms',
-      transitionDelay: '100ms',
-      transform: [null, 'scale(1.25)'],
-      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
-    },
-  }}
-/>
+---
 
-**Keyboard navigaton:** pressing <Code variant="fade">Up</Code> and <Code variant="fade">Down</Code> arrows don't
-cycle over the options.
+Our goal was to retain as much of the Select's native functionality as possible while enabling completely custom styling.
 
-</Box>
-
-<Box>
-
-<ProductVideo
-  small
-  src={facebook}
-  mb={2}
-  sx={{
-    transition: 'ease-out 200ms',
-    transformOrigin: '50% 85%',
-    ':hover': {
-      transitionDuration: '250ms',
-      transitionDelay: '100ms',
-      transform: [null, 'scale(1.25)'],
-      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
-    },
-  }}
-/>
-
-**Typeahead:** typing in "US Dollar" doesn't skip to that option.
-
-</Box>
-
-<Box>
-
-<ProductVideo
-  small
-  src={soundcloud}
-  mb={2}
-  sx={{
-    transition: 'ease-out 200ms',
-    transformOrigin: '50% 85%',
-    ':hover': {
-      transitionDuration: '250ms',
-      transitionDelay: '100ms',
-      transform: [null, 'scale(1.25)'],
-      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
-    },
-  }}
-/>
-
-**Collision detection:** the Menu is being cropped by the viewport.
-
-</Box>
-
-<Box>
-
-<ProductVideo
-  small
-  src={squarespace}
-  mb={2}
-  sx={{
-    transition: 'ease-out 200ms',
-    transformOrigin: '50% 85%',
-    ':hover': {
-      transitionDuration: '250ms',
-      transitionDelay: '100ms',
-      transform: [null, 'scale(1.25)'],
-      boxShadow: [null, 'rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px'],
-    },
-  }}
-/>
-
-**Managing expectations:** the Menu is not positioned relative to the click target.
-
-</Box>
-
-</Grid>
-
-<Video id="uEyUbQ_eqwg" poster={amazonVideoPoster} />
-
-**Screen reader:** the video above shows the how the screen reader lacks enough context and information to accurately announce the list
-of options.
-
-<Divider mt={8} />
-
-## How we cracked it
-
-<!-- As with most of our Primitives, the Select is a core component for us, it's widely used in Modulz and our users will interact with it hundreds, if not thousands, of times. -->
-
-Our goal was to build the best custom Select that's ever been built. To do that, we needed to carefully consider each and every feature it we wanted to support.
-
-The idea is that when you use our Select, you don't even notice is custom. It just feels right, it belongs, it manages your expectations.
-
-Below is a list of all the features we've built into our Select, they all work out of-the-box, leaving only one task for you - make it look yours.
+Below is a list of all the features we've built into our Select, they all work out of-the-box, leaving only one task for you: make it look yours.
 
 ### Keyboard navigation
 
-Implementing keyboard navigation is one of the most important accessibility features of the Select component. It helps users with motor diabilities navigate across the options in the select. Blind users also rely on keyboard for navigation. It's also important for other types of disablities, such as people with tremors, people without hands or people who have no use of their hands.
+Keyboard navigation helps users with motor diabilities navigate across the options in the Select. Blind users also rely on keyboard for navigation. It's also important for other types of disablities, such as people with tremors or people who cannot use their hands.
 
-Keyboard navigation can also improve the user experience for people without disabilities, by allowing users to achieve their goal without reaching out for the mouse.
+Keyboard navigation also improves the user experience for people without disabilities. It allows them to achieve their goal without reaching out for the mouse.
 
-We support full keyboard accessibility so you can do anything you need without using your mouse.
+Every Select designed with Modulz supports keyboard accessibility, out of the box. So you can do anything you need without using your mouse.
 
-When the Select Button is focused, you can:
+When you focus the Select, you can:
 
 - Press `Space` key to open the menu
 - Press `Up` and `Down` arrow keys to open the menu
 - Typeahead lookups
 
-When the Select Menu is opened, you can:
+When you open the Select Menu, you can:
 
 - Press `Space` or `Enter` keys to select the highlighted item
 - Press `Esc` to close the menu
@@ -174,13 +73,22 @@ When the Select Menu is opened, you can:
 
 ### Typeahead
 
-You can rely on typeahead funtionality if you're focused on the Select Button or when the Select Menu is opened.
+Typeahead is a technique for searching and filtering through text. It's also known as autocomplete. Our Select component uses it to
+provide suggestions based on what you type.
 
-<ProductVideo small src={typeaheadClosed} />
-<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
-  Typeahead when Select button is focused example
-</Text>
+Select components designed in Modulz include typeahead by default. Your users will be grateful.
 
+You can rely on the typeahead functionality when you focus the Select or when you open it. In both cases, it works like this:
+
+- Your keystrokes will be stored in a memory buffer
+- After one second of inactivity, we'll reset the buffer
+- Pressing the same key will loop over suggestions starting with that character
+
+<ProductVideo small src={typeaheadClosed}>
+  A demo of how typeahead works.
+</ProductVideo>
+
+<!--
 <ProductVideo small src={typeaheadOpen} />
 <Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
   Typeahead when Select Menu is opened example
@@ -195,54 +103,50 @@ Pressing the same letter will loop over all items that start with that letter.
 
 Loop through items starting with the same letter if that letter is pressed repeatedly
 
+-->
+
 ### Screen reader
 
-We provide the right `aria-*` attributes according to the WAI-ARIA specification to ensure voice over works correctly.
+A screen reader is an assistive technology. It helps people who are severe visual impaired to use a computer.
 
-### Positioning
+Our Select component follows the WAI-ARIA authoring specification. This ensures it's accessible to screen reader users.
 
-When you open the menu, we'll make sure that it's properly positioned above the menu, whilst keeping the selected item placed on top.
+Every Select designed will Modulz works with screen readers. One less thing thing for you to worry about.
 
-### Collision
+### Focus trap
+
+Focus trapping is an important accessibility feature, specially for screen reader users.
+
+When you open the Select, the Menu gets focused. Pressing `Tab` will prevent elements outside of the Menu from receiving focus.
+
+### Scroll lock
+
+When you open the Select, the page can't be scrolled. This ensures the Menu is always in view.
+
+### Block clicks outside
+
+This functionality prevents clicks on elements that are outside of the Select component. When you click outside, the Menu will be closed.
+
+### Styling
+
+The Select component has many parts. In Modulz, you can style each part and their respective states.
+
+<ProductImage src={parts}>All the parts of a Select Primitive</ProductImage>
+
+### Collision + positioning
 
 In the unlikely scenario where there's not enough space to position the menu relatively to the selected item, we'll adjust the positioning automatically.
+
+When you open the menu, we'll make sure that it's properly positioned above the menu, whilst keeping the selected item placed on top.
 
 ### Scroll based height
 
 If the menu needs scrolling, we'll automatically add Scroll Indicators where necessary. As you start scrolling the menu, we'll proportionally update the height to allow more items to be visible at once.
 
-### Focus trap
-
-When the Menu is opened, the focus is trapped to the Menu container. Pressing `tab` at this point will prevent the focused element to changing. To navigate across the Items, the up and down arrow must be used.
-
-### Scroll lock
-
-When the Menu is opened, the page cannot be scrolled.
-
-### Block clicks outside
-
-When the Menu is opened, clicks on elements outside of it will be blocked. When you click outside, the Menu will be closed.
-
-### Styling
-
-As showed in the demo above, all the parts (and their corresponding states) that make up a Select componment are available in the parts panel.
-
-The Select Primitve consists of two main parts, these are the `Button` and the `Menu`. Each of these part contains furhter nested parts.
-
-<ProductImage src={parts} />
-<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
-  All the parts of a Select Primitive
-</Text>
-
 <Divider />
-
-## Wrapping up
 
 ### Modulz demo
 
-Here's a short demo of how the Select Primtive can be styled via Modulz
+To summarize, here's a short demo of how the Select Primtive can be styled from start to finish in Modulz.
 
-<ProductVideo src={redSelect} />
-<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
-  A demo of Modulz styling the Select Primitive
-</Text>
+<ProductVideo src={redSelect}>A demo of Modulz styling the Select Primitive</ProductVideo>

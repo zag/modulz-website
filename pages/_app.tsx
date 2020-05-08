@@ -47,8 +47,8 @@ function App({ Component, pageProps }: AppProps) {
             }
             return <Radix.Link href={href} {...props} variant="underline" />;
           },
-          hr: (props) => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
-          inlineCode: Radix.Code,
+          hr: (props) => <Radix.Divider size={2} my={6} mx="auto" {...props} />,
+          inlineCode: (props) => <Radix.Code variant="fade" {...props} />,
           ul: (props) => <Radix.Box mb={3} {...props} as="ul" />,
           ol: (props) => <Radix.Box mb={3} {...props} as="ol" />,
           li: (props) => (
@@ -76,23 +76,33 @@ function App({ Component, pageProps }: AppProps) {
           Image: ({ ...props }) => (
             <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
           ),
-          ProductImage: ({ ...props }) => (
-            <Radix.Box
-              mx={[-5, -5, -9]}
-              my={4}
-              sx={{
-                border: (theme) => `1px solid ${theme.colors.gray300}`,
-                borderRadius: [0, 2, 2],
-                overflow: 'hidden',
-              }}
-            >
-              <Radix.Image
-                {...props}
+          ProductImage: ({ children, ...props }) => (
+            <Radix.Box as="figure" mx={0} my={4}>
+              <Radix.Box
+                mx={[-5, -5, -9]}
                 sx={{
-                  maxWidth: '100%',
-                  verticalAlign: 'middle',
+                  border: (theme) => `1px solid ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
                 }}
-              />
+              >
+                <Radix.Image
+                  {...props}
+                  sx={{
+                    maxWidth: '100%',
+                    verticalAlign: 'middle',
+                  }}
+                />
+              </Radix.Box>
+              <Radix.Text
+                as="figcaption"
+                size={3}
+                pt={4}
+                pb={2}
+                sx={{ lineHeight: 2, letterSpacing: 0, color: 'gray700' }}
+              >
+                {children}
+              </Radix.Text>
             </Radix.Box>
           ),
           blockquote: (props) => (
@@ -103,40 +113,57 @@ function App({ Component, pageProps }: AppProps) {
               {...props}
             />
           ),
-          Video: ({ small, id, poster, ...props }) => (
-            <Radix.Box
-              mx={!small && [-5, -5, -9]}
-              my={4}
-              {...props}
-              sx={{
-                border: (theme) => `1px solid ${theme.colors.gray300}`,
-                borderRadius: [0, 2, 2],
-                overflow: 'hidden',
-                ...props.sx,
-              }}
-            >
-              <VideoPlayer id={id} poster={poster} />
+          Video: ({ small, id, poster, children, ...props }) => (
+            <Radix.Box as="figure" mx={0} my={4}>
+              <Radix.Box
+                mx={!small && [-5, -5, -9]}
+                {...props}
+                sx={{
+                  border: (theme) => `1px solid ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
+                  ...props.sx,
+                }}
+              >
+                <VideoPlayer id={id} poster={poster} />
+              </Radix.Box>
+              <Radix.Text
+                as="figcaption"
+                size={3}
+                pt={4}
+                pb={2}
+                sx={{ lineHeight: 2, letterSpacing: 0, color: 'gray700' }}
+              >
+                {children}
+              </Radix.Text>
             </Radix.Box>
           ),
-          ProductVideo: ({ small, src, ...props }) => (
-            <Radix.Box
-              mx={!small && [-5, -5, -9]}
-              my={4}
-              {...props}
-              sx={{
-                boxShadow: (theme) => `0 0 0 1px ${theme.colors.gray300}`,
-                borderRadius: [0, 2, 2],
-                overflow: 'hidden',
-                ...props.sx,
-              }}
-            >
-              <video src={src} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
+          ProductVideo: ({ small, src, children = '', ...props }) => (
+            <Radix.Box as="figure" mx={0} my={4}>
+              <Radix.Box
+                mx={!small && [-5, -5, -9]}
+                {...props}
+                sx={{
+                  boxShadow: (theme) => `0 0 0 1px ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
+                  ...props.sx,
+                }}
+              >
+                <video src={src} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
+              </Radix.Box>
+              <Radix.Text
+                as="figcaption"
+                size={3}
+                pt={4}
+                pb={2}
+                sx={{ lineHeight: 2, letterSpacing: 0, color: 'gray700' }}
+              >
+                {children}
+              </Radix.Text>
             </Radix.Box>
           ),
           VideoPlayer: (props) => <VideoPlayer {...props} />,
-          video: (props) => (
-            <video {...props} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
-          ),
           Icon: (props) => (
             <Radix.Box
               as="span"
@@ -153,19 +180,6 @@ function App({ Component, pageProps }: AppProps) {
                 ...props.sx,
               }}
             />
-          ),
-          Intro: (props) => (
-            <Radix.Box mt={7} mb={5}>
-              {React.Children.map(props.children, (child) => (
-                <Radix.Text
-                  size={5}
-                  mb={5}
-                  {...child.props}
-                  sx={{ lineHeight: 3, letterSpacing: 0, ...props.sx }}
-                  as="p"
-                />
-              ))}
-            </Radix.Box>
           ),
         }}
       >
