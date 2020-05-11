@@ -1,6 +1,6 @@
 ---
 title: 'Under the spotlight: Select'
-publishedAt: '2020-04-03'
+publishedAt: '2020-05-11'
 summary: 'A custom Select component without compromises.'
 by: 'peduarte'
 relatedIds:
@@ -31,7 +31,7 @@ This article highlights the common pitfalls and demonstrates how we overcame the
 Look closer at custom-built Select components around the web. Keyboard navigation. Typeahead functionality. Collision-aware positioning. Screen reader support. These are some of the most common features that custom Selects tend to lack.
 
 <ProductVideo src={yelp}>
-  Pressing <Code variant="fade">Up</Code> and <Code variant="fade">Down</Code> arrows don't cycle over the options.
+  Pressing <Code>Up</Code> and <Code>Down</Code> arrows don't cycle over the options.
 </ProductVideo>
 
 <ProductVideo src={facebook}>Typing in "US Dollar" doesn't skip to that option.</ProductVideo>
@@ -60,14 +60,14 @@ Every Select designed with Modulz supports keyboard accessibility, out of the bo
 
 When you focus the Select, you can:
 
-- Press `Space` key to open the menu
-- Press `Up` and `Down` arrow keys to open the menu
+- Press `Space` key to open the Menu
+- Press `Up` and `Down` arrow keys to open the Menu
 - Typeahead lookups
 
 When you open the Select Menu, you can:
 
 - Press `Space` or `Enter` keys to select the highlighted item
-- Press `Esc` to close the menu
+- Press `Esc` to close the Menu
 - Press `Up` and `Down` arrow keys to navigate across items
 - Typeahead lookups
 
@@ -125,23 +125,25 @@ When you open the Select, the page can't be scrolled. This ensures the Menu is a
 
 ### Block clicks outside
 
-This functionality prevents clicks on elements that are outside of the Select component. When you click outside, the Menu will be closed.
+This functionality prevents clicks on elements that are outside of the Select component. When you click outside, the Menu will close.
+
+### Positioning and collision
+
+When you open the Select, the currently selected option will be placed above the button. In the unlikely scenario where there's not enough space, the position will be adjusted.
+
+### Scroll Indicators
+
+When the number of options exceeds the Menu height, it becomes scrollable. To improve user experience, Scroll Indicators will appear where necessary.
+
+### Scroll based height
+
+When you scroll the Menu, we'll increase its height. This maximises the number of options visible at once. It helps users scan and find the option they're after.
 
 ### Styling
 
 The Select component has many parts. In Modulz, you can style each part and their respective states.
 
 <ProductImage src={parts}>All the parts of a Select Primitive</ProductImage>
-
-### Collision + positioning
-
-In the unlikely scenario where there's not enough space to position the menu relatively to the selected item, we'll adjust the positioning automatically.
-
-When you open the menu, we'll make sure that it's properly positioned above the menu, whilst keeping the selected item placed on top.
-
-### Scroll based height
-
-If the menu needs scrolling, we'll automatically add Scroll Indicators where necessary. As you start scrolling the menu, we'll proportionally update the height to allow more items to be visible at once.
 
 <Divider />
 
