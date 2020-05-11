@@ -69,7 +69,7 @@ function App({ Component, pageProps }: AppProps) {
           th: Radix.Th,
           strong: (props) => <Radix.Text {...props} sx={{ ...props.sx, fontSize: 'inherit', fontWeight: 500 }} />,
           img: ({ ...props }) => (
-            <Radix.Box mx={[-5, -5, -7]} my={4}>
+            <Radix.Box mx={[-5, -5, -7]} my={6}>
               <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
             </Radix.Box>
           ),
@@ -77,7 +77,7 @@ function App({ Component, pageProps }: AppProps) {
             <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
           ),
           ProductImage: ({ children, ...props }) => (
-            <Radix.Box as="figure" mx={0} my={4}>
+            <Radix.Box as="figure" mx={0} my={6}>
               <Radix.Box
                 mx={[-5, -5, -9]}
                 sx={{
@@ -114,7 +114,7 @@ function App({ Component, pageProps }: AppProps) {
             />
           ),
           Video: ({ small, id, poster, children, ...props }) => (
-            <Radix.Box as="figure" mx={0} my={4}>
+            <Radix.Box as="figure" mx={0} my={6}>
               <Radix.Box
                 mx={!small && [-5, -5, -9]}
                 {...props}
@@ -139,7 +139,7 @@ function App({ Component, pageProps }: AppProps) {
             </Radix.Box>
           ),
           ProductVideo: ({ small, src, children = '', ...props }) => (
-            <Radix.Box as="figure" mx={0} my={4}>
+            <Radix.Box as="figure" mx={0} my={6}>
               <Radix.Box
                 mx={!small && [-5, -5, -9]}
                 {...props}
