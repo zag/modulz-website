@@ -12,6 +12,9 @@ import test1 from './test1.mp4';
 import parts from './parts.png';
 import redSelect from './red-select.mp4';
 import typeahead from './select-typeahead-demo.mp4';
+import scrollIndicator from './select-scroll-indicator-demo.mp4';
+import scrollHeight from './select-scroll-height-demo.mp4';
+import positioning from './select-positioning-demo.mp4';
 import squarespace from './squarespace.mp4';
 import yelp from './yelp.mp4';
 import youtube from './youtube.mp4';
@@ -95,6 +98,30 @@ Our Select component follows the WAI-ARIA authoring specification. This ensures 
 
 Every Select designed will Modulz works with screen readers. One less thing thing for you to worry about.
 
+### Positioning
+
+When you open the Select, the currently selected option will be placed above the button. In the unlikely scenario where there's not enough space (a collision), the position will be adjusted.
+
+<ProductVideo small src={positioning}>
+  A demo of how the positioning logic works.
+</ProductVideo>
+
+### Scroll Indicators
+
+When the number of options exceeds the available Menu height, it becomes scrollable. To improve user experience, Scroll Indicators will appear where necessary.
+
+<ProductVideo small src={scrollIndicator}>
+  A demo of how Scroll Indicators works.
+</ProductVideo>
+
+### Scroll based height
+
+When you scroll the Menu, we'll increase its height. This maximises the number of options visible at once. It helps users scan and find the option they're after.
+
+<ProductVideo small src={scrollHeight}>
+  A demo of how the Menu height grows when you scroll.
+</ProductVideo>
+
 ### Focus trap
 
 Focus trapping is an important accessibility feature, specially for screen reader users.
@@ -108,18 +135,6 @@ When you open the Select, the page can't be scrolled. This ensures the Menu is a
 ### Block clicks outside
 
 This functionality prevents clicks on elements that are outside of the Select component. When you click outside, the Menu will close.
-
-### Positioning and collision
-
-When you open the Select, the currently selected option will be placed above the button. In the unlikely scenario where there's not enough space, the position will be adjusted.
-
-### Scroll Indicators
-
-When the number of options exceeds the Menu height, it becomes scrollable. To improve user experience, Scroll Indicators will appear where necessary.
-
-### Scroll based height
-
-When you scroll the Menu, we'll increase its height. This maximises the number of options visible at once. It helps users scan and find the option they're after.
 
 ### Styling
 
