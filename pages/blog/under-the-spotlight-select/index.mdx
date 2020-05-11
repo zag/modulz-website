@@ -8,11 +8,10 @@ relatedIds:
   - 'blog/introducing-tooltip'
 ---
 
+import test1 from './test1.mp4';
 import parts from './parts.png';
 import redSelect from './red-select.mp4';
-import typeaheadClosed from './typeahead-closed.mp4';
-import typeaheadOpen from './typeahead-open.mp4';
-import typeaheadLoop from './typeahead-loop.mp4';
+import typeahead from './select-typeahead-demo.mp4';
 import squarespace from './squarespace.mp4';
 import yelp from './yelp.mp4';
 import youtube from './youtube.mp4';
@@ -52,7 +51,7 @@ Below is a list of all the features we've built into our Select, they all work o
 
 ### Keyboard navigation
 
-Keyboard navigation helps users with motor diabilities navigate across the options in the Select. Blind users also rely on keyboard for navigation. It's also important for other types of disablities, such as people with tremors or people who cannot use their hands.
+Keyboard navigation helps users with motor disabilities navigate across the options in the Select. Blind users also rely on keyboard for navigation. It's also important for other types of disablities, such as people with tremors or people who cannot use their hands.
 
 Keyboard navigation also improves the user experience for people without disabilities. It allows them to achieve their goal without reaching out for the mouse.
 
@@ -81,29 +80,12 @@ Select components designed in Modulz include typeahead by default. Your users wi
 You can rely on the typeahead functionality when you focus the Select or when you open it. In both cases, it works like this:
 
 - Your keystrokes will be stored in a memory buffer
-- After one second of inactivity, we'll reset the buffer
+- After one second of inactivity, the buffer resets
 - Pressing the same key will loop over suggestions starting with that character
 
-<ProductVideo small src={typeaheadClosed}>
+<ProductVideo small src={typeahead}>
   A demo of how typeahead works.
 </ProductVideo>
-
-<!--
-<ProductVideo small src={typeaheadOpen} />
-<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
-  Typeahead when Select Menu is opened example
-</Text>
-
-Pressing the same letter will loop over all items that start with that letter.
-
-<ProductVideo small src={typeaheadLoop} />
-<Text as="legend" mb={7} sx={{ color: 'gray700', lineHeight: 0 }}>
-  Typeahead looping example
-</Text>
-
-Loop through items starting with the same letter if that letter is pressed repeatedly
-
--->
 
 ### Screen reader
 
@@ -152,3 +134,9 @@ The Select component has many parts. In Modulz, you can style each part and thei
 To summarize, here's a short demo of how the Select Primtive can be styled from start to finish in Modulz.
 
 <ProductVideo src={redSelect}>A demo of Modulz styling the Select Primitive</ProductVideo>
+
+---
+
+### Live demo
+
+<SelectDemo />

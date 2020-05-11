@@ -181,6 +181,7 @@ function App({ Component, pageProps }: AppProps) {
               }}
             />
           ),
+          SelectDemo,
         }}
       >
         <Head>
@@ -203,3 +204,17 @@ function App({ Component, pageProps }: AppProps) {
 }
 
 export default App;
+
+function SelectDemo() {
+  return (
+    <Radix.Flex sx={{ bg: 'gray800', alignItems: 'center', justifyContent: 'center', height: '480px' }}>
+      <Radix.Box sx={{}}>
+        <Radix.Select>
+          <Radix.Option value="option1" label="Option one" />
+          <Radix.Option value="option2" label="Option two" />
+          <Radix.Option value="option3" label="Option three" />
+        </Radix.Select>
+      </Radix.Box>
+    </Radix.Flex>
+  );
+}
