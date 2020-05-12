@@ -4,8 +4,8 @@ publishedAt: '2020-05-11'
 summary: 'A custom Select component without compromises.'
 by: 'peduarte'
 relatedIds:
-  - 'blog/introducing-primitives'
-  - 'blog/introducing-tooltip'
+  - 'blog/under-the-spotlight'
+  - 'blog/under-the-spotlight-tooltip'
 ---
 
 import test1 from './test1.mp4';
@@ -15,6 +15,7 @@ import typeahead from './select-typeahead-demo.mp4';
 import scrollIndicator from './select-scroll-indicator-demo.mp4';
 import scrollHeight from './select-scroll-height-demo.mp4';
 import positioning from './select-positioning-demo.mp4';
+import nativeFallback from './select-native-fallback-demo.mp4';
 import squarespace from './squarespace.mp4';
 import yelp from './yelp.mp4';
 import youtube from './youtube.mp4';
@@ -114,6 +115,18 @@ When you scroll the Menu, we'll increase its height. This maximizes the number o
   A demo of how the Menu height grows when you scroll.
 </ProductVideo>
 
+### Native fallback
+
+You may prefer to rely on the native implementation in certain situations. This is possible via the `isNative` prop, which you can pass to the Select component.
+
+<ProductVideo src={nativeFallback}>A demo of how native fallback works.</ProductVideo>
+
+### Styling
+
+The Select component has many parts. In Modulz, you can style each one and their respective states.
+
+<ProductImage src={parts}>All the parts of a Select component.</ProductImage>
+
 ### Focus trap
 
 Focus trapping is an important accessibility feature, especially for screen reader users.
@@ -127,16 +140,6 @@ When you open the Select, the page can't be scrolled. This ensures the Menu is a
 ### Block clicks outside
 
 This functionality prevents clicks on elements that are outside of the Select component.
-
-### Styling
-
-The Select component has many parts. In Modulz, you can style each one and their respective states.
-
-<ProductImage src={parts}>All the parts of a Select component.</ProductImage>
-
-### Native fallback
-
-You may prefer to rely on the native implementation in certain situations. This is possible via the `isNative` prop, which you can pass to the Select component.
 
 ---
 
