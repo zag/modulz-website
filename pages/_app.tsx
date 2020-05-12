@@ -11,6 +11,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { useAnalytics } from '../utils/analytics';
 import { VideoPlayer } from '../components/VideoPlayer';
+import { useRouter } from 'next/router';
 
 const GlobalStyles = createGlobalStyle`
   ${prismTheme};
@@ -23,6 +24,10 @@ const GlobalStyles = createGlobalStyle`
 
 function App({ Component, pageProps }: AppProps) {
   useAnalytics();
+
+  const router = useRouter();
+
+  const isDemoPage = router.pathname.includes('/demo/');
 
   return (
     <Radix.RadixProvider>
@@ -181,7 +186,23 @@ function App({ Component, pageProps }: AppProps) {
               }}
             />
           ),
-          SelectDemo,
+          Demo: (props) => (
+            <Radix.Box sx={{ display: ['none', 'block'] }}>
+              <Radix.Divider size={2} my={6} mx="auto" {...props} />
+              <Radix.Heading size={0} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3">
+                Live demo
+              </Radix.Heading>
+
+              <Radix.Box my={6} mx={[-5, -5, -9]} sx={{ borderRadius: 2, overflow: 'hidden' }}>
+                <Radix.AspectRatio ratio="2:1">
+                  <iframe
+                    src={`/demo/${props.component}`}
+                    style={{ display: 'block', width: '100%', height: '100%', border: 0 }}
+                  ></iframe>
+                </Radix.AspectRatio>
+              </Radix.Box>
+            </Radix.Box>
+          ),
         }}
       >
         <Head>
@@ -193,28 +214,14 @@ function App({ Component, pageProps }: AppProps) {
 
         <GlobalStyles />
 
-        <Header />
+        {!isDemoPage && <Header />}
 
         <Component {...pageProps} />
 
-        <Footer />
+        {!isDemoPage && <Footer />}
       </MDXProvider>
     </Radix.RadixProvider>
   );
 }
 
 export default App;
-
-function SelectDemo() {
-  return (
-    <Radix.Flex sx={{ bg: 'gray800', alignItems: 'center', justifyContent: 'center', height: '480px' }}>
-      <Radix.Box sx={{}}>
-        <Radix.Select>
-          <Radix.Option value="option1" label="Option one" />
-          <Radix.Option value="option2" label="Option two" />
-          <Radix.Option value="option3" label="Option three" />
-        </Radix.Select>
-      </Radix.Box>
-    </Radix.Flex>
-  );
-}
