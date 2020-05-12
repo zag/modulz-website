@@ -202,7 +202,7 @@ function App({ Component, pageProps }: AppProps) {
                   boxShadow: (theme) => `0 0 0 1px ${theme.colors.gray300}`,
                 }}
               >
-                <Radix.AspectRatio ratio="2:1">
+                <Radix.AspectRatio ratio="16:9">
                   <iframe
                     src={`/demo/${props.component}`}
                     style={{ display: 'block', width: '100%', height: '100%', border: 0 }}
