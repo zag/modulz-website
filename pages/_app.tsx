@@ -193,7 +193,15 @@ function App({ Component, pageProps }: AppProps) {
                 Live demo
               </Radix.Heading>
 
-              <Radix.Box my={6} mx={[-5, -5, -9]} sx={{ borderRadius: 2, overflow: 'hidden' }}>
+              <Radix.Box
+                my={6}
+                mx={[-5, -5, -9]}
+                sx={{
+                  borderRadius: 2,
+                  overflow: 'hidden',
+                  boxShadow: (theme) => `0 0 0 1px ${theme.colors.gray300}`,
+                }}
+              >
                 <Radix.AspectRatio ratio="2:1">
                   <iframe
                     src={`/demo/${props.component}`}

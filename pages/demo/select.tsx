@@ -51,24 +51,20 @@ function SelectDemo() {
   return (
     <Flex
       sx={{
-        bg: 'gray800',
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
         width: '100vw',
-        '[data-part-id="text"]': {
-          color: 'white ',
-        },
       }}
     >
       <Box ml={4} mt={3} sx={{ position: 'fixed', top: 0, left: 0 }}>
-        <Flex as="label" mb={2} sx={{ alignItems: 'center' }}>
+        <Flex as="label" mb={1} sx={{ alignItems: 'center' }}>
           <Label>Grouped options</Label>
           <Switch checked={showLongList} onChange={(event) => setShowLongList(event.target.checked)} />
         </Flex>
 
-        <Flex as="label" mb={2} sx={{ alignItems: 'center' }}>
-          <Label>Native menu</Label>
+        <Flex as="label" mb={1} sx={{ alignItems: 'center' }}>
+          <Label>Native fallback</Label>
           <Switch checked={isNative} onChange={(event) => setIsNative(event.target.checked)} />
         </Flex>
       </Box>
@@ -90,4 +86,6 @@ function SelectDemo() {
 
 export default SelectDemo;
 
-const Label = (props) => <Text mr={2} {...props} sx={{ whiteSpace: 'nowrap', flex: '1', ...props.sx }} />;
+const Label = (props) => (
+  <Text mr={2} {...props} sx={{ whiteSpace: 'nowrap', userSelect: 'none', flex: '1', ...props.sx }} />
+);
