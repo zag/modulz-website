@@ -50,28 +50,24 @@ Look closer at custom-built Select components around the web. Keyboard navigatio
 
 Our goal was to retain as much of the Select's native functionality as possible while enabling completely custom styling.
 
-Below is a list of all the features we've built into our Select, they all work out of-the-box, leaving only one task for you: make it look yours.
+Below is a list of all the features we've built into our Select, they all work out of the box, leaving only one task for you: make it look yours.
 
 ### Keyboard navigation
 
-Keyboard navigation helps users with motor disabilities navigate across the options in the Select. Blind users also rely on keyboard for navigation. It's also important for other types of disablities, such as people with tremors or people who cannot use their hands.
+Keyboard navigation helps users with motor disabilities navigate across the options in the Select. Blind users rely on keyboard for navigation. It also improves the experience for people without disabilities.
 
-Keyboard navigation also improves the user experience for people without disabilities. It allows them to achieve their goal without reaching out for the mouse.
-
-Every Select designed with Modulz supports keyboard accessibility, out of the box. So you can do anything you need without using your mouse.
+Every Select designed with Modulz supports keyboard accessibility. So you can do anything you need without using your mouse.
 
 When you focus the Select, you can:
 
 - Press `Space` key to open the Menu
 - Press `Up` and `Down` arrow keys to open the Menu
-- Typeahead lookups
 
 When you open the Select Menu, you can:
 
 - Press `Space` or `Enter` keys to select the highlighted item
 - Press `Esc` to close the Menu
 - Press `Up` and `Down` arrow keys to navigate across items
-- Typeahead lookups
 
 ### Typeahead
 
@@ -80,11 +76,7 @@ provide suggestions based on what you type.
 
 Select components designed in Modulz include typeahead by default. Your users will be grateful.
 
-You can rely on the typeahead functionality when you focus the Select or when you open it. In both cases, it works like this:
-
-- Your keystrokes will be stored in a memory buffer
-- After one second of inactivity, the buffer resets
-- Pressing the same key will loop over suggestions starting with that character
+You can rely on the typeahead functionality when you focus the Select or when you open it.
 
 <ProductVideo small src={typeahead}>
   A demo of how typeahead works.
@@ -96,7 +88,7 @@ A screen reader is an assistive technology. It helps people who are severe visua
 
 Our Select component follows the WAI-ARIA authoring specification. This ensures it's accessible to screen reader users.
 
-Every Select designed will Modulz works with screen readers. One less thing thing for you to worry about.
+Every Select designed with Modulz works with screen readers. One less thing thing for you to worry about.
 
 ### Positioning
 
@@ -111,7 +103,7 @@ When you open the Select, the currently selected option will be placed above the
 When the number of options exceeds the available Menu height, it becomes scrollable. To improve user experience, Scroll Indicators will appear where necessary.
 
 <ProductVideo small src={scrollIndicator}>
-  A demo of how Scroll Indicators works.
+  A demo of how Scroll Indicators work.
 </ProductVideo>
 
 ### Scroll based height
@@ -134,13 +126,13 @@ When you open the Select, the page can't be scrolled. This ensures the Menu is a
 
 ### Block clicks outside
 
-This functionality prevents clicks on elements that are outside of the Select component. When you click outside, the Menu will close.
+This functionality prevents clicks on elements that are outside of the Select component.
 
 ### Styling
 
 The Select component has many parts. In Modulz, you can style each part and their respective states.
 
-<ProductImage src={parts}>All the parts of a Select Primitive</ProductImage>
+<ProductImage src={parts}>All the parts of a Select component.</ProductImage>
 
 ### Native option
 
