@@ -1,17 +1,20 @@
 import React from 'react';
-import { Section, Container, Box, Flexbox, Text, Avatar } from 'radix-ds';
-import LegacyTestimonial from './LegacyTestimonial';
-import MikeAvatar from '../../public/legacy/mike-avatar.png';
-import TonyAvatar from '../../public/legacy/tony-avatar.jpg';
-import JackAvatar from '../../public/legacy/jack-avatar.jpg';
-import JinaAvatar from '../../public/legacy/jina-avatar.png';
-import SteveAvatar from '../../public/legacy/steve-avatar.jpg';
+import { Container, Box, Flex } from '@modulz/radix';
+import { LegacyTestimonial } from './LegacyTestimonial';
+const MikeAvatar = require('../../public/legacy/mike-avatar.png');
+const TonyAvatar = require('../../public/legacy/tony-avatar.jpg');
+const JackAvatar = require('../../public/legacy/jack-avatar.jpg');
+const JinaAvatar = require('../../public/legacy/jina-avatar.png');
+const SteveAvatar = require('../../public/legacy/steve-avatar.jpg');
 
-const WallOfLove = () => (
-  <Section size2 bp1_size3>
-    <Container size2>
-      <Flexbox fd_column bp1_fd_row mb_6>
-        <Box fg_1 fb_0 mb_6 bp1_mb_0 bp1_mr_2 bp2_mr_8>
+export const LegacyWallOfLove = () => (
+  <Box py={5}>
+    <Container size={3}>
+      <Flex
+        mt={6}
+        sx={{ flexDirection: ['column', 'row'], flexGrow: 1, flexBasis: 0, justifyContent: 'space-between' }}
+      >
+        <Box mb={6} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
             quote='"Modulz is one of the most exciting design tools I’ve seen. This could revolutionize design workflows."'
             author="Michael Dick"
@@ -19,7 +22,8 @@ const WallOfLove = () => (
             avatar={MikeAvatar}
           />
         </Box>
-        <Box fg_1 fb_0 bp1_ml_8>
+
+        <Box mb={6} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
             quote='"Of all these new UI design tools coming out, I think Modulz looks the most promising. Excited to give it a try."'
             author="Steve Schoger"
@@ -28,9 +32,10 @@ const WallOfLove = () => (
             avatar={SteveAvatar}
           />
         </Box>
-      </Flexbox>
+      </Flex>
     </Container>
-    <Container size3>
+
+    <Container size={2} px={6} mb={6}>
       <LegacyTestimonial
         large
         quote='"It’s exciting to watch a small group of people working on an idea which will fundamentally change a discipline."'
@@ -40,9 +45,13 @@ const WallOfLove = () => (
         avatar={TonyAvatar}
       />
     </Container>
-    <Container size2>
-      <Flexbox fd_column bp1_fd_row mt_6>
-        <Box fg_1 fb_0 mb_6 bp1_mb_0 bp1_mr_2 bp2_mr_8>
+
+    <Container size={3}>
+      <Flex
+        mb={6}
+        sx={{ flexDirection: ['column', 'row'], flexGrow: 1, flexBasis: 0, justifyContent: 'space-between' }}
+      >
+        <Box mb={[6, 0]} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
             quote="I can’t wait to try Modulz. It looks so cool!"
             author="Jina Anne"
@@ -51,7 +60,7 @@ const WallOfLove = () => (
           />
         </Box>
 
-        <Box fg_1 fb_0 bp1_ml_8>
+        <Box mb={6} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
             quote='"Empowering designers to iterate on the *actual* product they are working on—this is the future of our industry"'
             author="Jack Lo Russo"
@@ -60,9 +69,9 @@ const WallOfLove = () => (
             avatar={JackAvatar}
           />
         </Box>
-      </Flexbox>
+      </Flex>
     </Container>
-  </Section>
+  </Box>
 );
 
 // "It’s exciting to watch a small group of people working on an idea which will fundamentally change a discipline."
@@ -73,5 +82,3 @@ const WallOfLove = () => (
 // "This is one of those things, that upon first viewing, makes one question why it hasn't existed before."'
 
 // Modulz is full of interesting ideas. Can't wait to try it out. - Koen Bok
-
-export default WallOfLove;

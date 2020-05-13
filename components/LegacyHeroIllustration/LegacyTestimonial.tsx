@@ -3,12 +3,12 @@ import NextLink from 'next/link';
 import { Box, Flex, Text, Avatar, IconButton } from '@modulz/radix';
 import { ExternalLinkIcon } from '@modulz/radix-icons';
 
-const LegacyTestimonial = (props) => (
+export const LegacyTestimonial = (props) => (
   <Box sx={{ textAlign: 'center' }}>
     <Flex sx={{ justifyContent: 'center' }} mb={4}>
       <Quote />
     </Flex>
-    <blockquote cite="">
+    <Box as="blockquote">
       <Text as="p" sx={{ lineHeight: [4, props.large ? 5 : 4], fontSize: [6, props.large ? 8 : 6] }}>
         {props.quote}
       </Text>
@@ -31,11 +31,9 @@ const LegacyTestimonial = (props) => (
           )}
         </Box>
       </Flex>
-    </blockquote>
+    </Box>
   </Box>
 );
-
-export default LegacyTestimonial;
 
 const Quote = () => (
   <svg

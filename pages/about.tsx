@@ -1,26 +1,306 @@
 import React from 'react';
-import { Container, Box, Heading, Button, Text, Divider, Flex } from '@modulz/radix';
+import { Container, Box, Heading, Link, Text, Divider, Flex, Grid, AspectRatio } from '@modulz/radix';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
+import { authors } from '../data/authors';
 
 const Pricing = () => {
   return (
     <Box>
       <TitleAndMetaTags title="About" />
 
-      <Box mt={6} mb={8}>
-        <Container size={1}>
-          <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
-            About
-          </Heading>
+      <Container size={2} mt={8} mb={[5, 7]}>
+        <Heading as="h2" size={4} weight="normal">
+          Our mission is to fix the disconnect between digital product teams.
+        </Heading>
+      </Container>
 
-          <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
-            Our mission is to fix the disconnect between digital product teams.
-          </Heading>
-        </Container>
-      </Box>
+      <Container size={1} px={9}>
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+          To reduce bottlenecks by building modern design tools which empower whole teams to collaborate.
+        </Text>
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+          To encourage inclusive digital products by automating accessibility and performance.
+        </Text>
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+          To save companies time and money by minimizing duplicate work.
+        </Text>
+        <Text as="p" size={5} sx={{ lineHeight: 4 }}>
+          To get everyone collaborating on their products. Together.
+        </Text>
+      </Container>
 
-      <Divider mx="auto" size={2} />
+      <Divider mx="auto" my={8} size={2} />
+
+      <Container size={2}>
+        <Heading as="h3" size={4} mb={9} sx={{ lineHeight: 4, textAlign: 'center' }}>
+          Our journey so far
+        </Heading>
+
+        <Flex>
+          <Box sx={{ flexGrow: 1, flexBasis: 0 }}>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                November '18
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                January '19
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                February '19
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                June '19
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                July '19
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                January '20
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                March '20
+              </Text>
+            </Box>
+            <Box>
+              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
+                Summer '20
+              </Text>
+            </Box>
+          </Box>
+          <Box px={6}>
+            <Box sx={{ width: '1px', bg: 'gray300' }}>
+              <Flex
+                mb={9}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bg: 'gray200',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              >
+                <TickIcon />
+              </Flex>
+              <Flex
+                mb={9}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bg: 'gray200',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              >
+                <TickIcon />
+              </Flex>
+              <Flex
+                mb={9}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bg: 'gray200',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              >
+                <TickIcon />
+              </Flex>
+              <Flex
+                mb={9}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bg: 'gray200',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              >
+                <TickIcon />
+              </Flex>
+              <Flex
+                mb={9}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bg: 'gray200',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              >
+                <TickIcon />
+              </Flex>
+              <Flex
+                mb={9}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bg: 'gray200',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              >
+                <TickIcon />
+              </Flex>
+              <Flex
+                mb={9}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bg: 'gray200',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              >
+                <TickIcon />
+              </Flex>
+              <Flex
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '1px solid',
+                  borderColor: 'gray300',
+                  bg: 'white',
+                  width: '25px',
+                  height: '25px',
+                  borderRadius: '50%',
+                  marginLeft: '-12px',
+                }}
+              />
+            </Box>
+          </Box>
+          <Box sx={{ flexGrow: 1, flexBasis: 0 }}>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                $36k on Kickstarter
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                Raised $1M+ funding
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                Private alpha launch
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                Grew to 7 peeps
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                Raised $3M funding
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                Private beta launch
+              </Text>
+            </Box>
+            <Box mb={9}>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                Grew to 11 peeps
+              </Text>
+            </Box>
+            <Box>
+              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
+                Public launch
+              </Text>
+            </Box>
+          </Box>
+        </Flex>
+      </Container>
+
+      <Divider mx="auto" my={8} size={2} />
+
+      <Container size={2}>
+        <Heading as="h3" size={4} mb={4} sx={{ lineHeight: 4, textAlign: 'center' }}>
+          Team
+        </Heading>
+
+        <Text as="p" size={5} mb={[6, 8]} sx={{ color: 'gray700', textAlign: 'center' }}>
+          Who we are and what we do.
+        </Text>
+      </Container>
+
+      <Divider mx="auto" my={8} size={2} />
+
+      <Container size={3}>
+        <Grid sx={{ gap: [5, 7], gridTemplateColumns: ['1fr 1fr', '1fr 1fr 1fr', '1fr 1fr 1fr 1fr'] }}>
+          {Object.entries(authors).map(([key, author]) => (
+            <Box>
+              <AspectRatio ratio="16:9">
+                <Box
+                  sx={{
+                    height: '100%',
+                    backgroundImage: `url(${author.mug})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    filter: 'grayscale(1)',
+                  }}
+                />
+              </AspectRatio>
+              <Box mt={4} px={[0, 2]}>
+                <Text as="p" size={4} weight="medium" mb={1}>
+                  {author.name}
+                </Text>
+                <Flex sx={{ alignItems: 'center' }} mt={2}>
+                  <Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer">
+                    <Text size={2}>Twitter</Text>
+                    <Box as="span" ml={1} sx={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path
+                          d="M5.5 3.5L11.5 3.5L11.5 9.5"
+                          stroke="hsl(208,12%,46%)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M3.5 11.5L11.5 3.5"
+                          stroke="hsl(208,12%,46%)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </Box>
+                  </Link>
+                </Flex>
+              </Box>
+            </Box>
+          ))}
+        </Grid>
+      </Container>
+
+      <Divider mx="auto" my={8} size={2} />
 
       <BetaAccess />
     </Box>
@@ -28,3 +308,9 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
+const TickIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+    <path d="M12.5 3.5L6.5 11.5L2.5 8.5" stroke="hsl(208,12%,46%)" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);

@@ -9,9 +9,9 @@ import { BlogCardGrid } from '../components/BlogCardGrid';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 import { MarketingButton } from '../components/MarketingButtton';
-import LegacyComposerHero from '../components/LegacyHeroIllustration/LegacyComposerHero';
-import LegacyUseCases from '../components/LegacyHeroIllustration/LegacyUseCases';
-import LegacyWallOfLove from '../components/LegacyHeroIllustration/LegacyWallOfLove';
+import { LegacyComposerHero } from '../components/LegacyHeroIllustration/LegacyComposerHero';
+import { LegacyUseCases } from '../components/LegacyHeroIllustration/LegacyUseCases';
+import { LegacyWallOfLove } from '../components/LegacyHeroIllustration/LegacyWallOfLove';
 import { HideInProd } from '../components/HideInProd';
 
 const Home = () => {

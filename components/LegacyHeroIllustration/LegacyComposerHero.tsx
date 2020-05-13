@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Flex, Box } from '@modulz/radix';
 const HomepageHero = require('../../public/home/homepage-hero-min.png');
 
-const ComposerHero = () => (
-  <Box py={2}>
+export const LegacyComposerHero = () => (
+  <Box>
     <Box sx={{ display: ['none', 'block'] }}>
       <Box my={8}>
         <Container size={3}>
@@ -169,8 +169,6 @@ const ComposerHero = () => (
     </Box>
   </Box>
 );
-
-export default ComposerHero;
 
 const LogoReact = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="74" height="65" viewBox="0 0 74 65" fill="none">
