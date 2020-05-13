@@ -9,6 +9,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
     {...props}
     sx={{
       position: 'relative',
+      zIndex: 1,
       display: 'inline-flex',
       alignItems: 'center',
       fontFamily: 'normal',

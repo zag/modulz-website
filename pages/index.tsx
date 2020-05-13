@@ -9,12 +9,15 @@ import { BlogCardGrid } from '../components/BlogCardGrid';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 import { MarketingButton } from '../components/MarketingButtton';
+import LegacyComposerHero from '../components/LegacyHeroIllustration/LegacyComposerHero';
+import LegacyUseCases from '../components/LegacyHeroIllustration/LegacyUseCases';
+import LegacyWallOfLove from '../components/LegacyHeroIllustration/LegacyWallOfLove';
+import { HideInProd } from '../components/HideInProd';
 
 const Home = () => {
   return (
     <Box>
       <TitleAndMetaTags />
-
       <Box mt={6} mb={8}>
         <Container size={2}>
           <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
@@ -50,50 +53,40 @@ const Home = () => {
         </Container>
       </Box>
 
-      <Container size={2} my={8} pb={8} sx={{ maxWidth: '1280px' }}>
-        <Box>
-          <img
-            src="/home/editor.png"
-            style={{
-              display: 'block',
-              maxWidth: '100%',
-              boxShadow:
-                'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
-              borderWidth: '1px',
-              borderStyle: 'solid',
-              borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
-              borderRadius: '10px',
-            }}
-          />
+      <LegacyComposerHero />
+      <LegacyUseCases />
+      <Divider size={2} my={8} mx="auto" />
+      <LegacyWallOfLove />
+
+      <HideInProd>
+        <Box my={8}>
+          <Container size={2} sx={{ maxWidth: '1090px' }}>
+            <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+              Learn
+            </Heading>
+            <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700', letterSpacing: '-.008em' }}>
+              Learn how to make the most out of Modulz.
+            </Text>
+
+            <BlogCardGrid>
+              {(learnPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
+                <Box key={frontMatter.title} sx={{ flex: 1 }}>
+                  <BlogCard frontMatter={frontMatter} />
+                </Box>
+              ))}
+            </BlogCardGrid>
+
+            <Box mt={2}>
+              <NextLink href="/learn" passHref>
+                <Link>Browse all</Link>
+              </NextLink>
+            </Box>
+          </Container>
         </Box>
-      </Container>
 
-      <Box my={8}>
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
-            Learn
-          </Heading>
-          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700', letterSpacing: '-.008em' }}>
-            Learn how to make the most out of Modulz.
-          </Text>
+        <Divider mx="auto" size={2} />
+      </HideInProd>
 
-          <BlogCardGrid>
-            {(learnPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
-              <Box key={frontMatter.title} sx={{ flex: 1 }}>
-                <BlogCard frontMatter={frontMatter} />
-              </Box>
-            ))}
-          </BlogCardGrid>
-
-          <Box mt={2}>
-            <NextLink href="/learn" passHref>
-              <Link>Browse all</Link>
-            </NextLink>
-          </Box>
-        </Container>
-      </Box>
-
-      <Divider mx="auto" size={2} />
       <Box py={9}>
         <Container size={2} sx={{ maxWidth: '1090px' }}>
           <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
@@ -118,9 +111,7 @@ const Home = () => {
           </Box>
         </Container>
       </Box>
-
       <Divider mx="auto" size={2} />
-
       <BetaAccess />
     </Box>
   );
