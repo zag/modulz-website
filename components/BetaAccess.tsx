@@ -6,10 +6,10 @@ export const BetaAccess = () => {
   return (
     <Box my={8}>
       <Container size={1}>
-        <Heading as="h5" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+        <Heading as="h5" size={4} mb={3} sx={{ textAlign: 'center' }}>
           Join our beta program
         </Heading>
-        <Text as="p" size={5} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}>
+        <Text as="p" size={5} sx={{ textAlign: 'center', color: 'gray700' }}>
           We're currently in private beta. We're primarily targeting teams. Applications will be screened based on fit.
         </Text>
 

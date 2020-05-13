@@ -30,7 +30,7 @@ const Careers = () => {
       <Divider mx="auto" my={8} size={2} />
 
       <Container size={2}>
-        <Heading as="h3" size={4} mb={8} sx={{ lineHeight: 4, textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={8} sx={{ textAlign: 'center' }}>
           Our values
         </Heading>
 
@@ -77,7 +77,7 @@ const Careers = () => {
       <Divider mx="auto" my={8} size={2} />
 
       <Container size={2}>
-        <Heading as="h3" size={4} mb={8} sx={{ lineHeight: 4, textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={8} sx={{ textAlign: 'center' }}>
           Perks and benefits
         </Heading>
 
@@ -168,11 +168,10 @@ const Careers = () => {
       <Divider mx="auto" my={8} size={2} />
 
       <Container size={2}>
-        <Heading as="h3" size={4} mb={4} sx={{ lineHeight: 4, textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center' }}>
           Open roles
         </Heading>
-
-        <Text as="p" size={5} mb={[6, 8]} sx={{ color: 'gray700', textAlign: 'center' }}>
+        <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
           We're not currently hiring for any roles. Check back in a couple months.
         </Text>
       </Container>

@@ -20,7 +20,7 @@ const Home = () => {
       <TitleAndMetaTags />
       <Box mt={6} mb={8}>
         <Container size={2}>
-          <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
+          <Heading size={5} mb={4} sx={{ textAlign: 'center' }}>
             The visual code editor
           </Heading>
         </Container>
@@ -61,10 +61,10 @@ const Home = () => {
       <HideInProd>
         <Box my={8}>
           <Container size={2} sx={{ maxWidth: '1090px' }}>
-            <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+            <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500 }}>
               Learn
             </Heading>
-            <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700', letterSpacing: '-.008em' }}>
+            <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
               Learn how to make the most out of Modulz.
             </Text>
 
@@ -89,10 +89,10 @@ const Home = () => {
 
       <Box py={9}>
         <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center' }}>
             Blog
           </Heading>
-          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700', letterSpacing: '-.008em' }}>
+          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
             More about what we're doing.
           </Text>
 

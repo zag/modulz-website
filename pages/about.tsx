@@ -243,11 +243,11 @@ const About = () => {
       <Divider mx="auto" my={8} size={2} />
 
       <Container size={2}>
-        <Heading as="h3" size={4} mb={4} sx={{ lineHeight: 4, textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={4} sx={{ textAlign: 'center' }}>
           Team
         </Heading>
 
-        <Text as="p" size={5} mb={[6, 8]} sx={{ color: 'gray700', textAlign: 'center' }}>
+        <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
           Who we are and what we do.
         </Text>
       </Container>
