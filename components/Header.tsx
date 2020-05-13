@@ -104,7 +104,7 @@ export const Header = () => {
             </Box>
           </Popover>
 
-          <Text size={3} sx={{ color: 'gray700' }} ml={7}>
+          <Text size={3} sx={{ color: 'gray700' }} ml={6}>
             <NextLink href="/about" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>About</Link>
             </NextLink>
