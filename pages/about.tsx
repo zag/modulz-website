@@ -4,7 +4,7 @@ import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 import { authors } from '../data/authors';
 
-const Pricing = () => {
+const About = () => {
   return (
     <Box>
       <TitleAndMetaTags title="About" />
@@ -307,7 +307,7 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default About;
 
 const TickIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
