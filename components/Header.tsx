@@ -30,7 +30,7 @@ export const Header = () => {
           </Link>
         </NextLink>
 
-        <Flex ml="auto" sx={{ flexDirection: ['column', 'row'], alignItems: ['flex-end', 'center'] }}>
+        <Flex ml="auto" sx={{ flexDirection: ['row', 'row'], alignItems: ['center', 'center'] }}>
           <ChromelessButton
             ref={buttonRef}
             onClick={() => setIsOpen(true)}
@@ -104,32 +104,32 @@ export const Header = () => {
             </Box>
           </Popover>
 
-          <Text size={3} sx={{ color: 'gray700' }} ml={6}>
+          <Text size={3} sx={{ color: 'gray700' }} ml={[2, 6]}>
             <NextLink href="/about" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>About</Link>
             </NextLink>
           </Text>
           <HideInProd>
-            <Text size={3} sx={{ color: 'gray700' }} ml={7}>
+            <Text size={3} sx={{ color: 'gray700' }} ml={[4, 7]}>
               <NextLink href="/learn" passHref>
                 <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Learn</Link>
               </NextLink>
             </Text>
           </HideInProd>
-          <Text size={3} sx={{ color: 'gray700' }} ml={7}>
+          <Text size={3} sx={{ color: 'gray700' }} ml={[4, 7]}>
             <NextLink href="/blog" passHref>
               <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Blog</Link>
             </NextLink>
           </Text>
           <HideInProd>
-            <Text size={3} sx={{ color: 'gray700' }} ml={7}>
+            <Text size={3} sx={{ color: 'gray700' }} ml={[4, 7]}>
               <NextLink href="/pricing" passHref>
                 <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>Pricing</Link>
               </NextLink>
             </Text>
           </HideInProd>
 
-          <Pipe mx={5} />
+          <Pipe mx={[2, 5]} />
 
           <Text size={3} sx={{ color: 'gray700' }}>
             <Link href="https://modulz.app/login" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
