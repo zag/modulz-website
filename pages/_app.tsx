@@ -11,6 +11,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { useAnalytics } from '../utils/analytics';
 import { VideoPlayer } from '../components/VideoPlayer';
+import { useRouter } from 'next/router';
 
 const GlobalStyles = createGlobalStyle`
   ${prismTheme};
@@ -24,6 +25,10 @@ const GlobalStyles = createGlobalStyle`
 function App({ Component, pageProps }: AppProps) {
   useAnalytics();
 
+  const router = useRouter();
+
+  const isDemoPage = router.pathname.includes('/demo/');
+
   return (
     <Radix.RadixProvider>
       <MDXProvider
@@ -32,7 +37,7 @@ function App({ Component, pageProps }: AppProps) {
           ...RadixIcons,
           h1: (props) => <Radix.Heading size={5} mb={8} sx={{ fontWeight: 500 }} {...props} as="h1" />,
           h2: (props) => <Radix.Heading size={2} mt={8} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
-          h3: (props) => <Radix.Heading size={1} mt={7} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
+          h3: (props) => <Radix.Heading size={0} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: (props) => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
           p: (props) => (
             <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />
@@ -47,8 +52,8 @@ function App({ Component, pageProps }: AppProps) {
             }
             return <Radix.Link href={href} {...props} variant="underline" />;
           },
-          hr: (props) => <Radix.Divider size={1} my={6} mx="auto" {...props} />,
-          inlineCode: Radix.Code,
+          hr: (props) => <Radix.Divider size={2} my={6} mx="auto" {...props} />,
+          inlineCode: (props) => <Radix.Code variant="fade" {...props} />,
           ul: (props) => <Radix.Box mb={3} {...props} as="ul" />,
           ol: (props) => <Radix.Box mb={3} {...props} as="ol" />,
           li: (props) => (
@@ -69,32 +74,40 @@ function App({ Component, pageProps }: AppProps) {
           th: Radix.Th,
           strong: (props) => <Radix.Text {...props} sx={{ ...props.sx, fontSize: 'inherit', fontWeight: 500 }} />,
           img: ({ ...props }) => (
-            <Radix.Box mx={[-5, -5, -7]} my={4}>
+            <Radix.Box mx={[-5, -5, -7]} my={6}>
               <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
             </Radix.Box>
           ),
           Image: ({ ...props }) => (
-            <Radix.Box mx={[-5, -5, -7]} my={4}>
-              <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
-            </Radix.Box>
+            <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
           ),
-          ProductImage: ({ ...props }) => (
-            <Radix.Box
-              mx={[-5, -5, -9]}
-              my={4}
-              sx={{
-                border: (theme) => `1px solid ${theme.colors.gray300}`,
-                borderRadius: [0, 2, 2],
-                overflow: 'hidden',
-              }}
-            >
-              <Radix.Image
-                {...props}
+          ProductImage: ({ children, ...props }) => (
+            <Radix.Box as="figure" mx={0} my={6}>
+              <Radix.Box
+                mx={[-5, -5, -9]}
                 sx={{
-                  maxWidth: '100%',
-                  verticalAlign: 'middle',
+                  border: (theme) => `1px solid ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
                 }}
-              />
+              >
+                <Radix.Image
+                  {...props}
+                  sx={{
+                    maxWidth: '100%',
+                    verticalAlign: 'middle',
+                  }}
+                />
+              </Radix.Box>
+              <Radix.Text
+                as="figcaption"
+                size={3}
+                pt={4}
+                pb={2}
+                sx={{ lineHeight: 2, letterSpacing: 0, color: 'gray700' }}
+              >
+                {children}
+              </Radix.Text>
             </Radix.Box>
           ),
           blockquote: (props) => (
@@ -105,24 +118,57 @@ function App({ Component, pageProps }: AppProps) {
               {...props}
             />
           ),
-          Video: (props) => (
-            <Radix.Box mx={[-5, -5, -7]} my={8}>
-              <VideoPlayer {...props} />
+          Video: ({ small, id, poster, children, ...props }) => (
+            <Radix.Box as="figure" mx={0} my={6}>
+              <Radix.Box
+                mx={!small && [-5, -5, -9]}
+                {...props}
+                sx={{
+                  border: (theme) => `1px solid ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
+                  ...props.sx,
+                }}
+              >
+                <VideoPlayer id={id} poster={poster} />
+              </Radix.Box>
+              <Radix.Text
+                as="figcaption"
+                size={3}
+                pt={4}
+                pb={2}
+                sx={{ lineHeight: 2, letterSpacing: 0, color: 'gray700' }}
+              >
+                {children}
+              </Radix.Text>
             </Radix.Box>
           ),
-          ProductVideo: (props) => (
-            <Radix.Box
-              mx={[-5, -5, -9]}
-              my={4}
-              sx={{
-                border: (theme) => `1px solid ${theme.colors.gray300}`,
-                borderRadius: [0, 2, 2],
-                overflow: 'hidden',
-              }}
-            >
-              <video {...props} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
+          ProductVideo: ({ small, src, children = '', ...props }) => (
+            <Radix.Box as="figure" mx={0} my={6}>
+              <Radix.Box
+                mx={!small && [-5, -5, -9]}
+                {...props}
+                sx={{
+                  boxShadow: (theme) => `0 0 0 1px ${theme.colors.gray300}`,
+                  borderRadius: [0, 2, 2],
+                  overflow: 'hidden',
+                  ...props.sx,
+                }}
+              >
+                <video src={src} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
+              </Radix.Box>
+              <Radix.Text
+                as="figcaption"
+                size={3}
+                pt={4}
+                pb={2}
+                sx={{ lineHeight: 2, letterSpacing: 0, color: 'gray700' }}
+              >
+                {children}
+              </Radix.Text>
             </Radix.Box>
           ),
+          VideoPlayer: (props) => <VideoPlayer {...props} />,
           Icon: (props) => (
             <Radix.Box
               as="span"
@@ -140,6 +186,31 @@ function App({ Component, pageProps }: AppProps) {
               }}
             />
           ),
+          Demo: (props) => (
+            <Radix.Box sx={{ display: ['none', 'block'] }}>
+              <Radix.Divider size={2} my={6} mx="auto" {...props} />
+              <Radix.Heading size={0} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3">
+                Live demo
+              </Radix.Heading>
+
+              <Radix.Box
+                my={6}
+                mx={[-5, -5, -9]}
+                sx={{
+                  borderRadius: 2,
+                  overflow: 'hidden',
+                  boxShadow: (theme) => `0 0 0 1px ${theme.colors.gray300}`,
+                }}
+              >
+                <Radix.AspectRatio ratio="16:9">
+                  <iframe
+                    src={`/demo/${props.component}`}
+                    style={{ display: 'block', width: '100%', height: '100%', border: 0 }}
+                  ></iframe>
+                </Radix.AspectRatio>
+              </Radix.Box>
+            </Radix.Box>
+          ),
         }}
       >
         <Head>
@@ -151,11 +222,11 @@ function App({ Component, pageProps }: AppProps) {
 
         <GlobalStyles />
 
-        <Header />
+        {!isDemoPage && <Header />}
 
         <Component {...pageProps} />
 
-        <Footer />
+        {!isDemoPage && <Footer />}
       </MDXProvider>
     </Radix.RadixProvider>
   );

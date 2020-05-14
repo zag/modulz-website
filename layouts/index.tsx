@@ -42,7 +42,7 @@ export default (frontMatter: FrontMatter) => {
             </Text>
             <Separator sx={{ display: ['none', 'block'] }} />
             <Text as="time" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
-              {format(parseISO(frontMatter.publishedAt), 'MMMM ‘yy')}
+              {format(parseISO(frontMatter.publishedAt), 'MMMM yyyy')}
             </Text>
             <Separator />
             <Text size={2} sx={{ color: 'gray700', lineHeight: 0 }}>

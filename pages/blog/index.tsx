@@ -12,7 +12,7 @@ const Blog = () => {
       <Container size={1}>
         <TitleAndMetaTags title="Modulz Blog" description="More about what we're doing." />
 
-        <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500 }}>
+        <Heading size={5} mb={4} sx={{ textAlign: 'center' }}>
           Blog
         </Heading>
 

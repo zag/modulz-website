@@ -1,22 +1,24 @@
 import React from 'react';
 import { AspectRatio, Box, Flex, Image as RadixImage } from '@modulz/radix';
 
-type VideoPlayerProps = { id: string };
+type VideoPlayerProps = { id?: string; poster?: string };
 
-export const VideoPlayer = ({ id, ...props }: VideoPlayerProps) => {
+export const VideoPlayer = ({ id, poster, ...props }: VideoPlayerProps) => {
   const [hasStartedPlaying, setHasStartedPlaying] = React.useState(false);
-  const [posterUrl, setPosterUrl] = React.useState(undefined);
+  const [posterUrl, setPosterUrl] = React.useState(poster || undefined);
 
   React.useEffect(() => {
-    const img = new Image();
-    img.src = `http://i3.ytimg.com/vi/${id}/maxresdefault.jpg`;
-    img.onload = () => {
-      if (img.width <= 120) {
-        setPosterUrl(`http://i3.ytimg.com/vi/${id}/hqdefault.jpg`);
-      } else {
-        setPosterUrl(img.src);
-      }
-    };
+    if (!poster) {
+      const img = new Image();
+      img.src = `http://i3.ytimg.com/vi/${id}/maxresdefault.jpg`;
+      img.onload = () => {
+        if (img.width <= 120) {
+          setPosterUrl(`http://i3.ytimg.com/vi/${id}/hqdefault.jpg`);
+        } else {
+          setPosterUrl(img.src);
+        }
+      };
+    }
   }, []);
 
   return (

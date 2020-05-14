@@ -55,7 +55,7 @@ export const Footer = () => {
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
                   <NextLink href="/styleguide" passHref>
-                    <Link variant="fade">Styleguide</Link>
+                    <Link variant="fade">Style guide</Link>
                   </NextLink>
                 </Text>
               </li>
