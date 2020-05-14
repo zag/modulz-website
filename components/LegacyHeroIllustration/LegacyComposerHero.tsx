@@ -5,7 +5,7 @@ const HomepageHero = require('../../public/home/homepage-hero-min.png');
 export const LegacyComposerHero = () => (
   <Box>
     <Box sx={{ display: ['none', 'block'] }}>
-      <Box my={8}>
+      <Box mt={8}>
         <Container size={3}>
           <Flex sx={{ flexDirection: ['column', 'row'] }}>
             <Flex sx={{ flexGrow: 1, flexBasis: 0, alignItems: 'flex-end', flexDirection: 'column' }}>
@@ -97,25 +97,14 @@ export const LegacyComposerHero = () => (
                       transform: 'rotate(19deg)',
                     }}
                   ></Box>
-                  <Box
-                    sx={{
-                      backgroundColor: 'white',
-                      boxShadow: '0 0 0 20px white',
-                    }}
-                  >
+                  <Box sx={{ backgroundColor: 'white', boxShadow: '0 0 0 20px white' }}>
                     <LogoModulz />
                   </Box>
                 </Box>
               </Flex>
             </Box>
             <Box sx={{ flexGrow: 1, flexBasis: 0 }}>
-              <Box
-                mb={9}
-                sx={{
-                  filter: 'grayscale(1)',
-                  opacity: '.5',
-                }}
-              >
+              <Box mb={9} sx={{ filter: 'grayscale(1)', opacity: '.5' }}>
                 <LogoFramer />
               </Box>
               <Box sx={{ pl: '160px', pb: '160px' }}>
@@ -124,12 +113,7 @@ export const LegacyComposerHero = () => (
               <Box mb={9} sx={{ pl: '160px', filter: 'grayscale(1)' }}>
                 <LogoFigma />
               </Box>
-              <Box
-                sx={{
-                  filter: 'grayscale(1)',
-                  opacity: '.7',
-                }}
-              >
+              <Box sx={{ filter: 'grayscale(1)', opacity: '.7' }}>
                 <LogoXd />
               </Box>
             </Box>
@@ -137,7 +121,8 @@ export const LegacyComposerHero = () => (
         </Container>
       </Box>
     </Box>
-    <Box mt={[7, 0]}>
+
+    <Box mt={8} pb={7}>
       <Container size={2} sx={{ maxWidth: '1280px' }}>
         <Box sx={{ position: 'relative' }}>
           <Box

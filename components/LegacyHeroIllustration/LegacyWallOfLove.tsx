@@ -8,13 +8,13 @@ const JinaAvatar = require('../../public/legacy/jina-avatar.png');
 const SteveAvatar = require('../../public/legacy/steve-avatar.jpg');
 
 export const LegacyWallOfLove = () => (
-  <Box py={5}>
+  <Box my={8}>
     <Container size={3}>
       <Flex
         mt={6}
         sx={{ flexDirection: ['column', 'row'], flexGrow: 1, flexBasis: 0, justifyContent: 'space-between' }}
       >
-        <Box mb={6} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
+        <Box mb={6} px={[0, 5]} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
             quote='"Modulz is one of the most exciting design tools I’ve seen. This could revolutionize design workflows."'
             author="Michael Dick"
@@ -23,7 +23,7 @@ export const LegacyWallOfLove = () => (
           />
         </Box>
 
-        <Box mb={6} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
+        <Box mb={6} px={[0, 5]} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
             quote='"Of all these new UI design tools coming out, I think Modulz looks the most promising. Excited to give it a try."'
             author="Steve Schoger"
@@ -35,7 +35,7 @@ export const LegacyWallOfLove = () => (
       </Flex>
     </Container>
 
-    <Container size={2} px={6} mb={6}>
+    <Container size={1} mb={6} px={[null, null, 0]}>
       <LegacyTestimonial
         large
         quote='"It’s exciting to watch a small group of people working on an idea which will fundamentally change a discipline."'
@@ -51,16 +51,22 @@ export const LegacyWallOfLove = () => (
         mb={6}
         sx={{ flexDirection: ['column', 'row'], flexGrow: 1, flexBasis: 0, justifyContent: 'space-between' }}
       >
-        <Box mb={[6, 0]} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
+        <Box px={[0, 5]} mb={[6, 0]} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
-            quote="I can’t wait to try Modulz. It looks so cool!"
+            quote={
+              <>
+                I can’t wait to try Modulz.
+                <br />
+                It looks so cool!
+              </>
+            }
             author="Jina Anne"
             initial="J"
             avatar={JinaAvatar}
           />
         </Box>
 
-        <Box mb={6} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
+        <Box px={[0, 5]} mb={6} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
             quote='"Empowering designers to iterate on the *actual* product they are working on—this is the future of our industry"'
             author="Jack Lo Russo"

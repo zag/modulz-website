@@ -37,19 +37,22 @@ const Home = () => {
                   <path
                     d="M5.5 3.5L11.5 3.5L11.5 9.5"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
-                  <path d="M3.5 11.5L11.5 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3.5 11.5L11.5 3.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Box>
             </MarketingButton>
           </Flex>
-          <Flex mt={3} sx={{ justifyContent: 'center' }}>
-            <Text size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '1' }}>
+          <Box mt={4}>
+            <Text as="p" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '1' }}>
               We're currently in private beta.
             </Text>
-          </Flex>
+            <Text as="p" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '1' }}>
+              We're primarily targeting teams.
+            </Text>
+          </Box>
         </Container>
       </Box>
 
@@ -59,15 +62,19 @@ const Home = () => {
       <LegacyWallOfLove />
 
       <HideInProd>
+        <Divider size={2} my={8} mx="auto" />
         <Box my={8}>
-          <Container size={2} sx={{ maxWidth: '1090px' }}>
-            <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center', fontWeight: 500 }}>
+          <Container size={2} sx={{ textAlign: 'center' }}>
+            <Heading as="h3" size={4} mb={4}>
               Learn
             </Heading>
-            <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+
+            <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
               Learn how to make the most out of Modulz.
             </Text>
+          </Container>
 
+          <Container size={2} sx={{ maxWidth: '1090px' }}>
             <BlogCardGrid>
               {(learnPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
                 <Box key={frontMatter.title} sx={{ flex: 1 }}>
@@ -88,14 +95,17 @@ const Home = () => {
       </HideInProd>
 
       <Box py={9}>
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center' }}>
+        <Container size={2} sx={{ textAlign: 'center' }}>
+          <Heading as="h3" size={4} mb={4}>
             Blog
           </Heading>
-          <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+
+          <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
             More about what we're doing.
           </Text>
+        </Container>
 
+        <Container size={2} sx={{ maxWidth: '1090px' }}>
           <BlogCardGrid>
             {(blogPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
               <Box key={frontMatter.title} sx={{ flex: 1 }}>

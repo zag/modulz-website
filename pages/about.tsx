@@ -10,22 +10,22 @@ const About = () => {
       <TitleAndMetaTags title="About" />
 
       <Container size={2} mt={8} mb={[5, 7]}>
-        <Heading as="h2" size={4} weight="normal">
+        <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
           Our mission is to fix the disconnect between digital product teams.
-        </Heading>
+        </Text>
       </Container>
 
-      <Container size={1} px={9}>
-        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+      <Container size={1}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
           To reduce bottlenecks by building modern design tools which empower whole teams to collaborate.
         </Text>
-        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
           To encourage inclusive digital products by automating accessibility and performance.
         </Text>
-        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
           To save companies time and money by minimizing duplicate work.
         </Text>
-        <Text as="p" size={5} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
           To get everyone collaborating on their products. Together.
         </Text>
       </Container>
@@ -242,12 +242,12 @@ const About = () => {
 
       <Divider mx="auto" my={8} size={2} />
 
-      <Container size={2}>
-        <Heading as="h3" size={4} mb={4} sx={{ textAlign: 'center' }}>
+      <Container size={2} sx={{ textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={4}>
           Team
         </Heading>
 
-        <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+        <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
           Who we are and what we do.
         </Text>
       </Container>

@@ -9,32 +9,34 @@ const Careers = () => {
       <TitleAndMetaTags title="Careers" />
 
       <Container size={2} mt={8} mb={[5, 7]}>
-        <Heading as="h2" size={4} weight="normal">
+        <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
           Help us build the future of visual coding by bringing design closer to engineering.
-        </Heading>
+        </Text>
       </Container>
 
-      <Container size={1} px={9}>
-        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+      <Container size={1}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
           Modulz is a very early-stage, VC-backed startup.
         </Text>
-        <Text as="p" size={5} mb={5} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
           Our first product is a visual code editor. We make it easy for teams to manage their design system, build a
           component library and design interfaces—all without writing code.
         </Text>
-        <Text as="p" size={5} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
           Our goal is to improve cross-team collaboration by getting everyone working on the same product, together.
         </Text>
       </Container>
 
       <Divider mx="auto" my={8} size={2} />
 
-      <Container size={2}>
-        <Heading as="h3" size={4} mb={8} sx={{ textAlign: 'center' }}>
+      <Container size={2} sx={{ textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={4}>
           Our values
         </Heading>
+      </Container>
 
-        <Grid sx={{ gap: 8, gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
+      <Container size={2} mt={8}>
+        <Grid sx={{ gap: [6, 8], gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
           <Box>
             <Heading size={1} mb={1}>
               Freedom
@@ -76,12 +78,14 @@ const Careers = () => {
 
       <Divider mx="auto" my={8} size={2} />
 
-      <Container size={2}>
-        <Heading as="h3" size={4} mb={8} sx={{ textAlign: 'center' }}>
-          Perks and benefits
+      <Container size={2} sx={{ textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={4}>
+          Perks & benefits
         </Heading>
+      </Container>
 
-        <Grid sx={{ gap: 8, gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
+      <Container size={2} mt={8}>
+        <Grid sx={{ gap: [6, 8], gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
           <Box>
             <Heading size={1} mb={1}>
               Salary
@@ -167,18 +171,15 @@ const Careers = () => {
 
       <Divider mx="auto" my={8} size={2} />
 
-      <Container size={2}>
-        <Heading as="h3" size={4} mb={2} sx={{ textAlign: 'center' }}>
+      <Container size={2} sx={{ textAlign: 'center' }}>
+        <Heading as="h3" size={4} mb={4}>
           Open roles
         </Heading>
-        <Text as="p" size={5} mb={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+
+        <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
           We're not currently hiring for any roles. Check back in a couple months.
         </Text>
       </Container>
-
-      <Divider mx="auto" my={8} size={2} />
-
-      <BetaAccess />
     </Box>
   );
 };
