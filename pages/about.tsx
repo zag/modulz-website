@@ -9,7 +9,7 @@ const About = () => {
     <Box>
       <TitleAndMetaTags title="About" />
 
-      <Container size={2} mt={8} mb={[5, 7]}>
+      <Container size={2} mt={6} mb={[5, 7]}>
         <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
           Our mission is to fix the disconnect between digital product teams.
         </Text>
@@ -251,8 +251,6 @@ const About = () => {
           Who we are and what we do.
         </Text>
       </Container>
-
-      <Divider mx="auto" my={8} size={2} />
 
       <Container size={3}>
         <Grid sx={{ gap: [5, 7], gridTemplateColumns: ['1fr 1fr', '1fr 1fr 1fr', '1fr 1fr 1fr 1fr'] }}>

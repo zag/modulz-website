@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Box, Flex } from '@modulz/radix';
 import { LegacyTestimonial } from './LegacyTestimonial';
-const MikeAvatar = require('../../public/legacy/mike-avatar.png');
-const TonyAvatar = require('../../public/legacy/tony-avatar.jpg');
-const JackAvatar = require('../../public/legacy/jack-avatar.jpg');
-const JinaAvatar = require('../../public/legacy/jina-avatar.png');
-const SteveAvatar = require('../../public/legacy/steve-avatar.jpg');
+const mikeAvatar = require('../../public/testimonials/mike-avatar.png');
+const tonyAvatar = require('../../public/testimonials/tony-avatar.jpg');
+const jackAvatar = require('../../public/testimonials/jack-avatar.jpg');
+const jinaAvatar = require('../../public/testimonials/jina-avatar.png');
+const steveAvatar = require('../../public/testimonials/steve-avatar.jpg');
 
 export const LegacyWallOfLove = () => (
   <Box my={8}>
@@ -19,7 +19,7 @@ export const LegacyWallOfLove = () => (
             quote='"Modulz is one of the most exciting design tools I’ve seen. This could revolutionize design workflows."'
             author="Michael Dick"
             initial="M"
-            avatar={MikeAvatar}
+            avatar={mikeAvatar}
           />
         </Box>
 
@@ -29,7 +29,7 @@ export const LegacyWallOfLove = () => (
             author="Steve Schoger"
             initial="S"
             url="https://twitter.com/steveschoger/status/965589237109264385"
-            avatar={SteveAvatar}
+            avatar={steveAvatar}
           />
         </Box>
       </Flex>
@@ -42,7 +42,7 @@ export const LegacyWallOfLove = () => (
         author="Tony Ennis"
         initial="T"
         url="https://twitter.com/tonyennis/status/960067570987556864"
-        avatar={TonyAvatar}
+        avatar={tonyAvatar}
       />
     </Container>
 
@@ -62,7 +62,7 @@ export const LegacyWallOfLove = () => (
             }
             author="Jina Anne"
             initial="J"
-            avatar={JinaAvatar}
+            avatar={jinaAvatar}
           />
         </Box>
 
@@ -72,7 +72,7 @@ export const LegacyWallOfLove = () => (
             author="Jack Lo Russo"
             initial="J"
             url="https://twitter.com/lol_russo/status/1047907911945654275"
-            avatar={JackAvatar}
+            avatar={jackAvatar}
           />
         </Box>
       </Flex>

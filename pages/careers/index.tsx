@@ -8,7 +8,7 @@ const Careers = () => {
     <Box>
       <TitleAndMetaTags title="Careers" />
 
-      <Container size={2} mt={8} mb={[5, 7]}>
+      <Container size={2} mt={6} mb={[5, 7]}>
         <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
           Help us build the future of visual coding by bringing design closer to engineering.
         </Text>
