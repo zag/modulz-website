@@ -239,7 +239,7 @@ const Styleguide = () => {
         <Box sx={{ bg: 'gray200' }}>
           <Container size={3}>
             <Grid sx={{ gap: [5, 8], gridTemplateColumns: ['1fr ', null, '1fr 1fr'] }}>
-              <Box mt={-320} ml={-8} sx={{ position: 'relative', display: ['none', null, 'block'] }}>
+              <Box mt={-320} ml={-8} sx={{ position: 'relative', display: ['none', null, 'block'] }} aria-hidden>
                 <Box sx={{ position: 'absolute' }}>
                   <VersionCard
                     date="20 Aug 2019"
