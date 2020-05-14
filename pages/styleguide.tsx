@@ -337,7 +337,7 @@ const Styleguide = () => {
       <Container size={2} px={[null, 6, 8]}>
         <Grid sx={{ gap: [5, 8], gridTemplateColumns: ['1fr ', '1fr 1fr'] }}>
           <Box>
-            <Flex mt={5}>
+            <Flex>
               <Box mr={4}>
                 <PasswordIcon />
               </Box>
@@ -351,7 +351,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <Flex mt={5}>
+            <Flex>
               <Box mr={4}>
                 <DomainIcon />
               </Box>
@@ -365,7 +365,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <Flex mt={5}>
+            <Flex>
               <Box mr={4}>
                 <VersioningIcon />
               </Box>
@@ -379,7 +379,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <Flex mt={5}>
+            <Flex>
               <Box mr={4}>
                 <SelfHostingIcon />
               </Box>
@@ -393,7 +393,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <Flex mt={5}>
+            <Flex>
               <Box mr={4}>
                 <AssetManagerIcon />
               </Box>
@@ -407,7 +407,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <Flex mt={5}>
+            <Flex>
               <Box mr={4}>
                 <ContentBlockIcon />
               </Box>
