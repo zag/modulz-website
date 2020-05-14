@@ -17,17 +17,17 @@ export const authors = {
     mug: require('../public/mugshots/benoit.jpg'),
   },
 
+  chance: {
+    name: 'Chance Strickland',
+    twitter: 'chancethedev',
+    mug: require('../public/mugshots/chance.jpg'),
+  },
+
   colm: {
     name: 'Colm Tuite',
     twitter: 'colmtuite',
     avatar: 'https://pbs.twimg.com/profile_images/864164353771229187/Catw6Nmh_400x400.jpg',
     mug: require('../public/mugshots/colm.jpg'),
-  },
-
-  chance: {
-    name: 'Chance Strickland',
-    twitter: 'chancethedev',
-    mug: require('../public/mugshots/chance.jpg'),
   },
 
   jenna: {
