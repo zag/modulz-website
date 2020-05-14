@@ -131,7 +131,7 @@ const Styleguide = () => {
       <Container size={3} px={[null, 5, 9]}>
         <Grid sx={{ gap: [5, 8], gridTemplateColumns: ['1fr ', '1fr 1fr'] }}>
           <Box>
-            <AspectRatio ratio="16:9">
+            <AspectRatio ratio="16:9" sx={{ maxWidth: 463, mx: 'auto' }}>
               <Card
                 variant="border"
                 sx={{
@@ -153,7 +153,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <AspectRatio ratio="16:9">
+            <AspectRatio ratio="16:9" sx={{ maxWidth: 463, mx: 'auto' }}>
               <Card
                 variant="border"
                 sx={{
@@ -175,7 +175,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <AspectRatio ratio="16:9">
+            <AspectRatio ratio="16:9" sx={{ maxWidth: 463, mx: 'auto' }}>
               <Card
                 variant="border"
                 sx={{
@@ -197,7 +197,7 @@ const Styleguide = () => {
           </Box>
 
           <Box>
-            <AspectRatio ratio="16:9">
+            <AspectRatio ratio="16:9" sx={{ maxWidth: 463, mx: 'auto' }}>
               <Card
                 variant="border"
                 sx={{
