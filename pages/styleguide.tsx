@@ -39,79 +39,81 @@ const Styleguide = () => {
         </Heading>
       </Container>
 
-      <Container size={3} pb={9} style={{ maxWidth: '1200px' }}>
-        <Box mb={3}>
-          <img
-            src={styleguideImg}
-            style={{
-              maxWidth: '100%',
-              boxShadow:
-                '0px 60px 123px -25px hsla(208, 29%, 12%, 0.42), 0px 35px 75px -35px hsla(208, 24%, 10%, 0.08)',
-              borderRadius: '10px',
-              verticalAlign: 'middle',
-              border: '1px solid',
-              borderColor: 'hsl(206, 19%, 86%) hsl(206, 19%, 86%) hsl(210, 16%, 76%)',
-              transform: 'perspective(75em) rotateX(18deg) rotateY(0) rotateZ(0) translateX(0)',
-            }}
-          />
-        </Box>
-      </Container>
-
-      <Container size={2} sx={{ textAlign: 'center' }}>
-        <Text as="h2" size={8} px={[0, 8]} sx={{ lineHeight: 5, color: 'gray500' }}>
-          <s>Developer Handoff</s>
-        </Text>
-        <Text as="h2" size={8} mb={5} px={[0, 8]} sx={{ lineHeight: 5 }}>
-          Goodbye handoff. Hello Style guide.
-        </Text>
-      </Container>
-
-      <Container size={1} sx={{ textAlign: 'center' }}>
-        <Text as="p" size={5} mb={5} px={[0, 6]} sx={{ lineHeight: 4 }}>
-          No more static components. No more useless code. Styleguide replaces "developer handoff" with a
-          production-ready design system.
-        </Text>
-      </Container>
-
-      <Container size={3} mt={8}>
-        <Grid sx={{ gap: [6, 8], gridTemplateColumns: ['1fr', '1fr 1fr 1fr'] }}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Flex mb={4} sx={{ justifyContent: 'center' }}>
-              <StopwatchIcon />
-            </Flex>
-            <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
-              Zero set-up
-            </Heading>
-            <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
-              Styleguides are automatically generated from your Modulz design system. No set-up required.
-            </Text>
+      <Box sx={{ overflow: 'hidden' }}>
+        <Container size={3} pb={9} style={{ maxWidth: '1200px' }}>
+          <Box mb={3}>
+            <img
+              src={styleguideImg}
+              style={{
+                maxWidth: '100%',
+                boxShadow:
+                  '0px 60px 123px -25px hsla(208, 29%, 12%, 0.42), 0px 35px 75px -35px hsla(208, 24%, 10%, 0.08)',
+                borderRadius: '10px',
+                verticalAlign: 'middle',
+                border: '1px solid',
+                borderColor: 'hsl(206, 19%, 86%) hsl(206, 19%, 86%) hsl(210, 16%, 76%)',
+                transform: 'perspective(75em) rotateX(18deg) rotateY(0) rotateZ(0) translateX(0)',
+              }}
+            />
           </Box>
+        </Container>
 
-          <Box sx={{ textAlign: 'center' }}>
-            <Flex mb={4} sx={{ justifyContent: 'center' }}>
-              <LightningIcon />
-            </Flex>
-            <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
-              Blazing fast
-            </Heading>
-            <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
-              Styleguides are built on Gatsby and for optimised for blazing fast performance.
-            </Text>
-          </Box>
+        <Container size={2} sx={{ textAlign: 'center' }}>
+          <Text as="h2" size={8} px={[0, 8]} sx={{ lineHeight: 5, color: 'gray500' }}>
+            <s>Developer Handoff</s>
+          </Text>
+          <Text as="h2" size={8} mb={5} px={[0, 8]} sx={{ lineHeight: 5 }}>
+            Goodbye handoff. Hello Style guide.
+          </Text>
+        </Container>
 
-          <Box sx={{ textAlign: 'center' }}>
-            <Flex mb={4} sx={{ justifyContent: 'center' }}>
-              <ArrowsIcon />
-            </Flex>
-            <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
-              Always in sync
-            </Heading>
-            <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
-              Styleguide keeps your design and engineering teams in sync with a single source of truth.
-            </Text>
-          </Box>
-        </Grid>
-      </Container>
+        <Container size={1} sx={{ textAlign: 'center' }}>
+          <Text as="p" size={5} mb={5} px={[0, 6]} sx={{ lineHeight: 4 }}>
+            No more static components. No more useless code. Styleguide replaces "developer handoff" with a
+            production-ready design system.
+          </Text>
+        </Container>
+
+        <Container size={3} mt={8}>
+          <Grid sx={{ gap: [6, 8], gridTemplateColumns: ['1fr', '1fr 1fr 1fr'] }}>
+            <Box sx={{ textAlign: 'center' }}>
+              <Flex mb={4} sx={{ justifyContent: 'center' }}>
+                <StopwatchIcon />
+              </Flex>
+              <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
+                Zero set-up
+              </Heading>
+              <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
+                Styleguides are automatically generated from your Modulz design system. No set-up required.
+              </Text>
+            </Box>
+
+            <Box sx={{ textAlign: 'center' }}>
+              <Flex mb={4} sx={{ justifyContent: 'center' }}>
+                <LightningIcon />
+              </Flex>
+              <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
+                Blazing fast
+              </Heading>
+              <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
+                Styleguides are built on Gatsby and for optimised for blazing fast performance.
+              </Text>
+            </Box>
+
+            <Box sx={{ textAlign: 'center' }}>
+              <Flex mb={4} sx={{ justifyContent: 'center' }}>
+                <ArrowsIcon />
+              </Flex>
+              <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
+                Always in sync
+              </Heading>
+              <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
+                Styleguide keeps your design and engineering teams in sync with a single source of truth.
+              </Text>
+            </Box>
+          </Grid>
+        </Container>
+      </Box>
 
       <Divider size={2} my={8} mx="auto" />
 
