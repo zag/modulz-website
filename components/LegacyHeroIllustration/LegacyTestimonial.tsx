@@ -1,12 +1,11 @@
 import React from 'react';
-import NextLink from 'next/link';
 import { Box, Flex, Text, Avatar, IconButton } from '@modulz/radix';
 import { ExternalLinkIcon } from '@modulz/radix-icons';
 
 export const LegacyTestimonial = (props) => (
   <Box sx={{ textAlign: 'center' }}>
     <Flex sx={{ justifyContent: 'center' }} mb={4}>
-      <Quote />
+      <QuoteIcon />
     </Flex>
     <Box as="blockquote">
       <Text as="p" sx={{ lineHeight: [4, props.large ? 5 : 4], fontSize: [6, props.large ? 8 : 6] }}>
@@ -21,13 +20,11 @@ export const LegacyTestimonial = (props) => (
         </Text>
         <Box ml={2}>
           {props.url && (
-            <NextLink href={props.url}>
-              <a target="_blank" rel="noopener noreferrer" aria-label="Visit tweet">
-                <IconButton sx={{ color: 'gray700' }}>
-                  <ExternalLinkIcon />
-                </IconButton>
-              </a>
-            </NextLink>
+            <a href={props.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${props.author}'s tweet`}>
+              <IconButton as="span" sx={{ color: 'gray700' }}>
+                <ExternalLinkIcon />
+              </IconButton>
+            </a>
           )}
         </Box>
       </Flex>
@@ -35,7 +32,7 @@ export const LegacyTestimonial = (props) => (
   </Box>
 );
 
-const Quote = () => (
+const QuoteIcon = () => (
   <svg
     width="45"
     height="45"

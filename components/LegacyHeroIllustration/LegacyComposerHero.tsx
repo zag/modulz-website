@@ -3,7 +3,7 @@ import { Container, Flex, Box } from '@modulz/radix';
 const HomepageHero = require('../../public/home/homepage-hero-min.png');
 
 export const LegacyComposerHero = () => (
-  <Box>
+  <Box aria-hidden>
     <Box sx={{ display: ['none', 'block'] }}>
       <Box mt={8}>
         <Container size={3}>

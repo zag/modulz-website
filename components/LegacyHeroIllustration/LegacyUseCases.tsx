@@ -4,7 +4,7 @@ import { Container, Box, Text } from '@modulz/radix';
 export const LegacyUseCases = () => (
   <Box>
     <Container size={2} mt={8} mb={[5, 7]}>
-      <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
+      <Text as="h3" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
         The visual code editor for creating design systems&mdash;without writing code.
       </Text>
     </Container>

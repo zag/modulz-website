@@ -70,7 +70,7 @@ export const VideoPlayer = ({ id, poster, ...props }: VideoPlayerProps) => {
 
       {hasStartedPlaying && (
         <iframe
-          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1`}
+          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`}
           frameBorder={0}
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
