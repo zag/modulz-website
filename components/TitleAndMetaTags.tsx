@@ -16,7 +16,7 @@ export default function TitleAndMetaTags({
   description = 'The visual code editor for producing production-ready design systems without writing code',
 }: TitleAndMetaTagsProps) {
   const router = useRouter();
-  const image = '/public/social.png';
+  const image = 'https://www.modulz.app/social.png';
   const path = pathname || router.pathname;
 
   return (
