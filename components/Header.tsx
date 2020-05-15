@@ -86,7 +86,7 @@ export const Header = () => {
                     </Badge>
                   </Heading>
                   <Text size={2} sx={{ color: 'gray700', lineHeight: 1 }}>
-                    Handoff your design system with a gorgeous, generated styleguide.
+                    Handoff your design system with a gorgeous, generated style guide.
                   </Text>
                 </Box>
               </NextLink>
