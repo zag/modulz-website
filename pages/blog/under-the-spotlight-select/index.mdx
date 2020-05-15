@@ -5,20 +5,23 @@ summary: 'How we overcame the challenged of pitfalls of custom Select components
 by: 'pedro'
 ---
 
-import parts from './parts.png';
-import redSelect from './red-select.mp4';
+import yelp from './yelp.mp4';
+import youtube from './youtube.mp4';
+import facebook from './facebook.mp4';
+import amazon from './amazon.mp4';
+import soundcloud from './soundcloud.mp4';
+
 import typeahead from './select-typeahead-demo.mp4';
+import screenReader from './select-voiceover-demo.mp4';
 import scrollIndicator from './select-scroll-indicator-demo.mp4';
 import scrollHeight from './select-scroll-height-demo.mp4';
+import keyboard from './select-keyboard-demo.mp4';
 import positioning from './select-positioning-demo.mp4';
 import nativeFallback from './select-native-fallback-demo.mp4';
 import autofill from './select-autofill-demo.mp4';
 import squarespace from './squarespace.mp4';
-import yelp from './yelp.mp4';
-import youtube from './youtube.mp4';
-import facebook from './facebook.mp4';
-import soundcloud from './soundcloud.mp4';
-import amazonVideoPoster from './amazon-video-poster.png';
+import parts from './parts.png';
+import redSelect from './red-select.mp4';
 
 Building a custom Select is hard. Very hard.
 
@@ -40,15 +43,28 @@ Look closer at custom-built Select components around the web. Keyboard navigatio
 
 <ProductVideo src={squarespace}>The Menu is not positioned relative to the click target.</ProductVideo>
 
-<Video id="TA8phJHfxBU" poster={amazonVideoPoster}>
-  The screen reader announcements are not descriptive enough.
-</Video>
+<ProductVideo src={amazon} controls>
+  🔈️Sound on. The Menu is not positioned relative to the click target. The screen reader announcements are not
+  descriptive enough.
+</ProductVideo>
 
 ---
 
 Our goal was to retain as much of the Select's native functionality as possible while enabling completely custom styling.
 
 Below is a list of all the features we've built into our Select, they all work out of the box, leaving only one task for you: make it look yours.
+
+### Screen reader
+
+A screen reader is a software that interprets things on the screen and converts them to a format that visually impaired people can consume and interact with.
+
+Our Select component follows the WAI-ARIA authoring specification. This ensures it's accessible to screen reader users.
+
+Every Select designed with Modulz works with screen readers. One less thing for you to worry about.
+
+<ProductVideo src={screenReader} controls>
+  🔈️Sound on. A demo of how VoiceOver works on Safari.
+</ProductVideo>
 
 ### Keyboard navigation
 
@@ -67,6 +83,10 @@ When you open the Select Menu, you can:
 - Press `Esc` to close the Menu.
 - Press `Up` and `Down` arrow keys to navigate across options.
 
+<ProductVideo small src={keyboard}>
+  A demo of how keyboard navigation works.
+</ProductVideo>
+
 ### Typeahead
 
 Typeahead is a technique for searching and filtering through text. It's also known as autocomplete. Our Select component uses it to
@@ -79,14 +99,6 @@ You can rely on the typeahead functionality when you focus the Select or when yo
 <ProductVideo small src={typeahead}>
   A demo of how typeahead works.
 </ProductVideo>
-
-### Screen reader
-
-A screen reader is a software that interprets things on the screen and converts them to a format that visually impaired people can consume and interact with.
-
-Our Select component follows the WAI-ARIA authoring specification. This ensures it's accessible to screen reader users.
-
-Every Select designed with Modulz works with screen readers. One less thing for you to worry about.
 
 ### Positioning
 

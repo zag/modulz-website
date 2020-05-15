@@ -143,7 +143,7 @@ function App({ Component, pageProps }: AppProps) {
               </Radix.Text>
             </Radix.Box>
           ),
-          ProductVideo: ({ small, src, children = '', ...props }) => (
+          ProductVideo: ({ small, src, children = '', muted = true, autoPlay = true, controls, ...props }) => (
             <Radix.Box as="figure" mx={0} my={6}>
               <Radix.Box
                 mx={!small && [-5, -5, -9]}
@@ -155,7 +155,15 @@ function App({ Component, pageProps }: AppProps) {
                   ...props.sx,
                 }}
               >
-                <video src={src} autoPlay playsInline muted loop style={{ width: '100%', display: 'block' }}></video>
+                <video
+                  src={src}
+                  autoPlay={autoPlay}
+                  playsInline
+                  muted={muted}
+                  controls={controls}
+                  loop
+                  style={{ width: '100%', display: 'block' }}
+                ></video>
               </Radix.Box>
               <Radix.Text
                 as="figcaption"
