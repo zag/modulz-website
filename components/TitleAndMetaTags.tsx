@@ -10,14 +10,14 @@ type TitleAndMetaTagsProps = {
 };
 
 export default function TitleAndMetaTags({
-  url = 'https://modulz.app',
+  url = 'https://modulz-website.now.sh',
   pathname,
   title = 'Modulz',
   description = 'The visual code editor for producing production-ready design systems without writing code',
 }: TitleAndMetaTagsProps) {
   const router = useRouter();
 
-  const image = 'https://www.modulz.app/social.png';
+  const image = `${url}/social.png`;
   const path = pathname || router.pathname;
 
   return (
