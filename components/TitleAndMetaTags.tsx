@@ -22,6 +22,7 @@ export default function TitleAndMetaTags({
   return (
     <Head>
       <title>{title}</title>
+      <meta name="description" content={description} />
 
       <meta property="og:url" content={`${url}${path}`} />
       <meta property="og:image" content={image} />

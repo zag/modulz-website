@@ -1,6 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Box, Container, Grid, Heading, Text, Link, Flex, Divider } from '@modulz/radix';
+import { Box, Container, Grid, Heading, Text, Link, Flex, Divider, VisuallyHidden } from '@modulz/radix';
 import { Logo } from './Logo';
 
 export const Footer = () => {
@@ -18,7 +18,8 @@ export const Footer = () => {
           <Flex sx={{ flexDirection: [null, 'column'], alignItems: ['center', 'start'] }}>
             <NextLink href="/" passHref>
               <Link variant="fade" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
-                <Logo />
+                <VisuallyHidden>Modulz homepage</VisuallyHidden>
+                <Logo aria-hidden />
               </Link>
             </NextLink>
 
@@ -27,7 +28,7 @@ export const Footer = () => {
               size={2}
               ml={['auto', 0]}
               mt={[0, 'auto']}
-              sx={{ color: 'gray500', lineHeight: '0', userSelect: 'none' }}
+              sx={{ color: 'gray700', lineHeight: '0', userSelect: 'none' }}
             >
               &copy; Modulz, Inc
             </Text>

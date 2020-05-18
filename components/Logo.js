@@ -1,5 +1,5 @@
-export const Logo = () => (
-  <svg width="35" height="35" viewBox="0 0 35 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+export const Logo = (props) => (
+  <svg width="35" height="35" viewBox="0 0 35 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path d="M10 26.5L4 31V22L10 26.5Z" />
     <path d="M10 14.5L4 19V10L10 14.5Z" />
     <path d="M17 8.5L11 13V4L17 8.5Z" />

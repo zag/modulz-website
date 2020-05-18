@@ -17,7 +17,7 @@ export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
           flexDirection: 'column',
         }}
       >
-        <Heading as="h6" size={1} sx={{ fontWeight: 500 }}>
+        <Heading as="h4" size={1} sx={{ fontWeight: 500 }}>
           {frontMatter.title}
         </Heading>
 
@@ -27,7 +27,7 @@ export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
 
         <Flex pt={4} mt="auto" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
           <Flex sx={{ alignItems: 'center' }}>
-            <Avatar src={authors[frontMatter.by].avatar} />
+            <Avatar src={authors[frontMatter.by].avatar} alt={`Photo of ${authors[frontMatter.by].name}`} />
             <Text as="p" size={2} ml={2} sx={{ color: 'gray700', lineHeight: 0 }}>
               {authors[frontMatter.by].name}
             </Text>

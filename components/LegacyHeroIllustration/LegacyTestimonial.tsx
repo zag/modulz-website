@@ -13,7 +13,7 @@ export const LegacyTestimonial = (props) => (
       </Text>
       <Flex mt={5} sx={{ alignItems: 'center', justifyContent: 'center' }}>
         <Box mr={3}>
-          <Avatar size={1} src={props.avatar} children={props.initial} />
+          <Avatar size={1} src={props.avatar} children={props.initial} alt={`Photo of ${props.author}`} />
         </Box>
         <Text size={3} sx={{ color: 'gray700' }}>
           {props.author}

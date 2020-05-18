@@ -80,7 +80,7 @@ const About = () => {
               </Text>
             </Box>
           </Box>
-          <Box px={6}>
+          <Box px={6} aria-hidden>
             <Box sx={{ width: '1px', bg: 'gray300' }}>
               <Flex
                 mb={9}
@@ -272,7 +272,12 @@ const About = () => {
                   {author.name}
                 </Text>
                 <Flex sx={{ alignItems: 'center' }} mt={2}>
-                  <Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href={`https://twitter.com/${author.twitter}`}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={`${author.name}'s twitter account`}
+                  >
                     <Text size={2}>Twitter</Text>
                     <Box as="span" ml={1} sx={{ display: 'inline-block', verticalAlign: 'middle' }}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
@@ -307,8 +312,8 @@ const About = () => {
 
 export default About;
 
-const TickIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+const TickIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none" {...props}>
     <path d="M12.5 3.5L6.5 11.5L2.5 8.5" stroke="hsl(208,12%,46%)" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );

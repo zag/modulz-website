@@ -50,7 +50,7 @@ function App({ Component, pageProps }: AppProps) {
                 </NextLink>
               );
             }
-            return <Radix.Link href={href} {...props} variant="underline" />;
+            return <Radix.Link href={href} {...props} variant="underline" target="_blank" rel="noopener" />;
           },
           hr: (props) => <Radix.Divider size={2} my={6} mx="auto" {...props} />,
           inlineCode: (props) => <Radix.Code variant="fade" {...props} />,

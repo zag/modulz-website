@@ -12,6 +12,7 @@ import {
   Badge,
   Heading,
   Divider,
+  VisuallyHidden,
 } from '@modulz/radix';
 import { Logo } from './Logo';
 import { HideInProd } from './HideInProd';
@@ -26,7 +27,8 @@ export const Header = () => {
       <Flex py={4} sx={{ alignItems: 'flex-start' }}>
         <NextLink href="/" passHref>
           <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
-            <Logo />
+            <VisuallyHidden>Modulz homepage</VisuallyHidden>
+            <Logo ara-hidden />
           </Link>
         </NextLink>
 

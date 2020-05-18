@@ -30,7 +30,7 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <script dangerouslySetInnerHTML={{ __html: renderSnippet() }} />
         </Head>

@@ -16,7 +16,7 @@ const Blog = () => {
           Blog
         </Heading>
 
-        <Text as="p" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
+        <Text as="h2" size={7} sx={{ textAlign: 'center', color: 'gray700' }}>
           More about what we're doing.
         </Text>
       </Container>
