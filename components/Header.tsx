@@ -28,7 +28,7 @@ export const Header = () => {
         <NextLink href="/" passHref>
           <Link sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
             <VisuallyHidden>Modulz homepage</VisuallyHidden>
-            <Logo ara-hidden />
+            <Logo aria-hidden />
           </Link>
         </NextLink>
 

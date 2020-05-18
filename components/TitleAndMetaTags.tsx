@@ -16,6 +16,7 @@ export default function TitleAndMetaTags({
   description = 'The visual code editor for producing production-ready design systems without writing code',
 }: TitleAndMetaTagsProps) {
   const router = useRouter();
+  console.log(router);
   const image = 'https://www.modulz.app/social.png';
   const path = pathname || router.pathname;
 
@@ -25,17 +26,12 @@ export default function TitleAndMetaTags({
       <meta name="description" content={description} />
 
       <meta property="og:url" content={`${url}${path}`} />
-      <meta property="og:image" content={image} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
 
-      <meta name="twitter:url" content={`${url}${path}`} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
       <meta name="twitter:site" content="@modulz" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@modulz" />
+      <meta name="twitter:card" content="summary" />
     </Head>
   );
 }

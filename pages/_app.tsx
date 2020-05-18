@@ -33,6 +33,11 @@ function App({ Component, pageProps }: AppProps) {
     <Radix.RadixProvider>
       <MDXProvider
         components={{
+          Poster: (image) => (
+            <Head>
+              <meta property="og:image" content={image} />
+            </Head>
+          ),
           ...Radix,
           ...RadixIcons,
           h1: (props) => <Radix.Heading size={5} mb={8} sx={{ fontWeight: 500 }} {...props} as="h1" />,
