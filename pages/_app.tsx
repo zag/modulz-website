@@ -40,7 +40,7 @@ function App({ Component, pageProps }: AppProps) {
           h3: (props) => <Radix.Heading size={0} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
           h4: (props) => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
           p: (props) => (
-            <Radix.Text size={3} mb={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} as="p" />
+            <Radix.Text size={4} mb={3} {...props} sx={{ lineHeight: '27px', letterSpacing: 0, ...props.sx }} as="p" />
           ),
           a: ({ href = '', ...props }) => {
             if (href.startsWith('/')) {
