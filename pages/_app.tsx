@@ -33,7 +33,7 @@ function App({ Component, pageProps }: AppProps) {
     <Radix.RadixProvider>
       <MDXProvider
         components={{
-          Poster: (image) => (
+          Poster: ({ image }) => (
             <Head>
               <meta property="og:image" content={image} />
             </Head>
