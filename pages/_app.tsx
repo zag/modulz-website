@@ -35,6 +35,7 @@ function App({ Component, pageProps }: AppProps) {
         components={{
           Poster: ({ image }) => (
             <Head>
+              <meta name="twitter:card" content="summary_large_image" />
               <meta property="og:image" content={`https://modulz-website.now.sh${image}`} />
             </Head>
           ),
