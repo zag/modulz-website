@@ -1,5 +1,4 @@
 import React from 'react';
-import NextLink from 'next/link';
 import {
   Container,
   Box,
@@ -9,7 +8,6 @@ import {
   Text,
   Divider,
   Flex,
-  Link,
   Subheading,
   AspectRatio,
   Card,
