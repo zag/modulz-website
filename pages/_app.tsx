@@ -35,7 +35,7 @@ function App({ Component, pageProps }: AppProps) {
         components={{
           Poster: ({ image }) => (
             <Head>
-              <meta property="og:image" content={`${window.location.origin}${image}`} />
+              <meta property="og:image" content={`https://modulz-website.now.sh${image}`} />
             </Head>
           ),
           ...Radix,
