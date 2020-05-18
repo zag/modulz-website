@@ -38,7 +38,9 @@ function App({ Component, pageProps }: AppProps) {
           ...RadixIcons,
           h1: (props) => <Radix.Heading size={5} mb={8} sx={{ fontWeight: 500 }} {...props} as="h1" />,
           h2: (props) => <Radix.Heading size={2} mt={8} mb={1} sx={{ fontWeight: 500 }} {...props} as="h2" />,
-          h3: (props) => <Radix.Heading size={0} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3" />,
+          h3: (props) => (
+            <Radix.Heading mt={6} mb={1} sx={{ fontWeight: 500, fontSize: 4, lineHeight: '27px' }} {...props} as="h3" />
+          ),
           h4: (props) => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
           p: (props) => (
             <Radix.Text size={4} mb={3} {...props} sx={{ lineHeight: '27px', letterSpacing: 0, ...props.sx }} as="p" />
@@ -144,15 +146,16 @@ function App({ Component, pageProps }: AppProps) {
               </Radix.Text>
             </Radix.Box>
           ),
-          ProductVideo: ({ small, src, children = '', muted = true, autoPlay = true, controls, ...props }) => (
+          ProductVideo: ({ small, large, src, children = '', muted = true, autoPlay = true, controls, ...props }) => (
             <Radix.Box as="figure" mx={0} my={6}>
               <Radix.Box
-                mx={!small && [-5, -5, -9]}
+                mx={!small && [-5, -5, large ? -220 : -9]}
                 {...props}
                 sx={{
                   boxShadow: (theme) => `0 0 0 1px ${theme.colors.gray300}`,
                   borderRadius: [0, 2, 2],
                   overflow: 'hidden',
+
                   ...props.sx,
                 }}
               >
