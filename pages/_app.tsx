@@ -12,7 +12,6 @@ import { Footer } from '../components/Footer';
 import { useAnalytics } from '../utils/analytics';
 import { VideoPlayer } from '../components/VideoPlayer';
 import { useRouter } from 'next/router';
-import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
 const GlobalStyles = createGlobalStyle`
   ${prismTheme};
@@ -61,7 +60,7 @@ function App({ Component, pageProps }: AppProps) {
           ol: (props) => <Radix.Box mb={3} {...props} as="ol" />,
           li: (props) => (
             <li>
-              <Radix.Text size={3} {...props} sx={{ lineHeight: 2, letterSpacing: 0, ...props.sx }} />
+              <Radix.Text size={4} {...props} sx={{ lineHeight: '27px', letterSpacing: 0, ...props.sx }} />
             </li>
           ),
           table: (props) => (
@@ -227,7 +226,9 @@ function App({ Component, pageProps }: AppProps) {
       >
         <Head>
           <title>Modulz</title>
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/favicon-dark.png" />
+          <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: dark)" />
+
           <link rel="stylesheet" href="https://core.modulz.app/fonts/fonts.css" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
