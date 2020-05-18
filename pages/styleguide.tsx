@@ -25,17 +25,20 @@ const desAvatar = require('../public/testimonials/des-avatar.jpg');
 const Styleguide = () => {
   return (
     <Box>
-      <TitleAndMetaTags title="Style guide" />
+      <TitleAndMetaTags
+        title="Style guide"
+        description="Keep your team in sync with a styleguide automatically generated from your design system."
+      />
 
       <Container size={3} mt={6} sx={{ textAlign: 'center' }}>
         <Heading size={5} mb={4}>
-          The fastest way to create a styleguide
+          The fastest way to create a style guide
         </Heading>
       </Container>
 
       <Container size={1} sx={{ textAlign: 'center' }}>
         <Heading as="h2" size={2} mb={0} sx={{ color: 'gray700', lineHeight: '4', fontWeight: 400 }}>
-          Keep your team in sync with a styleguide automatically generated from your design system.
+          Keep your team in sync with a style guide automatically generated from your design system.
         </Heading>
       </Container>
 
@@ -70,7 +73,7 @@ const Styleguide = () => {
 
         <Container size={1} sx={{ textAlign: 'center' }}>
           <Text as="p" size={5} mb={5} px={[0, 6]} sx={{ lineHeight: 4 }}>
-            No more static components. No more useless code. Styleguide replaces "developer handoff" with a
+            No more static components. No more useless code. Style guide replaces "developer handoff" with a
             production-ready design system.
           </Text>
         </Container>
@@ -85,7 +88,7 @@ const Styleguide = () => {
                 Zero set-up
               </Heading>
               <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
-                Styleguides are automatically generated from your Modulz design system. No set-up required.
+                Style guides are automatically generated from your Modulz design system. No set-up required.
               </Text>
             </Box>
 
@@ -97,7 +100,7 @@ const Styleguide = () => {
                 Blazing fast
               </Heading>
               <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
-                Styleguides are built on Gatsby and for optimised for blazing fast performance.
+                Style guides are built on Gatsby and for optimised for blazing fast performance.
               </Text>
             </Box>
 
@@ -109,7 +112,7 @@ const Styleguide = () => {
                 Always in sync
               </Heading>
               <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
-                Styleguide keeps your design and engineering teams in sync with a single source of truth.
+                Style guide keeps your design and engineering teams in sync with a single source of truth.
               </Text>
             </Box>
           </Grid>
@@ -123,7 +126,7 @@ const Styleguide = () => {
           Features
         </Subheading>
         <Heading as="h4" size={4} mb={4}>
-          A fully-featured styleguide. Out of the box.
+          A fully-featured style guide. Out of the box.
         </Heading>
 
         <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
@@ -194,7 +197,7 @@ const Styleguide = () => {
                 WYSIWYG editor
               </Heading>
               <Text as="p" size={4} sx={{ lineHeight: 3 }}>
-                Predefined templates to flesh out your styleguide content with usage docs, brand guidelines and more.
+                Predefined templates to flesh out your style guide content with usage docs, brand guidelines and more.
               </Text>
             </Box>
           </Box>
@@ -333,7 +336,7 @@ const Styleguide = () => {
         </Heading>
 
         <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
-          Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+          Modulz Style guide provides fully-featured design system documentation for teams who need total control.
         </Text>
       </Container>
 
@@ -349,7 +352,7 @@ const Styleguide = () => {
               </Box>
             </Flex>
             <Text as="p" size={4} ml={8} sx={{ color: 'gray700', lineHeight: 3 }}>
-              Set a password to keep your styleguide private.
+              Set a password to keep your style guide private.
             </Text>
           </Box>
 
@@ -363,7 +366,7 @@ const Styleguide = () => {
               </Box>
             </Flex>
             <Text as="p" size={4} ml={8} sx={{ color: 'gray700', lineHeight: 3 }}>
-              Add a professional touch to your styleguide with a custom domain.
+              Add a professional touch to your style guide with a custom domain.
             </Text>
           </Box>
 
@@ -419,7 +422,7 @@ const Styleguide = () => {
               </Box>
             </Flex>
             <Text as="p" size={4} ml={8} sx={{ color: 'gray700', lineHeight: 3 }}>
-              Use predefined templates to design a flexible structure for your styleguide content.
+              Use predefined templates to design a flexible structure for your style guide content.
             </Text>
           </Box>
         </Grid>

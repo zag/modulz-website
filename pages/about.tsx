@@ -7,7 +7,10 @@ import { authors } from '../data/authors';
 const About = () => {
   return (
     <Box>
-      <TitleAndMetaTags title="About" />
+      <TitleAndMetaTags
+        title="About"
+        description="Our mission is to fix the disconnect between digital product teams."
+      />
 
       <Container size={2} mt={6} mb={[5, 7]}>
         <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>

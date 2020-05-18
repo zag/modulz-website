@@ -6,7 +6,10 @@ import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 const Careers = () => {
   return (
     <Box>
-      <TitleAndMetaTags title="Careers" />
+      <TitleAndMetaTags
+        title="Careers"
+        description="Help us build the future of visual coding by bringing design closer to engineering."
+      />
 
       <Container size={2} mt={6} mb={[5, 7]}>
         <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
