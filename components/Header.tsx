@@ -134,7 +134,7 @@ export const Header = () => {
           <Pipe mx={[2, 5]} />
 
           <Text size={3} sx={{ color: 'gray700' }}>
-            <Link href="https://core.modulz.app" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
+            <Link href="https://kickstarter.modulz.app" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
               Login
             </Link>
           </Text>
