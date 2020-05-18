@@ -77,11 +77,11 @@ function App({ Component, pageProps }: AppProps) {
           strong: (props) => <Radix.Text {...props} sx={{ ...props.sx, fontSize: 'inherit', fontWeight: 500 }} />,
           img: ({ ...props }) => (
             <Radix.Box mx={[-5, -5, -7]} my={6}>
-              <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
+              <Radix.Image alt="" {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
             </Radix.Box>
           ),
           Image: ({ ...props }) => (
-            <Radix.Image {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
+            <Radix.Image alt="" {...props} sx={{ maxWidth: '100%', verticalAlign: 'middle', ...props.sx }} />
           ),
           ProductImage: ({ children, ...props }) => (
             <Radix.Box as="figure" mx={0} my={6}>
@@ -99,6 +99,7 @@ function App({ Component, pageProps }: AppProps) {
                     maxWidth: '100%',
                     verticalAlign: 'middle',
                   }}
+                  alt={children}
                 />
               </Radix.Box>
               <Radix.Text

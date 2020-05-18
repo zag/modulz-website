@@ -54,6 +54,7 @@ const Styleguide = () => {
                 borderColor: 'hsl(206, 19%, 86%) hsl(206, 19%, 86%) hsl(210, 16%, 76%)',
                 transform: 'perspective(75em) rotateX(18deg) rotateY(0) rotateZ(0) translateX(0)',
               }}
+              alt="Modulz style guide"
             />
           </Box>
         </Container>
@@ -78,7 +79,7 @@ const Styleguide = () => {
           <Grid sx={{ gap: [6, 8], gridTemplateColumns: ['1fr', '1fr 1fr 1fr'] }}>
             <Box sx={{ textAlign: 'center' }}>
               <Flex mb={4} sx={{ justifyContent: 'center' }}>
-                <StopwatchIcon />
+                <StopwatchIcon aria-hidden />
               </Flex>
               <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
                 Zero set-up
@@ -90,7 +91,7 @@ const Styleguide = () => {
 
             <Box sx={{ textAlign: 'center' }}>
               <Flex mb={4} sx={{ justifyContent: 'center' }}>
-                <LightningIcon />
+                <LightningIcon aria-hidden />
               </Flex>
               <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
                 Blazing fast
@@ -102,7 +103,7 @@ const Styleguide = () => {
 
             <Box sx={{ textAlign: 'center' }}>
               <Flex mb={4} sx={{ justifyContent: 'center' }}>
-                <ArrowsIcon />
+                <ArrowsIcon aria-hidden />
               </Flex>
               <Heading size={1} mb={3} sx={{ lineHeight: 2 }}>
                 Always in sync
@@ -286,7 +287,7 @@ const Styleguide = () => {
 
                 <Flex mt={5} sx={{ alignItems: 'center' }}>
                   <Box mr={4}>
-                    <ReleaseNotesIcon />
+                    <ReleaseNotesIcon aria-hidden />
                   </Box>
                   <Box>
                     <Heading size={1}>Release notes</Heading>
@@ -298,7 +299,7 @@ const Styleguide = () => {
 
                 <Flex mt={5} sx={{ alignItems: 'center' }}>
                   <Box mr={4}>
-                    <RollbacksIcon />
+                    <RollbacksIcon aria-hidden />
                   </Box>
                   <Box>
                     <Heading size={1}>Rollbacks</Heading>
@@ -310,7 +311,7 @@ const Styleguide = () => {
 
                 <Flex mt={5} sx={{ alignItems: 'center' }}>
                   <Box mr={4}>
-                    <ChangelogIcon />
+                    <ChangelogIcon aria-hidden />
                   </Box>
                   <Box>
                     <Heading size={1}>Change log</Heading>
@@ -341,7 +342,7 @@ const Styleguide = () => {
           <Box>
             <Flex sx={{ alignItems: 'center' }}>
               <Box mr={4}>
-                <PasswordIcon />
+                <PasswordIcon aria-hidden />
               </Box>
               <Box>
                 <Heading size={1}>Password protection</Heading>
@@ -355,7 +356,7 @@ const Styleguide = () => {
           <Box>
             <Flex sx={{ alignItems: 'center' }}>
               <Box mr={4}>
-                <DomainIcon />
+                <DomainIcon aria-hidden />
               </Box>
               <Box>
                 <Heading size={1}>Custom domain</Heading>
@@ -369,7 +370,7 @@ const Styleguide = () => {
           <Box>
             <Flex sx={{ alignItems: 'center' }}>
               <Box mr={4}>
-                <VersioningIcon />
+                <VersioningIcon aria-hidden />
               </Box>
               <Box>
                 <Heading size={1}>Versioning</Heading>
@@ -383,7 +384,7 @@ const Styleguide = () => {
           <Box>
             <Flex sx={{ alignItems: 'center' }}>
               <Box mr={4}>
-                <SelfHostingIcon />
+                <SelfHostingIcon aria-hidden />
               </Box>
               <Box>
                 <Heading size={1}>Self-hosting</Heading>
@@ -397,7 +398,7 @@ const Styleguide = () => {
           <Box>
             <Flex sx={{ alignItems: 'center' }}>
               <Box mr={4}>
-                <AssetManagerIcon />
+                <AssetManagerIcon aria-hidden />
               </Box>
               <Box>
                 <Heading size={1}>Asset manager</Heading>
@@ -411,7 +412,7 @@ const Styleguide = () => {
           <Box>
             <Flex sx={{ alignItems: 'center' }}>
               <Box mr={4}>
-                <ContentBlockIcon />
+                <ContentBlockIcon aria-hidden />
               </Box>
               <Box>
                 <Heading size={1}>Content blocks</Heading>
@@ -470,7 +471,7 @@ const VersionCard = ({ date, version, versionType, description, insertions, dele
       </Text>
       <Text as="p" mb={1} sx={{ display: 'inline-flex', alignItems: 'center', color: 'blue600' }}>
         <Box as="span" mr={2}>
-          <PlusIcon />
+          <PlusIcon aria-hidden />
         </Box>{' '}
         Show release notes
       </Text>
@@ -483,7 +484,7 @@ const VersionCard = ({ date, version, versionType, description, insertions, dele
             {insertions.map((insertion) => (
               <Text key={insertion} ml={4} sx={{ display: 'flex', alignItems: 'center' }}>
                 <Box as="span" mr={2} sx={{ color: 'green600' }}>
-                  <PlusIcon />
+                  <PlusIcon aria-hidden />
                 </Box>{' '}
                 {insertion}
               </Text>
@@ -496,7 +497,7 @@ const VersionCard = ({ date, version, versionType, description, insertions, dele
             {deletions.map((deletion) => (
               <Text key={deletion} ml={4} sx={{ display: 'flex', alignItems: 'center' }}>
                 <Box as="span" mr={2} sx={{ color: 'red600' }}>
-                  <MinusIcon />
+                  <MinusIcon aria-hidden />
                 </Box>{' '}
                 {deletion}
               </Text>
@@ -507,13 +508,13 @@ const VersionCard = ({ date, version, versionType, description, insertions, dele
       <Divider mx={-3} my={3} />
       <Button>
         <Box as="span" mr={2}>
-          <RestoreIcon />
+          <RestoreIcon aria-hidden />
         </Box>
         Restore
       </Button>
       {showCursor && (
         <Box sx={{ position: 'absolute', right: 120, bottom: -20 }}>
-          <CursorIcon />
+          <CursorIcon aria-hidden />
         </Box>
       )}
     </Card>
