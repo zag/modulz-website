@@ -7,6 +7,7 @@ type TitleAndMetaTagsProps = {
   pathname?: string;
   title?: string;
   description?: string;
+  poster?: string;
 };
 
 export default function TitleAndMetaTags({
@@ -14,10 +15,11 @@ export default function TitleAndMetaTags({
   pathname,
   title = 'Modulz',
   description = 'The visual code editor for producing production-ready design systems without writing code',
+  poster,
 }: TitleAndMetaTagsProps) {
   const router = useRouter();
 
-  const image = `${url}/social.png`;
+  const image = `${url}/social/${poster || 'default.png'}`;
   const path = pathname || router.pathname;
 
   return (
@@ -32,6 +34,7 @@ export default function TitleAndMetaTags({
 
       <meta name="twitter:site" content="@modulz" />
       <meta name="twitter:card" content="summary" />
+      {poster && <meta name="twitter:card" content="summary_large_image" />}
     </Head>
   );
 }

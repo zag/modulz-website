@@ -6,6 +6,7 @@ export type FrontMatter = {
   by?: string;
   id?: string;
   relatedIds?: string[];
+  poster?: string;
   readingTime?: { text: string; minutes: number; time: number; words: number };
   __resourcePath: string;
 };

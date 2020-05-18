@@ -12,6 +12,7 @@ import { Footer } from '../components/Footer';
 import { useAnalytics } from '../utils/analytics';
 import { VideoPlayer } from '../components/VideoPlayer';
 import { useRouter } from 'next/router';
+import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
 const GlobalStyles = createGlobalStyle`
   ${prismTheme};
@@ -33,12 +34,6 @@ function App({ Component, pageProps }: AppProps) {
     <Radix.RadixProvider>
       <MDXProvider
         components={{
-          Poster: ({ image }) => (
-            <Head>
-              <meta name="twitter:card" content="summary_large_image" />
-              <meta property="og:image" content={`https://modulz-website.now.sh${image}`} />
-            </Head>
-          ),
           ...Radix,
           ...RadixIcons,
           h1: (props) => <Radix.Heading size={5} mb={8} sx={{ fontWeight: 500 }} {...props} as="h1" />,

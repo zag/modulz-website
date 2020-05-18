@@ -28,7 +28,7 @@ export default (frontMatter: FrontMatter) => {
 
     return (
       <React.Fragment>
-        <TitleAndMetaTags title={frontMatter.title} description={frontMatter.summary} />
+        <TitleAndMetaTags title={frontMatter.title} description={frontMatter.summary} poster={frontMatter.poster} />
 
         <Container size={1} mt={6} sx={{ maxWidth: '600px' }}>
           <Heading size={3} mb={1} sx={{ fontWeight: 500 }}>
