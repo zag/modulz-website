@@ -202,8 +202,16 @@ function App({ Component, pageProps }: AppProps) {
             <Radix.Box sx={{ display: ['none', 'block'] }}>
               <Radix.Divider size={2} my={6} mx="auto" {...props} />
               <Radix.Heading size={0} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3">
-                Live demo
+                One last thing
               </Radix.Heading>
+
+              <Radix.Text size={4} mb={3} {...props} sx={{ lineHeight: '27px', letterSpacing: 0, ...props.sx }} as="p">
+                Here's a live playground. The example used here is from{' '}
+                <Radix.Link href="https://radix.modulz.app" variant="underline" target="_blank" rel="noopener">
+                  Radix
+                </Radix.Link>
+                , our very own design system.
+              </Radix.Text>
 
               <Radix.Box
                 my={6}
