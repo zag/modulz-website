@@ -201,7 +201,7 @@ function App({ Component, pageProps }: AppProps) {
           Demo: (props) => (
             <Radix.Box sx={{ display: ['none', 'block'] }}>
               <Radix.Divider size={2} my={6} mx="auto" {...props} />
-              <Radix.Heading size={0} mt={6} mb={1} sx={{ fontWeight: 500 }} {...props} as="h3">
+              <Radix.Heading mt={6} mb={1} sx={{ fontWeight: 500, fontSize: 4, lineHeight: '27px' }} {...props} as="h3">
                 One last thing
               </Radix.Heading>
 
