@@ -28,6 +28,8 @@ function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   const isDemoPage = router.pathname.includes('/demo/');
+  const isDarkMode = typeof window !== 'undefined' &&
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   return (
     <Radix.RadixProvider>
@@ -235,7 +237,7 @@ function App({ Component, pageProps }: AppProps) {
       >
         <Head>
           <title>Modulz</title>
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href={isDarkMode ? '/favicon-light.png' : '/favicon-dark.png'} />
 
           <link rel="stylesheet" href="https://core.modulz.app/fonts/fonts.css" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
