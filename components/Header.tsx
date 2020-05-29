@@ -130,6 +130,14 @@ export const Header = () => {
               </NextLink>
             </Text>
           </HideInProd>
+
+          <Pipe mx={[2, 5]} />
+
+          <Text size={3} sx={{ color: 'gray700' }}>
+            <Link href="https://kickstarter.modulz.app" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
+              Login
+            </Link>
+          </Text>
         </Flex>
       </Flex>
     </Container>
