@@ -245,11 +245,11 @@ function App({ Component, pageProps }: AppProps) {
 
         <GlobalStyles />
 
-        {/* {!isDemoPage && <Header />} */}
+        {!isDemoPage && <Header />}
 
         <Component {...pageProps} />
 
-        {/* {!isDemoPage && <Footer />} */}
+        {!isDemoPage && <Footer />}
       </MDXProvider>
     </Radix.RadixProvider>
   );

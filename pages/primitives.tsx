@@ -1,130 +1,50 @@
 import React from 'react';
-import { Container, Box, Grid, Heading, Button, Text, Divider, Flex } from '@modulz/radix';
+import { Container, Box, Link, Grid, Badge, CardLink, Heading, Button, Text, Divider, Flex } from '@modulz/radix';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
-const Editor = () => {
+const Primitives = () => {
   return (
     <Box>
-      <TitleAndMetaTags />
+      <TitleAndMetaTags
+        title="Primitives — Modulz"
+        description="Open-source, white-label components for building React apps."
+      />
 
       <Box mt={6} mb={8}>
-        <Container size={1}>
+        <Container size={2}>
           <Heading size={5} mb={4} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
-            The visual code editor
+            White-label components for building design systems.
           </Heading>
 
           <Heading as="h2" size={2} weight="normal" sx={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
-            Style your component library, from color to shadows to animations—without writing code.
+            An open-source component library for building accessible design systems.
           </Heading>
-        </Container>
-      </Box>
 
-      <Container size={2} sx={{ maxWidth: '1280px' }}>
-        <Flex mb={7} sx={{ justifyContent: 'space-around' }}>
-          <Box sx={{ position: 'relative', width: '175px', opacity: '.5' }}>
-            <Text as="p" size={2} mb={1} sx={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
-              Panes
-            </Text>
-            <Text as="p" size={2} sx={{ letterSpacing: '0', lineHeight: '1' }}>
-              Modulz is a visual code editor that empowers teams to design and develop a design system.
-            </Text>
-          </Box>
-          <Box sx={{ position: 'relative', width: '175px', opacity: '.5' }}>
-            <Text as="p" size={2} mb={1} sx={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
-              Variants
-            </Text>
-            <Text as="p" size={2} sx={{ letterSpacing: '0', lineHeight: '1' }}>
-              Modulz is a visual code editor that empowers teams to design and develop a design system.
-            </Text>
-          </Box>
-          <Box sx={{ position: 'relative', width: '175px', opacity: '1' }}>
-            <Text as="p" size={2} mb={1} sx={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
-              Parts
-            </Text>
-            <Text as="p" size={2} sx={{ letterSpacing: '0', lineHeight: '1' }}>
-              Modulz is a visual code editor that empowers teams to design and develop a design system.
-            </Text>
-          </Box>
-          <Box sx={{ position: 'relative', width: '175px', opacity: '.5' }}>
-            <Text as="p" size={2} mb={1} sx={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
-              Properties
-            </Text>
-            <Text as="p" size={2} sx={{ letterSpacing: '0', lineHeight: '1' }}>
-              Modulz is a visual code editor that empowers teams to design and develop a design system.
-            </Text>
-          </Box>
-        </Flex>
-        <img
-          src="/home/editor.png"
-          style={{
-            display: 'block',
-            maxWidth: '100%',
-            boxShadow: 'hsla(208, 28%, 12%, 0.42) 0px 60px 123px -25px, hsla(208, 25%, 10%, 0.08) 0px 35px 75px -35px',
-            borderWidth: '1px',
-            borderStyle: 'solid',
-            borderColor: 'hsl(208, 18%, 86%) hsl(208, 18%, 86%) hsl(210, 16%, 76%)',
-            borderRadius: '10px',
-          }}
-        />
-      </Container>
-
-      <Divider mx="auto" size={2} />
-
-      <Box py={9}>
-        <Container size={1}>
-          <Text
-            as="h3"
-            size={2}
-            mb={3}
-            sx={{
-              textAlign: 'center',
-              fontWeight: 500,
-              color: 'gray700',
-              letterSpacing: '.125em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Components
-          </Text>
-          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
-            The most advanced component library ever built.
-          </Heading>
-          <Text
-            as="p"
-            size={5}
-            sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}
-          >
-            Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-          </Text>
-        </Container>
-
-        <Box py={9}>
-          <Container size={1}>
-            <Text
-              as="h3"
-              size={2}
-              mb={3}
+          <Flex sx={{
+            pt: 8,
+            pb: 9,
+            justifyContent: 'center'
+          }}>
+            <Badge
+              size={1}
               sx={{
-                textAlign: 'center',
-                fontWeight: 500,
-                color: 'gray700',
-                letterSpacing: '.125em',
-                textTransform: 'uppercase',
+                fontFamily: 'Söhne Mono',
+                fontSize: '15px',
+                py: 2,
+                px: '2ch',
               }}
-            >
-              Components
-            </Text>
-            <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center' }}>
-              Kickstart your design system with premade components.
-            </Heading>
-            <Text as="p" size={5} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3' }}>
-              Hundreds of white-label components including sliders, tabs, buttons, datepickers and more.
-            </Text>
-          </Container>
+              style={{
+                lineHeight: '1',
+              }}>
+              Coming in July
+            </Badge>
+          </Flex>
+        </Container>
 
+        <Box>
           <Box>
-            <Flex sx={{ alignItems: 'center', userSelect: 'none', py: 7 }}>
+            <Flex sx={{ alignItems: 'center', userSelect: 'none', pb: 7 }}>
               <Box
                 sx={{
                   display: 'flex',
@@ -612,7 +532,6 @@ const Editor = () => {
               </Box>
             </Flex>
           </Box>
-
           <Box>
             <Flex sx={{ alignItems: 'center', userSelect: 'none', py: 7, flexDirection: 'row-reverse' }}>
               <Box
@@ -1104,110 +1023,82 @@ const Editor = () => {
           </Box>
         </Box>
 
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Grid
-            sx={{
-              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(3, 1fr)'],
-              gap: 5,
-            }}
-          >
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Accessible
-              </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Customisable
-              </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-          </Grid>
-        </Container>
+        <Box sx={{
+          py: 9,
+        }}>
+          <Container size={2}>
+            <Grid
+              sx={{
+                gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+                gap: 7,
+              }}
+            >
+              <Box>
+                <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
+                  Accessible
+                </Heading>
+                <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                  Primitives adhere to WAI-ARIA guidelines and are tested regularly in a wide selection of modern browsers and assistive technologies.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
+                  Functional
+                </Heading>
+                <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                  Primitives are feature-rich, with support for keyboard interaction, collision detection, focus trapping, dynamic resizing, scroll locking, native fallbacks, and more.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
+                  Interoperable
+                </Heading>
+                <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                  Fully interoperable with Modulz Editor and compatible with Modulz design tool plugins.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
+                  Themeable
+                </Heading>
+                <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                  Primitives are built to be themed. No need to override opinionated styles—Primitives ship with zero presentational styles.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
+                  Composable
+                </Heading>
+                <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                  Components were built to be composed.
+                </Text>
+              </Box>
+              <Box>
+                <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
+                  Open-source
+                </Heading>
+                <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                  Primitives are free and open-source under the MIT license.
+                </Text>
+              </Box>
+            </Grid>
+          </Container>
+        </Box>
+
+        <Divider mx="auto" mb={9} size={2} />
+
+        <Box>
+          <Container size={1}>
+            <Text as="p" size={4} sx={{ lineHeight: '3', mb: 3 }}>Most of us share similar definitions for common UI patterns like accordion, checkbox, combobox, dialog, dropdown, select, slider, and tooltip. These UI patterns are documented by WAI-ARIA and generally understood by the community.</Text>
+            <Text as="p" size={4} sx={{ lineHeight: '3', mb: 3 }}>However, the implementations provided to us by the web platform are inadequate. They're either completely missing, lacking in functionality, or cannot be customised sufficiently.</Text>
+            <Text as="p" size={4} sx={{ lineHeight: '3', mb: 3 }}>Developers are forced to build custom components for each product. As a result, most components on the web are inaccessible, non-performant, and lacking important features.</Text>
+            <Text as="p" size={4} sx={{ lineHeight: '3', mb: 3 }}>Our goal is to create a well-funded, open-source library of white-label components that the community can use to build accessible design systems.</Text>
+          </Container>
+        </Box>
+
       </Box>
-
-      <Divider mx="auto" size={2} />
-
-      <Box py={9}>
-        <Container size={1}>
-          <Text
-            as="h3"
-            size={2}
-            mb={3}
-            sx={{
-              textAlign: 'center',
-              fontWeight: 500,
-              color: 'gray700',
-              letterSpacing: '.125em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Code export
-          </Text>
-          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
-            The most advanced code generation in the world. Hands down.
-          </Heading>
-          <Text
-            as="p"
-            size={5}
-            sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}
-          >
-            Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-          </Text>
-        </Container>
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Grid
-            sx={{
-              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(3, 1fr)'],
-              gap: 5,
-            }}
-          >
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-          </Grid>
-        </Container>
-      </Box>
-
-      <Divider mx="auto" size={2} />
-
-      <BetaAccess />
     </Box>
   );
 };
 
-export default Editor;
+export default Primitives;
