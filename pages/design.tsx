@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Box, Grid, Heading, Button, Text, Divider, Flex } from '@modulz/radix';
 import { BetaAccess } from '../components/BetaAccess';
+import { LintingPopover } from '../components/LintingPopover';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 
-const Editor = () => {
+const DesignPage = () => {
   return (
     <Box>
       <TitleAndMetaTags />
@@ -199,9 +200,35 @@ const Editor = () => {
 
       <Divider mx="auto" size={2} />
 
+      <Box py={9}>
+        <Container size={2}>
+          <Grid
+            sx={{
+              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+              gap: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Box>
+              <LintingPopover />
+            </Box>
+            <Box>
+              <Heading as="h3" size={2} mb={3} sx={{ fontWeight: 500 }}>
+                Design Linting
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+              </Text>
+            </Box>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Divider mx="auto" size={2} />
+
       <BetaAccess />
     </Box>
   );
 };
 
-export default Editor;
+export default DesignPage;
