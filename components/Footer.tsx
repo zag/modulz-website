@@ -39,24 +39,30 @@ export const Footer = () => {
             </Heading>
             <ul>
               <li>
-                <Text as="p" size={3} mt={2} sx={{ color: 'gray500', lineHeight: '1', userSelect: 'none' }}>
-                  Theme
-                </Text>
-              </li>
-              <li>
-                <Text as="p" size={3} mt={2} sx={{ color: 'gray500', lineHeight: '1', userSelect: 'none' }}>
-                  Editor
-                </Text>
-              </li>
-              <li>
-                <Text as="p" size={3} mt={2} sx={{ color: 'gray500', lineHeight: '1', userSelect: 'none' }}>
-                  Composer
+                <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
+                  <NextLink href="/styleguide" passHref>
+                    <Link variant="fade">Design</Link>
+                  </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
                   <NextLink href="/styleguide" passHref>
-                    <Link variant="fade">Style guide</Link>
+                    <Link variant="fade">Prototype</Link>
+                  </NextLink>
+                </Text>
+              </li>
+              <li>
+                <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
+                  <NextLink href="/styleguide" passHref>
+                    <Link variant="fade">Handoff</Link>
+                  </NextLink>
+                </Text>
+              </li>
+              <li>
+                <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
+                  <NextLink href="/styleguide" passHref>
+                    <Link variant="fade">Design Systems</Link>
                   </NextLink>
                 </Text>
               </li>
