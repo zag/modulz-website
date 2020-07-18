@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Grid, Heading, Button, Text, Divider, Flex } from '@modulz/radix';
+import { Container, Box, Grid, Heading, Button, Input, IconButton, Text, Divider, Flex } from '@modulz/radix';
 import { BetaAccess } from '../components/BetaAccess';
 import { LintingPopover } from '../components/LintingPopover';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
@@ -74,20 +74,19 @@ const DesignPage = () => {
 
       <Box py={9}>
         <Container size={1}>
-          <Text
-            as="h3"
-            size={2}
-            mb={3}
-            sx={{
-              textAlign: 'center',
-              fontWeight: 500,
-              color: 'gray700',
-              letterSpacing: '.125em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Components
-          </Text>
+        <Text
+          as="h3"
+          size={2}
+          mb={4}
+          sx={{
+            textAlign: 'center',
+            color: 'blue700',
+            letterSpacing: '.115em',
+            textTransform: 'uppercase',
+            fontFamily: 'Söhne Mono'
+          }}
+        >
+        <Text sx={{ color: 'gray500' }}>&lt;</Text> Components <Text sx={{ color: 'gray500' }}>/&gt;</Text></Text>
           <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
             The most advanced component library ever built.
           </Heading>
@@ -98,39 +97,6 @@ const DesignPage = () => {
           >
             Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
           </Text>
-        </Container>
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Grid
-            sx={{
-              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(3, 1fr)'],
-              gap: 5,
-            }}
-          >
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Accessible
-              </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Customisable
-              </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-          </Grid>
         </Container>
       </Box>
 
@@ -148,8 +114,42 @@ const DesignPage = () => {
                 height: '6',
                 fontSize: '3',
                 fontWeight: '500',
-                borderRadius: '2',
                 mr: '8',
+              }}
+            >
+              Button
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                flexShrink: 0,
+                alignItems: 'center',
+                textAlign: 'center',
+                backgroundImage: 'linear-gradient(0deg, hsl(270,85%,50%) 0%, hsl(270,85%,65%) 100%)',
+                px: '3',
+                height: '6',
+                fontSize: '3',
+                fontWeight: '500',
+                borderRadius: '9999px',
+                mr: '8',
+              }}
+            >
+              Button
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                flexShrink: 0,
+                alignItems: 'center',
+                textAlign: 'center',
+                backgroundImage: 'linear-gradient(0deg, hsl(270,85%,50%) 0%, hsl(270,85%,65%) 100%)',
+                px: '3',
+                height: '6',
+                fontSize: '3',
+                fontWeight: '500',
+                borderRadius: '9999px',
+                mr: '8',
+                color: 'white'
               }}
             >
               Button
@@ -389,7 +389,7 @@ const DesignPage = () => {
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M11.467 3.72686C11.7559 3.91576 11.8369 4.30309 11.648 4.592L7.39803 11.092C7.29787 11.2452 7.1356 11.3468 6.95405 11.3699C6.77251 11.3931 6.58992 11.3355 6.4545 11.2124L3.7045 8.71243C3.44909 8.48024 3.43027 8.08496 3.66246 7.82954C3.89465 7.57413 4.28993 7.55531 4.54534 7.7875L6.75295 9.79442L10.6018 3.90793C10.7907 3.61903 11.178 3.53796 11.467 3.72686Z"
-                  fill="#282B2E"
+                  fill="currentColor"
                 />
               </svg>
             </Box>
@@ -431,6 +431,35 @@ const DesignPage = () => {
         </Box>
       </Box>
 
+      <Box py={9}>
+        <Container size={2}>
+          <Text
+            as="h3"
+            size={2}
+            mb={3}
+            sx={{
+              textAlign: 'center',
+              fontWeight: 500,
+              color: 'gray700',
+              letterSpacing: '.125em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Smart Layout
+          </Text>
+          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+            Accelerate your design workflow with a suite of powerful layout components.
+          </Heading>
+          <Text
+            as="p"
+            size={5}
+            sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}
+          >
+            Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+          </Text>
+        </Container>
+      </Box>
+
       <Divider mx="auto" size={2} />
 
       <Box sx={{ position: 'relative', p: 9 }}>
@@ -443,17 +472,15 @@ const DesignPage = () => {
             }}
           >
             <Box sx={{ alignSelf: 'stretch' }}>
-              <Flex sx={{ height: '400%', my: -9 }}>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
-                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)', mr: 4 }}></Box>
+              <Flex sx={{ height: '100%', my: -9 }}>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+
               </Flex>
             </Box>
             <Box>
@@ -476,118 +503,684 @@ const DesignPage = () => {
               <Text as="p" size={4} sx={{ lineHeight: '3' }}>
                 Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
-              <Flex>
+              <Flex sx={{ pt: 3 }}>
                 <Box>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                    <rect width="45" height="45" fill="white"/>
-                    <path d="M37.5 38.5H7.5C6.94772 38.5 6.5 38.0523 6.5 37.5V7.5C6.5 6.94772 6.94772 6.5 7.5 6.5H37.5C38.0523 6.5 38.5 6.94772 38.5 7.5V37.5C38.5 38.0523 38.0523 38.5 37.5 38.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22.5 6.5V38.5" stroke="black"/>
-                    <path d="M38.5 22.5H6.5" stroke="black"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
                 </Box>
                 <Box>
-                  <Text as="p" size={3} sx={{ lineHeight: '2', mt: 2, ml: 2 }}>
-                    Modulz Styleguide provides fully-featured design system documentation.
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Auto Layout
                   </Text>
                 </Box>
               </Flex>
-              <Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+              <Flex sx={{ pt: 3 }}>
                 <Box>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                    <rect width="45" height="45" fill="white"/>
-                    <path d="M37.5 38.5H7.5C6.94772 38.5 6.5 38.0523 6.5 37.5V7.5C6.5 6.94772 6.94772 6.5 7.5 6.5H37.5C38.0523 6.5 38.5 6.94772 38.5 7.5V37.5C38.5 38.0523 38.0523 38.5 37.5 38.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22.5 6.5V38.5" stroke="black"/>
-                    <path d="M38.5 22.5H6.5" stroke="black"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
                 </Box>
                 <Box>
-                  <Text as="p" size={3} sx={{ lineHeight: '2', mt: 2, ml: 2 }}>
-                    Modulz Styleguide provides fully-featured design system documentation.
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Auto Layout
                   </Text>
                 </Box>
               </Flex>
-              <Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+              <Flex sx={{ pt: 3 }}>
                 <Box>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                    <rect width="45" height="45" fill="white"/>
-                    <path d="M37.5 38.5H7.5C6.94772 38.5 6.5 38.0523 6.5 37.5V7.5C6.5 6.94772 6.94772 6.5 7.5 6.5H37.5C38.0523 6.5 38.5 6.94772 38.5 7.5V37.5C38.5 38.0523 38.0523 38.5 37.5 38.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22.5 6.5V38.5" stroke="black"/>
-                    <path d="M38.5 22.5H6.5" stroke="black"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
                 </Box>
                 <Box>
-                  <Text as="p" size={3} sx={{ lineHeight: '2', mt: 2, ml: 2 }}>
-                    Modulz Styleguide provides fully-featured design system documentation.
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Auto Layout
                   </Text>
                 </Box>
               </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+            </Box>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Divider mx="auto" size={2} />
+
+      <Box sx={{ position: 'relative', p: 9 }}>
+        <Container size={2}>
+          <Grid
+            sx={{
+              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+              gap: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Box sx={{ alignSelf: 'stretch' }}>
+              <Flex sx={{ justifyContent: 'space-between' }}>
+                <Box sx={{ height: '100%' }}>
+                  <Box sx={{ backgroundImage: 'linear-gradient(0deg, hsl(270,75%,45%) 0%, hsl(270,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center' }} style={{ lineHeight: '1' }}>Button</Box>
+                </Box>
+                <Box sx={{ width: '250px', boxShadow: '0 15px 35px -10px rgba(0,0,0,.35)', borderRadius: 2 }}>
+                  <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', pt: 1, px: 3 }}>
+                    <Text size={1} sx={{ fontWeight: '500' }}>Selector</Text>
+                    <Box sx={{ mr: -2 }}>
+                      <IconButton>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3C8 2.72386 7.77614 2.5 7.5 2.5C7.22386 2.5 7 2.72386 7 3V7H3C2.72386 7 2.5 7.22386 2.5 7.5C2.5 7.77614 2.72386 8 3 8H7V12C7 12.2761 7.22386 12.5 7.5 12.5C7.77614 12.5 8 12.2761 8 12V8H12C12.2761 8 12.5 7.77614 12.5 7.5C12.5 7.22386 12.2761 7 12 7H8V3Z" fill="currentColor"/>
+                        </svg>
+                      </IconButton>
+                    </Box>
+                  </Flex>
+                  <Box sx={{ py: 1 }}>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3, backgroundColor: 'blue600' }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue700', color: 'white', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:base</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'white' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:hover</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:active</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:focus</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:active:hover</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:disabled</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Flex>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono', mr: 1 }} style={{ lineHeight: 1 }}>:hover</Text>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:icon</Text>
+                      </Flex>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                  </Box>
+                </Box>
+
+              </Flex>
+            </Box>
+            <Box>
+              <Text
+                as="h3"
+                size={2}
+                mb={4}
+                sx={{
+                  color: 'blue700',
+                  letterSpacing: '.1em',
+                  textTransform: 'uppercase',
+                  fontFamily: 'Söhne Mono'
+                }}
+              >
+                &lt;States/&gt;
+              </Text>
+              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500 }}>
+                States
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+              </Text>
+              <Flex sx={{ pt: 3 }}>
+                <Box>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+                </Box>
+                <Box>
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Compound states
+                  </Text>
+                </Box>
+              </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+              <Flex sx={{ pt: 3 }}>
+                <Box>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+                </Box>
+                <Box>
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Child selectors
+                  </Text>
+                </Box>
+              </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+            </Box>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Box sx={{ position: 'relative', p: 9 }}>
+        <Container size={2}>
+          <Grid
+            sx={{
+              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+              gap: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Box sx={{ alignSelf: 'stretch' }}>
+              <Flex sx={{ justifyContent: 'space-between' }}>
+                <Flex sx={{ flexDirection: 'column', flexGrow: 1 }}>
+                  <Box sx={{ backgroundImage: 'linear-gradient(0deg, hsl(270,10%,45%) 0%, hsl(270,10%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: 4 }} style={{ lineHeight: '1' }}>Button</Box>
+                  <Box sx={{ backgroundImage: 'linear-gradient(0deg, hsl(205,75%,45%) 0%, hsl(205,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: 4 }} style={{ lineHeight: '1' }}>Button</Box>
+                  <Box sx={{ backgroundImage: 'linear-gradient(0deg, hsl(270,75%,45%) 0%, hsl(270,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: 4 }} style={{ lineHeight: '1' }}>Button</Box>
+                  <Box sx={{ backgroundImage: 'linear-gradient(0deg, hsl(5,75%,45%) 0%, hsl(5,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: 4 }} style={{ lineHeight: '1' }}>Button</Box>
+                  <Box sx={{ backgroundImage: 'linear-gradient(0deg, hsl(145,75%,45%) 0%, hsl(145,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: 4 }} style={{ lineHeight: '1' }}>Button</Box>
+                  <Box sx={{ backgroundImage: 'linear-gradient(0deg, hsl(270,75%,45%) 0%, hsl(270,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: 4 }} style={{ lineHeight: '1' }}>Button</Box>
+                </Flex>
+                <Box sx={{ width: '250px', flexShrink: 0, boxShadow: '0 15px 35px -10px rgba(0,0,0,.35)', borderRadius: 2 }}>
+                  <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', pt: 1, px: 3 }}>
+                    <Text size={1} sx={{ fontWeight: '500' }}>Variants</Text>
+                    <Box sx={{ mr: -2 }}>
+                      <IconButton>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3C8 2.72386 7.77614 2.5 7.5 2.5C7.22386 2.5 7 2.72386 7 3V7H3C2.72386 7 2.5 7.22386 2.5 7.5C2.5 7.77614 2.72386 8 3 8H7V12C7 12.2761 7.22386 12.5 7.5 12.5C7.77614 12.5 8 12.2761 8 12V8H12C12.2761 8 12.5 7.77614 12.5 7.5C12.5 7.22386 12.2761 7 12 7H8V3Z" fill="currentColor"/>
+                        </svg>
+                      </IconButton>
+                    </Box>
+                  </Flex>
+                  <Box sx={{ py: 1 }}>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3, backgroundColor: 'blue600' }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue700', color: 'white', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:base</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'white' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:hover</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:active</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:focus</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:active:hover</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Box>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:disabled</Text>
+                      </Box>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', py: 1, px: 3 }}>
+                      <Flex>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono', mr: 1 }} style={{ lineHeight: 1 }}>:hover</Text>
+                        <Text size={1} sx={{ display: 'block', pt: '3px', pr: '4px', pb: '3px', pl: '2px', backgroundColor: 'blue200', color: 'blue700', fontFamily: 'Söhne Mono' }} style={{ lineHeight: 1 }}>:icon</Text>
+                      </Flex>
+                      <Flex sx={{ alignItems: 'center', mr: -2 }}>
+                        <Text size={1} sx={{ mr: 1, color: 'gray700' }} style={{ lineHeight: 1 }}>(27)</Text>
+                        <IconButton>
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
+                          </svg>
+                        </IconButton>
+                      </Flex>
+                    </Flex>
+                  </Box>
+                </Box>
+
+              </Flex>
+            </Box>
+            <Box>
+              <Text
+                as="h3"
+                size={2}
+                mb={4}
+                sx={{
+                  color: 'blue700',
+                  letterSpacing: '.1em',
+                  textTransform: 'uppercase',
+                  fontFamily: 'Söhne Mono'
+                }}
+              >
+                &lt;Variants/&gt;
+              </Text>
+              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500 }}>
+                Variants
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+              </Text>
+              <Flex sx={{ pt: 3 }}>
+                <Box>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+                </Box>
+                <Box>
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Compound states
+                  </Text>
+                </Box>
+              </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+              <Flex sx={{ pt: 3 }}>
+                <Box>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+                </Box>
+                <Box>
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Child selectors
+                  </Text>
+                </Box>
+              </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+            </Box>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Divider mx="auto" size={2} />
+
+      <Box sx={{ position: 'relative', p: 9 }}>
+        <Container size={2}>
+          <Grid
+            sx={{
+              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(2, 1fr)'],
+              gap: 8,
+              alignItems: 'center',
+            }}
+          >
+            <Box sx={{ alignSelf: 'stretch' }}>
+              <Flex sx={{ height: '100%', my: -9 }}>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+                <Box sx={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
+                <Box sx={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
+
+              </Flex>
+            </Box>
+            <Box>
+              <Text
+                as="h3"
+                size={2}
+                mb={4}
+                sx={{
+                  color: 'blue700',
+                  letterSpacing: '.1em',
+                  textTransform: 'uppercase',
+                  fontFamily: 'Söhne Mono'
+                }}
+              >
+                &lt;Design tokens/&gt;
+              </Text>
+              <Heading as="h3" size={3} mb={3} sx={{ fontWeight: 500 }}>
+                Maintain consistency with reusable styles
+              </Heading>
+              <Text as="p" size={4} sx={{ lineHeight: '3' }}>
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+              </Text>
+              <Flex sx={{ pt: 3 }}>
+                <Box>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+                </Box>
+                <Box>
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Auto Layout
+                  </Text>
+                </Box>
+              </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+              <Flex sx={{ pt: 3 }}>
+                <Box>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+                </Box>
+                <Box>
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Auto Layout
+                  </Text>
+                </Box>
+              </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
+              <Flex sx={{ pt: 3 }}>
+                <Box>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+                </Box>
+                <Box>
+                  <Text as="p" size={3} sx={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
+                    Auto Layout
+                  </Text>
+                </Box>
+              </Flex>
+              <Box sx={{ pl: 7 }}>
+                <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
+                  Modulz Styleguide provides fully-featured design system documentation.
+                </Text>
+              </Box>
             </Box>
           </Grid>
         </Container>
         <Box sx={{ width: '400px', height: '400px', borderRadius: '50%', backgroundColor: 'hsl(52, 100%, 50%)', position: 'absolute', left: '-200px', top: '0' }}></Box>
         <Box sx={{ width: '400px', height: '400px', borderRadius: '50%', backgroundColor: 'hsl(185, 100%, 18%)', position: 'absolute', right: '-200px', top: '200px' }}></Box>
-      </Box>
-
-      <Box py={9}>
-        <Container size={1}>
-          <Text
-            as="h3"
-            size={2}
-            mb={3}
-            sx={{
-              textAlign: 'center',
-              fontWeight: 500,
-              color: 'gray700',
-              letterSpacing: '.125em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Code export
-          </Text>
-          <Heading as="h3" size={4} mb={3} sx={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
-            The most advanced code generation in the world. Hands down.
-          </Heading>
-          <Text
-            as="p"
-            size={5}
-            sx={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}
-          >
-            Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-          </Text>
-        </Container>
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Grid
-            sx={{
-              gridTemplateColumns: ['repeat(1, 1fr)', 'repeat(3, 1fr)'],
-              gap: 5,
-            }}
-          >
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-            <Box>
-              <Heading as="h3" size={1} mb={3} sx={{ fontWeight: 500 }}>
-                Theme UI
-              </Heading>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: '2' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-            </Box>
-          </Grid>
-        </Container>
       </Box>
 
       <Divider mx="auto" size={2} />

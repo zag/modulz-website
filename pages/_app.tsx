@@ -20,6 +20,10 @@ const GlobalStyles = createGlobalStyle`
 		background-color: ${Radix.theme.colors.blue600};
 		color: ${Radix.theme.colors.white};
 	}
+
+  html {
+    overflow-x: hidden;
+  }
 `;
 
 function App({ Component, pageProps }: AppProps) {
