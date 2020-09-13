@@ -98,7 +98,7 @@ const Styleguide = () => {
                 Blazing fast
               </Heading>
               <Text as="p" size={4} mx={[0, 0, 3]} sx={{ color: 'gray700', lineHeight: 3 }}>
-                Style guides are built on Gatsby and for optimised for blazing fast performance.
+                Style guides are built on Gatsby and optimised for blazing fast performance.
               </Text>
             </Box>
 
