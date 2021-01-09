@@ -45,7 +45,7 @@ export const authors = {
   pedro: {
     name: 'Pedro Duarte',
     twitter: 'peduarte',
-    avatar: 'https://pbs.twimg.com/profile_images/1108829952076668934/jgTRTUMC_400x400.jpg',
+    avatar: 'https://pbs.twimg.com/profile_images/1293852807024521218/1u__xCFD_400x400.jpg',
     mug: require('../public/mugshots/pedro.jpg'),
   },
 
