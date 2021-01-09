@@ -7,9 +7,9 @@ export const Footer = () => {
   return (
     <Box>
       <Separator size="1" />
-      <Container size="2" css={{ maxWidth: '1090px' }}>
-        <Box>
-          <Flex css={{ flexDirection: 'column', alignItems: 'center' }}>
+      <Container size="3">
+        <Flex>
+          <Flex css={{ alignItems: 'center' }}>
             <NextLink href="/" passHref>
               <Link variant="subtle" css={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
                 <Box>Modulz homepage</Box>
@@ -136,7 +136,7 @@ export const Footer = () => {
               </li>
             </ul>
           </Box>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   );

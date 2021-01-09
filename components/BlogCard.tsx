@@ -9,6 +9,8 @@ export const BlogCard = ({ frontMatter }: { frontMatter: FrontMatter }) => {
   return (
     <NextLink href={`/${frontMatter.id}`} passHref>
       <Card
+        as="a"
+        variant="interactive"
         css={{
           backgroundColor: 'transparent',
           userSelect: 'none',

@@ -3,25 +3,25 @@ import { Box, Flex, Text, Avatar, IconButton } from '@modulz/design-system';
 import { ExternalLinkIcon } from '@modulz/radix-icons';
 
 export const LegacyTestimonial = (props) => (
-  <Box sx={{ textAlign: 'center' }}>
-    <Flex sx={{ justifyContent: 'center' }} mb={4}>
+  <Box>
+    <Flex css={{ justifyContent: 'center', mb: '$5' }}>
       <QuoteIcon />
     </Flex>
     <Box as="blockquote">
-      <Text as="p" sx={{ lineHeight: [3, props.large ? 4 : 3], fontSize: [5, props.large ? 8 : 6] }}>
+      <Text as="p" size="6">
         {props.quote}
       </Text>
-      <Flex mt={4} sx={{ alignItems: 'center', justifyContent: 'center' }}>
-        <Box mr={3}>
-          <Avatar size={1} src={props.avatar} children={props.initial} alt={`Photo of ${props.author}`} />
+      <Flex css={{ alignItems: 'center', justifyContent: 'center' }}>
+        <Box css={{ mr: '$5' }}>
+          <Avatar size="2" src={props.avatar} children={props.initial} alt={`Photo of ${props.author}`} />
         </Box>
-        <Text size={3} sx={{ color: 'gray700' }}>
+        <Text size="3" color="gray">
           {props.author}
         </Text>
-        <Box ml={2}>
+        <Box>
           {props.url && (
             <a href={props.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${props.author}'s tweet`}>
-              <IconButton as="span" sx={{ color: 'gray700' }}>
+              <IconButton as="div" variant="ghost">
                 <ExternalLinkIcon />
               </IconButton>
             </a>

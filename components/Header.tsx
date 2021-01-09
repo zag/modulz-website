@@ -21,7 +21,7 @@ export const Header = () => {
   const buttonRef = React.useRef<HTMLButtonElement>(null);
 
   return (
-    <Container size="2" css={{ maxWidth: 'none' }}>
+    <Container size="4">
       <Flex css={{ justifyContent: 'space-between' }}>
         <NextLink href="/" passHref>
           <Link css={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>

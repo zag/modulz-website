@@ -4,28 +4,28 @@ const HomepageHero = require('../../public/home/homepage-hero-min.png');
 
 export const LegacyComposerHero = () => (
   <Box aria-hidden>
-    <Box sx={{ display: ['none', 'block'] }}>
-      <Box mt={8}>
-        <Container size={3}>
-          <Flex sx={{ flexDirection: ['column', 'row'] }}>
-            <Flex sx={{ flexGrow: 1, flexBasis: 0, alignItems: 'flex-end', flexDirection: 'column' }}>
-              <Box mb={9}>
+    <Box>
+      <Box>
+        <Container size="3">
+          <Flex>
+            <Flex css={{ flexGrow: 1, flexBasis: 0, alignItems: 'flex-end', flexDirection: 'column' }}>
+              <Box>
                 <LogoReact />
               </Box>
-              <Box sx={{ pr: '160px', pb: '160px', filter: 'grayscale(1)' }}>
+              <Box css={{ pr: '160px', pb: '160px', filter: 'grayscale(1)' }}>
                 <LogoVue />
               </Box>
-              <Box mb={9} sx={{ paddingRight: '160px', filter: 'grayscale(1)' }}>
+              <Box css={{ paddingRight: '160px', filter: 'grayscale(1)' }}>
                 <LogoHTML />
               </Box>
-              <Box sx={{ filter: 'grayscale(1)' }}>
+              <Box css={{ filter: 'grayscale(1)' }}>
                 <LogoCSS />
               </Box>
             </Flex>
-            <Box sx={{ flexGrow: 1, flexBasis: 0 }}>
-              <Flex sx={{ height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+            <Box css={{ flexGrow: 1, flexBasis: 0 }}>
+              <Flex css={{ height: '100%', alignItems: 'center', justifyContent: 'center' }}>
                 <Box
-                  sx={{
+                  css={{
                     position: 'relative',
                     boxShadow:
                       '0 0 0 80px white, 0 0 0 81px hsl(208, 100%, 90%), 0 0 0 160px hsl(208, 100%, 98%), 0 0 0 161px hsl(208, 100%, 92%), 0 0 0 240px white, 0 0 0 241px hsl(208, 100%, 92%), 0 0 0 320px hsl(208, 100%, 99%), 0 0 0 321px hsl(208, 100%, 94%), 0 0 0 400px white, 0 0 0 401px hsl(208, 100%, 94%), 0 0 0 480px hsl(208, 100%, 99%), 0 0 0 481px hsl(208, 100%, 96%), 0 0 0 560px white, 0 0 0 561px hsl(208, 100%, 96%), 0 0 0 640px hsl(208, 100%, 99%), 0 0 0 641px hsl(208, 100%, 96%), 0 0 0 720px white, 0 0 0 721px hsl(208, 100%, 96%)',
@@ -34,7 +34,7 @@ export const LegacyComposerHero = () => (
                   }}
                 >
                   <Box
-                    sx={{
+                    css={{
                       position: 'absolute',
                       backgroundColor: 'blue500',
                       backgroundImage:
@@ -50,7 +50,7 @@ export const LegacyComposerHero = () => (
                     }}
                   ></Box>
                   <Box
-                    sx={{
+                    css={{
                       position: 'absolute',
                       backgroundColor: 'blue500',
                       backgroundImage:
@@ -66,7 +66,7 @@ export const LegacyComposerHero = () => (
                     }}
                   ></Box>
                   <Box
-                    sx={{
+                    css={{
                       position: 'absolute',
                       backgroundColor: 'blue500',
                       backgroundImage:
@@ -82,7 +82,7 @@ export const LegacyComposerHero = () => (
                     }}
                   ></Box>
                   <Box
-                    sx={{
+                    css={{
                       position: 'absolute',
                       backgroundColor: 'blue500',
                       backgroundImage:
@@ -97,23 +97,23 @@ export const LegacyComposerHero = () => (
                       transform: 'rotate(19deg)',
                     }}
                   ></Box>
-                  <Box sx={{ backgroundColor: 'white', boxShadow: '0 0 0 20px white' }}>
+                  <Box css={{ backgroundColor: 'white', boxShadow: '0 0 0 20px white' }}>
                     <LogoModulz />
                   </Box>
                 </Box>
               </Flex>
             </Box>
-            <Box sx={{ flexGrow: 1, flexBasis: 0 }}>
-              <Box mb={9} sx={{ filter: 'grayscale(1)', opacity: '.5' }}>
+            <Box css={{ flexGrow: 1, flexBasis: 0 }}>
+              <Box css={{ filter: 'grayscale(1)', opacity: '.5' }}>
                 <LogoFramer />
               </Box>
-              <Box sx={{ pl: '160px', pb: '160px' }}>
+              <Box css={{ pl: '160px', pb: '160px' }}>
                 <LogoSketch />
               </Box>
-              <Box mb={9} sx={{ pl: '160px', filter: 'grayscale(1)' }}>
+              <Box css={{ pl: '160px', filter: 'grayscale(1)' }}>
                 <LogoFigma />
               </Box>
-              <Box sx={{ filter: 'grayscale(1)', opacity: '.7' }}>
+              <Box css={{ filter: 'grayscale(1)', opacity: '.7' }}>
                 <LogoXd />
               </Box>
             </Box>
@@ -122,11 +122,11 @@ export const LegacyComposerHero = () => (
       </Box>
     </Box>
 
-    <Box mt={8} pb={7}>
-      <Container size={2} sx={{ maxWidth: '1280px' }}>
-        <Box sx={{ position: 'relative' }}>
+    <Box>
+      <Container size="2" css={{ maxWidth: '1280px' }}>
+        <Box css={{ position: 'relative' }}>
           <Box
-            sx={{
+            css={{
               position: 'absolute',
               backgroundColor: 'blue500',
               top: '-10px',
