@@ -8,10 +8,10 @@ export const LegacyTestimonial = (props) => (
       <QuoteIcon />
     </Flex>
     <Box as="blockquote">
-      <Text as="p" sx={{ lineHeight: [4, props.large ? 5 : 4], fontSize: [6, props.large ? 8 : 6] }}>
+      <Text as="p" sx={{ lineHeight: [3, props.large ? 4 : 3], fontSize: [5, props.large ? 8 : 6] }}>
         {props.quote}
       </Text>
-      <Flex mt={5} sx={{ alignItems: 'center', justifyContent: 'center' }}>
+      <Flex mt={4} sx={{ alignItems: 'center', justifyContent: 'center' }}>
         <Box mr={3}>
           <Avatar size={1} src={props.avatar} children={props.initial} alt={`Photo of ${props.author}`} />
         </Box>
