@@ -73,29 +73,9 @@ export const Header = () => {
                 </Text>
               </Box>
 
-              <NextLink href="/styleguide" passHref>
-                <Box
-                  as="a"
-                  py={2}
-                  px={4}
-                  sx={{ textDecoration: 'none', color: 'inherit', display: 'block', ':hover': { bg: 'gray200' } }}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Heading size={0}>
-                    Style guide
-                    <Badge variant="blue" ml={1}>
-                      New
-                    </Badge>
-                  </Heading>
-                  <Text size={2} sx={{ color: 'gray700', lineHeight: 1 }}>
-                    Handoff your design system with a gorgeous, generated style guide.
-                  </Text>
-                </Box>
-              </NextLink>
-
               <Divider my={1} />
 
-              <a href="https://radix.modulz.app" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <a href="https://radix-ui.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <Box as="span" py={2} px={4} sx={{ display: 'block', ':hover': { bg: 'gray200' } }}>
                   <Heading size={0}>Radix</Heading>
                   <Text size={2} sx={{ color: 'gray700', lineHeight: 1 }}>
@@ -134,7 +114,7 @@ export const Header = () => {
           <Pipe mx={[2, 5]} />
 
           <Text size={3} sx={{ color: 'gray700' }}>
-            <Link href="https://core.modulz.app" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
+            <Link href="https://kickstarter.modulz.app" sx={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
               Login
             </Link>
           </Text>

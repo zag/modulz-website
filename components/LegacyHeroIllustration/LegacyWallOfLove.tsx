@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Box, Flex } from '@modulz/radix';
 import { LegacyTestimonial } from './LegacyTestimonial';
-const mikeAvatar = require('../../public/testimonials/mike-avatar.png');
-const tonyAvatar = require('../../public/testimonials/tony-avatar.jpg');
+const willAvatar = require('../../public/testimonials/will-avatar.jpg');
+const desAvatar = require('../../public/testimonials/des-avatar.jpg');
 const jackAvatar = require('../../public/testimonials/jack-avatar.jpg');
-const jinaAvatar = require('../../public/testimonials/jina-avatar.png');
-const steveAvatar = require('../../public/testimonials/steve-avatar.jpg');
+const felipeAvatar = require('../../public/testimonials/felipe-avatar.jpg');
+const johnAvatar = require('../../public/testimonials/john-avatar.jpg');
 
 export const LegacyWallOfLove = () => (
   <Box my={8}>
@@ -16,26 +16,27 @@ export const LegacyWallOfLove = () => (
       >
         <Box mb={6} px={[0, 5]} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
-            quote='"Modulz is one of the most exciting design tools I’ve seen. This could revolutionize design workflows."'
-            author="Michael Dick"
-            initial="M"
-            avatar={mikeAvatar}
+            quote='"It is exceptionally hard to have a great design tool that outputs useful code. Many have tried but in the end the trade offs were too great.  That was until Modulz made it their mission."'
+            author="Will Prendergast"
+            initial="W"
+            url="https://twitter.com/wilp/status/1341389418599489536"
+            avatar={willAvatar}
           />
         </Box>
 
         <Box mb={6} px={[0, 5]} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
-            quote='"Of all these new UI design tools coming out, I think Modulz looks the most promising. Excited to give it a try."'
-            author="Steve Schoger"
-            initial="S"
-            url="https://twitter.com/steveschoger/status/965589237109264385"
-            avatar={steveAvatar}
+            quote='"A classical looking design tool with a freaking deploy button in the toolbar is SO EXCITING."'
+            author="John Meguerian"
+            initial="J"
+            url="https://twitter.com/jmegs/status/1341189494050058241"
+            avatar={johnAvatar}
           />
         </Box>
       </Flex>
     </Container>
 
-    <Container size={1} mb={6} px={[null, null, 0]}>
+    {/* <Container size={1} mb={6} px={[null, null, 0]}>
       <LegacyTestimonial
         large
         quote='"It’s exciting to watch a small group of people working on an idea which will fundamentally change a discipline."'
@@ -43,6 +44,17 @@ export const LegacyWallOfLove = () => (
         initial="T"
         url="https://twitter.com/tonyennis/status/960067570987556864"
         avatar={tonyAvatar}
+      />
+    </Container> */}
+
+    <Container size={1} mb={6} px={[null, null, 0]}>
+      <LegacyTestimonial
+        large
+        quote='"Of all the startups I’ve invested in, I struggle to remember one producing quality product as fast as Modulz. Inspirational."'
+        author="Des Traynor"
+        initial="D"
+        url="https://twitter.com/destraynor/status/1121745686146494464"
+        avatar={desAvatar}
       />
     </Container>
 
@@ -53,25 +65,20 @@ export const LegacyWallOfLove = () => (
       >
         <Box px={[0, 5]} mb={[6, 0]} mr={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
-            quote={
-              <>
-                I can’t wait to try Modulz.
-                <br />
-                It looks so cool!
-              </>
-            }
-            author="Jina Anne"
-            initial="J"
-            avatar={jinaAvatar}
+            quote='"Modulz is—with no doubt—my bet for the next big thing in tools that close the gap between design and code. Really impressive."'
+            author="Felipe Pires"
+            initial="F"
+            url="https://twitter.com/felipeapiress/status/1341376952528154624"
+            avatar={felipeAvatar}
           />
         </Box>
 
         <Box px={[0, 5]} mb={6} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
-            quote='"Empowering designers to iterate on the *actual* product they are working on—this is the future of our industry"'
+            quote='"If you’ve been stoked with everything Modulz has been putting out but are worried it’s not going to all come together into the web design tool of your dreams, don’t stress. It’s sick."'
             author="Jack Lo Russo"
             initial="J"
-            url="https://twitter.com/lol_russo/status/1047907911945654275"
+            url="https://twitter.com/lol_russo/status/1341303403155111936"
             avatar={jackAvatar}
           />
         </Box>

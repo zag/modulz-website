@@ -20,14 +20,14 @@ const Home = () => {
       <TitleAndMetaTags />
 
       <Container size={2} mt={6} sx={{ textAlign: 'center' }}>
-        <Heading size={5} mb={4}>
-          The visual code editor
+        <Heading size={5} mb={3}>
+          The user interface design tool
         </Heading>
       </Container>
 
-      <Container size={1} sx={{ textAlign: 'center' }}>
-        <Heading as="h2" size={2} mb={6} sx={{ color: 'gray700', lineHeight: '4', fontWeight: 400 }}>
-          Design, develop, document and deploy your design system—without writing code.
+      <Container size={2} sx={{ textAlign: 'center', px: [6, '120px'] }}>
+        <Heading as="h2" size={2} mb={6} sx={{ color: 'gray700', lineHeight: '3', fontWeight: 400 }}>
+          Design and prototype visually in the target medium, then handoff production code.
         </Heading>
         <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank" rel="noopener">
           Apply for beta access
@@ -39,12 +39,9 @@ const Home = () => {
           </Box>
         </MarketingButton>
 
-        <Box mt={4}>
+        <Box mt={3}>
           <Text as="p" size={2} sx={{ color: 'gray700', lineHeight: '1' }}>
-            We're currently in private beta.
-          </Text>
-          <Text as="p" size={2} sx={{ textAlign: 'center', color: 'gray700', lineHeight: '1' }}>
-            We're primarily targeting teams.
+            We're currently in private alpha.
           </Text>
         </Box>
       </Container>

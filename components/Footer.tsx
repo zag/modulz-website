@@ -40,30 +40,35 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ color: 'gray500', lineHeight: '1', userSelect: 'none' }}>
-                  Theme
+                  Design
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ color: 'gray500', lineHeight: '1', userSelect: 'none' }}>
-                  Editor
+                  Prototyping
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ color: 'gray500', lineHeight: '1', userSelect: 'none' }}>
-                  Composer
+                  Handoff
                 </Text>
               </li>
               <li>
-                <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
-                  <NextLink href="/styleguide" passHref>
-                    <Link variant="fade">Style guide</Link>
-                  </NextLink>
+                <Text as="p" size={3} mt={2} sx={{ color: 'gray500', lineHeight: '1', userSelect: 'none' }}>
+                  Design systems
                 </Text>
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
                   <Link variant="fade" href="https://radix.modulz.app">
                     Radix
+                  </Link>
+                </Text>
+              </li>
+              <li>
+                <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
+                  <Link variant="fade" href="https://stitches.dev">
+                    Stitches
                   </Link>
                 </Text>
               </li>
@@ -97,8 +102,8 @@ export const Footer = () => {
               </li>
               <li>
                 <Text as="p" size={3} mt={2} sx={{ lineHeight: '1' }}>
-                  <Link variant="fade" href="https://spectrum.chat/modulz">
-                    Spectrum
+                  <Link variant="fade" href="https://discord.gg/p8PwAPFNHc">
+                    Discord
                   </Link>
                 </Text>
               </li>

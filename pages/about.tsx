@@ -13,22 +13,22 @@ const About = () => {
       />
 
       <Container size={2} mt={6} mb={[5, 7]}>
-        <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
+        <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 4 }}>
           Our mission is to fix the disconnect between digital product teams.
         </Text>
       </Container>
 
       <Container size={1}>
-        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 3 }}>
           To reduce bottlenecks by building modern design tools which empower whole teams to collaborate.
         </Text>
-        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 3 }}>
           To encourage inclusive digital products by automating accessibility and performance.
         </Text>
-        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 3 }}>
           To save companies time and money by minimizing duplicate work.
         </Text>
-        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 3 }}>
           To get everyone collaborating on their products. Together.
         </Text>
       </Container>
@@ -42,51 +42,36 @@ const About = () => {
 
         <Flex>
           <Box sx={{ flexGrow: 1, flexBasis: 0 }}>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
                 November '18
               </Text>
             </Box>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
                 January '19
               </Text>
             </Box>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
-                February '19
+                August '19
               </Text>
             </Box>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
-                June '19
+                December '20
               </Text>
             </Box>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
-                July '19
-              </Text>
-            </Box>
-            <Box mb={9}>
-              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
-                January '20
-              </Text>
-            </Box>
-            <Box mb={9}>
-              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
-                March '20
-              </Text>
-            </Box>
-            <Box>
-              <Text as="p" size={4} sx={{ color: 'gray700', lineHeight: 2, textAlign: 'right' }}>
-                Summer '20
+                April '21
               </Text>
             </Box>
           </Box>
           <Box px={6} aria-hidden>
             <Box sx={{ width: '1px', bg: 'gray300' }}>
               <Flex
-                mb={9}
+                mb={8}
                 sx={{
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -100,7 +85,7 @@ const About = () => {
                 <TickIcon />
               </Flex>
               <Flex
-                mb={9}
+                mb={8}
                 sx={{
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -114,7 +99,7 @@ const About = () => {
                 <TickIcon />
               </Flex>
               <Flex
-                mb={9}
+                mb={8}
                 sx={{
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -128,49 +113,7 @@ const About = () => {
                 <TickIcon />
               </Flex>
               <Flex
-                mb={9}
-                sx={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  bg: 'gray200',
-                  width: '25px',
-                  height: '25px',
-                  borderRadius: '50%',
-                  marginLeft: '-12px',
-                }}
-              >
-                <TickIcon />
-              </Flex>
-              <Flex
-                mb={9}
-                sx={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  bg: 'gray200',
-                  width: '25px',
-                  height: '25px',
-                  borderRadius: '50%',
-                  marginLeft: '-12px',
-                }}
-              >
-                <TickIcon />
-              </Flex>
-              <Flex
-                mb={9}
-                sx={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  bg: 'gray200',
-                  width: '25px',
-                  height: '25px',
-                  borderRadius: '50%',
-                  marginLeft: '-12px',
-                }}
-              >
-                <TickIcon />
-              </Flex>
-              <Flex
-                mb={9}
+                mb={8}
                 sx={{
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -199,44 +142,29 @@ const About = () => {
             </Box>
           </Box>
           <Box sx={{ flexGrow: 1, flexBasis: 0 }}>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ lineHeight: 2 }}>
                 $36k on Kickstarter
               </Text>
             </Box>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ lineHeight: 2 }}>
-                Raised $1M+ funding
+                Founded Modulz
               </Text>
             </Box>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ lineHeight: 2 }}>
-                Private alpha launch
+                Raised $5M funding
               </Text>
             </Box>
-            <Box mb={9}>
+            <Box mb={8}>
               <Text as="p" size={4} sx={{ lineHeight: 2 }}>
-                Grew to 7 peeps
-              </Text>
-            </Box>
-            <Box mb={9}>
-              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
-                Raised $3M funding
-              </Text>
-            </Box>
-            <Box mb={9}>
-              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
-                Private beta launch
-              </Text>
-            </Box>
-            <Box mb={9}>
-              <Text as="p" size={4} sx={{ lineHeight: 2 }}>
-                Grew to 11 peeps
+                Private alpha release
               </Text>
             </Box>
             <Box>
               <Text as="p" size={4} sx={{ lineHeight: 2 }}>
-                Public launch
+                Private beta release
               </Text>
             </Box>
           </Box>
