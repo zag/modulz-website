@@ -96,7 +96,7 @@ export const Header = () => {
             </NextLink>
           </Text>
 
-          <Separator orientation="vertical" />
+          <Separator size="1" orientation="vertical" css={{ mx: 45 }} />
 
           <Text size="3" css={{ color: 'gray700' }}>
             <Link href="https://kickstarter.modulz.app" css={{ color: 'inherit', ':focus': { boxShadow: 'none' } }}>
