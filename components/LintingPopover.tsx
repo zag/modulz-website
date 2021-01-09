@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { Flex, Code, Text, Button, Box } from '@modulz/radix';
+import { Flex, Code, Text, Button, Box } from '@modulz/design-system';
 
 const cursorAnimation = keyframes`
   0%    { transform: translate(0, 0) }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { parseISO, format } from 'date-fns';
-import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider, TextProps } from '@modulz/radix';
+import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider, TextProps } from '@modulz/design-system';
 import { FrontMatter } from '../types';
 import { authors } from '../data/authors';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';

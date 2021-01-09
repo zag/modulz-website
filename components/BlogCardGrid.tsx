@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@modulz/radix';
+import { Grid } from '@modulz/design-system';
 
 export const BlogCardGrid = ({ children }: { children: React.ReactNode }) => {
   return (

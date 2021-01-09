@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Grid, Heading, Button, Text, Divider, Flex } from '@modulz/radix';
+import { Container, Box, Grid, Heading, Button, Text, Divider, Flex } from '@modulz/design-system';
 import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 

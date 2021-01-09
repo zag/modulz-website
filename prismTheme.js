@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { theme } from '@modulz/radix';
+import { theme } from '@modulz/design-system';
 
 export const prismTheme = css`
   code[class*='language-'],

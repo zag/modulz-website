@@ -1,6 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Container, Box, Heading, Text, Divider, Flex, Link } from '@modulz/radix';
+import { Container, Box, Heading, Text, Separator, Title, Subtitle, Flex, Link } from '@modulz/design-system';
 import { learnPosts } from '../utils/learnPosts';
 import { blogPosts } from '../utils/blogPosts';
 import { FrontMatter } from '../types';
@@ -19,19 +19,19 @@ const Home = () => {
     <Box>
       <TitleAndMetaTags />
 
-      <Container size={2} mt={6} sx={{ textAlign: 'center' }}>
-        <Heading size={5} mb={3}>
+      <Container size="2" css={{ textAlign: 'center' }}>
+        <Title>
           The user interface design tool
-        </Heading>
+        </Title>
       </Container>
 
-      <Container size={2} sx={{ textAlign: 'center', px: [6, '120px'] }}>
-        <Heading as="h2" size={2} mb={6} sx={{ color: 'gray700', lineHeight: '3', fontWeight: 400 }}>
+      <Container size="2" css={{ textAlign: 'center', px: [6, '120px'] }}>
+        <Subtitle>
           Design and prototype visually in the target medium, then handoff production code.
-        </Heading>
+        </Subtitle>
         <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank" rel="noopener">
           Apply for beta access
-          <Box as="span" ml={2} aria-hidden>
+          <Box as="span" aria-hidden>
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
               <path d="M5.5 3.5L11.5 3.5L11.5 9.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M3.5 11.5L11.5 3.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
@@ -39,8 +39,8 @@ const Home = () => {
           </Box>
         </MarketingButton>
 
-        <Box mt={3}>
-          <Text as="p" size={2} sx={{ color: 'gray700', lineHeight: '1' }}>
+        <Box>
+          <Text as="p" size="2" css={{ color: 'gray700', lineHeight: '1' }}>
             We're currently in private alpha.
           </Text>
         </Box>
@@ -48,32 +48,32 @@ const Home = () => {
 
       <LegacyComposerHero />
       <LegacyUseCases />
-      <Divider size={2} my={8} mx="auto" />
+      <Separator size="2" />
       <LegacyWallOfLove />
 
       <HideInProd>
-        <Divider size={2} my={8} mx="auto" />
-        <Box my={8}>
-          <Container size={2} sx={{ textAlign: 'center' }}>
-            <Heading as="h3" size={4} mb={4}>
+        <Separator size="2" />
+        <Box>
+          <Container size="2" css={{ textAlign: 'center' }}>
+            <Heading>
               Learn
             </Heading>
 
-            <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
+            <Text as="p" size="5" css={{ color: 'gray700', lineHeight: 3 }}>
               Learn how to make the most out of Modulz.
             </Text>
           </Container>
 
-          <Container size={2} sx={{ maxWidth: '1090px' }}>
+          <Container size="2" css={{ maxWidth: '1090px' }}>
             <BlogCardGrid>
               {(learnPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
-                <Box key={frontMatter.title} sx={{ flex: 1 }}>
+                <Box key={frontMatter.title} css={{ flex: 1 }}>
                   <BlogCard frontMatter={frontMatter} />
                 </Box>
               ))}
             </BlogCardGrid>
 
-            <Box mt={2}>
+            <Box>
               <NextLink href="/learn" passHref>
                 <Link>Browse all</Link>
               </NextLink>
@@ -81,37 +81,37 @@ const Home = () => {
           </Container>
         </Box>
 
-        <Divider mx="auto" size={2} />
+        <Separator size="2" />
       </HideInProd>
 
-      <Box py={9}>
-        <Container size={2} sx={{ textAlign: 'center' }}>
-          <Heading as="h3" size={4} mb={4}>
+      <Box>
+        <Container size="2" css={{ textAlign: 'center' }}>
+          <Heading>
             Blog
           </Heading>
 
-          <Text as="p" size={5} mb={7} sx={{ color: 'gray700', lineHeight: 3 }}>
+          <Text as="p" size="5" css={{ color: 'gray700', lineHeight: 3 }}>
             More about what we're doing.
           </Text>
         </Container>
 
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
+        <Container size="2" css={{ maxWidth: '1090px' }}>
           <BlogCardGrid>
             {(blogPosts as FrontMatter[]).slice(0, 4).map((frontMatter) => (
-              <Box key={frontMatter.title} sx={{ flex: 1 }}>
+              <Box key={frontMatter.title} css={{ flex: 1 }}>
                 <BlogCard frontMatter={frontMatter} />
               </Box>
             ))}
           </BlogCardGrid>
 
-          <Box mt={2}>
+          <Box>
             <NextLink href="/blog" passHref>
               <Link>Browse all</Link>
             </NextLink>
           </Box>
         </Container>
       </Box>
-      <Divider mx="auto" size={2} />
+      <Separator size="2" />
       <BetaAccess />
     </Box>
   );

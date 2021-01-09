@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Text, Box, Flex, Heading } from '@modulz/radix';
+import { Container, Text, Box, Flex, Heading } from '@modulz/design-system';
 import { MarketingButton } from '../components/MarketingButtton';
 
 export const BetaAccess = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Text, Select, Option, Switch, OptionGroup } from '@modulz/radix';
+import { Flex, Box, Text, Select, Option, Switch, OptionGroup } from '@modulz/design-system';
 
 const fruits = [
   { value: 'apple', label: 'Apple' },

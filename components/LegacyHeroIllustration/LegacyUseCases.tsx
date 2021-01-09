@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Text } from '@modulz/radix';
+import { Container, Box, Text } from '@modulz/design-system';
 
 export const LegacyUseCases = () => (
   <Box>

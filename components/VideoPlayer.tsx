@@ -1,5 +1,5 @@
 import React from 'react';
-import { AspectRatio, Box, Flex, Image as RadixImage } from '@modulz/radix';
+import { Box, Flex, Image as RadixImage } from '@modulz/design-system';
 
 type VideoPlayerProps = { id?: string; poster?: string };
 
@@ -22,12 +22,12 @@ export const VideoPlayer = ({ id, poster, ...props }: VideoPlayerProps) => {
   }, []);
 
   return (
-    <AspectRatio ratio="16:9" sx={{ overflow: 'hidden' }}>
+    <Box css={{ overflow: 'hidden' }}>
       <Flex
         as="button"
         aria-label="Play video"
         onClick={() => setHasStartedPlaying(true)}
-        sx={{
+        css={{
           appearance: 'none',
           border: 0,
           alignItems: 'center',
@@ -35,7 +35,7 @@ export const VideoPlayer = ({ id, poster, ...props }: VideoPlayerProps) => {
           width: '100%',
           height: '100%',
           overflow: 'hidden',
-          bg: 'gray200',
+          backgroundColor: 'gray200',
           ':hover, :focus': {
             '[data-part-id="box"]': {
               transform: 'scale(1.2)',
@@ -43,13 +43,13 @@ export const VideoPlayer = ({ id, poster, ...props }: VideoPlayerProps) => {
           },
         }}
       >
-        {posterUrl && <RadixImage src={posterUrl} sx={{ width: '100%', height: '100%' }} />}
+        {posterUrl && <RadixImage src={posterUrl} css={{ width: '100%', height: '100%' }} />}
 
         <Box
-          sx={{
+          css={{
             position: 'absolute',
             boxSizing: 'content-box',
-            bg: 'blue600',
+            backgroundColor: 'blue600',
             color: 'white',
             borderRadius: '50%',
             padding: 2,
@@ -78,6 +78,6 @@ export const VideoPlayer = ({ id, poster, ...props }: VideoPlayerProps) => {
           {...props}
         ></iframe>
       )}
-    </AspectRatio>
+    </Box>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Flex } from '@modulz/radix';
+import { Container, Box, Flex } from '@modulz/design-system';
 import { LegacyTestimonial } from './LegacyTestimonial';
 const willAvatar = require('../../public/testimonials/will-avatar.jpg');
 const desAvatar = require('../../public/testimonials/des-avatar.jpg');

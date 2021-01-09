@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Flex, Box } from '@modulz/radix';
+import { Container, Flex, Box } from '@modulz/design-system';
 const HomepageHero = require('../../public/home/homepage-hero-min.png');
 
 export const LegacyComposerHero = () => (

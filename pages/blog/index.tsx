@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Heading, Text } from '@modulz/radix';
+import { Container, Box, Heading, Text } from '@modulz/design-system';
 import { blogPosts } from '../../utils/blogPosts';
 import { FrontMatter } from '../../types';
 import { BlogCard } from '../../components/BlogCard';

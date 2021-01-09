@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Text, Avatar, IconButton } from '@modulz/radix';
+import { Box, Flex, Text, Avatar, IconButton } from '@modulz/design-system';
 import { ExternalLinkIcon } from '@modulz/radix-icons';
 
 export const LegacyTestimonial = (props) => (

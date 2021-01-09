@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Grid, Heading, Button, Input, IconButton, Text, Divider, Flex } from '@modulz/radix';
+import { Container, Box, Grid, Heading, Button, Input, IconButton, Text, Divider, Flex } from '@modulz/design-system';
 import { BetaAccess } from '../components/BetaAccess';
 import { LintingPopover } from '../components/LintingPopover';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';

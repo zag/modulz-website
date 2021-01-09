@@ -1,10 +1,8 @@
 import React from 'react';
-import { ChromelessButton, ChromelessButtonProps } from '@modulz/radix';
-
-type ButtonProps = ChromelessButtonProps & React.ComponentPropsWithRef<'a'> & { as?: any };
+import { Button } from '@modulz/design-system';
 
 export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>((props, forwardedRef) => (
-  <ChromelessButton
+  <Button
     ref={forwardedRef}
     {...props}
     sx={{
