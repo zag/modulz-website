@@ -1,6 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Container, Box, Heading, Text, Separator, Title, Subtitle, Flex, Link } from '@modulz/design-system';
+import { Container, Box, Heading, Section, Paragraph, Text, Separator, Title, Subtitle, Flex, Link } from '@modulz/design-system';
 import { learnPosts } from '../utils/learnPosts';
 import { blogPosts } from '../utils/blogPosts';
 import { FrontMatter } from '../types';
@@ -40,15 +40,28 @@ const Home = () => {
         </MarketingButton>
 
         <Box>
-          <Text as="p" size="2" css={{ color: 'gray700', lineHeight: '1' }}>
+          <Text size="2" color="gray">
             We're currently in private alpha.
           </Text>
         </Box>
       </Container>
 
       <LegacyComposerHero />
-      <LegacyUseCases />
+
+      <Section size="3">
+        <Container size="2">
+          <Paragraph>
+            Modern design tools are still optimised for illustration. Drawing tools are great for exploration but when it
+            comes to designing interactive interfaces, we need something more powerful.
+          </Paragraph>
+          <Paragraph>
+            Modulz is designed to produce accessible, performant, production-ready design systems.
+          </Paragraph>
+        </Container>
+      </Section>
+
       <Separator size="2" />
+
       <LegacyWallOfLove />
 
       <HideInProd>

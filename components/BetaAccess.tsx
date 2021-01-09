@@ -10,7 +10,7 @@ export const BetaAccess = () => {
           Get early access
         </Heading>
 
-        <Text as="p" size="5" css={{ color: 'gray700', lineHeight: 3 }}>
+        <Text as="p" size="4" color="gray">
           We're currently in private alpha. Applications will be screened based on fit.
         </Text>
 
