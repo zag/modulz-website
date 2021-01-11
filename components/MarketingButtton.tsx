@@ -1,11 +1,13 @@
 import React from 'react';
-import { Button } from '@modulz/design-system';
+import { Button, ButtonProps } from '@modulz/design-system';
 
-export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>((props, forwardedRef) => (
+type MarketingButtonProps = ButtonProps & { as?: React.ReactNode };
+
+export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButtonProps>((props, forwardedRef) => (
   <Button
     ref={forwardedRef}
     {...props}
-    sx={{
+    css={{
       position: 'relative',
       zIndex: 1,
       display: 'inline-flex',
@@ -15,12 +17,12 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       textTransform: 'uppercase',
       letterSpacing: '.05em',
       transition: 'all 100ms ease',
-      fontSize: 2,
-      height: 6,
-      minWidth: 6,
-      paddingX: 3,
+      fontSize: '$2',
+      height: '$6',
+      minWidth: '$6',
+      paddingX: '$3',
       backgroundColor: 'transparent',
-      color: 'blue600',
+      color: '$blue600',
       '&::before': {
         content: "''",
         display: 'block',
@@ -32,7 +34,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         zIndex: '-1',
         backgroundColor: 'white',
         transition: 'all 50ms ease',
-        boxShadow: (theme) => `inset 0 0 0 1px ${theme.colors.blue400}`,
+        boxShadow: 'inset 0 0 0 1px $blue400',
       },
       '&::after': {
         content: "''",
@@ -44,16 +46,10 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         left: '6px',
         zIndex: '-2',
         pointerEvents: 'none',
-        backgroundImage: (theme) => `repeating-linear-gradient(
-			-45deg,
-			${theme.colors.blue600},
-			${theme.colors.blue600} 1px,
-			transparent 1px,
-			transparent 6px
-		)`,
+        backgroundImage: 'repeating-linear-gradient(-45deg,$blue600,$blue600 1px,transparent 1px,transparent 6px)',
       },
       '&:hover::before, &:active::before, &:focus::before': {
-        boxShadow: (theme) => `inset 0 0 0 1px ${theme.colors.blue600}`,
+        boxShadow: 'inset 0 0 0 1px $blue600',
       },
       '&:active': {
         transform: 'translate(1px, 1px)',
@@ -61,7 +57,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       '&:active::after': {
         transform: 'translate(-6px, -6px)',
       },
-      ...props.sx,
+      ...(props.css as any),
     }}
   />
 ));

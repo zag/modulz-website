@@ -1,44 +1,46 @@
 import React from 'react';
-import NextDocument, { Head, Main, NextScript, DocumentContext } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
-import { renderSnippet } from '../utils/analytics';
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import { css } from '@modulz/design-system';
 
 export default class Document extends NextDocument {
-  static async getInitialProps(ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet();
+  static async getInitialProps(ctx) {
     const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-        });
+      let extractedStyles;
+      ctx.renderPage = () => {
+        const { styles, result } = css.getStyles(originalRenderPage);
+        extractedStyles = styles;
+        return result;
+      };
+
       const initialProps = await NextDocument.getInitialProps(ctx);
+
       return {
         ...initialProps,
         styles: (
           <>
             {initialProps.styles}
-            {sheet.getStyleElement()}
+
+            {extractedStyles.map((content, index) => (
+              <style key={index} dangerouslySetInnerHTML={{ __html: content }} />
+            ))}
           </>
         ),
       };
     } finally {
-      sheet.seal();
     }
   }
 
   render() {
     return (
-      <html lang="en">
-        <Head>
-          <script dangerouslySetInnerHTML={{ __html: renderSnippet() }} />
-        </Head>
+      <Html lang="en">
+        <Head />
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

@@ -1,6 +1,18 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Container, Box, Heading, Section, Paragraph, Text, Separator, Title, Subtitle, Flex, Link } from '@modulz/design-system';
+import {
+  Container,
+  Box,
+  Heading,
+  Section,
+  Paragraph,
+  Text,
+  Separator,
+  Title,
+  Subtitle,
+  Flex,
+  Link,
+} from '@modulz/design-system';
 import { learnPosts } from '../utils/learnPosts';
 import { blogPosts } from '../utils/blogPosts';
 import { FrontMatter } from '../types';
@@ -10,7 +22,7 @@ import { BetaAccess } from '../components/BetaAccess';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
 import { MarketingButton } from '../components/MarketingButtton';
 import { LegacyComposerHero } from '../components/LegacyHeroIllustration/LegacyComposerHero';
-import { LegacyUseCases } from '../components/LegacyHeroIllustration/LegacyUseCases';
+// import { LegacyUseCases } from '../components/LegacyHeroIllustration/LegacyUseCases';
 import { LegacyWallOfLove } from '../components/LegacyHeroIllustration/LegacyWallOfLove';
 import { HideInProd } from '../components/HideInProd';
 
@@ -20,15 +32,11 @@ const Home = () => {
       <TitleAndMetaTags />
 
       <Container size="2" css={{ textAlign: 'center' }}>
-        <Title>
-          The user interface design tool
-        </Title>
+        <Title>The user interface design tool</Title>
       </Container>
 
       <Container size="2" css={{ textAlign: 'center', px: [6, '120px'] }}>
-        <Subtitle>
-          Design and prototype visually in the target medium, then handoff production code.
-        </Subtitle>
+        <Subtitle>Design and prototype visually in the target medium, then handoff production code.</Subtitle>
         <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank" rel="noopener">
           Apply for beta access
           <Box as="span" aria-hidden>
@@ -51,12 +59,10 @@ const Home = () => {
       <Section size="3">
         <Container size="2">
           <Paragraph>
-            Modern design tools are still optimised for illustration. Drawing tools are great for exploration but when it
-            comes to designing interactive interfaces, we need something more powerful.
+            Modern design tools are still optimised for illustration. Drawing tools are great for exploration but when
+            it comes to designing interactive interfaces, we need something more powerful.
           </Paragraph>
-          <Paragraph>
-            Modulz is designed to produce accessible, performant, production-ready design systems.
-          </Paragraph>
+          <Paragraph>Modulz is designed to produce accessible, performant, production-ready design systems.</Paragraph>
         </Container>
       </Section>
 
@@ -68,9 +74,7 @@ const Home = () => {
         <Separator size="2" />
         <Box>
           <Container size="2" css={{ textAlign: 'center' }}>
-            <Heading>
-              Learn
-            </Heading>
+            <Heading>Learn</Heading>
 
             <Text as="p" size="5" css={{ color: 'gray700', lineHeight: 3 }}>
               Learn how to make the most out of Modulz.
@@ -99,9 +103,7 @@ const Home = () => {
 
       <Box>
         <Container size="2" css={{ textAlign: 'center' }}>
-          <Heading>
-            Blog
-          </Heading>
+          <Heading>Blog</Heading>
 
           <Text as="p" size="5" css={{ color: 'gray700', lineHeight: 3 }}>
             More about what we're doing.
