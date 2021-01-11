@@ -11,21 +11,20 @@ const Careers = () => {
         description="Help us build the future of visual coding by bringing design closer to engineering."
       />
 
-      <Container size={2} mt={6} mb={[5, 7]}>
-        <Text as="h2" size={8} mb={[5, 7]} px={[0, 8]} sx={{ lineHeight: 5 }}>
-          Help us build the future of visual coding by bringing design closer to engineering.
+      <Container size={1} mt={6}>
+        <Text as="h1" size={9} mb={[5, 6]} sx={{ lineHeight: 5, fontWeight: 500 }}>
+          Build the future of design and developer tools.
         </Text>
       </Container>
 
       <Container size={1}>
-        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
-          Modulz is a very early-stage, VC-backed startup.
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 3 }}>
+          Modulz is a VC-backed startup, seed-stage startup working on the next generation of design/dev tooling.
         </Text>
-        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
-          Our first product is a visual code editor. We make it easy for teams to manage their design system, build a
-          component library and design interfaces—all without writing code.
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 3 }}>
+          We're improving collaboration across product teams by visualising code so designers can contribute directly to the product.
         </Text>
-        <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 4 }}>
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 3 }}>
           Our goal is to improve cross-team collaboration by getting everyone working on the same product, together.
         </Text>
       </Container>
