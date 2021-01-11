@@ -32,7 +32,7 @@ module.exports = withPlugins(
         {
           source: '/styleguide',
           destination: '/',
-          permanent: false,
+          permanent: true,
         },
       ];
     },
