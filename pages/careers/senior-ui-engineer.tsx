@@ -236,7 +236,7 @@ const Careers = () => {
           <li>
             <Text as="p" size={4} sx={{ lineHeight: '27px' }}>
               <span style={{ fontWeight: 500 }}>Challenge: </span>
-              Potential candidates will be asked to complete a 1 hour React/JS challenge with a focus on component architecure 
+              Potential candidates will be asked to complete a 1 hour React/JS challenge with a focus on component architecure and JavaScript knowledge.
             </Text>
           </li>
           <li>
