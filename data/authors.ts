@@ -30,6 +30,12 @@ export const authors = {
     mug: require('../public/mugshots/jenna.jpg'),
   },
 
+  jonathan: {
+    name: 'Jonathan Neal',
+    twitter: 'jon_neal',
+    mug: require('../public/mugshots/jonathan.jpg'),
+  },
+
   nnika: {
     name: 'Nnika Taylor',
     twitter: 'nnikax',
