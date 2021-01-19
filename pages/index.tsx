@@ -27,7 +27,7 @@ const Home = () => {
 
       <Container size={2} sx={{ textAlign: 'center', px: [6, '120px'] }}>
         <Heading as="h2" size={2} mb={6} sx={{ color: 'gray700', lineHeight: '3', fontWeight: 400 }}>
-          Design and prototype visually in the target medium, then handoff production code.
+          Design in the target medium. Prototype with real components. Handoff production code.
         </Heading>
         <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank" rel="noopener">
           Apply for beta access
