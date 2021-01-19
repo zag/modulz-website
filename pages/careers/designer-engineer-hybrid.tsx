@@ -53,7 +53,7 @@ const Careers = () => {
           </li>
           <li>
             <Text as="p" size={4} sx={{ lineHeight: '27px' }}>
-              Maintain our mutliple documentation sites.
+              Maintain our multiple documentation sites.
             </Text>
           </li>
           <li>
@@ -113,6 +113,11 @@ const Careers = () => {
           <li>
             <Text as="p" size={4} sx={{ lineHeight: '27px' }}>
               An extremely keen eye for detail. We need someone who cares deeply about quality, someone who cares about kerning, decimal color values etc.
+            </Text>
+          </li>
+          <li>
+            <Text as="p" size={4} sx={{ lineHeight: '27px' }}>
+              Obviously, a broad and deep skill set like this is rare. So you don't necessarily need to check all of these boxes, but a strong foundation in both UI design and development is a minimum requirement.
             </Text>
           </li>
         </ul>
