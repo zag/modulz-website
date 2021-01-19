@@ -177,26 +177,46 @@ const Careers = () => {
         </Heading>
         
         <Grid mx={-4} mt={7} sx={{ gridTemplateColumns: '1fr 1fr', gap: '6' }}>
-          <NextLink href="/careers/senior-ui-engineer">
+          <NextLink href="/careers/senior-ui-engineer" passHref>
             <CardLink variant="ghost">
               <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Senior UI Engineer
+                Senior UI Engineer (Radix)
               </Text>
               <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
                 Build an accessible UI component library as part of the Radix core team.
               </Text>
             </CardLink>
           </NextLink>
-          {/* <NextLink href="/careers/engineering-manager">
+          {/* <NextLink href="/careers/engineering-manager" passHref>
             <CardLink variant="ghost">
               <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Engineering Manager
+                Engineering Manager (Radix)
               </Text>
               <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
                 Project manage all of our open-source efforts including Radix and Stitches.
               </Text>
             </CardLink>
           </NextLink> */}
+          {/* <NextLink href="/careers/engineering-manager" passHref>
+            <CardLink variant="ghost">
+              <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
+                Product Engineer
+              </Text>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
+                Project manage all of our open-source efforts including Radix and Stitches.
+              </Text>
+            </CardLink>
+          </NextLink> */}
+          <NextLink href="/careers/designer-engineer-hybrid" passHref>
+            <CardLink variant="ghost">
+              <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
+                Designer/Engineer Hybrid (Radix)
+              </Text>
+              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
+                Own our design system and create a massive library of open-source UI assets and resources.
+              </Text>
+            </CardLink>
+          </NextLink>
         </Grid>
       </Container>
     </Box>
