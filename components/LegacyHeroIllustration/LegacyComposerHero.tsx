@@ -14,8 +14,6 @@ export const LegacyComposerHero = () => (
               '0px 60px 123px -25px hsla(208, 29%, 12%, 0.42), 0px 35px 75px -35px hsla(208, 24%, 10%, 0.08)',
             borderRadius: '7px',
             verticalAlign: 'middle',
-            border: '1px solid',
-            borderColor: 'hsl(206, 19%, 86%) hsl(206, 19%, 86%) hsl(210, 16%, 76%)',
             // opacity: '.2'
           }}
         />
