@@ -23,6 +23,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       paddingX: 3,
       backgroundColor: 'transparent',
       color: 'blue600',
+      willChange: 'transform',
       '&::before': {
         content: "''",
         display: 'block',
@@ -46,6 +47,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         left: '6px',
         zIndex: '-2',
         pointerEvents: 'none',
+        willChange: 'transform',
         backgroundImage: (theme) => `repeating-linear-gradient(
 			-45deg,
 			${theme.colors.blue600},
