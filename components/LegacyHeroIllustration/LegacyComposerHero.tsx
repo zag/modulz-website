@@ -5,7 +5,7 @@ const HomepageHero = require('../../public/home/homepage-hero-min.png');
 export const LegacyComposerHero = () => (
   <Box role="presentation" css={{ pt: '$9' }}>
     <Box css={{ position: 'relative', pb: '$6' }}>
-      <Container size="3" css={{ px: 0 }}>
+      <Container size="3" css={{ maxWidth: 1280, px: 0 }}>
         <img
           src={HomepageHero}
           style={{
