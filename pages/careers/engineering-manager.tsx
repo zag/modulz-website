@@ -1,6 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Container, Box, Heading, Text, Divider, Grid, CardLink } from '@modulz/design-system';
+import { Container, Box, Heading, Text, Divider, Grid, Card, CardLink } from '@modulz/radix';
 import { BetaAccess } from '../../components/BetaAccess';
 import TitleAndMetaTags from '../../components/TitleAndMetaTags';
 
@@ -12,17 +12,20 @@ const Careers = () => {
         description="Help us build the future of visual coding by bringing design closer to engineering."
       />
 
-      <Container size={1} mt={6} sx={{ maxWidth: 715 }}>
+      <Container size={1} mt={6}>
         <Text as="h1" size={9} mb={[5, 6]} sx={{ lineHeight: 5, fontWeight: 500 }}>
           Build the future of design and developer tools.
         </Text>
-        <Text as="p" size={4} mb={4} sx={{ lineHeight: '27px' }}>
+      </Container>
+
+      <Container size={1}>
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 3 }}>
           Modulz is a VC-backed startup, seed-stage startup working on the next generation of design/dev tooling.
         </Text>
-        <Text as="p" size={4} mb={4} sx={{ lineHeight: '27px' }}>
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 3 }}>
           We're improving collaboration across product teams by visualising code so designers can contribute directly to the product.
         </Text>
-        <Text as="p" size={4} mb={4} sx={{ lineHeight: '27px' }}>
+        <Text as="p" size={5} mb={5} sx={{ lineHeight: 3 }}>
           Our goal is to improve cross-team collaboration by getting everyone working on the same product, together.
         </Text>
       </Container>
@@ -177,43 +180,23 @@ const Careers = () => {
         </Heading>
         
         <Grid mx={-4} mt={7} sx={{ gridTemplateColumns: '1fr 1fr', gap: '6' }}>
-          <NextLink href="/careers/senior-ui-engineer" passHref>
+          <NextLink href="/">
             <CardLink variant="ghost">
               <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Senior UI Engineer (Radix)
+                Senior UI Engineer
               </Text>
               <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
-                Build an accessible UI component library as part of the Radix core team.
+                We're not currently hiring for any roles. Check back in a couple months.
               </Text>
             </CardLink>
           </NextLink>
-          {/* <NextLink href="/careers/engineering-manager" passHref>
+          <NextLink href="/">
             <CardLink variant="ghost">
               <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Engineering Manager (Radix)
+                Engineering Manager
               </Text>
               <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
-                Project manage all of our open-source efforts including Radix and Stitches.
-              </Text>
-            </CardLink>
-          </NextLink> */}
-          {/* <NextLink href="/careers/engineering-manager" passHref>
-            <CardLink variant="ghost">
-              <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Product Engineer
-              </Text>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
-                Project manage all of our open-source efforts including Radix and Stitches.
-              </Text>
-            </CardLink>
-          </NextLink> */}
-          <NextLink href="/careers/designer-engineer-hybrid" passHref>
-            <CardLink variant="ghost">
-              <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Designer/Engineer Hybrid (Radix)
-              </Text>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
-                Own our design system and create a massive library of open-source UI assets and resources.
+                We're not currently hiring for any roles. Check back in a couple months.
               </Text>
             </CardLink>
           </NextLink>

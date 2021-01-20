@@ -27,6 +27,15 @@ module.exports = withPlugins(
   ],
   {
     // Next.js config
+    async redirects() {
+      return [
+        {
+          source: '/styleguide',
+          destination: '/',
+          permanent: true,
+        },
+      ];
+    },
   }
 );
 

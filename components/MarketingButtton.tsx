@@ -22,7 +22,9 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButt
       minWidth: '$6',
       paddingX: '$3',
       backgroundColor: 'transparent',
-      color: '$blue600',
+      color: '$blue900',
+      willChange: 'transform',
+      fontFamily: '$untitled',
       '&::before': {
         content: "''",
         display: 'block',
@@ -34,7 +36,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButt
         zIndex: '-1',
         backgroundColor: 'white',
         transition: 'all 50ms ease',
-        boxShadow: 'inset 0 0 0 1px $blue400',
+        boxShadow: 'inset 0 0 0 1px $blue600',
       },
       '&::after': {
         content: "''",
@@ -46,6 +48,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButt
         left: '6px',
         zIndex: '-2',
         pointerEvents: 'none',
+        willChange: 'transform',
         backgroundImage: 'repeating-linear-gradient(-45deg,$blue600,$blue600 1px,transparent 1px,transparent 6px)',
       },
       '&:hover::before, &:active::before, &:focus::before': {

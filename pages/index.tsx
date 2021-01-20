@@ -36,7 +36,9 @@ const Home = () => {
       </Container>
 
       <Container size="2" css={{ textAlign: 'center', px: [6, '120px'] }}>
-        <Subtitle>Design and prototype visually in the target medium, then handoff production code.</Subtitle>
+        <Subtitle as="h2" css={{ mb: '$6' }}>
+          Design in the target medium. Prototype with real components. Handoff production code.
+        </Subtitle>
         <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank" rel="noopener">
           Apply for beta access
           <Box as="span" aria-hidden>
@@ -59,10 +61,10 @@ const Home = () => {
       <Section size="3">
         <Container size="2">
           <Paragraph>
-            Modern design tools are still optimised for illustration. Drawing tools are great for exploration but when
-            it comes to designing interactive interfaces, we need something more powerful.
+            Almost all design tools are optimised for illustration. Drawing tools are great for exploration but when it
+            comes to websites, apps, and user interfaces, we need something more powerful.
           </Paragraph>
-          <Paragraph>Modulz is designed to produce accessible, performant, production-ready design systems.</Paragraph>
+          <Paragraph>Modulz is optimised for designing digital products and design systems.</Paragraph>
         </Container>
       </Section>
 
