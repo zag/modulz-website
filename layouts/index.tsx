@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { parseISO, format } from 'date-fns';
-import { Container, Heading, Text, Box, Flex, Avatar, Link, Divider, TextProps } from '@modulz/design-system';
+import { Container, Heading, Text, Box, Flex, Avatar, Link, Separator, TextProps } from '@modulz/design-system';
 import { FrontMatter } from '../types';
 import { authors } from '../data/authors';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
@@ -34,34 +34,34 @@ export default ({ children, frontMatter }: LayoutProps) => {
     <React.Fragment>
       <TitleAndMetaTags title={frontMatter.title} description={frontMatter.summary} poster={frontMatter.poster} />
 
-      <Container size={1} mt={6} sx={{ maxWidth: '600px' }}>
-        <Heading size={3} mb={1} sx={{ fontWeight: 500 }}>
+      <Container size="2">
+        <Heading>
           {frontMatter.title}
         </Heading>
 
-        <Flex mt={3} sx={{ alignItems: 'center' }}>
+        <Flex css={{ alignItems: 'center' }}>
           <Avatar src={authors[frontMatter.by].avatar} mr={2} />
-          <Text as="p" size={2} sx={{ display: ['none', 'block'], color: 'gray700', lineHeight: 0 }}>
+          <Text as="p" size="2" css={{ display: ['none', 'block'], color: 'gray700', lineHeight: 0 }}>
             {authors[frontMatter.by].name}
           </Text>
-          <Separator sx={{ display: ['none', 'block'] }} />
-          <Text as="time" size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+          <Bullet css={{ display: ['none', 'block'] }} />
+          <Text as="time" size="2" css={{ color: 'gray700', lineHeight: 0 }}>
             {format(parseISO(frontMatter.publishedAt), 'MMMM yyyy')}
           </Text>
-          <Separator />
-          <Text size={2} sx={{ color: 'gray700', lineHeight: 0 }}>
+          <Bullet />
+          <Text size="2" css={{ color: 'gray700', lineHeight: 0 }}>
             {frontMatter.readingTime.text}
           </Text>
         </Flex>
 
-        <Box my={6}>{children}</Box>
+        <Box>{children}</Box>
 
-        <Divider size={2} my={8} mx="auto" />
+        <Separator size="2" />
 
-        <Box sx={{ textAlign: 'center' }}>
-          <Text as="p" size={3} sx={{ lineHeight: 2 }}>
+        <Box css={{ textAlign: 'center' }}>
+          <Text as="p" size="3" css={{ lineHeight: 2 }}>
             Share this post on{' '}
-            <Link href={twitterShare} target="_blank" title="Share this post on Twitter">
+            <Link href={twitterShare} variant="blue" target="_blank" title="Share this post on Twitter">
               Twitter
             </Link>
           </Text>
@@ -69,15 +69,13 @@ export default ({ children, frontMatter }: LayoutProps) => {
       </Container>
 
       {Boolean(frontMatter.relatedIds) && (
-        <Container size={2} sx={{ maxWidth: '1090px' }}>
-          <Divider size={2} my={8} mx="auto" />
+        <Container size="2" css={{ maxWidth: '1090px' }}>
+          <Separator size="2" />
           <Box>
             <Text
               as="h3"
-              size={2}
-              mb={3}
-              weight="medium"
-              sx={{
+              size="2"
+              css={{
                 textAlign: 'center',
                 color: 'gray700',
                 letterSpacing: '.125em',
@@ -101,9 +99,9 @@ export default ({ children, frontMatter }: LayoutProps) => {
   );
 };
 
-function Separator({ sx }: TextProps) {
+function Bullet({ css }: TextProps) {
   return (
-    <Text mx={2} sx={{ color: 'gray700', lineHeight: 0, ...sx }} aria-hidden>
+    <Text css={{ color: 'gray700', lineHeight: 0, mx: '$1', ...css }} aria-hidden>
       &#xB7;
     </Text>
   );

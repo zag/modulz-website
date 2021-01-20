@@ -65,36 +65,38 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <Radix.Box>
-      {/* <MDXProvider
+      <MDXProvider
         components={{
           ...Radix,
           ...RadixIcons,
           h1: (props) => <Radix.Heading size={5} mb={8} css={{ fontWeight: 500 }} {...props} as="h1" />,
-          h2: (props) => <Radix.Heading size={2} mt={6} mb={2} css={{ fontWeight: 500 }} {...props} as="h2" />,
+          h2: (props) => <Radix.Heading {...props} />,
           h3: (props) => (
-            <Radix.Heading mt={6} mb={1} css={{ fontWeight: 500, fontSize: 4, lineHeight: '27px' }} {...props} as="h3" />
+            <Radix.Subheading {...props} />
           ),
           h4: (props) => <Radix.Heading size={0} mt={3} mb={1} {...props} as="h4" />,
           p: (props) => (
-            <Radix.Text size={4} mb={3} {...props} css={{ lineHeight: '27px', letterSpacing: 0, ...props.css }} as="p" />
+            <Radix.Paragraph {...props} css={{ mb: '$3', ...props.css }} />
           ),
           a: ({ href = '', ...props }) => {
             if (href.startsWith('/')) {
               return (
                 <NextLink href={href} passHref>
-                  <Radix.Link {...props} />
+                  <Radix.Link variant="subtle" {...props} />
                 </NextLink>
               );
             }
-            return <Radix.Link href={href} {...props} target="_blank" rel="noopener" />;
+            return <Radix.Link href={href} {...props} variant="blue" target="_blank" rel="noopener" />;
           },
-          hr: (props) => <Radix.Separator size={2} my={6} mx="auto" {...props} />,
+          hr: (props) => (
+            <Radix.Separator {...props} size={2} css={{ my: '$6', mx: 'auto', ...props.css }} />
+          ),
           inlineCode: (props) => <Radix.Code variant="fade" {...props} />,
-          ul: (props) => <Radix.Box mb={3} {...props} as="ul" />,
-          ol: (props) => <Radix.Box mb={3} {...props} as="ol" />,
+          ul: (props) => <Radix.Box {...props} as="ul" />,
+          ol: (props) => <Radix.Box {...props} as="ol" />,
           li: (props) => (
             <li>
-              <Radix.Text size={4} {...props} css={{ lineHeight: '27px', letterSpacing: 0, ...props.css }} />
+              <Radix.Paragraph {...props} css={{ ...props.css }} />
             </li>
           ),
           table: (props) => (
@@ -108,7 +110,7 @@ function App({ Component, pageProps }: AppProps) {
           tr: Radix.Box,
           td: Radix.Box,
           th: Radix.Box,
-          strong: (props) => <Radix.Text {...props} css={{ ...props.css, fontSize: 'inherit', fontWeight: 500 }} />,
+          strong: (props) => <Radix.Text {...props} css={{ ...props.css, display: 'inline', fontSize: 'inherit', fontWeight: 500 }} />,
           img: ({ ...props }) => (
             <Radix.Box>
               <Radix.Image alt="" {...props} css={{ maxWidth: '100%', verticalAlign: 'middle', ...props.css }} />
@@ -268,7 +270,7 @@ function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
 
         {!isDemoPage && <Footer />}
-      {/* </MDXProvider> */}
+      </MDXProvider>
     </Radix.Box>
   );
 }
