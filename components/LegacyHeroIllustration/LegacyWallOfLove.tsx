@@ -5,7 +5,7 @@ const willAvatar = require('../../public/testimonials/will-avatar.jpg');
 const desAvatar = require('../../public/testimonials/des-avatar.jpg');
 const jackAvatar = require('../../public/testimonials/jack-avatar.jpg');
 const felipeAvatar = require('../../public/testimonials/felipe-avatar.jpg');
-const johnAvatar = require('../../public/testimonials/john-avatar.jpg');
+const jinaAvatar = require('../../public/testimonials/jina-avatar.jpg');
 
 export const LegacyWallOfLove = () => (
   <Box my={8}>
@@ -26,11 +26,10 @@ export const LegacyWallOfLove = () => (
 
         <Box mb={6} px={[0, 5]} ml={[0, 4, 8]} sx={{ flexGrow: 1, flexBasis: 0 }}>
           <LegacyTestimonial
-            quote='"A classical looking design tool with a freaking deploy button in the toolbar is SO EXCITING."'
-            author="John Meguerian"
+            quote='"I cant wait to check out Modulz, it looks so cool!"'
+            author="Jina Anne"
             initial="J"
-            url="https://twitter.com/jmegs/status/1341189494050058241"
-            avatar={johnAvatar}
+            avatar={jinaAvatar}
           />
         </Box>
       </Flex>
