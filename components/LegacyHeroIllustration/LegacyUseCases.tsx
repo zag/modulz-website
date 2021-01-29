@@ -12,7 +12,7 @@ export const LegacyUseCases = () => (
     <Container size={1}>
       <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 3 }}>
         Almost all design tools are optimised for illustration. Drawing tools are great for exploration but when it
-        comes to websites, apps, and user interfaces, we need something more powerful.
+        comes to designing websites, apps, and user interfaces, we need something more powerful.
       </Text>
       <Text as="p" size={5} mb={5} px={[0, 9]} sx={{ lineHeight: 3 }}>
         Modulz is optimised for designing digital products and design systems.
