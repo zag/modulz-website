@@ -175,8 +175,10 @@ const Careers = () => {
         <Heading as="h3" size={4} mb={4} sx={{ textAlign: 'center' }}>
           Open roles
         </Heading>
-        
-        <Grid mx={-4} mt={7} sx={{ gridTemplateColumns: '1fr 1fr', gap: '6' }}>
+        <Text as="p" size={4} mt={6} sx={{ lineHeight: 2, textAlign: 'center' }}>
+          We have 0 roles open currently.
+        </Text>
+        {/* <Grid mx={-4} mt={7} sx={{ gridTemplateColumns: '1fr 1fr', gap: '6' }}>
           <NextLink href="/careers/senior-ui-engineer" passHref>
             <CardLink variant="ghost">
               <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
@@ -187,26 +189,6 @@ const Careers = () => {
               </Text>
             </CardLink>
           </NextLink>
-          {/* <NextLink href="/careers/engineering-manager" passHref>
-            <CardLink variant="ghost">
-              <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Engineering Manager (Radix)
-              </Text>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
-                Project manage all of our open-source efforts including Radix and Stitches.
-              </Text>
-            </CardLink>
-          </NextLink> */}
-          {/* <NextLink href="/careers/engineering-manager" passHref>
-            <CardLink variant="ghost">
-              <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
-                Product Engineer
-              </Text>
-              <Text as="p" size={3} sx={{ color: 'gray700', lineHeight: 2 }}>
-                Project manage all of our open-source efforts including Radix and Stitches.
-              </Text>
-            </CardLink>
-          </NextLink> */}
           <NextLink href="/careers/designer-engineer-hybrid" passHref>
             <CardLink variant="ghost">
               <Text as="p" size={5} mb={1} sx={{ fontWeight: 500, lineHeight: 2 }}>
@@ -217,7 +199,7 @@ const Careers = () => {
               </Text>
             </CardLink>
           </NextLink>
-        </Grid>
+        </Grid> */}
       </Container>
     </Box>
   );
