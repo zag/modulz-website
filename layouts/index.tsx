@@ -34,8 +34,8 @@ export default ({ children, frontMatter }: LayoutProps) => {
     <React.Fragment>
       <TitleAndMetaTags title={frontMatter.title} description={frontMatter.summary} poster={frontMatter.poster} />
 
-      <Container size={1} mt={6} sx={{ maxWidth: '600px' }}>
-        <Heading size={3} mb={1} sx={{ fontWeight: 500 }}>
+      <Container size={1} mt={6} sx={{ maxWidth: '715px' }}>
+        <Heading size={4} mb={1} sx={{ fontWeight: 500 }}>
           {frontMatter.title}
         </Heading>
 
