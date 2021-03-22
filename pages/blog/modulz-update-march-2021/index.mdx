@@ -1,0 +1,77 @@
+---
+title: 'Modulz March update: Image/SVG support, improved property panels, improved text tool'
+publishedAt: '2021-03-22'
+summary: 'An overview of the features and enhancements we shipped for Modulz in January 2021.'
+by: 'colm'
+---
+
+import inspector from './inspector.mp4';
+import colors from './colors.mp4';
+import images from './images.mp4';
+import measuring from './measuring.mp4';
+import pages from './pages.mp4';
+import rulers from './rulers.mp4';
+import zoom from './zoom.mp4';
+import panels from './panels.png';
+
+Just before Christmas, we launched the latest Modulz release to our existing beta users. Today, we're inviting hundreds more from our waitlist, so check your email!
+
+Since launching in December, we've released many exciting features.
+
+### SVG support
+If you're the opposite of someone like me—and you like to keep your files organised—you can now do so by creating Pages within each Document.
+
+<ProductVideo src={pages}>
+  Creating and naming a new Page in Modulz.
+</ProductVideo>
+
+### Image support
+We added the Inspector to better support the typical developer handoff workflow. Click the "Inspect" tab to see the CSS for the selected component(s). Choose between string or object syntax, then click the copy icon to grab the styles and paste them into your code editor.
+
+<ProductVideo src={inspector}>
+  Copying CSS code from the Inspect tab in Modulz.
+</ProductVideo>
+
+### Improved property panels
+We're continually improving the properties panel in order to minimise unwanted distractions, maximise vertical space, and make controls more intuitive. Some recent updates include:
+
+- Min/max dimension inputs have been collapsed into a popover.
+- Background image properties have been relocated to the color tool.
+- Auto Layout icons have been refined.
+- Redesigned Text panel.
+
+<figure style={{ margin: 0 }}>
+  <img src={panels} alt="Modulz property panels." style={{ boxShadow: '0 0 0 1px hsl(210deg 15% 90%)' }} />
+  <Box as="figcaption" style={{ fontSize: '15px', marginTop: '-15px', paddingBottom: '10px', lineHeight: '25px' }} sx={{ color: 'gray700' }}>The new Modulz property panels.</Box>
+</figure>
+
+### Alt + drag duplication
+
+- It now accepts CSS color names and automatically converts them to HSL.
+- Use the cursor keys to update channels individually.
+- Set a background image from the color picker popover.
+- Separated the alpha channel into its own input.
+
+<ProductVideo src={colors}>
+  A demo of Modulz color tool.
+</ProductVideo>
+
+### Text tool improvements
+For those of you who like fancy zoom shortcuts, you can now hold Z and draw a box to zoom into any area.
+
+<ProductVideo src={zoom}>
+  Drawing a box to zoom in on a Tesla car.
+</ProductVideo>
+
+---
+
+## Coming soon
+
+Every month we'll release a blog post outlining major updates and new features. Next month, you can look forward to:
+
+- Sortable + selectable property rows
+- Stroke property panel
+- Grid tool
+- Tons of core experience enhancements
+
+Want early access? There are 6000+ people on our waitlist, but each month we're releasing hundreds of invites. If you [join our waitlist](https://modulz.typeform.com/to/fp4gBW), we'll let you in asap.
