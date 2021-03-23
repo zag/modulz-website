@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Grid, Heading, Badge, Section, Button, Paragraph, Input, IconButton, Text, Separator, Flex } from '@modulz/design-system';
+import { Title, Subtitle, Container, Box, Grid, Code, Heading, Badge, Section, Button, Paragraph, Input, IconButton, Text, Separator, Flex } from '@modulz/design-system';
 import { BetaAccess } from '../components/BetaAccess';
 import { LintingPopover } from '../components/LintingPopover';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
@@ -9,22 +9,21 @@ const DesignPage = () => {
     <Box>
       <TitleAndMetaTags />
 
-      <Box mt={6} mb={8}>
-        <Container size="2">
-          <Heading size="5" mb={4} css={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.052em' }}>
-            The most advanced code generation in the world.
-          </Heading>
-
-          <Heading as="h2" size="2" weight="normal" css={{ textAlign: 'center', color: 'gray700', lineHeight: '4' }}>
-            Style your component library, from color to shadows to animations—without writing code.
-          </Heading>
+      <Box css={{ mt: '$6', mb: '$8' }}>
+        <Container size="3">
+          <Title css={{ textAlign: 'center', mb: '$3' }}>
+            Design with real components
+          </Title>
+          <Subtitle css={{ textAlign: 'center' }}>
+            No more wiring things up. Prototyping works out of the box in Modulz.
+          </Subtitle>
         </Container>
       </Box>
 
       <Container size="2" css={{ maxWidth: '1280px' }}>
-        <Flex mb={7} css={{ justifyContent: 'space-around' }}>
+        <Flex css={{ justifyContent: 'space-around' }}>
           <Box css={{ position: 'relative', width: '175px', opacity: '.5' }}>
-            <Text as="p" size="2" mb={1} css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
+            <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
               Panes
             </Text>
             <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1' }}>
@@ -32,7 +31,7 @@ const DesignPage = () => {
             </Text>
           </Box>
           <Box css={{ position: 'relative', width: '175px', opacity: '.5' }}>
-            <Text as="p" size="2" mb={1} css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
+            <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
               Variants
             </Text>
             <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1' }}>
@@ -40,7 +39,7 @@ const DesignPage = () => {
             </Text>
           </Box>
           <Box css={{ position: 'relative', width: '175px', opacity: '1' }}>
-            <Text as="p" size="2" mb={1} css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
+            <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
               Parts
             </Text>
             <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1' }}>
@@ -48,7 +47,7 @@ const DesignPage = () => {
             </Text>
           </Box>
           <Box css={{ position: 'relative', width: '175px', opacity: '.5' }}>
-            <Text as="p" size="2" mb={1} css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
+            <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1', fontWeight: 500 }}>
               Properties
             </Text>
             <Text as="p" size="2" css={{ letterSpacing: '0', lineHeight: '1' }}>
@@ -70,51 +69,43 @@ const DesignPage = () => {
         />
       </Container>
 
-      <Separator mx="auto" size="2" css={{ my: 9 }} />
+      <Separator mx="auto" size="2" css={{ my: '$9' }} />
 
-      <Box py={9}>
-        <Container size="1">
-        <Text
-          as="h3"
-          size="2"
-          mb={4}
-          css={{
-            textAlign: 'center',
-            color: '$blue700',
-            letterSpacing: '.115em',
-            textTransform: 'uppercase',
-            fontFamily: 'Söhne Mono'
-          }}
-        >
-        <Text css={{ color: 'gray500' }}>&lt;</Text> Components <Text css={{ color: 'gray500' }}>/&gt;</Text></Text>
-          <Heading as="h3" size="4" mb={3} css={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
+      <Section>
+        <Container size="2">
+          <Flex css={{ mb: '$5', jc: 'center' }}>
+            <Code
+              css={{
+                fontSize: '$4',
+              }}
+            >
+              Components
+            </Code>
+          </Flex>
+          <Text as="h3" size="8" css={{ textAlign: 'center', fontWeight: 500, mb: '$2' }}>
             The most advanced component library ever built.
-          </Heading>
-          <Text
-            as="p"
-            size="5"
-            css={{ textAlign: 'center', color: 'gray700', lineHeight: '3', letterSpacing: '-.008em' }}
-          >
-            Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
           </Text>
+          <Paragraph variant="gray" css={{ ta: 'center' }}>
+            Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+          </Paragraph>
         </Container>
-      </Box>
+      </Section>
 
-      <Box css={{ py: 9 }}>
+      <Section>
         <Box>
-          <Flex css={{ alignItems: 'center', userSelect: 'none', pb: 7 }}>
+          <Flex css={{ alignItems: 'center', userSelect: 'none', pb: '$7' }}>
             <Box
               css={{
                 display: 'flex',
                 flexShrink: 0,
                 alignItems: 'center',
                 textAlign: 'center',
-                backgroundColor: 'gray200',
-                px: '3',
-                height: '6',
-                fontSize: '3',
-                fontWeight: '500',
-                mr: '8',
+                backgroundColor: '$gray200',
+                px: '$3',
+                height: '$6',
+                fontSize: '$3',
+                fontWeight: 500,
+                mr: '$8',
               }}
             >
               Button
@@ -126,12 +117,12 @@ const DesignPage = () => {
                 alignItems: 'center',
                 textAlign: 'center',
                 backgroundImage: 'linear-gradient(0deg, hsl(270,85%,50%) 0%, hsl(270,85%,65%) 100%)',
-                px: '3',
-                height: '6',
-                fontSize: '3',
-                fontWeight: '500',
-                borderRadius: '9999px',
-                mr: '8',
+                px: '$3',
+                height: '$6',
+                fontSize: '$3',
+                fontWeight: 500,
+                borderRadius: '$pill',
+                mr: '$8',
               }}
             >
               Button
@@ -143,12 +134,12 @@ const DesignPage = () => {
                 alignItems: 'center',
                 textAlign: 'center',
                 backgroundImage: 'linear-gradient(0deg, hsl(270,85%,50%) 0%, hsl(270,85%,65%) 100%)',
-                px: '3',
-                height: '6',
-                fontSize: '3',
-                fontWeight: '500',
-                borderRadius: '9999px',
-                mr: '8',
+                px: '$3',
+                height: '$6',
+                fontSize: '$3',
+                fontWeight: 500,
+                borderRadius: '$pill',
+                mr: '$8',
                 color: 'white'
               }}
             >
@@ -160,15 +151,15 @@ const DesignPage = () => {
                 flexShrink: 0,
                 alignItems: 'center',
                 textAlign: 'center',
-                px: '2',
-                height: '4',
-                fontSize: '1',
+                px: '$2',
+                height: '$4',
+                fontSize: '$1',
                 border: '1px solid',
-                borderColor: 'gray300',
+                borderColor: '$gray300',
                 color: 'gray700',
-                fontWeight: '500',
-                borderRadius: '9999px',
-                mr: '8',
+                fontWeight: 500,
+                borderRadius: '$pill',
+                mr: '$8',
               }}
             >
               Badge
@@ -176,12 +167,12 @@ const DesignPage = () => {
             <Box
               css={{
                 flexShrink: 0,
-                backgroundColor: 'gray200',
-                height: '3px',
-                width: '100px',
-                borderRadius: '9999px',
+                backgroundColor: '$gray200',
+                height: 3,
+                width: 100,
+                borderRadius: '$pill',
                 position: 'relative',
-                mr: '8',
+                mr: '$8',
               }}
             >
               <Box
@@ -189,14 +180,14 @@ const DesignPage = () => {
                   backgroundColor: 'gray500',
                   height: '100%',
                   width: '50%',
-                  borderRadius: '9999px',
+                  borderRadius: '$pill',
                 }}
               ></Box>
               <Box
                 css={{
                   backgroundColor: 'white',
                   border: '1px solid',
-                  borderColor: 'gray300',
+                  borderColor: '$gray300',
                   boxShadow: '0 1px 3px rgba(0,0,0,.05)',
                   height: '15px',
                   width: '15px',
@@ -211,12 +202,12 @@ const DesignPage = () => {
             <Box
               css={{
                 flexShrink: 0,
-                backgroundColor: 'gray200',
-                height: '2',
-                width: '150px',
-                borderRadius: '9999px',
+                backgroundColor: '$gray200',
+                height: '$2',
+                width: 150,
+                borderRadius: '$pill',
                 position: 'relative',
-                mr: '8',
+                mr: '$8',
               }}
             >
               <Box
@@ -234,10 +225,10 @@ const DesignPage = () => {
               css={{
                 flexShrink: 0,
                 backgroundColor: 'white',
-                borderRadius: '2',
+                borderRadius: '$2',
                 position: 'relative',
-                py: '2',
-                mr: '8',
+                py: '$2',
+                mr: '$8',
                 boxShadow:
                   '0 10px 38px -10px rgba(22,23,24,0.35), 0 10px 20px -15px rgba(22,23,24,0.2)',
               }}
@@ -246,9 +237,9 @@ const DesignPage = () => {
                 css={{
                   display: 'flex',
                   alignItems: 'center',
-                  px: '6',
-                  height: '6',
-                  fontSize: '2',
+                  px: '$6',
+                  height: '$6',
+                  fontSize: '$2',
                 }}
               >
                 This is a menu item
@@ -257,9 +248,9 @@ const DesignPage = () => {
                 css={{
                   display: 'flex',
                   alignItems: 'center',
-                  px: '6',
-                  height: '6',
-                  fontSize: '2',
+                  px: '$6',
+                  height: '$6',
+                  fontSize: '$2',
                 }}
               >
                 Second menu item
@@ -268,9 +259,9 @@ const DesignPage = () => {
                 css={{
                   display: 'flex',
                   alignItems: 'center',
-                  px: '6',
-                  height: '6',
-                  fontSize: '2',
+                  px: '$6',
+                  height: '$6',
+                  fontSize: '$2',
                 }}
               >
                 Menu item
@@ -279,9 +270,9 @@ const DesignPage = () => {
                 css={{
                   display: 'flex',
                   alignItems: 'center',
-                  px: '6',
-                  height: '6',
-                  fontSize: '2',
+                  px: '$6',
+                  height: '$6',
+                  fontSize: '$2',
                 }}
               >
                 Another menu item
@@ -297,7 +288,7 @@ const DesignPage = () => {
                 width: '150px',
                 height: '150px',
                 borderRadius: '50%',
-                mr: '8',
+                mr: '$8',
               }}
             >
               <Box
@@ -313,7 +304,7 @@ const DesignPage = () => {
               >
                 <Box
                   css={{
-                    fontSize: '8',
+                    fontSize: '$8',
                     color: 'gray900',
                   }}
                 >
@@ -325,10 +316,10 @@ const DesignPage = () => {
               css={{
                 flexShrink: 0,
                 backgroundColor: 'gray400',
-                height: '3',
-                width: '6',
-                borderRadius: '9999px',
-                mr: '8',
+                height: '$3',
+                width: '$6',
+                borderRadius: '$pill',
+                mr: '$8',
               }}
             >
               <Box
@@ -352,7 +343,7 @@ const DesignPage = () => {
                 border: '1px solid',
                 borderColor: 'gray400',
                 borderRadius: '50%',
-                mr: '8',
+                mr: '$8',
               }}
             >
               <Box
@@ -375,7 +366,7 @@ const DesignPage = () => {
                 border: '1px solid',
                 borderColor: 'gray400',
                 borderRadius: '1',
-                mr: '8',
+                mr: '$8',
               }}
             >
               <svg
@@ -399,14 +390,14 @@ const DesignPage = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                height: '6',
-                width: '6',
+                height: '$6',
+                width: '$6',
                 border: '1px solid',
-                borderColor: 'gray300',
+                borderColor: '$gray300',
                 borderRadius: '50%',
-                fontSize: '3',
+                fontSize: '$3',
                 color: 'gray700',
-                mr: '8',
+                mr: '$8',
               }}
             >
               A
@@ -422,14 +413,14 @@ const DesignPage = () => {
                 border: '1px solid',
                 borderColor: 'gray400',
                 borderRadius: '1',
-                mr: '8',
+                mr: '$8',
               }}
             >
               Alert
             </Box>
           </Flex>
         </Box>
-      </Box>
+      </Section>
 
       <BetaAccess />
     </Box>
