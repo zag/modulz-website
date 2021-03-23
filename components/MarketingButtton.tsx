@@ -36,7 +36,7 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButt
         zIndex: '-1',
         backgroundColor: 'white',
         transition: 'all 50ms ease',
-        boxShadow: 'inset 0 0 0 1px $blue600',
+        boxShadow: 'inset 0 0 0 1px $colors$blue600',
       },
       '&::after': {
         content: "''",
@@ -49,10 +49,10 @@ export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButt
         zIndex: '-2',
         pointerEvents: 'none',
         willChange: 'transform',
-        backgroundImage: 'repeating-linear-gradient(-45deg,$blue600,$blue600 1px,transparent 1px,transparent 6px)',
+        backgroundImage: 'repeating-linear-gradient(-45deg, $colors$blue600, $colors$blue600 1px,transparent 1px,transparent 6px)',
       },
       '&:hover::before, &:active::before, &:focus::before': {
-        boxShadow: 'inset 0 0 0 1px $blue600',
+        boxShadow: 'inset 0 0 0 1px $colors$blue600',
       },
       '&:active': {
         transform: 'translate(1px, 1px)',
