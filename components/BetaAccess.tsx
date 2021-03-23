@@ -1,19 +1,17 @@
 import React from 'react';
-import { Container, Text, Box, Flex, Heading } from '@modulz/design-system';
+import { Section, Container, Text, Box, Flex, Heading, Paragraph } from '@modulz/design-system';
 import { MarketingButton } from '../components/MarketingButtton';
 
 export const BetaAccess = () => {
   return (
-    <Box>
+    <Section>
       <Container size="1" css={{ textAlign: 'center' }}>
-        <Heading>
+        <Text size="8" css={{ fontWeight: 500, mb: '$2' }}>
           Get early access
-        </Heading>
-
-        <Text as="p" size="4" color="gray">
-          We're currently in private alpha. Applications will be screened based on fit.
         </Text>
-
+        <Paragraph variant="gray" css={{ mb: '$6' }}>
+          We're currently in private alpha. Applications will be screened based on fit.
+        </Paragraph>
         <MarketingButton as="a" href="https://modulz.typeform.com/to/fp4gBW" target="_blank" rel="noopener">
           Apply for early access
           <Box as="span" aria-hidden>
@@ -24,6 +22,6 @@ export const BetaAccess = () => {
           </Box>
         </MarketingButton>
       </Container>
-    </Box>
+    </Section>
   );
 };
