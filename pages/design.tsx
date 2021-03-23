@@ -422,9 +422,9 @@ const DesignPage = () => {
           >
             Auto Layout
           </Text>
-          <Heading css={{ textAlign: 'center', fontWeight: 500, letterSpacing: '-.042em' }}>
-            Accelerate your design workflow with a suite of powerful layout components.
-          </Heading>
+          <Text size="8" css={{ textAlign: 'center', fontWeight: 500 }}>
+            Auto Layout, all the things.
+          </Text>
           <Paragraph css={{ textAlign: 'center' }}>
             Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
           </Paragraph>
