@@ -254,7 +254,7 @@ function App({ Component, pageProps }: AppProps) {
             </Radix.Box>
           ),
         }}
-      > */}
+      >
         <Head>
           <title>Modulz</title>
           <link rel="icon" href={isDarkMode ? '/favicon-light.png' : '/favicon-dark.png'} />
