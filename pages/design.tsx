@@ -433,149 +433,6 @@ const DesignPage = () => {
 
       <Separator size="2" />
 
-      <Box css={{ position: 'relative', p: '$9' }}>
-        <Container size="2">
-          <Grid
-            css={{
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '$8',
-              alignItems: 'center',
-            }}
-          >
-            <Box css={{ alignSelf: 'stretch' }}>
-              <Flex css={{ height: '100%', my: -9 }}>
-                <Box css={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
-                <Box css={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
-                <Box css={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
-                <Box css={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
-                <Box css={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
-                <Box css={{ width: '5%', backgroundColor: 'hsl(310, 100%, 97%)' }}></Box>
-                <Box css={{ width: '20%', height: '20%', backgroundColor: 'hsl(310, 100%, 77%)' }}></Box>
-
-              </Flex>
-            </Box>
-            <Box>
-              <Text
-                as="h3"
-                size="2"
-                css={{
-                  color: '$blue700',
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  fontFamily: 'Söhne Mono'
-                }}
-              >
-                &lt;Design tokens/&gt;
-              </Text>
-              <Heading css={{ fontWeight: 500 }}>
-                Maintain consistency with reusable styles
-              </Heading>
-              <Text as="p" size="4" css={{ lineHeight: '3px' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Text>
-              <Flex css={{ pt: '$3' }}>
-                <Box>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-<rect width="45" height="45" fill="white"/>
-<path d="M8.5 4V41" stroke="#FFC5FD"/>
-<path d="M36.5 4V41" stroke="#FFC5FD"/>
-<path d="M41 8.5H4" stroke="#FFC5FD"/>
-<path d="M41 36.5H4" stroke="#FFC5FD"/>
-<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
-<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
-<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
-<path d="M25.5 13V16" stroke="#FF00C7"/>
-<path d="M35.5 13V16" stroke="#FF00C7"/>
-<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M32 19.5H29" stroke="#FF00C7"/>
-<path d="M32 9.5H29" stroke="#FF00C7"/>
-</svg>
-                </Box>
-                <Box>
-                  <Text as="p" size="3" css={{ fontWeight: '500', lineHeight: '2', mt: '$2', ml: '$2' }}>
-                    Auto Layout
-                  </Text>
-                </Box>
-              </Flex>
-              <Box css={{ pl: '$7' }}>
-                <Text as="p" size="3" css={{ color: 'gray700', lineHeight: '2', ml: '$2' }}>
-                  Modulz Styleguide provides fully-featured design system documentation.
-                </Text>
-              </Box>
-              <Flex css={{ pt: '$3' }}>
-                <Box>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-<rect width="45" height="45" fill="white"/>
-<path d="M8.5 4V41" stroke="#FFC5FD"/>
-<path d="M36.5 4V41" stroke="#FFC5FD"/>
-<path d="M41 8.5H4" stroke="#FFC5FD"/>
-<path d="M41 36.5H4" stroke="#FFC5FD"/>
-<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
-<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
-<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
-<path d="M25.5 13V16" stroke="#FF00C7"/>
-<path d="M35.5 13V16" stroke="#FF00C7"/>
-<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M32 19.5H29" stroke="#FF00C7"/>
-<path d="M32 9.5H29" stroke="#FF00C7"/>
-</svg>
-                </Box>
-                <Box>
-                  <Text as="p" size="3" css={{ fontWeight: '500', lineHeight: '2', mt: '$2', ml: '$2' }}>
-                    Auto Layout
-                  </Text>
-                </Box>
-              </Flex>
-              <Box css={{ pl: '$7' }}>
-                <Text as="p" size="3" css={{ color: 'gray700', lineHeight: '2', ml: '$2' }}>
-                  Modulz Styleguide provides fully-featured design system documentation.
-                </Text>
-              </Box>
-              <Flex css={{ pt: '$3' }}>
-                <Box>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-<rect width="45" height="45" fill="white"/>
-<path d="M8.5 4V41" stroke="#FFC5FD"/>
-<path d="M36.5 4V41" stroke="#FFC5FD"/>
-<path d="M41 8.5H4" stroke="#FFC5FD"/>
-<path d="M41 36.5H4" stroke="#FFC5FD"/>
-<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
-<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
-<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
-<path d="M25.5 13V16" stroke="#FF00C7"/>
-<path d="M35.5 13V16" stroke="#FF00C7"/>
-<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M32 19.5H29" stroke="#FF00C7"/>
-<path d="M32 9.5H29" stroke="#FF00C7"/>
-</svg>
-                </Box>
-                <Box>
-                  <Text as="p" size="3" css={{ fontWeight: '500', lineHeight: '2', mt: '$2', ml: '$2' }}>
-                    Auto Layout
-                  </Text>
-                </Box>
-              </Flex>
-              <Box css={{ pl: '$7' }}>
-                <Text as="p" size="3" css={{ color: 'gray700', lineHeight: '2', ml: '$2' }}>
-                  Modulz Styleguide provides fully-featured design system documentation.
-                </Text>
-              </Box>
-            </Box>
-          </Grid>
-        </Container>
-      </Box>
-
-      <Separator size="2" />
-
       <States />
       <Variants />
 
@@ -727,6 +584,30 @@ const DesignPage = () => {
       </Box>
 
       <Separator size="2" />
+
+      <Section size="3">
+        <Container size="2">
+          <Text
+            as="h3"
+            size="2"
+            css={{
+              textAlign: 'center',
+              fontWeight: 500,
+              color: 'gray700',
+              letterSpacing: '.125em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Responsive Design
+          </Text>
+          <Text size="8" css={{ textAlign: 'center', fontWeight: 500 }}>
+            Make your layout respond to things
+          </Text>
+          <Paragraph css={{ textAlign: 'center' }}>
+            Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+          </Paragraph>
+        </Container>
+      </Section>
 
       <Box>
         <Container size="2">
