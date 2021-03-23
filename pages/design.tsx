@@ -1,8 +1,156 @@
 import React from 'react';
-import { Container, Box, Grid, Heading, Badge, Section, Button, Subtitle, Title, Paragraph, Input, IconButton, Text, Separator, Flex } from '@modulz/design-system';
+import { Container, Code, Box, Grid, Heading, Badge, Section, Button, Subtitle, Title, Paragraph, Input, IconButton, Text, Separator, Flex } from '@modulz/design-system';
 import { BetaAccess } from '../components/BetaAccess';
 import { LintingPopover } from '../components/LintingPopover';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
+
+const Variants = () => {
+  return (
+    <Section size="3">
+      <Container size="3">
+        <Grid
+          css={{
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '$8',
+            alignItems: 'center',
+          }}
+        >
+
+          <Box>
+            <Box css={{ mb: '$5' }}>
+              <Code
+                size="2"
+                css={{
+                  mb: '$5',
+                  fontSize: '$4',
+                }}
+              >
+                Variants
+              </Code>
+            </Box>
+            <Text as="h3" size="8" css={{ fontWeight: 500, mb: '$4', lineHeight: '40px' }}>
+              Variants
+            </Text>
+            <Paragraph>
+              Stitches has built-in solutions for tokens and theming, which use CSS variables under-the-hood. You can define multiple themes, then expose them to any part of your app.
+            </Paragraph>
+            <Flex css={{ ai: 'center', pt: '$5' }}>
+              <Box>
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+              </Box>
+              <Box>
+                <Text as="p" size="3" css={{ fontWeight: '500', ml: '$2' }}>
+                  Compound states
+                </Text>
+              </Box>
+            </Flex>
+            <Box css={{ pl: 7 }}>
+              <Text as="p" size="3" color="gray" css={{ lineHeight: '23px', ml: '$7', pl: '$1' }}>
+                Modulz Styleguide provides fully-featured design system documentation.
+              </Text>
+            </Box>
+            <Flex css={{ ai: 'center', pt: '$5' }}>
+              <Box>
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<rect width="45" height="45" fill="white"/>
+<path d="M8.5 4V41" stroke="#FFC5FD"/>
+<path d="M36.5 4V41" stroke="#FFC5FD"/>
+<path d="M41 8.5H4" stroke="#FFC5FD"/>
+<path d="M41 36.5H4" stroke="#FFC5FD"/>
+<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
+<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
+<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
+<path d="M25.5 13V16" stroke="#FF00C7"/>
+<path d="M35.5 13V16" stroke="#FF00C7"/>
+<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
+<path d="M32 19.5H29" stroke="#FF00C7"/>
+<path d="M32 9.5H29" stroke="#FF00C7"/>
+</svg>
+              </Box>
+              <Box>
+                <Text as="p" size="3" css={{ fontWeight: '500', ml: '$2' }}>
+                  Compound states
+                </Text>
+              </Box>
+            </Flex>
+            <Box css={{ pl: 7 }}>
+              <Text as="p" size="3" color="gray" css={{ lineHeight: '23px', ml: '$7', pl: '$1' }}>
+                Modulz Styleguide provides fully-featured design system documentation.
+              </Text>
+            </Box>
+          </Box>
+
+          <Box css={{ alignSelf: 'stretch' }}>
+            <Flex css={{ alignItems: 'center', justifyContent: 'space-between', gap: '$6' }}>
+              <Flex css={{ flexDirection: 'column', flexGrow: 1, gap: '$4' }}>
+                <Box css={{ backgroundImage: 'linear-gradient(0deg, hsl(205,75%,45%) 0%, hsl(205,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: '$4', fontsize: '$3' }}>Button</Box>
+              </Flex>
+              <Box css={{ width: 265, flexShrink: 0, boxShadow: '0 15px 35px -10px rgba(0,0,0,.35)', borderRadius: '$2', p: '$3' }}>
+                <Flex css={{ alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Text size="2" css={{ fontWeight: 500 }}>Variants</Text>
+                </Flex>
+                <Box>
+                  <Text size="1" css={{ fontWeight: 500 }}>Size</Text>
+                  <Flex css={{ gap: '$1', flexWrap: 'wrap' }}>
+                    <Badge size="2" variant="blue">Base</Badge>
+                    <Badge size="2">Base</Badge>
+                    <Badge size="2">Base</Badge>
+                    <Badge size="2">Base</Badge>
+                    <Badge size="2">Base</Badge>
+                  </Flex>
+                  <Text size="1" css={{ fontWeight: 500 }}>Size</Text>
+                  <Flex css={{ gap: '$1', flexWrap: 'wrap' }}>
+                    <Badge size="2">Red</Badge>
+                    <Badge size="2">Crimson</Badge>
+                    <Badge size="2">Purple</Badge>
+                    <Badge size="2">Violet</Badge>
+                    <Badge size="2">Indigo</Badge>
+                    <Badge size="2" variant="blue">Blue</Badge>
+                    <Badge size="2">Turquoise</Badge>
+                    <Badge size="2">Teal</Badge>
+                    <Badge size="2">Green</Badge>
+                    <Badge size="2">Lime</Badge>
+                    <Badge size="2">Yellow</Badge>
+                    <Badge size="2">Orange</Badge>
+                    <Badge size="2">Gold</Badge>
+                    <Badge size="2">Bronze</Badge>
+                    <Badge size="2">Brown</Badge>
+                  </Flex>
+                  <Text size="1" css={{ fontWeight: 500 }}>Size</Text>
+                  <Flex css={{ gap: '$1', flexWrap: 'wrap' }}>
+                    <Badge size="2">Waiting</Badge>
+                    <Badge size="2" variant="blue">Active</Badge>
+                  </Flex>
+                </Box>
+              </Box>
+
+            </Flex>
+          </Box>
+
+        </Grid>
+      </Container>
+    </Section>
+)};
 
 const DesignPage = () => {
   return (
@@ -288,149 +436,7 @@ const DesignPage = () => {
         </Container>
       </Section>
 
-      <Section size="3">
-        <Container size="3">
-          <Grid
-            css={{
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '$8',
-              alignItems: 'center',
-            }}
-          >
-            <Box css={{ alignSelf: 'stretch' }}>
-              <Flex css={{ alignItems: 'center', justifyContent: 'space-between', gap: '$6' }}>
-                <Flex css={{ flexDirection: 'column', flexGrow: 1, gap: '$4' }}>
-                  <Box css={{ backgroundImage: 'linear-gradient(0deg, hsl(205,75%,45%) 0%, hsl(205,75%,60%) 100%)', border: '1px solid hsl(270,75%,40%)', boxShadow: '0 3px 10px rgba(0,0,0,.25)', color: 'white', fontSize: 3, height: '35px', borderRadius: '9999px', px: 4, fontWeight: '500', display: 'inline-flex', alignItems: 'center', mb: '$4', fontsize: '$3' }}>Button</Box>
-                </Flex>
-                <Box css={{ width: 265, flexShrink: 0, boxShadow: '0 15px 35px -10px rgba(0,0,0,.35)', borderRadius: '$2', p: '$3' }}>
-                  <Flex css={{ alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Text size="1" css={{ fontWeight: 500 }}>Variants</Text>
-                  </Flex>
-                  <Box>
-                    <Text size="1" css={{ fontWeight: 500 }}>Size</Text>
-                    <Flex css={{ gap: '$1', flexWrap: 'wrap' }}>
-                      <Badge size="2" variant="blue">Base</Badge>
-                      <Badge size="2">Base</Badge>
-                      <Badge size="2">Base</Badge>
-                      <Badge size="2">Base</Badge>
-                      <Badge size="2">Base</Badge>
-                    </Flex>
-                    <Text size="1" css={{ fontWeight: 500 }}>Size</Text>
-                    <Flex css={{ gap: '$1', flexWrap: 'wrap' }}>
-                      <Badge size="2">Red</Badge>
-                      <Badge size="2">Crimson</Badge>
-                      <Badge size="2">Purple</Badge>
-                      <Badge size="2">Violet</Badge>
-                      <Badge size="2">Indigo</Badge>
-                      <Badge size="2" variant="blue">Blue</Badge>
-                      <Badge size="2">Turquoise</Badge>
-                      <Badge size="2">Teal</Badge>
-                      <Badge size="2">Green</Badge>
-                      <Badge size="2">Lime</Badge>
-                      <Badge size="2">Yellow</Badge>
-                      <Badge size="2">Orange</Badge>
-                      <Badge size="2">Gold</Badge>
-                      <Badge size="2">Bronze</Badge>
-                      <Badge size="2">Brown</Badge>
-                    </Flex>
-                    <Text size="1" css={{ fontWeight: 500 }}>Size</Text>
-                    <Flex css={{ gap: '$1', flexWrap: 'wrap' }}>
-                      <Badge size="2">Waiting</Badge>
-                      <Badge size="2" variant="blue">Active</Badge>
-                    </Flex>
-                  </Box>
-                </Box>
-
-              </Flex>
-            </Box>
-            <Box>
-              <Text
-                as="h3"
-                size="2"
-                mb={4}
-                css={{
-                  color: '$blue700',
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  fontFamily: 'Söhne Mono'
-                }}
-              >
-                &lt;Variants/&gt;
-              </Text>
-              <Heading as="h3" size="3" mb={3} css={{ fontWeight: 500 }}>
-                Variants
-              </Heading>
-              <Paragraph>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
-              </Paragraph>
-              <Flex css={{ pt: 3 }}>
-                <Box>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-<rect width="45" height="45" fill="white"/>
-<path d="M8.5 4V41" stroke="#FFC5FD"/>
-<path d="M36.5 4V41" stroke="#FFC5FD"/>
-<path d="M41 8.5H4" stroke="#FFC5FD"/>
-<path d="M41 36.5H4" stroke="#FFC5FD"/>
-<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
-<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
-<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
-<path d="M25.5 13V16" stroke="#FF00C7"/>
-<path d="M35.5 13V16" stroke="#FF00C7"/>
-<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M32 19.5H29" stroke="#FF00C7"/>
-<path d="M32 9.5H29" stroke="#FF00C7"/>
-</svg>
-                </Box>
-                <Box>
-                  <Text as="p" size="3" css={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
-                    Compound states
-                  </Text>
-                </Box>
-              </Flex>
-              <Box css={{ pl: 7 }}>
-                <Text as="p" size="3" css={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
-                  Modulz Styleguide provides fully-featured design system documentation.
-                </Text>
-              </Box>
-              <Flex css={{ pt: 3 }}>
-                <Box>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-<rect width="45" height="45" fill="white"/>
-<path d="M8.5 4V41" stroke="#FFC5FD"/>
-<path d="M36.5 4V41" stroke="#FFC5FD"/>
-<path d="M41 8.5H4" stroke="#FFC5FD"/>
-<path d="M41 36.5H4" stroke="#FFC5FD"/>
-<rect x="9" y="9" width="11" height="11" fill="#FF00C7"/>
-<rect x="9" y="25" width="11" height="11" fill="#FF00C7"/>
-<rect x="25" y="25" width="11" height="11" fill="#FF00C7"/>
-<path d="M25.5 13V16" stroke="#FF00C7"/>
-<path d="M35.5 13V16" stroke="#FF00C7"/>
-<path d="M25.5 18.5V19.5H26.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M34.5 19.5H35.5V18.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M26.5 9.5H25.5V10.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M35.5 10.5V9.5H34.5" stroke="#FF00C7" stroke-linecap="square"/>
-<path d="M32 19.5H29" stroke="#FF00C7"/>
-<path d="M32 9.5H29" stroke="#FF00C7"/>
-</svg>
-                </Box>
-                <Box>
-                  <Text as="p" size="3" css={{ fontWeight: '500', lineHeight: '2', mt: 2, ml: 2 }}>
-                    Child selectors
-                  </Text>
-                </Box>
-              </Flex>
-              <Box css={{ pl: 7 }}>
-                <Text as="p" size="3" css={{ color: 'gray700', lineHeight: '2', ml: 2 }}>
-                  Modulz Styleguide provides fully-featured design system documentation.
-                </Text>
-              </Box>
-            </Box>
-          </Grid>
-        </Container>
-      </Section>
+      <Variants />
 
       <Separator mx="auto" size="2" />
 
