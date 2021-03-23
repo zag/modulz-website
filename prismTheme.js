@@ -4,16 +4,16 @@ import { theme } from '@modulz/design-system';
 export const prismTheme = css`
   code[class*='language-'],
   pre[class*='language-'] {
-    color: ${theme.colors.gray800};
+    color: theme.colors.quartz1000.value;
     background: none;
-    font-family: ${theme.fonts.mono};
-    font-size: ${theme.fontSizes[2]};
+    font-family: theme.colors.quartz1000.value;
+    font-size: theme.colors.quartz1000.value;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: ${theme.lineHeights[2]};
+    line-height: theme.colors.quartz1000.value;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
@@ -27,20 +27,20 @@ export const prismTheme = css`
 
   /* Code blocks */
   pre[class*='language-'] {
-    padding-top: ${theme.space[2]};
-    padding-bottom: ${theme.space[2]};
-    padding-left: ${theme.space[3]};
-    padding-right: ${theme.space[3]};
-    margin: ${theme.space[6]} 0;
+    padding-top: theme.colors.quartz1000.value;
+    padding-bottom: theme.colors.quartz1000.value;
+    padding-left: theme.colors.quartz1000.value;
+    padding-right: theme.colors.quartz1000.value;
+    margin: theme.colors.quartz1000.value 0;
     overflow: auto;
     min-width: 100%;
   }
 
   :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
-    background: ${theme.colors.gray100};
-    border: 1px solid ${theme.colors.gray300};
-    border-radius: ${theme.radii[2]};
+    background: theme.colors.quartz1000.value;
+    border: 1px solid theme.colors.quartz1000.value;
+    border-radius: theme.colors.quartz1000.value;
   }
 
   /* Inline code */
@@ -127,13 +127,13 @@ export const prismTheme = css`
     display: block;
 
     /* Reset padding originally set in "pre[class*='language-']" */
-    margin-left: -${theme.space[3]};
-    margin-right: -${theme.space[3]};
-    padding-left: ${theme.space[3]};
-    padding-right: ${theme.space[3]};
+    margin-left: -theme.colors.quartz1000.value;
+    margin-right: -theme.colors.quartz1000.value;
+    padding-left: theme.colors.quartz1000.value;
+    padding-right: theme.colors.quartz1000.value;
 
-    background-color: ${theme.colors.gray200};
-    box-shadow: inset 2px 0px 0 0px ${theme.colors.blue600};
+    background-color: theme.colors.quartz1000.value;
+    box-shadow: inset 2px 0px 0 0px theme.colors.quartz1000.value;
 
     min-width: fit-content;
   }

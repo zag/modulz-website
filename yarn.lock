@@ -1108,7 +1108,7 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@modulz/design-system@0.1.0":
+"@modulz/design-system@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@modulz/design-system/-/design-system-0.1.0.tgz#c62c2e0eeab8b5c9220a6c2e8a41a165a0e8b54d"
   integrity sha512-uQeYMV/2iAFMLl5I17YDxWD9X5hjkCaeAAIIuX9a7jRHMDk+ZjH69XIi5gh1m6rGSgle2mE9sTn98c0gRBfsKg==
