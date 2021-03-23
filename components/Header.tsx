@@ -53,7 +53,7 @@ export const Header = () => {
                       </Text>
                     </Box>
                   </NextLink>
-                  <NextLink href="/design" passHref>
+                  <NextLink href="/prototyping" passHref>
                     <Box as="a" css={{ display: 'block', textDecoration: 'none', py: '$2', px: '$4', '&:hover': { backgroundColor: '$blue200' } }}>
                       <Text size="3" css={{ fontWeight: 500, lineHeight: '17px', mb: '$1' }}>
                         Prototyping
