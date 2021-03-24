@@ -1,90 +1,90 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import { styled, keyframes } from '@stitches/react';
 import { Flex, Code, Text, Button, Box } from '@modulz/design-system';
 
-const cursorAnimation = keyframes`
-  0%    { transform: translate(0, 0) }
-  10%   { transform: translate(0, 0) }
-  15%   { transform: translate(-20px, -75px) }
-  40%   { transform: translate(-20px, -75px) }
-  45%   { transform: translate(-75px, -10px) }
-  70%   { transform: translate(-75px, -10px) }
-  75%   { transform: translate(-75px, -70px) }
-  95%   { transform: translate(-75px, -70px) }
-  100%  { transform: translate(0, 0) }
-`
+const cursorAnimation = keyframes({
+  '0%':    { transform: 'translate(0, 0)' },
+  '10%':   { transform: 'translate(0, 0)' },
+  '15%':   { transform: 'translate(-20px, -75px)' },
+  '40%':   { transform: 'translate(-20px, -75px)' },
+  '45%':   { transform: 'translate(-75px, -10px)' },
+  '70%':   { transform: 'translate(-75px, -10px)' },
+  '75%':   { transform: 'translate(-75px, -70px)' },
+  '95%':   { transform: 'translate(-75px, -70px)' },
+  '100%':  { transform: 'translate(0, 0)' },
+});
 
-const popoverAnimation = keyframes`
-  0%    { opacity: 0; transform: translateX(4px); }
-  20%   { opacity: 0; transform: translateX(4px); }
-  25%   { opacity: 1; transform: translateX(0); }
-  85%   { opacity: 1; transform: translateX(0); }
-  90%   { opacity: 0; transform: translateX(4px); }
-  100%  { opacity: 0; transform: translateX(4px); }
-`
+const PopoverAnimation = keyframes({
+  '0%':    { opacity: '0', transform: 'translateX(4px)' },
+  '20%':   { opacity: '0', transform: 'translateX(4px)' },
+  '25%':   { opacity: '1', transform: 'translateX(0)' },
+  '85%':   { opacity: '1', transform: 'translateX(0)' },
+  '90%':   { opacity: '0', transform: 'translateX(4px)' },
+  '100%':  { opacity: '0', transform: 'translateX(4px)' },
+});
 
-const grayCount = keyframes`
-  0%    { opacity: 0; }
-  50%   { opacity: 0; }
-  51%   { opacity: 1; }
-  100%  { opacity: 1; }
-`
+const grayCount = keyframes({
+  '0%':    { opacity: '0' },
+  '50%':   { opacity: '0' },
+  '51%':   { opacity: '1' },
+  '100%':  { opacity: '1' },
+});
 
-const GrayCount = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 35px;
-  height: 35px;
-  background-color: hsl(208, 10%, 90%);
-  border-radius: 50%;
-  animation-name: ${grayCount};
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-`
+const GrayCount = styled('div', {
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  width: '35px',
+  height: '35px',
+  backgroundColor: 'hsl(208, 10%, 90%)',
+  borderRadius: '50%',
+  animationName: `${grayCount}`,
+  animationDuration: '7s',
+  animationIterationCount: 'infinite',
+});
 
-const oneCount = keyframes`
-  0%    { opacity: 1; }
-  50%   { opacity: 1; }
-  51%   { opacity: 0; }
-  100%  { opacity: 0; }
-`
+const oneCount = keyframes({
+  '0%':    { opacity: '1' },
+  '50%':   { opacity: '1' },
+  '51%':   { opacity: '0' },
+  '100%':  { opacity: '0' },
+});
 
-const OneCount = styled.span`
-  position: absolute;
-  animation-name: ${oneCount};
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-`
+const OneCount = styled('span', {
+  position: 'absolute',
+  animationName: `${oneCount}`,
+  animationDuration: '7s',
+  animationIterationCount: 'infinite',
+});
 
-const zeroCount = keyframes`
-  0%    { opacity: 0; }
-  50%    { opacity: 0; }
-  51%    { opacity: 1; }
-  100%  { opacity: 1; }
-`
+const zeroCount = keyframes({
+  '0%':    { opacity: '0' },
+  '50%':    { opacity: '0' },
+  '51%':    { opacity: '1' },
+  '100%':  { opacity: '1' },
+});
 
-const ZeroCount = styled.span`
-  position: absolute;
-  animation-name: ${zeroCount};
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-`
+const ZeroCount = styled('span', {
+  position: 'absolute',
+  animationName: `${zeroCount}`,
+  animationDuration: '7s',
+  animationIterationCount: 'infinite',
+});
 
-const Cursor = styled.div`
-  position: absolute;
-  top: 100px;
-  right: -20px;
-  animation-name: ${cursorAnimation};
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-`
+const Cursor = styled('div', {
+  position: 'absolute',
+  top: '100px',
+  right: '-20px',
+  animationName: `${cursorAnimation}`,
+  animationDuration: '7s',
+  animationIterationCount: 'infinite',
+});
 
-const Popover = styled.div`
-  animation-name: ${popoverAnimation};
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-`
+const Popover = styled('div', {
+  animationName: `${PopoverAnimation}`,
+  animationDuration: '7s',
+  animationIterationCount: 'infinite',
+});
 
 export const LintingPopover = () => {
   return (
@@ -113,7 +113,7 @@ export const LintingPopover = () => {
             <Text size="4" style={{ fontWeight: 500 }}>
               Linter warnings
             </Text>
-            <Box mr={-1} css={{ color: 'gray700' }}>
+            <Box css={{ color: 'gray700', mr: '-$1' }}>
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3536 4.35355C11.5488 4.15829 11.5488 3.84171 11.3536 3.64645C11.1583 3.45118 10.8417 3.45118 10.6464 3.64645L7.5 6.79289L4.35355 3.64645C4.15829 3.45118 3.84171 3.45118 3.64645 3.64645C3.45118 3.84171 3.45118 4.15829 3.64645 4.35355L6.79289 7.5L3.64645 10.6464C3.45118 10.8417 3.45118 11.1583 3.64645 11.3536C3.84171 11.5488 4.15829 11.5488 4.35355 11.3536L7.5 8.20711L10.6464 11.3536C10.8417 11.5488 11.1583 11.5488 11.3536 11.3536C11.5488 11.1583 11.5488 10.8417 11.3536 10.6464L8.20711 7.5L11.3536 4.35355Z" fill="currentColor"/>
               </svg>
@@ -297,7 +297,7 @@ export const LintingPopover = () => {
           </g>
           <defs>
           <filter id="filter0_d" x="-5.68303" y="-5.68302" width="31.4545" height="32.5526" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
           <feOffset dy="1"/>
           <feGaussianBlur stdDeviation="1"/>
