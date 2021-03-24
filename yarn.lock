@@ -1736,12 +1736,24 @@
   resolved "https://registry.yarnpkg.com/@stitches/core/-/core-0.1.0.tgz#9ee10f0eda36a6a7c0a6746aea32d41d41b6c9d2"
   integrity sha512-3XX86Jc3iDtMEKEg9aCrRIaPOh2Qptp/5J1UH1rB5NtepCc6jXPqK0sxNNEQO6HZlv0AszycKEp8hW2KGL7Xng==
 
+"@stitches/core@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@stitches/core/-/core-0.1.3.tgz#11ef21a8b31d6b456f79c80b12c2fd4acbc41dec"
+  integrity sha512-QgDHacnRliBnnAAyhdgpeQnOCvCFGlUavNA7I8TQTMv8+hqNq6YEtms7tVRKp9MSbww1vZL8JtghvHKD5Gwehw==
+
 "@stitches/react@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@stitches/react/-/react-0.1.0.tgz#707ac79e8a5e7eae0c742bdbf2535fa9ec5439d8"
   integrity sha512-IlbqC4bQ0iHgfpl9hcegy5QsXiZtsmQJukiB1p5eSQh133+irvS77cXFu/rHRCyBrXGr94nigJboGVmuG33ekQ==
   dependencies:
     "@stitches/core" "^0.1.0"
+
+"@stitches/react@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@stitches/react/-/react-0.1.3.tgz#bebfa8973b8cb44525200f0f6198ddc8fcb0dde4"
+  integrity sha512-+/6Cebbu3IpcdoTSC5Gzsr+XUaH6VdPmNFFZnSK7VcmsNgRsdKmDaLTrpSCpTvnAvI0AtVn8Z7hYsf6OugH6ZA==
+  dependencies:
+    "@stitches/core" "^0.1.3"
 
 "@types/hast@^2.0.0":
   version "2.3.1"
