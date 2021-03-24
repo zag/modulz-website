@@ -87,6 +87,14 @@ export const Header = () => {
               </PopoverContent>
             </Popover>
 
+            <NextLink href="/why-modulz" passHref>
+              <Link variant="subtle">
+                <Text size="3">
+                  Why Modulz
+                </Text>
+              </Link>
+            </NextLink>
+
             <NextLink href="/about" passHref>
               <Link variant="subtle">
                 <Text size="3">
