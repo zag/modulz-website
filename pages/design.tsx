@@ -348,9 +348,9 @@ const DesignPage = () => {
       <TitleAndMetaTags />
 
       <Section size="3">
-        <Container size="2">
+        <Container size="3">
           <Title css={{ textAlign: 'center', mb: '$2' }}>
-            The most advanced code generation in the world.
+            Design has never been so powerful
           </Title>
           <Subtitle css={{ textAlign: 'center' }}>
             Style your component library, from color to shadows to animations—without writing code.
@@ -428,6 +428,24 @@ const DesignPage = () => {
           <Paragraph css={{ textAlign: 'center' }}>
             Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
           </Paragraph>
+        </Container>
+        
+        <Container size="3">
+          <Flex css={{
+            jc: 'center'
+          }}>
+            <Box css={{
+              width: 375,
+              height: 667,
+              boxShadow: 'inset 0 0 0 1px $colors$gray500',
+              transition: 'width 2s ease',
+              transformOrigin: 'center',
+            }}>
+              <Text size="8" css={{ textAlign: 'center', fontWeight: 500 }}>
+              Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+          </Text>
+            </Box>
+          </Flex>
         </Container>
       </Section>
 
@@ -622,12 +640,12 @@ const DesignPage = () => {
               <LintingPopover />
             </Box>
             <Box>
-              <Heading css={{ fontWeight: 500 }}>
+              <Text size="8" css={{ fontWeight: 500 }}>
                 Design Linting
-              </Heading>
-              <Text as="p" size="4" css={{ lineHeight: '3px' }}>
-                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
               </Text>
+              <Paragraph>
+                Modulz Styleguide provides fully-featured design system documentation for teams who need total control.
+              </Paragraph>
             </Box>
           </Grid>
         </Container>
