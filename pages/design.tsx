@@ -1,8 +1,48 @@
 import React from 'react';
-import { Container, Code, Box, Grid, Heading, Badge, Section, Button, Subtitle, Title, Paragraph, Input, IconButton, Text, Separator, Flex } from '@modulz/design-system';
+import { Container, Code, Box, Grid, Heading, Badge, Section, Button, Subtitle, Title, Paragraph, Input, IconButton, Text, Separator, Flex, keyframes } from '@modulz/design-system';
 import { BetaAccess } from '../components/BetaAccess';
 import { LintingPopover } from '../components/LintingPopover';
 import TitleAndMetaTags from '../components/TitleAndMetaTags';
+
+const scaleUp = keyframes({
+  '0%': { height: 35, backgroundColor: '$gray400', fontSize: '$3', color: '$gray1000', px: '$3' },
+  '15.9999%': { height: 35, backgroundColor: '$gray400', fontSize: '$3', color: '$gray1000', px: '$3' },
+
+  '16%': { height: 45, backgroundColor: '$gray400', fontSize: '$4', color: '$gray1000', px: '$4' },
+  '31.9999%': { height: 45, backgroundColor: '$gray400', fontSize: '$4', color: '$gray1000', px: '$4' },
+
+  '32%': { height: 45, backgroundColor: '$violet800', fontSize: '$4', color: 'white', px: '$4' },
+  '47.9999%': { height: 45, backgroundColor: '$violet800', fontSize: '$4', color: 'white', px: '$4' },
+
+  '48%': { height: 45, backgroundColor: '$teal800', fontSize: '$4', color: 'white', px: '$4' },
+  '63.9999%': { height: 45, backgroundColor: '$teal800', fontSize: '$4', color: 'white', px: '$4' },
+
+  '64%': { height: 45, backgroundColor: '$gray400', fontSize: '$4', color: '$gray1000', px: '$4' },
+  '79.9999%': { height: 45, backgroundColor: '$gray400', fontSize: '$4', color: '$gray1000', px: '$4' },
+
+  '80%': { height: 35, backgroundColor: '$gray400', fontSize: '$3', color: '$gray1000', px: '$3' },
+  '100%': { height: 35, backgroundColor: '$gray400', fontSize: '$3', color: '$gray1000', px: '$3' },
+});
+
+const Cursor = keyframes({
+  '0%': { transform: 'translate(-103px, 88px)', },
+  '10%': { transform: 'translate(-103px, 88px)', },
+
+  '16%': { transform: 'translate(-40px, 85px)', },
+  '26%': { transform: 'translate(-40px, 85px)', },
+
+  '32%': { transform: 'translate(-75px, 150px)', },
+  '42%': { transform: 'translate(-75px, 150px)', },
+
+  '48%': { transform: 'translate(-85px, 185px)', },
+  '58%': { transform: 'translate(-85px, 185px)', },
+
+  '64%': { transform: 'translate(-150px, 150px)', },
+  '74%': { transform: 'translate(-150px, 150px)', },
+
+  '80%': { transform: 'translate(-103px, 88px)', },
+  '100%': { transform: 'translate(-103px, 88px)', },
+});
 
 const States = () => {
   return (
@@ -291,45 +331,74 @@ const Variants = () => {
             <Flex css={{ alignItems: 'center', justifyContent: 'space-between', gap: '$6' }}>
               <Flex css={{ flexDirection: 'column', flexGrow: 1, gap: '$4', ai: 'flex-start' }}>
                 <Box css={{
-                  backgroundImage: 'linear-gradient(0deg, $colors$violet800 0%, $colors$violet700 100%)',
-                  border: '1px solid $colors$violet800',
-                  boxShadow: '0 3px 10px rgba(0,0,0,.25)',
-                  color: 'white',
-                  fontSize: '$3',
-                  height: '$6',
                   borderRadius: '$pill',
                   px: '$4',
                   fontWeight: 500,
                   display: 'inline-flex',
                   alignItems: 'center',
-                  fontsize: '$3',
+                  animation: `${scaleUp}`,
+                  animationIterationCount: 'infinite',
+                  animationDuration: '10s',
+                  animationTimingFunction: 'cubic-bezier(0.33, 1, 0.68, 1)',
                 }}>
                   Button
                 </Box>
               </Flex>
-              <Box css={{ width: 265, flexShrink: 0, boxShadow: '0 15px 35px -10px rgba(0,0,0,.35)', borderRadius: '$2', p: '$3' }}>
-                <Flex css={{ alignItems: 'center', justifyContent: 'space-between', mb: '$3' }}>
+              <Box css={{ width: 265, flexShrink: 0, boxShadow: '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)', borderRadius: '$2', p: '$3', position: 'relative' }}>
+                <Box
+                  css={{
+                    top: 0,
+                    right: 0,
+                    position: 'absolute',
+                    animation: `${Cursor}`,
+                    animationIterationCount: 'infinite',
+                    animationDuration: '10s'
+                  }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <g clip-path="url(#clip0)">
+                    <g filter="url(#filter0_d)">
+                    <path d="M7.5 23.1865L4.79423 0.5L23.0885 14.1865L13.5442 15.6554L7.5 23.1865Z" fill="black"/>
+                    <path d="M7.5 23.1865L4.79423 0.5L23.0885 14.1865L13.5442 15.6554L7.5 23.1865Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d" x="-5.68303" y="-5.68302" width="31.4545" height="32.5526" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                    <feOffset dy="1"/>
+                    <feGaussianBlur stdDeviation="1"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                    <clipPath id="clip0">
+                    <rect width="25" height="25" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </Box>
+                <Flex css={{ alignItems: 'center', justifyContent: 'space-between', mb: '$4' }}>
                   <Text size="1" css={{ fontWeight: 500 }}>Variants</Text>
                 </Flex>
                 <Box>
-                  <Text size="1" css={{ fontWeight: 500, mb: '$3' }}>Size</Text>
-                  <Flex css={{ gap: '$2', flexWrap: 'wrap', mb: '$3' }}>
-                    <Badge size="2" variant="blue">Small</Badge>
-                    <Badge size="2">Medium</Badge>
-                    <Badge size="2">Large</Badge>
+                  <Text size="1" css={{ mb: '$2' }}>Size</Text>
+                  <Flex css={{ gap: '$2', flexWrap: 'wrap', mb: '$4' }}>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2" variant="blue">Small</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Medium</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Large</Badge>
                   </Flex>
-                  <Text size="1" css={{ fontWeight: 500, mb: '$3' }}>Size</Text>
-                  <Flex css={{ gap: '$2', flexWrap: 'wrap', mb: '$3' }}>
-                    <Badge size="2" variant="blue">Secondary</Badge>
-                    <Badge size="2">Primary</Badge>
-                    <Badge size="2">Warning</Badge>
-                    <Badge size="2">Success</Badge>
-                    <Badge size="2">Ghost</Badge>
+                  <Text size="1" css={{ mb: '$2' }}>Color</Text>
+                  <Flex css={{ gap: '$2', flexWrap: 'wrap', mb: '$4' }}>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2" variant="blue">Secondary</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Primary</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Warning</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Success</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Ghost</Badge>
                   </Flex>
-                  <Text size="1" css={{ fontWeight: 500, mb: '$3' }}>Size</Text>
+                  <Text size="1" css={{ mb: '$2' }}>Size</Text>
                   <Flex css={{ gap: '$2', flexWrap: 'wrap' }}>
-                    <Badge size="2">Waiting</Badge>
-                    <Badge size="2">Active</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Waiting</Badge>
+                    <Badge css={{ fontWeight: 500, fontSize: '$1', lineHeight: '25px' }} size="2">Active</Badge>
                   </Flex>
                 </Box>
               </Box>
