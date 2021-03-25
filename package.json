@@ -30,8 +30,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "reading-time": "^1.2.0",
-    "styled-components": "^5.1.0",
-    "yarn.lock": "^0.0.1-security"
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.8",
