@@ -26,3 +26,5 @@ yarn-error.log*
 
 # https://github.com/hashicorp/next-mdx-enhanced#installation
 .mdx-data
+
+.vercel
