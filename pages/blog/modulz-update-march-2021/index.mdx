@@ -1,77 +1,87 @@
 ---
-title: 'Modulz March update: Image/SVG support, improved property panels, improved text tool'
-publishedAt: '2021-03-22'
+title: 'Modulz March update: Image/SVG support, sortable property rows, stroke panel, pre-built layouts'
+publishedAt: '2021-03-30'
 summary: 'An overview of the features and enhancements we shipped for Modulz in January 2021.'
 by: 'colm'
 ---
 
-import inspector from './inspector.mp4';
-import colors from './colors.mp4';
-import images from './images.mp4';
-import measuring from './measuring.mp4';
-import pages from './pages.mp4';
-import rulers from './rulers.mp4';
-import zoom from './zoom.mp4';
-import panels from './panels.png';
+import stroke from './stroke.mp4';
+import sortable from './sortable.mp4';
+import text from './text.mp4';
+import duplicate from './duplicate.mp4';
+import copy from './copy.mp4';
+import svg from './svg.mp4';
+import layouts from './layouts.mp4';
 
-Just before Christmas, we launched the latest Modulz release to our existing beta users. Today, we're inviting hundreds more from our waitlist, so check your email!
+This is a juicy release! Lots of exciting new features and usability enhancements. And of course, we've sent out hundreds of invites.
 
-Since launching in December, we've released many exciting features.
+### Image + SVG support
+You can now drag+drop, or paste images and SVGs directly onto the canvas.
 
-### SVG support
-If you're the opposite of someone like me—and you like to keep your files organised—you can now do so by creating Pages within each Document.
-
-<ProductVideo src={pages}>
-  Creating and naming a new Page in Modulz.
+<ProductVideo src={svg}>
+  Dragging SVG icons directly into a Modulz artboard.
 </ProductVideo>
 
-### Image support
-We added the Inspector to better support the typical developer handoff workflow. Click the "Inspect" tab to see the CSS for the selected component(s). Choose between string or object syntax, then click the copy icon to grab the styles and paste them into your code editor.
+### Selectable + sortable property rows
+You can now select property rows, then drag+drop to sort them. You can also copy/paste them across elements.
 
-<ProductVideo src={inspector}>
-  Copying CSS code from the Inspect tab in Modulz.
+<ProductVideo src={sortable}>
+  Selecting, sorting, and copy/pasting property rows.
 </ProductVideo>
 
-### Improved property panels
-We're continually improving the properties panel in order to minimise unwanted distractions, maximise vertical space, and make controls more intuitive. Some recent updates include:
+### Stroke Panel
+There's a brand new Stroke panel, with support for color and thickness on independent sides.
 
-- Min/max dimension inputs have been collapsed into a popover.
-- Background image properties have been relocated to the color tool.
-- Auto Layout icons have been refined.
-- Redesigned Text panel.
-
-<figure style={{ margin: 0 }}>
-  <img src={panels} alt="Modulz property panels." style={{ boxShadow: '0 0 0 1px hsl(210deg 15% 90%)' }} />
-  <Box as="figcaption" style={{ fontSize: '15px', marginTop: '-15px', paddingBottom: '10px', lineHeight: '25px' }} sx={{ color: 'gray700' }}>The new Modulz property panels.</Box>
-</figure>
-
-### Alt + drag duplication
-
-- It now accepts CSS color names and automatically converts them to HSL.
-- Use the cursor keys to update channels individually.
-- Set a background image from the color picker popover.
-- Separated the alpha channel into its own input.
-
-<ProductVideo src={colors}>
-  A demo of Modulz color tool.
+<ProductVideo src={stroke}>
+  Styling border sides independently with the new stroke panel.
 </ProductVideo>
 
 ### Text tool improvements
-For those of you who like fancy zoom shortcuts, you can now hold Z and draw a box to zoom into any area.
+Working with text just got a whole lot easier. While focused inside one text element, you can now focus another with a single click.
 
-<ProductVideo src={zoom}>
-  Drawing a box to zoom in on a Tesla car.
+<ProductVideo src={text}>
+  Selecting text across multiple text elements.
+</ProductVideo>
+
+### Pre-built layouts
+We've pre-built some common layouts to help you hit the ground running.
+
+<ProductVideo src={layouts}>
+  Inserting pre-built layouts into a Modulz artboard.
+</ProductVideo>
+
+### Copy/paste styles and code
+You can now copy/paste styles from one element to another. This is a powerful feature.
+
+- Copy styles as regular CSS.
+- Copy styles as CSS with object syntax.
+- Copy the JSX tree of an element, or even an entire artboard.
+
+<ProductVideo src={copy}>
+  Copy/pasting styles from one element to another.
+</ProductVideo>
+
+### Alt + drag duplication
+
+Hold Alt + drag to duplicate an element.
+
+<ProductVideo src={duplicate}>
+  Dragging an element while holding Alt to duplicate it.
 </ProductVideo>
 
 ---
 
 ## Coming soon
 
-Every month we'll release a blog post outlining major updates and new features. Next month, you can look forward to:
+Every 4–8 weeks, we'll release a blog post outlining major updates and new features. Next time, you can look forward to:
 
-- Sortable + selectable property rows
-- Stroke property panel
-- Grid tool
-- Tons of core experience enhancements
+- Grid tool.
+- Position property panel.
+- OpenType font features.
+- Dark mode.
+- Interactive components with integrated Radix Primitives.
+- Theming and token customisation.
+- Local and custom fonts.
+- Tons of core experience enhancements.
 
 Want early access? There are 6000+ people on our waitlist, but each month we're releasing hundreds of invites. If you [join our waitlist](https://modulz.typeform.com/to/fp4gBW), we'll let you in asap.
