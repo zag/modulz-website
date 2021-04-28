@@ -16,6 +16,7 @@ export const unsubFromMarketingBlasts = async (req: NextApiRequest, res: NextApi
     await fetch(unsubEndpoint, {
       method: 'POST',
       headers: {
+        Authorization: `Bearer ${process.env.ADMIN_BEARER_TOKEN}`,
         'content-type': 'application/json',
       },
       body: JSON.stringify({ userId: uuid }),
