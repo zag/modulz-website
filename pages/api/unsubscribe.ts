@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import fetch from 'node-fetch';
 
 export const unsubFromMarketingBlasts = async (req: NextApiRequest, res: NextApiResponse) => {
   const { uuid } = req.body;
@@ -19,10 +20,17 @@ export const unsubFromMarketingBlasts = async (req: NextApiRequest, res: NextApi
         Authorization: `Bearer ${process.env.ADMIN_BEARER_TOKEN}`,
         'content-type': 'application/json',
       },
-      body: JSON.stringify({ userId: uuid }),
-    }).catch((err) => {
-      throw new Error(err);
-    });
+      body: JSON.stringify({ userId: undefined }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status !== 200) {
+          throw new Error('Unable to unsubscribe from marketing blasts');
+        }
+      })
+      .catch((err) => {
+        throw new Error(err);
+      });
 
     res.status(200).end();
   } catch (err) {
