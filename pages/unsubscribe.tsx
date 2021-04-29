@@ -8,13 +8,15 @@ const Unsubscribe = () => {
   const { uuid } = router.query;
 
   useEffect(() => {
-    fetch('/api/unsubscribe', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({ uuid }),
-    });
+    if (uuid) {
+      fetch('/api/unsubscribe', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({ uuid }),
+      });
+    }
   }, []);
 
   return (
