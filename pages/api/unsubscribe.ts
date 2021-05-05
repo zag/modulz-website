@@ -20,7 +20,7 @@ export const unsubFromMarketingBlasts = async (req: NextApiRequest, res: NextApi
         Authorization: `Bearer ${process.env.ADMIN_BEARER_TOKEN}`,
         'content-type': 'application/json',
       },
-      body: JSON.stringify({ userId: undefined }),
+      body: JSON.stringify({ userId: uuid }),
     })
       .then((res) => res.json())
       .then((data) => {

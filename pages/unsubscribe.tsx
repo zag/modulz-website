@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import dynamic from 'next/dynamic';
-import { Flex, Text, theme } from '@modulz/radix';
+import { Flex, Text } from '@modulz/radix';
 import { useRouter } from 'next/router';
 
 const Unsubscribe = () => {
@@ -17,7 +16,7 @@ const Unsubscribe = () => {
         body: JSON.stringify({ uuid }),
       });
     }
-  }, []);
+  }, [uuid]);
 
   return (
     <Flex
@@ -31,13 +30,11 @@ const Unsubscribe = () => {
         height: '100%',
       }}
     >
-      <Text size={8} sx={{ textAlign: 'center', color: theme.colors.green900 }}>
+      <Text size={8} sx={{ textAlign: 'center', color: 'hsl(148 69% 30.0%)' }}>
         You have been successfully unsubscribed
       </Text>
     </Flex>
   );
 };
 
-export default dynamic(() => Promise.resolve(Unsubscribe), {
-  ssr: false,
-});
+export default Unsubscribe;
