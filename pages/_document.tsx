@@ -1,7 +1,7 @@
 import React from 'react';
 import NextDocument, { Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { renderSnippet } from '../utils/analytics';
+import { renderSnippet, gtagUrl } from '../utils/analytics';
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -32,6 +32,7 @@ export default class Document extends NextDocument {
     return (
       <html lang="en">
         <Head>
+          <script async src={gtagUrl} />
           <script dangerouslySetInnerHTML={{ __html: renderSnippet() }} />
         </Head>
         <body>
