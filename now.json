@@ -1,7 +1,0 @@
-{
-  "build": {
-    "env": {
-      "SEGMENT_ID": "@segment_write_key"
-    }
-  }
-}
