@@ -12,11 +12,9 @@ export const useAnalytics = () => {
   React.useEffect(() => {
     const handleRouteChange = (url) => {
       if (process.env.NODE_ENV === 'production') {
-        requestAnimationFrame(() => {
-          (window as WindowWithAnalytics).gtag('config', trackingID, {
-            page_location: url,
-            page_title: document.title,
-          });
+        (window as WindowWithAnalytics).gtag('config', trackingID, {
+          page_location: url,
+          page_title: document.title,
         });
       }
     };
