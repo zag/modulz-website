@@ -5,6 +5,12 @@ export const authors = {
     mug: require('../public/mugshots/abdul.png'),
   },
 
+  andy: {
+    name: 'Andy Hook',
+    twitter: 'Andy_Hook',
+    mug: require('../public/mugshots/andy.jpg'),
+  },
+
   benoit: {
     name: 'Benoît Grélard',
     twitter: 'benoitgrelard',
@@ -36,10 +42,10 @@ export const authors = {
     mug: require('../public/mugshots/jonathan.jpg'),
   },
 
-  nnika: {
-    name: 'Nnika Taylor',
-    twitter: 'nnikax',
-    mug: require('../public/mugshots/nnika.png'),
+  lucas: {
+    name: 'Lucas Motta',
+    twitter: 'elmotta',
+    mug: require('../public/mugshots/lucas.jpg'),
   },
 
   paul: {
