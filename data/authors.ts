@@ -1,6 +1,6 @@
 export const authors = {
   abdul: {
-    name: 'Abdulhadi Alhallak',
+    name: 'Abd Ulhadi Alhallak',
     twitter: 'hadi_hlk',
     mug: require('../public/mugshots/abdul.png'),
   },
